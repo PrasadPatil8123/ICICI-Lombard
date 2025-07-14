@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './all footer/footer/footer.component';
+import { Footer2Component } from './all footer/footer2/footer2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
+    FooterComponent,
+    Footer2Component
   ],
   imports: [
     BrowserModule,
