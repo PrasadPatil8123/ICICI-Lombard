@@ -5,28 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-<<<<<<< HEAD
-import { FooterComponent } from './all footer/footer/footer.component';
-import { Footer2Component } from './all footer/footer2/footer2.component';
-import { NavbarComponent } from './navbar/navbar/navbar.component';
-=======
+import { FooterComponent } from './common/all footer/footer/footer.component';
+import { Footer2Component } from './common/all footer/footer2/footer2.component';
+import { NavbarComponent } from './common/navbar/navbar/navbar.component';
 import { PipesPipe } from './shared/pipes/pipes.pipe';
 import { DirectivesDirective } from './shared/directives/directives.directive';
 import { HeaderComponent } from './common/header/header.component';
->>>>>>> master
 
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
     FooterComponent,
     Footer2Component,
-    NavbarComponent
-=======
+    NavbarComponent,
     PipesPipe,
     DirectivesDirective,
     HeaderComponent,
->>>>>>> master
   ],
   imports: [
     BrowserModule,
