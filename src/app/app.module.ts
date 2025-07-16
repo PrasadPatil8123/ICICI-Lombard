@@ -10,6 +10,7 @@ import { DirectivesDirective } from './shared/directives/directives.directive';
 import { HeaderComponent } from './common/header/header.component';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
+import { HomeComponent } from './common/home/home.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ButtonModule } from 'primeng/button';
     PipesPipe,
     DirectivesDirective,
     HeaderComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
