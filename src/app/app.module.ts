@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -11,6 +11,10 @@ import { NavbarComponent } from './common/navbar/navbar/navbar.component';
 import { PipesPipe } from './shared/pipes/pipes.pipe';
 import { DirectivesDirective } from './shared/directives/directives.directive';
 import { HeaderComponent } from './common/header/header.component';
+import { CommonModule } from '@angular/common';
+import { ButtonModule } from 'primeng/button';
+import { HomeComponent } from './common/home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -21,13 +25,17 @@ import { HeaderComponent } from './common/header/header.component';
     PipesPipe,
     DirectivesDirective,
     HeaderComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule,
+    ButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
