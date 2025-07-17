@@ -4,3 +4,6 @@
 a{
     text-decoration: none;
 }
+.loginbutton{
+    background-color: var(--primaryColor);
+}
