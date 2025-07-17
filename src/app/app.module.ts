@@ -12,7 +12,7 @@ import { PipesPipe } from './shared/pipes/pipes.pipe';
 import { DirectivesDirective } from './shared/directives/directives.directive';
 import { HeaderComponent } from './common/header/header.component';
 import { CommonModule } from '@angular/common';
-import { ButtonModule } from 'primeng/button';
+// import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
 
 
@@ -34,7 +34,7 @@ import { HomeComponent } from './common/home/home.component';
     ReactiveFormsModule,
     HttpClientModule,
     CommonModule,
-    ButtonModule,
+    // ButtonModule,
     BrowserAnimationsModule
   ],
   providers: [],
