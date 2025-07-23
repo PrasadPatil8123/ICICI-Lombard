@@ -42,12 +42,12 @@ export class HealthClaimsService {
     },
     {
       title: 'Second opinion',
-      description: 'Booking an appointment for an alternate medical opinion',
+      description: 'Booking an appointment for an alternate medical opinion.',
       icon: 'assets/claimsModuleImages/second-op.svg'
     },
     {
       title: 'Hospitalisation assistance',
-      description: 'Sharing suitable options for hospitals and other cashless facilities',
+      description: 'Sharing suitable options for hospitals and other cashless facilities.',
       icon: 'assets/claimsModuleImages/pre-hospital.svg'
     },
     {
