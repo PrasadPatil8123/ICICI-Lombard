@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path : ' ', loadChildren:() => import('./features/claims/claims.module')
+  {path : 'claim', loadChildren:() => import('./features/claims/claims.module')
     .then(mod => mod.ClaimsModule)
   }
 ]
