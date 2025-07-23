@@ -1,0 +1,145 @@
+<app-navbar2></app-navbar2>
+<div>
+    <img class="w-100" [src]="img" alt="">
+</div>
+<div class="container">
+    <div class="link-tag">
+        <a class="text-decoration-none text-black" routerLink="">General Insurance By ICICI Lombard</a>
+        <span> > </span>
+        <a class="text-decoration-none text-black" routerLink="">Travel Insurance Claims</a>
+    </div>
+
+    <div class="container mt-4">
+        <h1 class="fw-medium inherit-font">Travel Insurance Claims</h1>
+        <div class="row">
+            <!-- Emergency Contact Info -->
+            <div class="container col-md-8">
+                <div class="card">
+                    <!-- Header -->
+                    <div class="card-header d-flex justify-content-between align-items-center text-white"
+                        style="background-color: #004b84; cursor: pointer;" (click)="togglePanel()">
+                        <div class="fw-bold">
+                            In case of an unforeseen medical or non-medical emergency while on travel, be assured of
+                            complete assistance from us
+                        </div>
+                        <i class="pi" [ngClass]="{'pi-plus': !isPanelOpen,'pi-minus': isPanelOpen }"></i>
+                    </div>
+
+                    <!-- Collapsible Content -->
+                    <div *ngIf="isPanelOpen" class="card-body bg-light">
+                        <ul class="list-unstyled">
+                            <li>• We will do whatever is required to get you safe, comfortable and back on your feet as
+                                soon as possible.</li>
+                            <li>• All you need to do is reach out. Use any of the following ways to get in touch, and
+                                leave the rest to us.</li>
+                            <li><strong>• In USA and Canada:</strong> +1 844 871 1200 (Toll Free)</li>
+                            <li><strong>• From the rest of the world:</strong> +91 124 4498778 (Call back facility)</li>
+                            <li><strong>• In India:</strong> 1800 102 5721 (Toll Free & Accessible in India only)</li>
+                            <li><strong>• Fax:</strong> +91 124 4006674</li>
+                            <li><strong>• Email:</strong> <a href="">{{mail}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4">
+                <div class="bg-warning text-white p-3 fw-bold text-center">
+                    Quick Links
+                </div>
+                <div class="bg-light p-3">
+                    <ul>
+                        <li><a class="text-black" routerLink="/">Claim related FAQ's (ICICI Lombard)</a></li>
+                        <li><a class="text-black" routerLink="/">Policy Wordings</a></li>
+                        <li><a class="text-black" routerLink="/">Download Claim Form</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-light text-dark pt-5 pb-4">
+        <div class="container text-start">
+            <div class="row">
+
+                <!-- Loop through footer sections -->
+                <div *ngFor="let section of footerSections" class="col-6 col-md-2 mb-3">
+                    <h6 class="fw-bold">{{ section.title }}</h6>
+                    <ul class="list-unstyled">
+                        <li *ngFor="let link of section.links">
+                            <a [routerLink]="link.route">{{ link.label }}</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mobile App & Social Icons -->
+                <div class="col-12 col-md-4">
+                    <h6 class="fw-bold">MOBILE</h6>
+                    <p>IL Take Care App</p>
+                    <div class="mb-3">
+                        <img src="../../../../assets/claimsModuleImages/android_icon.png" height="35" class="me-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                            height="35">
+                    </div>
+
+                    <h6 class="fw-bold">SOCIAL</h6>
+                    <div class="d-flex gap-3">
+                        <a *ngFor="let s of socialLinks" [href]="s.url" target="_blank">
+                            <i class="pi" [ngClass]="s.icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center pt-3 small">
+                <img src="../../../../assets/claimsModuleImages/Insurancelogo.png" height="30" alt="ICICI Lombard">
+                <p>© ICICI Lombard General Insurance</p>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+
+<footer class="bg-light text-center text-md-left py-4 px-3 border-top">
+    <div class="container">
+
+        <!-- Company Description -->
+        <p class="text-muted mb-3" style="font-size: 14px;">
+            ICICI Lombard General Insurance Company Limited is one of the leading private sector general insurance
+            companies in India offering insurance coverage for motor, health, travel, home, student travel and more.
+            Policies can be purchased and renewed online as well. Immediate issuance of policy copy online.
+        </p>
+
+        <!-- Links -->
+        <div class="mb-3">
+            <span ><a class="mx-2 fw-bold text-danger" routerLink="">ICICI Group</a></span> |
+            <span><a class="mx-2 fw-bold text-danger" routerLink="">ICICI Bank</a></span> |
+            <span><a class="mx-2 fw-bold text-danger" routerLink="">ICICI Prudential Life Insurance</a></span> |
+            <span><a class="mx-2 fw-bold text-danger" routerLink="">ICICI Prudential Mutual Fund</a></span> |
+            <span><a class="mx-2 fw-bold text-danger" routerLink="">ICICI Direct</a></span> |
+            <span><a class="mx-2 fw-bold text-danger" routerLink="">ICICI Home Finance</a></span> |
+            <span><a class="mx-2 fw-bold text-danger" routerLink="">ICICI Home Search</a></span>
+        </div>
+
+        <!-- Disclaimer -->
+        <p class="text-muted" style="font-size: 13px;">
+            ICICI trade logo displayed above belongs to ICICI Bank Ltd and is used by ICICI Lombard General Insurance
+            Company Ltd under license and Lombard logo belongs to ICICI Lombard General Insurance Company Ltd. Insurance
+            is the subject matter of the solicitation. The advertisement contains only an indication of cover offered.
+            <br>
+            For more details on risk factors, terms, conditions and exclusions, please read the sales brochure carefully
+            before concluding a sale.
+        </p>
+
+        <!-- Contact Info -->
+        <p class="text-muted" style="font-size: 13px;">
+            ICICI Lombard General Insurance Company Limited, ICICI Lombard House, 414, Veer Savarkar Marg, Near Siddhi
+            Vinayak Temple, Prabhadevi, Mumbai - 400025. <br>
+            Reg. No.115. Fax no - 022 61961323. CIN: L67200MH2000PLC129408. <br>
+            Email ID - <a href="mailto:customersupport@icicilombard.com">{{customersMail}}</a>
+        </p>
+
+    </div>
+</footer>

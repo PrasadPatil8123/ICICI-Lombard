@@ -16,6 +16,7 @@ import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,9 +34,11 @@ import { HomeComponent } from './common/home/home.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule
+r
   ],
   providers: [],
   bootstrap: [AppComponent]

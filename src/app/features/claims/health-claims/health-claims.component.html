@@ -1,0 +1,382 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="main-section">
+        <div>
+            <h6>Health insurance claim </h6>
+        </div>
+        <div class="text-area">
+            <span>We’re committed to providing a </span>
+            <br>
+            <span class="text-highlited">worry-free</span>
+            <span> claim </span>
+            <br>
+            <span>experience </span>
+        </div>
+        <div class="img-section">
+            <img [src]="takeCareImg" alt="">
+            <span>Download the</span>
+            <span class="text-highlited"> IL TakeCare App</span>
+            <br>
+            <img class="googlePlay" [src]="googlePlayImg" alt="">
+            <img class="appStore" [src]="appStoreImg" alt="">
+            <img style="position: absolute;" [src]="dataImages" alt="">
+        </div>
+        <div class="video-section">
+            <img [src]="videoImg" alt="">
+            <span>How does our claim process work?</span>
+            <a class="watchVideo" href="">Watch now</a>
+        </div>
+        <div class="color-area">
+        </div>
+    </div>
+
+    <div class="form-container">
+        <form class="claim-form" name="carData" #carData="ngForm"
+            (ngSubmit)="onSendDataClaimsProcess()">
+            <h3>Check health claim status</h3>
+
+            <label class="form-label">Type of user</label>
+            <div class="radio-group">
+                <label class="radio-option">
+                    <input type="radio" name="userType" value="retail" checked [(ngModel)]="showDateInput">
+                    <span>Retail User</span>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="userType" value="corporate" [(ngModel)]="showDateInput">
+                    <span>Corporate User</span>
+                </label>
+            </div>
+
+            <input type="text" placeholder="Enter claim number" class="claim-input" name="claimNumber" [(ngModel)]="objectOfHealth.claimNumber" required>
+            <ng-container *ngIf="showDateInput === 'corporate'">
+                <input type="date" placeholder="DD / MM / YYYY" class="claim-input" name="claimsDay" [(ngModel)]="objectOfHealth.claimsDay" required>
+            </ng-container>
+            <button type="submit" class="submit-btn">Proceed</button>
+        </form> 
+    </div>
+
+
+    <div class="claim-wrapper">
+        <!-- Left Side Menu -->
+        <div class="left-menu">
+            <ul>
+                <li (click)="selectOption('emergency')" [class.active]="selectedOption === 'emergency'">
+                    🚨<b> Emergency cashless hospitalisation</b> <br>
+                    <p>I am / My insured family member is hospitalised for emergency treatment</p>
+                </li>
+                <li (click)="selectOption('planned')" [class.active]="selectedOption === 'planned'">
+                    📅 <b>Planned cashless hospitalisation</b> <br>
+                    <p>I have an upcoming planned surgery/ treatment which requires hospitalisation</p>
+                </li>
+                <li (click)="selectOption('reimbursement')" [class.active]="selectedOption === 'reimbursement'">
+                    💰 <b>Reimbursement for hospitalisation</b> <br>
+                    <p>I want to be reimbursed for the medical expenses I incurred during hospitalisation</p>
+                </li>
+                <li (click)="selectOption('prepost')" [class.active]="selectedOption === 'prepost'">
+                    🧾 <b>Reimbursement for pre/post hospitalisation</b> <br>
+                    <p>I want to be reimbursed for the medical expenses I incurred before admission and after discharge.
+                    </p>
+                </li>
+                <li (click)="selectOption('OPD')" [class.active]="selectedOption === 'OPD'">
+                    🧾 <b>Reimbursement for OPD</b> <br>
+                    <p>I have an out-patient (OPD) cover in my policy, I want to claim reimbursement under this cover.
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="right-content">
+            <div *ngIf="(selectedOption === 'emergency') || (selectedOption === 'planned')">
+                <h3>Get well soon!</h3>
+                <p>Here are a few things you need to do</p>
+                <p> if your treating hospital is part of our cashless network</p>
+                <input type="text" class="inputText" placeholder="Search by hospital or city or pincod"> <button
+                    class="bg-orange ">Submit</button>
+                <p class="fw-bold">Your cashless Initial request will be processed within 1 hour and final discharge
+                    will be
+                    processed
+                    within 3 hours upon receipt of all relevant documents.
+                    <br><br>
+                    In case a policyholder avails services in hospitals/health care providers apart from the above
+                    network
+                    hospitals, then claim shall be filed through reimbursement mode.
+                </p>
+                <h2>Cashless Claim Procedure:</h2>
+                <p style="margin: 1rem 0;"><b>Step 1</b>: Get treated at any of our <b>network hospitals</b>. Submit a
+                    copy
+                    of your <b>health card</b> and <b>photo ID proof</b>
+                    at the <b>Hospital TPA (Third Party Administration) desk</b> during admission.<br><br>
+
+                    <b>Step 2</b>: The hospital will send us a <b>cashless approval request</b> along with necessary
+                    documents
+                    (pre-authorization form, investigation reports, past consultation papers (if applicable), a copy of
+                    your
+                    health card, photo ID proof, etc.).<br><br>
+
+                    <b>Step 3</b>: We will <b>process your claim request</b> as per policy terms and conditions.<br><br>
+
+                    <b>Step 4</b>: If you have paid any <b>deposit,</b> don’t forget to <b>collect it from the
+                        hospital</b>.<br><br>
+
+                    <b>Step 5</b>: Once your treatment is complete, we will <b>settle the claim payment directly with
+                        the
+                        hospital.</b> <br><br>
+
+                    <b>Step 6</b>: Track your claim status anytime on our <a href="">IL Take Care App</a> or <a
+                        href="">WhatsApp</a> at 7738282666.<br><br>
+
+                    If you submit a <b>cashless pre-authorization request</b> through a network hospital with all
+                    required
+                    documents, we will <b>process it within 1 hour</b> of receiving it. The <b>final approval</b> will
+                    be
+                    given <b>within 3
+                        hours</b> of receiving the hospital’s discharge request.<br><br>
+
+                    For cashless services, please notify us <b>48 hours before</b> a planned admission or <b>within 24
+                        hours</b> in
+                    emergencies. <a
+                        href="https://www.icicilombard.com/docs/default-source/other-documents/sc-annexure---non-payable-list.pdf?sfvrsn=2">Non-medical
+                        and non-payable expenses</a> will need to be covered by you.
+                </p>
+                <p><a class="read-more-link" href="">Read more</a> </p>
+            </div>
+
+
+
+            <div *ngIf="selectedOption === 'reimbursement'">
+                <h3>Hope you are fine now!</h3>
+                <p style="margin-bottom: -1rem;">Here’re a few things you need to do for faster processing of your
+                    claim.
+                    <br><br>
+
+                    Here are the steps to file reimbursement claim request:
+                    Make sure you have downloaded IL TakeCare app and have linked your policy.<br><br>
+
+                    You can now file your claim easily 24X7 at your convenience in a few minutes at the IL TakeCare app.
+                    Simply answer questions to provide your claim details, securely upload self-attested original
+                    supporting
+                    documents in PDF / JPEG format and submit your claim for assessment. Do remember to keep your policy
+                    number or UHID ready.<br><br>
+                </p>
+                <p class="block-separator">
+                    <span>or</span>
+                </p>
+                <p>Alternatively, you can <a
+                        href="https://www.icicilombard.com/docs/default-source/apps/healthclaims/assets/files/claim-form-less-then-1-lac.pdf">download
+                        the claim form here</a>, fill all the fields correctly and completely, and
+                    send it along with self-attested original supporting documents at:<br><br>
+
+                    ICICI Lombard Healthcare, 1st, 4th, 5th & 6th Floor, Varun Towers II, Opp Hyderabad Public School,
+                    Begumpet, Hyderabad 500016, Telangana.<br><br>
+
+                    You can see a sample claim form here to help you fill your form correctly. <a
+                        href="https://www.icicilombard.com/docs/default-source/apps/healthclaims/assets/files/sample-claim-file-with-form.pdf">(Sample
+                        Form)</a><br><br>
+
+                    Please be rest assured, we are committed to settle your claim within 15* days from claim intimation.
+                </p>
+                <p><a class="read-more-link" href="">Read more</a> </p>
+            </div>
+
+            <div *ngIf="selectedOption === 'prepost'">
+                <h3>Don't worry, we've got you covered.</h3>
+                <p>Here are the steps to file pre/post hospitalisation claim request:<br><br>
+
+                    Make sure you have downloaded IL TakeCare app and have linked your policy.<br><br>
+
+                    You can now file your claim easily <b>24X7</b> at your convenience in a few minutes at the <b>IL
+                        TakeCare</b> app.
+                    Simply answer questions to provide your claim details, securely upload self-attested original
+                    supporting
+                    documents in PDF / JPEG format and submit your claim for assessment. Do remember to keep your policy
+                    number or UHID ready.</p>
+                <p class="block-separator">
+                    <span>or</span>
+                </p>
+                <p>Alternatively, you can <a
+                        href="https://www.icicilombard.com/docs/default-source/apps/healthclaims/assets/files/claim-form-less-then-1-lac.pdf">download
+                        the claim form here</a>, fill all the fields correctly and completely, and
+                    send it along with self-attested original supporting documents at:<br><br>
+
+                    ICICI Lombard Healthcare, 1st, 4th, 5th & 6th Floor, Varun Towers II, Opp Hyderabad Public School,
+                    Begumpet, Hyderabad 500016, Telangana.<br><br>
+
+                    You can see a sample claim form here to help you fill your form correctly. <a
+                        href="https://www.icicilombard.com/docs/default-source/apps/healthclaims/assets/files/sample-claim-file-with-form.pdf">(Sample
+                        Form)</a> <br><br>
+
+                    Please be rest assured, we are committed to settle your claim within 15* days from claim intimation.
+                </p>
+                <p><a class="read-more-link" href="">Read more</a> </p>
+            </div>
+
+            <div *ngIf="selectedOption === 'OPD'">
+                <h3>OPD cover pays for the expenses incurred for outpatient treatment without being hospitalized!.</h3>
+                <p>Here are the steps to file pre/post hospitalisation claim request:<br><br>
+
+                    Make sure you have downloaded IL TakeCare app and have linked your policy.<br><br>
+
+                    You can now file your claim easily <b>24X7</b> at your convenience in a few minutes at the <b>IL
+                        TakeCare</b> app.
+                    Simply answer questions to provide your claim details, securely upload self-attested original
+                    supporting
+                    documents in PDF / JPEG format and submit your claim for assessment. Do remember to keep your policy
+                    number or UHID ready.</p>
+                <p class="block-separator">
+                    <span>or</span>
+                </p>
+                <p>Alternatively, you can <a
+                        href="https://www.icicilombard.com/docs/default-source/apps/healthclaims/assets/files/claim-form-less-then-1-lac.pdf">download
+                        the claim form here</a>, fill all the fields correctly and completely, and
+                    send it along with self-attested original supporting documents at:<br><br>
+
+                    ICICI Lombard Healthcare, 1st, 4th, 5th & 6th Floor, Varun Towers II, Opp Hyderabad Public School,
+                    Begumpet, Hyderabad 500016, Telangana.<br><br>
+
+                    You can see a sample claim form here to help you fill your form correctly. <a
+                        href="https://www.icicilombard.com/docs/default-source/apps/healthclaims/assets/files/sample-claim-file-with-form.pdf">(Sample
+                        Form)</a> <br><br>
+
+                    Please be rest assured, we are committed to settle your claim within 15* days from claim intimation.
+                </p>
+                <p><a class="read-more-link" href="">Read more</a> </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="table-container">
+        <div class="heading">Documents required for a reimbursement claim
+        </div>
+        <div class="sub-info">Here is the list of documents we will need to process your
+            reimbursement claim request</div>
+
+        <table class="table table-bordered text-center align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th *ngFor="let head of headingOfTable">{{head}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of rows">
+                    <td style="text-align: left;">{{ row.name }}</td>
+                    <td>{{ row.hospitalisation }}</td>
+                    <td>{{ row.prePost }}</td>
+                    <td>{{ row.outPatient }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- container tag close -->
+</div>
+<div class="containerItem py-5 bgColor text-center">
+    <div class="container px-0">
+        <h2 class="text-white fw-bold mb-4">Health assistance service</h2>
+        <p class="text-white mb-5">
+            Our team of qualified and experienced medical professionals will assist you with :
+        </p>
+
+        <div class="row justify-content-center g-4">
+            <div class="col-md-4 col-sm-6 px-0 d-flex justify-content-center" *ngFor="let item of assistanceItems">
+                <div class="card text-center shadow-sm p-0" style="width: 100%; max-width: 300px;">
+                    <div class="card-body p-2 m-2">
+                        <img [src]="item.icon" alt="Icon" class="mb-1" width="50" />
+                        <h5 class="card-title fw-bold">{{ item.title }}</h5>
+                        <p class="card-text text-muted">{{ item.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="text-center my-5">
+    <h2 class="fw-semibold">Connect with our Health Assistance Team via</h2>
+</div>
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-3 col-sm-6 mb-4" *ngFor="let item of connectOptions">
+            <div class="card border-0">
+                <div class="card-body">
+                    <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-3"
+                        style="width: 80px; height: 80px;">
+                        <img [src]="item.icon" alt="icon" width="40">
+                    </div>
+                    <h6 class="fw-bold">{{ item.title }}</h6>
+                    <ng-container *ngIf="item.link; else plainText">
+                        <a [href]="item.link" class="text-decoration-underline text-dark fw-normal">
+                            {{ item.value }}
+                        </a>
+                    </ng-container>
+                    <ng-template #plainText>
+                        <p class="mb-0">{{ item.value }}</p>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-dark-blue text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Left side: Image -->
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img [src]="glossaryImg" alt="Glossary Illustration" class="img-fluid" />
+            </div>
+
+            <!-- Right side: Content -->
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-4">Glossary</h2>
+
+                <h6 class="fw-semibold">Delisted Hospitals:</h6>
+                <p class="p-0">
+                    There are some hospitals that are delisted and we will not cover any medical expenses for
+                    treatment taken in these hospitals.
+                    The updated list of delisted hospitals is also available here
+                </p>
+
+                <button class="btn btn-warning text-white fw-semibold px-4 py-2 mb-4">
+                    View List
+                </button>
+
+                <h6 class="fw-semibold">Third Party Assistance:</h6>
+                <p class="p-0">
+                    This is a special department at all our cashless hospitals and healthcare facilities.
+                    You can submit your health insurance details with them to file a claim.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <h2 class="text-center fw-bold mb-5">Health insurance blog articles</h2>
+
+    <div class="row gy-4">
+        <div class="col-lg-4 col-md-6" *ngFor="let article of blogArticles">
+            <div class="card h-100 shadow-sm border-0 rounded-4">
+                <div class="card-body">
+                    <h5 class="card-title fw-semibold">{{ article.title }}</h5>
+                    <p class="card-text text-muted p-0">{{ article.description }}</p>
+                    <p class="text-muted small mb-0 p-0">{{ article.date | date: 'dd MMM yyyy' }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="">
+            <button class="btn btn-outline-warning rounded-pill px-4 fw-bold text-orange">
+                Read more articles
+            </button>
+        </a>
+    </div>
+</div>
+<app-footer></app-footer>
