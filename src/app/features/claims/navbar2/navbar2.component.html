@@ -1,0 +1,39 @@
+<!-- navbar.component.html -->
+<div class="bgColor">
+    <div class="container ">
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand text-danger fw-bold" href="#">
+                    <img src="../../../../assets/claimsModuleImages/il-logo.png" alt="Logo" style="height: 30px;" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <!-- Loop through menuList -->
+                        <li class="nav-item dropdown" *ngFor="let menu of menuList">
+                            <ng-container *ngIf="menu.dropdown; else noDropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="{{ menu.label }}Dropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{ menu.label }}
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li *ngFor="let option of menu.options">
+                                        <a class="dropdown-item" [routerLink]="option.route">
+                                            {{ option.label }}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </ng-container>
+                            <!-- Non-dropdown item -->
+                            <ng-template #noDropdown>
+                                <a class="nav-link" [routerLink]="menu.route">{{ menu.label }}</a>
+                            </ng-template>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
