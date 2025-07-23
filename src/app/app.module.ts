@@ -38,7 +38,7 @@ import { HomeComponent } from './common/home/home.component';
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule
-r
+
   ],
   providers: [],
   bootstrap: [AppComponent]
