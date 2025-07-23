@@ -1,34 +1,112 @@
-.margin{
-    margin-left:90px;
-    overflow:"-moz-hidden-unscrollable"
-}
-p{
-    margin: 0px;
-    padding: 0px;
-}
-p:hover{
-    color: chocolate;
+
+
+
+.footer-ctr {
+  background-color: #ece9e9;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
 }
 
-.bgcolor{
 
-background-color:#66666626
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
 }
 
-.font{
-    font-size: small;
-    
-}
-.emailbg{
-color:#6666669e
-
-}
-.margintop{
-    margin-top: -50px;
+.footer-column {
+  min-width: 200px;
+  flex: 1;
 }
 
-.font2{
-    font-size: larger;
-    margin-left: 130px;
-    margin-top: 30px;
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px;
+}
+
+.footer-column ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+  color: #e74c3c;
+}
+
+.footer-column p {
+  margin-bottom: 6px;
+}
+
+.footer-column.app-download .store-badges img {
+  width: 130px;
+  margin-bottom: 8px;
+  display: block;
+}
+/* ------------------------- */
+.mobile-footer {
+  background: #f5f5f5;
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+
+    .accordion-header {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 16px;
+      font-weight: bold;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      cursor: pointer;
+
+      span {
+        transition: transform 0.3s ease;
+        &.rotate {
+          transform: rotate(180deg); 
+        }
+      }
+    }
+
+    .accordion-content {
+      padding: 0 16px 16px 16px;
+      background: #fff;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          padding: 8px 0;
+        }
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+      }
+
+      img {
+        max-width: 120px;
+        margin-right: 10px;
+      }
+    }
+  }
 }
