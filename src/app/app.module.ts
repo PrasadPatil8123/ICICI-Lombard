@@ -34,11 +34,9 @@ import { HomeComponent } from './common/home/home.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
     CommonModule,
     // ButtonModule,
     BrowserAnimationsModule
-r
   ],
   providers: [],
   bootstrap: [AppComponent]
