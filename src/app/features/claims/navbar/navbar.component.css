@@ -1,0 +1,55 @@
+.gradient-bg {
+  background: #c13911;
+}
+
+.topMenu {
+  background-color: #eaeaea;
+}
+
+.call-wrap {
+  display: inline-block;
+}
+
+.call-wrap ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.top-menu-wrap li a {
+  color: #282828;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.call-us {
+  vertical-align: middle;
+  padding-left: 1rem !important;
+}
+
+.call-wrap li {
+  display: inline-block;
+  width: 291px;
+  font-weight: 700;
+  color: #282828;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+  text-decoration: underline;
+}
+
+.nav-link {
+  /* color: white !important; */
+  transition: all 0.3s ease;
+
+  &:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+}

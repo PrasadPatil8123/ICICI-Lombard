@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClaimsModule } from './features/claims/claims.module';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +19,10 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ClaimsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
