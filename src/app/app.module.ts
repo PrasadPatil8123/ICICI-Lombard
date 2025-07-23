@@ -34,7 +34,9 @@ import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+
     ClaimsRoutingModule,
+
     CommonModule,
     ButtonModule,
     ClaimsModule,
