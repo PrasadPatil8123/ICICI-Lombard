@@ -1,31 +1,131 @@
 
-<!-- <!-- <app-footer></app-footer> --> -->
-<!-- <app-footer2></app-footer2> -->
-<!-- <app-navbar></app-navbar> -->
+<!-- First Navbar -->
+ <nav class="navbar navbar-expand-lg bg-secondary-subtle col-12 col-md-12">
+                <div class="container-fluid text-black d-flex aling-items-centre justify-content-between" id="">
+                    <ul class="navbar-nav text-black">
+                        <li class="nav-item text-black">
+                            <a class="nav-link" href="tel:1800 26666">
+                                <span class="call-us text-body-emphasis">
+                                    <img [src]="callUsImg">
+                                    1800 26666
+                                </span>
+                                <small class="text-body-emphasis">
+                                    (Available 24 x 7)
+                                </small>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="collapse navbar-collapse mt-2">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                               <a href="#" class="nav-link text-body-emphasis">
+                                   | &nbsp; <img [src]="callBackImg">
+                                    Call Back
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-body-emphasis">
+                                    | &nbsp;  
+                                    <button class="btn btn-sm bg-white text-body-emphasis rounded-pill" id="btnn">
+                                    <span class="dotsgreen">
+                                    </span>
+                                        Live Chat
+                                </button>
+                                </a>
+                            </li>
+                            </ul>
+                    </div>
+                    <div class="collapse navbar-collapse ms-lg-4 dropdown">
+                            <ul class="navbar-nav ms-lg-5 ">
+                            <li class="nav-item" *ngFor="let items of topMenuList" [ngClass]="{'blue':items.isSelected}">
+                                <a href="" class="nav-link">
+                                    {{items.Title}}
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li *ngFor="let subitem of items.SubMenueList">
+                                        <a class="dropdown-item" href="#">{{subitem}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            </ul>
+                    </div>
+                    <!-- Modal Structure -->
+                    <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                       <div class="modal-dialog">
+                          <div class="modal-content">
+                          <div class="modal-header d-flex justify-content-between">
+                            <div>
+                                <h3 class="mb-4">Login</h3>
+                                <!-- Enter your mobile number to login --> 
+                            </div>
+                                <!-- Correct Close Button (data-bs-dismiss) --> 
+                              <button type="button" class="btn btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+                         </div>
+                     <div class="modal-body">
+                        <!-- Input Field for Mobile Number -->
+                         <div> 
+                           <input class="col-12 mt-5 p-2" type="text" name="mo-num" placeholder="Mobile no.">
+                        </div> 
+                       <!-- Send OTP Button -->
+                        <div>
+                          <button class="btn col-12 orange mt-5 p-2">Send OTP</button>
+                     </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+<!-- Trigger Button to Open Modal -->
+<button class="btn btn-sm orange ms-3 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#login-modal">
+    Login&nbsp;
+    <i class="fa-solid fa-chevron-right"></i>
+</button>
+    </div>
+</nav>
+     
+<!-- Second Nav-Bar -->
+ <nav class="navbar navbar-expand-lg sec-nav-color col-12">
+        <div class="container-fluid">
+            <button class="navbar-toggler" (dblclick)="dblclick()" (click)="click()" data-bs-toggle="collapse" data-bs-target="#sec-nav-coll">
+                <span class="navbar-toggler-icon icon-light"></span>
+            </button>
+            <div class="nav-brand">
+                <img [src]="iciLogo">
+            </div>
+            <div class="collapse navbar-collapse" id="sec-nav-coll" *ngIf="isShow">
+                <ul class="navbar-nav">
+                <li class="nav-item" *ngFor="let menue of secondNavMenueList" >
+                    <a href="" class="nav-link nav-linkk" >
+                        {{menue.Title}} 
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                    <div class="sub-menu-wrap d-flex sub-menue">
+                        <div class="sub-menu-img">
+                            <img class="mt-5 ms-4" [src]="menue.Img">
+                        </div>
+                        <div class="sub-menu-list">
+                            <ul>
+                                <li *ngFor="let subMenue of menue.SubMenueList">
+                                    <a class="dropdown-item mb-3" routerLink ="menue.Link">{{subMenue}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+        
+    
+   
+
+
+
 
 <!-- <router-outlet></router-outlet> -->
 <!-- <a href="http://wa.link/0m7ter"><img alt="ICICI Lombard Whatsapp" class="img-responsive lazy loading" src="/docs/default-source/assets/home-revamp/images/whatsapp.png" data-ll-status="loading"></a> -->
+<!--  <app-footer></app-footer> -->
+<!-- <app-footer2></app-footer2> -->
 
 
 
-<!-- 
-<button class=" my-button">Submit</button>
-<div class="chat-popup">Hello there!</div> -->
-
-<!-- git branch
-(master)
-git checkout master
-git pull origin master  
-git checkout nilesh 
-git merge master
-git add .
-git commit -m "merge conflicts" 
-
-(to get someones code into our local machin) -->
-<!-- <p>testing code</p> -->
-<!-- <p-button label="Check"/> -->
-
-<!-- <h1>root component</h1> -->
 
 
 
