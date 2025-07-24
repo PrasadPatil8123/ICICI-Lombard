@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+<<<<<<< HEAD
 import { FooterComponent } from './common/all footer/footer/footer.component';
 import { Footer2Component } from './common/all footer/footer2/footer2.component';
 import { NavbarComponent } from './common/navbar/navbar/navbar.component';
@@ -16,6 +17,9 @@ import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
 
 
+=======
+import { RouterModule } from '@angular/router';
+>>>>>>> 928c04c1ca9071b8b32d0ca11747cdb0bd8f40a7
 
 @NgModule({
   declarations: [
@@ -34,11 +38,15 @@ import { HomeComponent } from './common/home/home.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+<<<<<<< HEAD
 
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule
 
+=======
+    RouterModule
+>>>>>>> 928c04c1ca9071b8b32d0ca11747cdb0bd8f40a7
   ],
   providers: [],
   bootstrap: [AppComponent]
