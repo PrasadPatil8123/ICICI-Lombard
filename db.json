@@ -98,5 +98,34 @@
       "coverageAmount": 500000,
       "status": "generated"
     }
+  ],
+  "HealthContactDetails": [
+    {
+      "mobile": "",
+      "email": "",
+      "pincode": "",
+      "name": ""
+    },
+    {
+      "id": "8ead",
+      "mobile": "374463294746",
+      "email": "xyz@gmail.com",
+      "pincode": "414502",
+      "name": "Prasad Patil"
+    },
+    {
+      "id": "e0aa",
+      "mobile": "374463294746",
+      "email": "xyz@gmail.com",
+      "pincode": "414502",
+      "name": "Prasad Patil"
+    },
+    {
+      "id": "49d8",
+      "mobile": "374463294746",
+      "email": "xyz@gmail.com",
+      "pincode": "414502",
+      "name": "Prasad Patil"
+    }
   ]
 }
