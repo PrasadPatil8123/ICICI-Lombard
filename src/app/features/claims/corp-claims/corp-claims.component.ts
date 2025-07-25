@@ -45,46 +45,54 @@ export class CorpClaimsComponent {
 
     this.intimateClaim = fb.group({
       id: [''],
-      policyNumbe: [''],
-      policyStartDate: ['']
+      policyNumbe: ['', [Validators.required]],
+      policyStartDate: ['', [Validators.required]]
     })
     this.trackClaim = fb.group({
       id: [''],
-      claimRefNumber: [''],
-      lossDate: ['']
+      claimRefNumber: ['', [Validators.required]],
+      lossDate: ['', [Validators.required]]
     })
   }
 
   onIntimateSubmit() {
     this.intimateForm.value.id = this.countId++;
     this.listOfData.push({ ...this.intimateForm.value });
+    alert("Data submit successfully !!");
     if (this.intimateForm.valid) {
       console.log("Intimate Claim Data:", this.intimateForm.value);
     }
+    this.intimateForm.reset();
   }
 
   onTrackSubmit() {
     this.trackForm.value.id = this.trackCountId++;
     this.trackListData.push({ ...this.trackForm.value });
+    alert("Data submit successfully !!");
     if (this.trackForm.valid) {
       console.log("Track Claim Data:", this.trackForm.value);
     }
+    this.trackForm.reset();
   }
 
   public intimateClaimSubmit() {
     this.intimateClaim.value.id = this.intimateClaimCountId++;
     this.intimateClaimDataList.push({ ...this.intimateClaim });
+    alert("Data submit successfully !!");
     console.log(this.intimateClaimDataList);
-
+    
+    this.intimateClaim.reset();
   }
   public trackClaimSubmit() {
     this.trackClaim.value.id = this.trackClaimsCountId++;
     this.trackClaimsListData.push({ ...this.trackClaim })
+    alert("Data submit successfully !!");
     console.log(this.trackClaimsListData);
-
+    
+    this.trackClaim.reset();
   }
 
   get f() {
-    return this.intimateForm.contains;
+    return this.intimateForm.controls;
   }
 }
