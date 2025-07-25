@@ -64,6 +64,9 @@
                 <div class="col-md-6">
                     <h5>Track a Claim</h5>
                     <form [formGroup]="trackForm" (ngSubmit)="onTrackSubmit()">
+                        <div>
+                            <input type="hidden" formControlName="id">
+                        </div>
                         <div class="mb-3">
                             <input type="text" class="form-control" placeholder="Enter Claim Reference Number"
                                 formControlName="claimRef">
@@ -92,7 +95,7 @@
                     <!-- Intimate a Claim -->
                     <div class="col-md-6 mb-3">
                         <h5>Intimate a Claim</h5>
-                        <form [formGroup]="intimateForm" (ngSubmit)="onIntimateSubmit()">
+                        <form [formGroup]="intimateForm" (ngSubmit)="intimateClaimSubmit()">
                             <div class="mb-3">
                                 <input type="text" class="form-control" formControlName="policyNumber"
                                     placeholder="Enter Policy Number *">
@@ -107,7 +110,7 @@
                     <!-- Track a Claim -->
                     <div class="col-md-6 mb-3">
                         <h5>Track a Claim</h5>
-                        <form [formGroup]="trackForm" (ngSubmit)="onTrackSubmit()">
+                        <form [formGroup]="trackForm" (ngSubmit)="trackClaimSubmit()">
                             <div class="mb-3">
                                 <input type="text" class="form-control" formControlName="claimRefNumber"
                                     placeholder="Enter Claim Reference Number *">
