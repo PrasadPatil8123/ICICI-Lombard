@@ -15,6 +15,8 @@ import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
 import { ClaimsModule } from './features/claims/claims.module';
 import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
+// import { RiskManagementComponent } from './features/corporate-insurance/risk-management/risk-management.component';
+import { CorporateInsuranceModule } from "./features/corporate-insurance/corporate-insurance.module";
 
 
 
@@ -27,22 +29,23 @@ import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
     DirectivesDirective,
     HeaderComponent,
     HomeComponent,
+    
+   
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
     ClaimsRoutingModule,
-
     CommonModule,
     ButtonModule,
     ClaimsModule,
-    BrowserAnimationsModule
-
-  ],
+    BrowserAnimationsModule,
+    CorporateInsuranceModule
+],
   providers: [],
   bootstrap: [AppComponent]
 })
