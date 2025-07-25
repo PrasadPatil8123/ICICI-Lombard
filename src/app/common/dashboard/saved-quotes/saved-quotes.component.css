@@ -1,0 +1,18 @@
+.saved-quote-panel {
+  margin-top: 2rem;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.empty-message {
+  text-align: center;
+  font-size: 1rem;
+  padding: 2rem;
+  color: #777;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+}

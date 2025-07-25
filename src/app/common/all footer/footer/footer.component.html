@@ -1,0 +1,73 @@
+
+<footer class="d-none d-md-block footer-ctr">
+    <div class="container">
+        <div class="row">
+        <div class="col">
+            <div class="footer-column" *ngFor="let section of footerData1">
+                <h4>{{ section.title }}</h4>
+                <ul>
+                    <li *ngFor="let link of section.links">
+                        <a href="#">{{ link }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+             <div class="footer-column" *ngFor="let section of footerData2">
+                <h4>{{ section.title }}</h4>
+                <ul>
+                    <li *ngFor="let link of section.links">
+                        <a href="#">{{ link }}</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li *ngFor="let img of section.images" >
+                      <a href="https://play.google.com/store/apps/details?id=icici.lombard.ghi&referrer=adjust_reftag%3DcJ3NwY2FJjGh6%26utm_source%3DEchannel%26utm_campaign%3DWebsite"><img *ngFor="let img of section.images" [src]="img.src" [alt]="img.alt" /></a> <br>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+             <div class="footer-column" *ngFor="let section of footerData3">
+                <h4>{{ section.title }}</h4>
+                <ul>
+                    <li *ngFor="let link of section.links">
+                        <a href="#">{{ link }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+             <div class="footer-column" *ngFor="let section of footerData4">
+                <h4>{{ section.title }}</h4>
+                <ul>
+                    <li *ngFor="let link of section.links">
+                        <a href="#">{{ link }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+
+<!-- for mobile -->
+ <div class="mobile-footer d-block d-md-none">
+  <div *ngFor="let section of footerData; let i = index" class="accordion-item">
+    <button class="accordion-header" (click)="toggleSection(i)">
+      {{ section.title }}
+      <span [class.rotate]="activeIndex === i">&#9662;</span>
+    </button>
+
+    <div class="accordion-content" *ngIf="activeIndex === i">
+      <ul>
+        <li *ngFor="let link of section.links">
+          <a href="#">{{ link }}</a>
+        </li>
+      </ul>
+      <div *ngIf="section.images">
+       <a href="https://play.google.com/store/apps/details?id=icici.lombard.ghi&referrer=adjust_reftag%3DcJ3NwY2FJjGh6%26utm_source%3DEchannel%26utm_campaign%3DWebsite"><img *ngFor="let img of section.images" [src]="img.src" [alt]="img.alt" /></a> <br>
+      </div>
+    </div>
+  </div>
+</div>

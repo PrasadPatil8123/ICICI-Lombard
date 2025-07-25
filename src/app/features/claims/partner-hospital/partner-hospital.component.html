@@ -1,0 +1,85 @@
+<div class="hospital-img">
+
+    <div class="network-hospital-sec">
+        <h3 class="mb-4">Search ICICI Lombard <span class="text-danger">network hospitals</span></h3>
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="searchType" [(ngModel)]="searchType"
+                value="hospitalName">
+            <label class="form-check-label">Hospital Name</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="searchType" [(ngModel)]="searchType" value="city">
+            <label class="form-check-label">City</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="searchType" [(ngModel)]="searchType" value="pincode">
+            <label class="form-check-label">Pincode</label>
+        </div>
+
+        <input type="text" class="form-control mt-3" [(ngModel)]="city" [placeholder]="searchType"
+            (input)="filterHospitals()">
+        <div class="mt-2">
+            <span *ngFor="let c of popularCities" class="badge bg-secondary me-2 cursor-pointer"
+                (click)="selectCity(c)">
+                {{ c }}
+            </span>
+        </div>
+
+
+
+
+
+        <div class="mt-4" *ngIf="filteredHospitals.length">
+            <p>{{ filteredHospitals.length }} hospitals found</p>
+            <div *ngFor="let hospital of filteredHospitals" class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ hospital.name }}</h5>
+                    <p class="card-text">{{ hospital.address }}</p>
+                    <p class="mb-0"><strong>Phone:</strong> {{ hospital.phone }}</p>
+                    <p><strong>Pincode:</strong> {{ hospital.pincode }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="col-lg-12">
+        <div class="cashless-details-sec">
+            <div class="cashless-details-block">
+                <div class="left-block">
+                    <div class="img-block"><img src="../../../../assets/claimsModuleImages/Hospitalisation.svg">
+                    </div>
+                    <div class="content-block">
+                        <h5>What is Cashless Hospitalisation?</h5>
+                        <p> Cashless hospitalisation means that you do not have to pay any
+                            cash or have a financial transaction with the hospital directly. It enables you and your
+                            family can focus on treatment and recovery without worrying about the bills piling up.
+                            Within Cashless Mediclaim all your medical expenses are borne by your insurance provider.
+                        </p>
+                    </div>
+                </div>
+                <div class="right-block">
+                    <div class="img-block"><img src="../../../../assets/claimsModuleImages/Cashless Hospital.svg">
+                    </div>
+                    <div class="content-block">
+                        <h5>How Does Cashless Hospitalisation Work</h5>
+                        <p> When availing cashless hospitalisation, be sure to check the
+                            network hospital list before getting admitted. This list contains the names of all the
+                            hospitals that your insurer has tied-up with to provide cashless Mediclaim. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="note-block">
+                <p><span>Note:</span>ICICI Lombard reserves
+                    the right to add or remove any Hospital from the given list. Cashless facility may be limited to
+                    specific room category or Services available in some hospitals. Please check the same with hospital
+                    before admission. </p>
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,432 @@
+<!-- <div class="bg-Color">
+    <div class="container">
+        <p class="text-white d-inline-block fs-3">Quick & easy claim processing at your fingertips</p>
+        <p-button label="Raise a claim" (click)="display = true"></p-button>
+
+        <p-dialog header="Raise a claim" [(visible)]="display" [modal]="true" [dismissableMask]="true"
+            [style]="{ width: '50vw', height: '90vh' }" [position]="'left'" [baseZIndex]="10000" [draggable]="false">
+            <p>Dialog Content goes here... </p>
+
+            <div class="flex items-center gap-4 mb-4">
+                <label for="username" class="font-semibold w-24">Username</label>
+                <input pInputText id="username" class="flex-auto" autocomplete="off" />
+            </div>
+            <div class="flex items-center gap-4 mb-8">
+                <label for="email" class="font-semibold w-24">Email</label>
+                <input pInputText id="email" class="flex-auto" autocomplete="off" />
+            </div>
+            <div class="flex justify-end gap-2">
+                <p-button label="Cancel" severity="secondary" (click)="visible = false" />
+                <p-button label="Save" (click)="visible = false" />
+            </div>
+
+        </p-dialog>
+    </div>
+
+</div> -->
+<div class="bg-Color">
+
+    <div class="container container-fluid bg-Color text-white py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <h2 class="fw-bold">Quick & easy claim processing at your fingertips</h2>
+
+                <div class="mt-4">
+                    <!-- <button class="btn btn-warning me-3 rounded-pill px-4">Raise a claim</button> -->
+                    <!-- BUTTON -->
+                    <button type="button" class="btn btn-outline-warning rounded-pill px-4" data-bs-toggle="modal"
+                        data-bs-target="#raiseClaimModal">
+                        Raise a claim
+                    </button>
+
+                    <!-- MODAL -->
+                    <div class="modal fade" id="raiseClaimModal" tabindex="-1" aria-labelledby="raiseClaimModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down"
+                            style="max-width: 50vw;">
+                            <div class="modal-content" style="height: 90vh;">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="raiseClaimModalLabel">Let's begin with a few details
+                                    </h5>
+
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Please enter your information below</p>
+                                    <div class="mb-3 row">
+                                        <div class="col-sm-9">
+                                            <input type="hidden" [(ngModel)]="detailsOfCar.id">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" name="policyNo"
+                                                placeholder="Policy/Cover note number"
+                                                [(ngModel)]="detailsOfCar.policyNo" required #policyNo="ngModel"
+                                                [ngClass]="{'is-is-invaild':policyNo.invalid && policyNo.touched}">
+                                            <div class="text-danger" *ngIf="policyNo.invalid && policyNo.touched">
+                                                Required Policy/Cover note number</div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3 row">
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" name="vehicleReg"
+                                                placeholder="Chassis/Vehicle registration no*"
+                                                [(ngModel)]="detailsOfCar.vehicleReg" required #vehicleReg="ngModel"
+                                                [ngClass]="{'is-is-invaild':vehicleReg.invalid && vehicleReg.touched}">
+                                            <div class="text-danger" *ngIf="vehicleReg.invalid && vehicleReg.touched">
+                                                Required Chassis/Vehicle registration no*</div>
+                                        </div>
+                                    </div>
+                                    <h5>Nature of incident</h5>
+                                    <div class="form-check form-check-inline me-3">
+                                        <input class="form-check-input" type="radio" value="accident"
+                                            [(ngModel)]="detailsOfCar.raiseTypeCar" name="raiseType" id="accident">
+                                        <label class="form-check-label ms-1" for="accident">Accident</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" value="stolen"
+                                            [(ngModel)]="detailsOfCar.raiseTypeCar" name="raiseType" id="stolen">
+                                        <label class="form-check-label ms-1" for="stolen">Stolen</label>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-primary"
+                                        (click)="onGetDataFormUser()">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-warning rounded-pill px-4">Submit an e-claim</button>
+                </div>
+
+                <div class="bg-info text-white rounded p-3 mt-4 d-inline-block">
+                    <!-- Modal 2 -->
+                    <div class="modal fade" id="mobileModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content rounded-0" style="height: 80vh;">
+                                <div class="modal-body p-5">
+                                    <button type="button" class="btn-close float-end" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                    <h2 class="fw-bold mb-2">Let's begin with a few details</h2>
+                                    <p class="text-muted mb-4">Please enter your information below</p>
+                                    <div class="mb-4">
+                                        <label class="form-label">Registered mobile number <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control border-0 border-bottom"
+                                            placeholder="Enter mobile number" />
+                                    </div>
+                                    <button class="btn btn-warning rounded-pill px-4">Get OTP</button>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <a href="#" class="text-danger text-decoration-none" data-bs-dismiss="modal"
+                                            data-bs-toggle="modal" data-bs-target="#policyModal">
+                                            Search claim with registered mobile no.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal 1 -->
+                    <div class="modal fade" id="policyModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content rounded-0" style="height: 90vh;">
+                                <div class="modal-body p-7">
+                                    <button type="button" class="btn-close float-end" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                    <h2 class="fw-bold mb-2">Let's begin with a few details</h2>
+                                    <p class="text-muted mb-4">Please enter your information below</p>
+                                    <form name="registration" #registration="ngForm" (ngSubmit)=" onSubmitData()">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-4">
+                                                <label class="form-label">Search your claim using*</label>
+                                                <input type="text" class="form-control border-0 border-bottom"
+                                                    name="policyNo" placeholder="Policy No."
+                                                    [(ngModel)]="registCarNo.policyNo">
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <label class="form-label">Enter policy number*</label>
+                                                <input type="text" class="form-control border-0 border-bottom"
+                                                    name="policyNumber" [(ngModel)]="registCarNo.policyNumber">
+                                            </div>
+
+                                            <div class="col-md-6 mb-4">
+                                                <label class="form-label">Select option*</label>
+                                                <input type="text" class="form-control border-0 border-bottom"
+                                                    name="vehicleReg" placeholder="Vehicle Registration No"
+                                                    [(ngModel)]="registCarNo.vehicleReg">
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <label class="form-label">Enter vehicle registration number*</label>
+                                                <input type="text" class="form-control border-0 border-bottom"
+                                                    name="vehicleRegNo" [(ngModel)]="registCarNo.vehicleRegNo">
+                                            </div>
+                                        </div>
+
+                                        <!-- Submit + Link to open Modal 2 -->
+                                        <div class="d-flex align-items-center gap-3">
+                                            <button class="btn btn-warning rounded-pill px-4">Submit</button>
+                                            <a href="#" class="text-danger text-decoration-none" data-bs-dismiss="modal"
+                                                data-bs-toggle="modal" data-bs-target="#mobileModal">
+                                                Search claim with registered mobile no.
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <button class="bg-info text-white " data-bs-toggle="modal" data-bs-target="#policyModal">
+                        Check claim status and upload docs
+                    </button>
+
+
+
+
+
+                </div>
+
+                <div class="mt-4 p-3 bg-dark text-white rounded-3 shadow-sm w-75">
+                    <h6>For doorstep cashless claims, call <strong>1800 2666</strong></h6>
+                    <ul class="list-unstyled mt-2">
+                        <li>✔ Car pick-up & drop</li>
+                        <li>✔ Dedicated claim manager</li>
+                        <li>✔ Service quality assurance</li>
+                        <li>✔ WhatsApp updates</li>
+                    </ul>
+                    <a href="#" class="text-warning text-decoration-underline">Know more</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 text-center mt-4 mt-md-0">
+                <img src="../../../../assets/claimsModuleImages/car-img.svg" class="img-fluid"
+                    alt="Claim Illustration" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="container text-center py-5">
+        <h2 class="fw-bold mb-5">Why you’ll love our motor claims process</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4 mb-4">
+                <h3 class="text-orange fw-bold">93.4%</h3>
+                <p>Claim settlement ratio<br><small>(Motor own damage)</small></p>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <h3 class="text-orange fw-bold">80%</h3>
+                <p>Claims processed by live<br>video inspection^</p>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <h3 class="text-orange fw-bold">13,000+</h3>
+                <p>Cashless garages</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row align-items-center">
+        <!-- LEFT COLUMN: Text content -->
+        <div class="col-lg-7 col-md-12">
+            <h2 class="fw-bold mb-4">Doorstep Cashless Repairs</h2>
+            <p>
+                Our latest feature is one-stop solution for hassle-free car repairs at your doorstep & quick
+                cashless claims. As a car owner, dealing with the aftermath of an accident can be a daunting
+                task. In today's fast-paced world, time is of the essence, and nobody wants to spend hours
+                dealing with car repairs. With this service, you won't have to worry about the time and effort
+                it takes to get your vehicle inspected, repaired, and back on the road. Our dedicated team will
+                take care of everything from the moment you call us, to the moment your vehicle is returned to you.
+            </p>
+
+            <p class="fw-bold mt-4">Some of the highlights of this service are</p>
+            <ul class="list-unstyled" *ngFor="let item of serviceDoorstep">
+                <li><span class="text-orange me-2">&#9656;</span>{{item.name}} </li>
+            </ul>
+
+            <p class="mt-4">
+                All you need to do is call ICICI Lombard's toll-free number <strong>1800 2666</strong>,
+                or use our IL Take Care app <a href="#" class="text-danger fw-bold">(Download here)</a>,
+                or log on to our <a href="#" class="text-decoration-underline">website</a>.
+            </p>
+        </div>
+
+        <!-- RIGHT COLUMN: Image -->
+        <div class="col-lg-5 col-md-12 text-center mt-4 mt-lg-0">
+            <img src="../../../../assets/claimsModuleImages/doorstep-cashless-img.svg" class="img-fluid"
+                alt="Doorstep Repairs" />
+        </div>
+    </div>
+</div>
+<div class="container py-5">
+    <div class="row align-items-center">
+        <!-- LEFT: Image -->
+        <div class="col-lg-5 text-center mb-4 mb-lg-0">
+            <img src="../../../../assets/claimsModuleImages/how_to_claim.svg" alt="Claim Process" class="img-fluid" />
+        </div>
+
+        <!-- RIGHT: Text content -->
+        <div class="col-lg-7">
+            <h2 class="fw-bold mb-4">How does the motor claim insurance process work?</h2>
+
+            <p>
+                During motor insurance claims, whether it be a car insurance claim or claim for a two-wheeler,
+                customers often face a lot of hurdles; calling customer support multiple times, filling up the
+                claim form, attaching the relevant documents, waiting for a surveyor to inspect damages and then
+                taking the car to the garage for repair.
+            </p>
+
+            <p>
+                Not so with ICICI Lombard motor insurance. Our smooth and easy claim process ensures you get
+                adequate compensation for the damages suffered within the shortest possible time. By integrating
+                cutting-edge technology into our processes, we provide a seamless claims experience.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- claim-options.component.html -->
+<div class="container py-5">
+    <!-- Tabs -->
+    <ul class="nav nav-tabs mb-4">
+        <li class="nav-item">
+            <a class="nav-link active" routerLink="">Intimate the claim</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="">Complete your video survey</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="">Submit the required documents</a>
+        </li>
+    </ul>
+
+    <!-- Intro text -->
+    <p class="text-center fw-semibold mb-5">
+        Use any of the below methods to intimate an own damage claim
+    </p>
+
+    <!-- Grid of options -->
+    <div class="row text-center justify-content-center">
+        <div class="col-md-2 col-6 mb-4" *ngFor="let method of claimMethods">
+            <div class="p-3">
+                <img [src]="method.icon" class="mb-2" width="50" height="50" />
+                <p class="fw-semibold">{{ method.title }}</p>
+                <div [innerHTML]="method.description"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Note -->
+    <p class="text-muted text-center mt-3" style="font-size: 14px;">
+        Note: For third party or personal accident claims, please intimate us by calling 1800 2666
+    </p>
+
+    <!-- Footer links -->
+    <div class="d-flex justify-content-center gap-4 mt-4 text-decoration-underline">
+        <a routerLink="">View garage list</a>
+        <a routerLink="">Documents for claims process</a>
+        <a routerLink="">Policy wordings</a>
+    </div>
+</div>
+
+<!-- claim-flow.component.html -->
+<div class="container text-center my-5">
+    <h2 class="fw-semibold">Why contact us first and not go to a local garage?</h2>
+    <p class="text-muted">
+        Call us first on <strong>1800 2666</strong> in case of any emergency for a hassle-free motor insurance claim
+        process.
+    </p>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-3 mb-5" *ngFor="let step of claimSteps; let i = index">
+            <div class="position-relative px-3">
+                <!-- Step Number -->
+                <span
+                    class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-light text-dark border"
+                    style="left: 20px; top: -20px; font-size: 18px;">
+                </span>
+
+                <!-- Image -->
+                <img [src]="step.image" class="img-fluid mb-3" alt="step" style="max-height: 200px;" />
+
+                <!-- Text -->
+                <p class="text-center fw-medium fw-semibold" [innerHTML]="step.description"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center my-5">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-3 mb-5" *ngFor="let step of claimSteps2; let i = index">
+            <div class="position-relative px-3">
+                <!-- Step Number -->
+                <span
+                    class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-light text-dark border"
+                    style="left: 20px; top: -20px; font-size: 18px;">
+                </span>
+
+                <!-- Image -->
+                <img [src]="step.image" class="img-fluid mb-3" alt="step" style="max-height: 200px;" />
+
+                <!-- Text -->
+                <p class="text-center fw-medium fw-semibold" [innerHTML]="step.description"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- faq.component.html -->
+<div class="container my-5">
+    <h2 class="text-center mb-4 fw-semibold fw-bold">
+        Get answers to common questions about two-wheeler and car insurance claims
+    </h2>
+
+    <div class="accordion ps-5 pe-5" id="faqAccordion">
+        <div class="accordion-item" *ngFor="let faq of faqs; let i = index">
+            <h2 class="accordion-header" [id]="'heading' + i">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    [attr.data-bs-target]="'#collapse' + i" aria-expanded="false" [attr.aria-controls]="'collapse' + i">
+                    {{ faq.question }}
+                </button>
+            </h2>
+            <div [id]="'collapse' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading' + i"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    {{ faq.answer }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div style="font-size: small;">
+        <b>Disclaimers:</b>
+        <p>Disclaimers: **As on 16th Jan 2022</p>
+        <p>^Claims processed in Jan 2022. Excludes commercial vehicle intimations.</p>
+
+        <p>*Quality assurance of 6 months or 6000 km (whichever comes early) is available only at our preferred partner
+            garages.</p>
+
+        <p>#Approval would be subject to physical survey of the vehicle wherever deemed necessary. The insurer reserves
+            the right to conduct a physical survey in accordance with the regulatory prescriptions.
+        </p>
+        <p>^^Claims must be initiated through InstaSpect during working hours.</p>
+    </div>
+</div>
+
+<app-footer></app-footer>
