@@ -31,8 +31,7 @@
     </div>
 
     <div class="form-container">
-        <form class="claim-form" name="carData" #carData="ngForm"
-            (ngSubmit)="onSendDataClaimsProcess()">
+        <form class="claim-form" name="carData" #carData="ngForm" (ngSubmit)="onSendDataClaimsProcess()">
             <h3>Check health claim status</h3>
 
             <label class="form-label">Type of user</label>
@@ -47,12 +46,14 @@
                 </label>
             </div>
 
-            <input type="text" placeholder="Enter claim number" class="claim-input" name="claimNumber" [(ngModel)]="objectOfHealth.claimNumber" required>
+            <input type="text" placeholder="Enter claim number" class="claim-input" name="claimNumber"
+                [(ngModel)]="objectOfHealth.claimNumber" required>
             <ng-container *ngIf="showDateInput === 'corporate'">
-                <input type="date" placeholder="DD / MM / YYYY" class="claim-input" name="claimsDay" [(ngModel)]="objectOfHealth.claimsDay" required>
+                <input type="date" placeholder="DD / MM / YYYY" class="claim-input" name="claimsDay"
+                    [(ngModel)]="objectOfHealth.claimsDay" required>
             </ng-container>
             <button type="submit" class="submit-btn">Proceed</button>
-        </form> 
+        </form>
     </div>
 
 
