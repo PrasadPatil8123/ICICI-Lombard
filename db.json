@@ -15,7 +15,24 @@
         "notes": "Prefers email communication",
         "lastUpdated": "2025-07-15T22:30:00"
       }
+    },
+    {
+      "id": 2,
+      "mobile": "9876543210",
+      "dateOfBirth": "1990-05-15",
+      "email": "rahul.sharma@example.com",
+      "address": {
+        "street": "Flat 12B, Green Residency",
+        "pincode": "400001",
+        "cityState": "Mumbai, Maharashtra",
+        "landmark": "Opposite CST Station"
+      },
+      "additional": {
+        "notes": "Prefers WhatsApp updates",
+        "lastUpdated": "2025-07-16T09:15:00"
+      }
     }
+
   ],
   "policies": [
     {
@@ -47,7 +64,28 @@
       "startDate": "2022-01-10",
       "endDate": "2023-01-09",
       "premium": 12500
+    },
+    {
+      "id": 201,
+      "userId": 2,
+      "type": "Life Insurance",
+      "status": "active",
+      "policyNumber": "LIC-LIFE-2023-015",
+      "startDate": "2023-03-01",
+      "endDate": "2043-03-01",
+      "premium": 10000
+    },
+    {
+      "id": 202,
+      "userId": 2,
+      "type": "Travel Insurance",
+      "status": "pending",
+      "policyNumber": "ICICI-TRAVEL-2025-003",
+      "startDate": "",
+      "endDate": "",
+      "premium": 2200
     }
+
   ],
   "payments": [
     {
@@ -59,7 +97,18 @@
       "method": "Credit Card",
       "status": "completed",
       "transactionId": "TXN-CAR-7200-ICICI"
+    },
+     {
+      "id": 2,
+      "userId": 2,
+      "policyId": 201,
+      "date": "2023-03-01T08:45:00",
+      "amount": 10000,
+      "method": "UPI",
+      "status": "completed",
+      "transactionId": "TXN-LIFE-10000-LIC"
     }
+
   ],
   "savedQuotes": [
     {
@@ -81,7 +130,18 @@
       "createdDate": "2025-07-12T11:15:00",
       "status": "saved",
       "quoteReference": "QUOTE-MI-2025-0002"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "type": "Home Insurance",
+      "coverageAmount": 1000000,
+      "premium": 8500,
+      "createdDate": "2025-07-14T16:40:00",
+      "status": "saved",
+      "quoteReference": "QUOTE-HOME-2025-0003"
     }
+
   ],
   "carInsuranceQuotes": [
     {
@@ -97,6 +157,21 @@
       "premium": 7200,
       "coverageAmount": 500000,
       "status": "generated"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "vehicleRegistrationNumber": "MH02B7890",
+      "mobile": "9876543210",
+      "email": "rahul.sharma@example.com",
+      "agreedToTerms": true,
+      "whatsappUpdates": false,
+      "quoteGeneratedAt": "2025-07-16T10:30:00",
+      "quoteReference": "QUOTE-CAR-2025-0002",
+      "premium": 6400,
+      "coverageAmount": 400000,
+      "status": "generated"
     }
+
   ]
 }
