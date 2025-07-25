@@ -1,0 +1,102 @@
+{
+  "personalDetails": [
+    {
+      "id": 1,
+      "mobile": "9175156049",
+      "dateOfBirth": "2003-12-08",
+      "email": "prasadpatil2003128@gmail.com",
+      "address": {
+        "street": "House number & name, street name",
+        "pincode": "411057",
+        "cityState": "Pune, Maharashtra",
+        "landmark": "Near Hinjawadi IT Park"
+      },
+      "additional": {
+        "notes": "Prefers email communication",
+        "lastUpdated": "2025-07-15T22:30:00"
+      }
+    }
+  ],
+  "policies": [
+    {
+      "id": 101,
+      "userId": 1,
+      "type": "Car Insurance",
+      "status": "active",
+      "policyNumber": "ICICI-CAR-2023-001",
+      "startDate": "2023-07-01",
+      "endDate": "2024-06-30",
+      "premium": 7200
+    },
+    {
+      "id": 102,
+      "userId": 1,
+      "type": "Bike Insurance",
+      "status": "pending",
+      "policyNumber": "ICICI-BIKE-2025-001",
+      "startDate": "",
+      "endDate": "",
+      "premium": 1800
+    },
+    {
+      "id": 103,
+      "userId": 1,
+      "type": "Health Insurance",
+      "status": "expired",
+      "policyNumber": "ICICI-HEALTH-2022-001",
+      "startDate": "2022-01-10",
+      "endDate": "2023-01-09",
+      "premium": 12500
+    }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "userId": 1,
+      "policyId": 101,
+      "date": "2023-07-01T10:00:00",
+      "amount": 7200,
+      "method": "Credit Card",
+      "status": "completed",
+      "transactionId": "TXN-CAR-7200-ICICI"
+    }
+  ],
+  "savedQuotes": [
+    {
+      "id": 1,
+      "userId": 1,
+      "type": "Health Insurance",
+      "coverageAmount": 500000,
+      "premium": 4500,
+      "createdDate": "2025-07-10T14:23:00",
+      "status": "saved",
+      "quoteReference": "QUOTE-HI-2025-0001"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "type": "Motor Insurance",
+      "coverageAmount": 200000,
+      "premium": 3200,
+      "createdDate": "2025-07-12T11:15:00",
+      "status": "saved",
+      "quoteReference": "QUOTE-MI-2025-0002"
+    }
+  ],
+  "carInsuranceQuotes": [
+    {
+      "id": 1,
+      "userId": 1,
+      "vehicleRegistrationNumber": "MH01A1234",
+      "mobile": "9175156049",
+      "email": "prasadpatil2003128@gmail.com",
+      "agreedToTerms": true,
+      "whatsappUpdates": true,
+      "quoteGeneratedAt": "2025-07-15T23:00:00",
+      "quoteReference": "QUOTE-CAR-2025-0001",
+      "premium": 7200,
+      "coverageAmount": 500000,
+      "status": "generated"
+    }
+  ]
+}
