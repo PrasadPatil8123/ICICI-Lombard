@@ -1,0 +1,54 @@
+<div class="topMenu">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+            <ul class="call-wrap mb-0">
+                <li>
+                    <img alt="Call Us" [src]="imgCallIcon"><span class="call-us">1800 2666</span>
+                    <small>(Available 8am to 11pm)</small>
+                </li>
+            </ul>
+            <div class="container-fluid justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown" *ngFor="let item of topMenu">
+                        <ng-container *ngIf="item.dropdown; else singleLink">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ item.label }}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li *ngFor="let opt of item.options">
+                                    <a class="dropdown-item" [routerLink]="opt.route">{{ opt.label }}</a>
+                                </li>
+                            </ul>
+                        </ng-container>
+                        <ng-template #singleLink>
+                            <a class="nav-link text-dark" [routerLink]="item.route">{{ item.label }}</a>
+                        </ng-template>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<div class="gradient-bg">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg gradient-bg shadow-sm">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+
+                <!-- Logo -->
+                <a class="navbar-brand text-white fw-bold d-flex align-items-center" href="#">
+                    <img [src]="imgIcici" alt="Logo" style="height: 30px; margin-right: 10px;" />
+                </a>
+
+                <!-- Navigation Items -->
+                <ul class="navbar-nav ms-auto flex-row gap-4">
+                    <li class="nav-item" *ngFor="let item of navItems">
+                        <a class="nav-link text-white fw-semibold" [routerLink]="item.route">{{ item.label }}</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+</div>
