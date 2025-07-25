@@ -1,0 +1,210 @@
+<div class="container">
+    <div class="part-1">
+      <div class="row text-left">
+        <!-- left side -->
+        <div class="col-md-12 col-xs-12 col-sm-12 col-lg-7 order-1 order-lg-1">
+            <h1 class="page-head">Your passport to travelling </h1>
+            <h1> with peace of mind</h1>
+            <h3>Travel insurance starting at just {{ 22 | currencySymbol:'INR' }}/day</h3>
+           
+            <!-- 3 boxes -->
+            <div class="benefits-container row">
+                   <div class="benefit-box col-lg-4 col-md-6 col-12" *ngFor="let card of cards">
+                     <div class="icon">
+                             <img [src]="card.imgPath" alt="icon" class="img-fluid"/>
+                     </div>
+                        <div class="title">{{ card.title }}</div>
+                   </div>
+            </div>
+            <!-- image -->
+               <div class="person-image-wrapper  mt-3 order-3 ">
+        <img src="../../../../assets/travel-insurance/0.1.png" class=" person-image" alt="image">
+     </div>
+        </div>
+     
+
+<!-- this is form  part -->
+ <div class="col-md-12 col-xs-12 col-sm-12 col-lg-5 order-2 order-lg-1">
+                <div class="mt-5">
+                <app-travel-insurance-form></app-travel-insurance-form>
+                </div>
+ </div>
+  </div>
+    </div>
+    
+     <!-- main boxes -->
+      <div class="box ">
+        <h2 class="text-center">Millions of Indians love us because</h2>
+      <div class=" boxes row">
+         <div class="main-box col-lg-4 col-md-12 col-sm-12">
+           <div><img src="../../../../assets/travel-insurance/8.svg" alt="cashless" class="img-fluid"></div>
+           <div class="box-text">
+            <h5>Cashless hospitalisation <sup>E</sup></h5>
+            <p>Worldwide cashless medical facility on your international trip</p>
+           </div>
+         </div>
+
+         <div class="main-box col-lg-4 col-md-12 col-sm-12">
+           <div><img src="assets/travel-insurance/9.png" alt="cashless"class="img-fluid"></div>
+           <div class="box-text">
+            <h5>IL Take Care app</h5>
+            <p>Quick claim intimation, Food calorie check etc</p>
+           </div>
+         </div>
+
+         <div class="main-box col-lg-4 col-md-12 col-sm-12">
+           <div><img src="assets/travel-insurance/10 (2).png" alt="cashless"class="img-fluid"></div>
+           <div class="box-text">
+            <h5>24x7 customer support</h5>
+              <ol class="list-inline">
+                phone
+               <li class="list-inline-item">chat</li>
+              <li class="list-inline-item">mail</li>
+              <li class="list-inline-item">Visit: 320+ branches <sup>E</sup></li>
+              </ol>
+           </div>
+         </div>
+      </div>
+    </div>
+
+
+    <div class="travel">
+        <img src="assets/travel-insurance/10.png" alt="travel img" class="img-fluid">
+      <div>
+        <h3>Travel Insurance</h3>
+        <p>The thrill of travelling comes with uncertainties lost luggage, medical emergencies, flight cancellations, and unexpected disruptions. Whether you’re heading on a family vacation, a solo adventure, or a business trip, ICICI Lombard’s travel insurance has you covered. Offering worldwide cashless hospitalisation, emergency support, and protection against travel inconveniences, our travel insurance plans can ensure that you focus on the journey, not the risks. With quick online policy issuance and 24/7 assistance, you can set out on your next trip without worry. Travel smarter with insurance that lets you embrace new experiences while staying prepared for life’s surprises.
+       </p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <h3>Features of ICICI Lombard's travel insurance</h3>
+  <div class="features-grid">
+    <div class="feature-box" *ngFor="let feature of features">
+      <img [src]="feature.icon" alt="icon" class="icon img-fluid" />
+      <div class="feature-text">
+      <h5>{{ feature.title }}</h5>
+      <p>{{ feature.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- advantages -->
+ <div class="main-adv mt-3">
+      <h2 class="align-center">Advantages of buying ICICI Lombard's travel insurance policy</h2>
+    <div class="adv">
+       <div *ngFor="let advant of advantages; let i = index" class="adv-box ">
+           <div class="adv-icon">{{i + 1}}</div>
+         <div class="adv-text">
+              <h5>{{advant.title}}</h5>
+              <p>{{advant.description}}</p></div>
+      </div>
+    </div>
+ </div>
+
+
+ <!-- covered -->
+ <div class="covered my-5">
+  <h2 class="text-center fw-bold mb-4">What’s covered under ICICI Lombard's travel insurance?</h2>
+
+  <p-tabView>
+    <p-tabPanel header="Inclusions">
+      <div class="row gy-4">
+        <div class="col-md-6 d-flex">
+          <i class="pi pi-check-circle text-success fs-3 me-3 mt-1"></i>
+          <div>
+            <h5 class="fw-bold mb-1">Hospitalisation expenses for illness and injury</h5>
+            <p class="mb-0">A medical emergency during your trip could mentally and financially drain you. Our travel insurance policy covers hospitalisation expenses during your travel.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 d-flex">
+          <i class="pi pi-check-circle text-success fs-3 me-3 mt-1"></i>
+          <div>
+            <h5 class="fw-bold mb-1">Personal liability</h5>
+            <p class="mb-0">Legal expenses arising from bodily injuries or property damage to a third-party could be taxing. Our policy helps cover the legal costs associated with such mishaps.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 d-flex">
+          <i class="pi pi-check-circle text-success fs-3 me-3 mt-1"></i>
+          <div>
+            <h5 class="fw-bold mb-1">Lost, delayed, or damaged baggage</h5>
+            <p class="mb-0">Our travel insurance policy covers you for expenses incurred due to loss of baggage, delay (more than six hours) of baggage and even damage of baggage in transit.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 d-flex">
+          <i class="pi pi-check-circle text-success fs-3 me-3 mt-1"></i>
+          <div>
+            <h5 class="fw-bold mb-1">Emergency cash</h5>
+            <p class="mb-0">If you need emergency cash during your trip because of a lost wallet, we will help you arrange it.</p>
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+
+    <!-- exclusion -->
+   <p-tabPanel header="Exclusions">
+  <div class=" row gy-2">
+    <div class="col-md-6 d-flex">
+       <i class="pi pi-times-circle text-danger me-2 fs-5"></i>
+      <p class="mb-0 exc-text">Events before the trip starts or after it ends</p>
+    </div>
+
+    <div class="col-md-6 d-flex">
+    <i class="pi pi-times-circle text-danger me-2 fs-5"></i>
+      <p class="mb-0 exc-text">Intentional self-injury, suicide, or intoxication</p>
+    </div>
+
+    <div class="col-md-6 d-flex">
+        <i class="pi pi-times-circle text-danger me-3 fs-5"></i>
+      <p class="mb-0 exc-text">Fraudulent claims, false declarations, or willful damage by the insured</p>
+    </div>
+
+    <div class="col-md-6 d-flex">
+       <i class="pi pi-times-circle text-danger me-3 fs-5"></i>
+      <p class="mb-0 exc-text">Involvement in murder, assault, or criminal acts</p>
+    </div>
+
+    <div class="col-md-6 d-flex">
+        <i class="pi pi-times-circle text-danger me-3 fs-5"></i>
+      <p class="mb-0 exc-text">The insured travelling against medical advice, awaiting specific treatments, with terminal prognosis, seeking treatment, or involved in military/naval operations</p>
+    </div>
+
+    <div class="col-md-6 d-flex">
+       <i class="pi pi-times-circle text-danger me-3 fs-5"></i>
+      <p class="mb-0 exc-text">Professional/semi-professional sports without prior declaration</p>
+    </div>
+
+    <div class="col-md-6 d-flex">
+       <i class="pi pi-times-circle text-danger me-3 fs-5"></i>
+      <p class="mb-0 exc-text">Participation in hazardous/adventure sports (unless premium is paid for coverage)</p>
+    </div>
+
+    <div class="col-md-6 d-flex">
+        <i class="pi pi-times-circle text-danger me-3 fs-5"></i>
+      <p class="mb-0 exc-text">Overseas trips exceeding 90 days on an immigrant visa</p>
+    </div>
+
+    <div class="col-md-6 offset-md-6 d-flex">
+        <i class="pi pi-times-circle text-danger me-3 fs-5"></i>
+      <p class=" exc-text mb-0">Claims below the deductible or time excess in the policy schedule.</p>
+    </div>
+  </div>
+
+  <p class=" mt-1 exc-text">
+    There are cover-specific exclusions apart from general exclusions which need to be referred to. The details are available in the product’s policy wording.
+  </p>
+  </p-tabPanel>
+
+  </p-tabView>
+</div>
+
+    
+     
+     
+     
+      
+</div>

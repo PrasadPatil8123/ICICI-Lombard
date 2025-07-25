@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-16"?>
+<svg width="40" height="48" viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="Group 14">
+    <path id="Stroke 1" d="M18.039 41.1339H4.98184C2.78224 41.1339 1.00024 39.351 1.00024 37.1523V4.98178C1.00024 2.78218 2.78224 1.00018 4.98184 1.00018H27.9705C30.1692 1.00018 31.9512 2.78218 31.9512 4.98178V25.9365" stroke="#002A51" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    <g id="Group 5">
+      <mask id="mask0_3_1573" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="20" y="27" width="20" height="21">
+        <path id="Clip 4" fill-rule="evenodd" clip-rule="evenodd" d="M20.8923 27.0789H39.7117V47.0807H20.8923V27.0789Z" fill="white" />
+      </mask>
+      <g mask="url(#mask0_3_1573)">
+        <path id="Fill 3" fill-rule="evenodd" clip-rule="evenodd" d="M20.9223 28.2667L25.4637 46.3594C25.6617 47.1478 26.6922 47.3422 27.1647 46.6807L31.7529 39.505L39.1563 36.7717C39.8952 36.4333 39.8979 35.3839 39.1608 35.041L22.2498 27.1705C21.5217 26.8312 20.727 27.4882 20.9223 28.2667Z" fill="#EC6625" />
+      </g>
+    </g>
+    <path id="Stroke 6" d="M6.35353 25.4168H13.7254" stroke="#002A51" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    <path id="Stroke 8" d="M6.35353 31.1566H13.7254" stroke="#002A51" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    <path id="Stroke 10" d="M6.35353 19.6433H26.5621" stroke="#002A51" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    <path id="Stroke 12" fill-rule="evenodd" clip-rule="evenodd" d="M11.7035 14.5825H8.3762C7.2593 14.5825 6.3539 13.6771 6.3539 12.5602V9.23293C6.3539 8.11513 7.2593 7.21063 8.3762 7.21063H11.7035C12.8204 7.21063 13.7258 8.11513 13.7258 9.23293V12.5602C13.7258 13.6771 12.8204 14.5825 11.7035 14.5825Z" stroke="#002A51" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

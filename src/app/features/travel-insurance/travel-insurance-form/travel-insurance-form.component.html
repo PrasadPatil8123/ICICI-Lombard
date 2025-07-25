@@ -1,1 +1,184 @@
-<p>travel-insurance-form works!</p>
+<div class="container mt-3">
+ 
+  <div class="card ">
+  <!-- Trip Type -->
+     <div class="trip-tabs  ">
+        <div [ngClass]="{active: tripType === 'single'}" (click)="tripType = 'single'">Single Trip
+            <p>One policy, one trip</p>
+        </div>
+        <div [ngClass]="{active: tripType === 'multi'}" (click)="tripType = 'multi'" >Multi Trip
+            <p>One policy, Multiple trips</p>
+        </div>
+     </div>
+
+    <div  *ngIf="tripType === 'single'">
+        <div class=" radio-toggle ms-3 mt-4">
+         <p-radioButton name="geoType" value="geography" [(ngModel)]="geoOrCountry" inputId="geo"></p-radioButton>
+           <label for="geo" class="ms-2 me-4">Select geography</label>
+         <p-radioButton  class="ms-5 " name="geoType"  value="country"  [(ngModel)]="geoOrCountry"  inputId="country"></p-radioButton>
+           <label for="country" class="ms-2">Select country</label>
+     </div>
+
+  <!-- Region Select -->
+     <div *ngIf="geoOrCountry === 'geography'" class="region-cards mt-4">
+      <div 
+        *ngFor="let region of regionOptions" 
+         class="region-wrapper"
+         (click)="selectedRegion = region.value">
+
+       <div class="region-card" [class.selected]="selectedRegion === region.value">
+          <img [src]="region.img" alt="{{region.label}}" />
+       </div>
+
+       <div class="region-label">{{ region.label }}</div>
+     </div>
+       <a class="text align-center mb-2">know more about geographical scope</a>
+      </div>
+  <!-- </div> -->
+
+<!-- country -->
+ <!-- Country Input (Optional) -->
+  <div class="form" *ngIf="geoOrCountry === 'country'">
+<div  class="form-group mt-3 position-relative">
+  <input
+    type="text"
+    class="form-control travel-input"
+    placeholder="Travelling to"
+    [(ngModel)]="travellingTo"
+    [value]="selectedCountries.join(', ')"
+      readonly
+  />
+  </div>
+
+<!-- Popular Countries Section -->
+<div class="mt-3 popular-container">
+  <h5 class="fw-semibold mb-2">Popular countries</h5>
+  <div class="popular-country-list">
+    <div
+      class="country-tag"
+      *ngFor="let country of popularCountries"
+      [class.selected]="selectedCountries.includes(country)"
+      (click)="toggleCountry(country)" >
+      {{ country }}
+    </div>
+  </div>
+</div>
+  </div>
+    
+  
+
+  <!-- Dates -->
+   <div class="row mt-3">
+     <div class="date-section col-md-6 col-sm-6 mb-3 ">
+                <!-- Travel Date -->
+            <p-calendar  [(ngModel)]="travelDate" [showIcon]="true" 
+                         dateFormat="dd/mm/yy"  name="travelDate" inputId="travelDate"
+                          placeholder="travel date" class="custom-calendar w-100"
+                          [numberOfMonths]="2"  [touchUI]="false"
+                           icon="pi pi-calendar-plus" [minDate]="minDate"
+                           (onSelect)="validateDates()"    (onBlur)="onTravelDateBlur()"
+                           [required]="true"> 
+            </p-calendar>
+<div *ngIf="showTravelDateRequiredError" class="text-danger"><small>Travel date is required.</small></div>
+
+         </div>
+      <!-- </div> -->
+
+                <!-- Return Date -->
+    <div class="date-section col-md-6 col-sm-6">
+         <p-calendar  [(ngModel)]="returnDate" [showIcon]="true" name="returnDate"  
+                         dateFormat="dd/mm/yy"  inputId="returnDate"  #returnDateRef="ngModel"
+                          placeholder="return date" class="custom-calendar w-100"
+                          [numberOfMonths]="2"  [touchUI]="false"
+                          [minDate]="travelDate || minDate"
+                          (onSelect)="validateDates()" (onBlur)="onReturnDateBlur()"
+                            [required]="true"> 
+            </p-calendar>
+       
+              <!-- Show if empty on touch -->
+          <div *ngIf="showReturnDateRequiredError" class="text-danger"><small>Return date is required.</small></div>
+            <div *ngIf="dateError" class="text-danger">{{ dateError }}</div>
+            <div *ngIf="tripDuration !== null" class="mt-2 text-danger">
+               Trip Duration: <small >{{ tripDuration }}</small> days
+              </div>
+           </div>
+    </div>
+  <!-- </div> -->
+   
+
+  <!-- Checkboxes -->
+  <!-- Terms and Conditions -->
+<div class="checkbox mt-4">
+  <p-checkbox
+    [(ngModel)]="agreeTerms"
+    inputId="terms"
+    class="me-2"
+    (onChange)="validateCheckboxes()"
+    [styleClass]="agreeTerms ? 'checked-orange' : ''">
+  </p-checkbox>
+  <label for="terms">
+    I agree to the <a href="#" class="link">terms and conditions</a>
+  </label>
+  <div *ngIf="showTermsError" class="text-danger mt-1">You must agree to the terms</div>
+</div>
+
+<!-- Visa Checkbox -->
+<div class="checkbox mt-4">
+  <p-checkbox
+    [(ngModel)]="hasVisa"
+    inputId="visa"
+    class="me-2"
+    (onChange)="validateCheckboxes()"
+    [styleClass]="hasVisa ? 'checked-orange' : ''">
+  </p-checkbox>
+  <label for="visa">All the travellers have a non-immigrant visa</label>
+  <div *ngIf="showVisaError" class="text-danger mt-1">Visa confirmation is required</div>
+</div>
+
+
+  <p class="textinfo mt-2 p-2">
+    All the travelling members are Indian residents and will be travelling from India
+  </p>
+</div>
+
+<!-- multitrip -->
+<div *ngIf="tripType === 'multi'" class="p-4" style="max-width: 450px; margin: auto;">
+  <h6 class="mb-3">In which age group do you fall?</h6>
+  <p-selectButton 
+    [options]="ageGroupOptions" 
+    [(ngModel)]="selectedAgeGroup" 
+    optionLabel="label"
+    class=" custom-select-button">
+  </p-selectButton>
+
+  <h6 class="mt-3 mb-3">What would be the maximum duration of your trips?</h6>
+  <p-selectButton 
+    [options]="tripDurationOptions" 
+    [(ngModel)]="selectedDuration" 
+    optionLabel="label"
+    class="w-full mb-4 custom-select-button">
+  </p-selectButton>
+ 
+
+  <div class="mt-4">
+  <p-calendar 
+    [(ngModel)]="tripStartDate" 
+    placeholder="Trip start date" 
+    inputId="tripStartDate"
+    [showIcon]="true"
+    class="w-full ">
+  </p-calendar>
+  </div>
+</div>
+
+
+
+  <!-- Button -->
+  <button class="btn btn-warning w-full mt-4 mb-4" (click)="onSubmit()">
+    Continue
+  </button>
+     </div>
+ 
+
+
+</div>

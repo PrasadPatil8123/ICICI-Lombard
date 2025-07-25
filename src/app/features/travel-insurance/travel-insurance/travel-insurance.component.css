@@ -1,0 +1,355 @@
+.container {
+  max-width: 100%;
+  padding: 0 50px;
+  align-items: center;
+}
+.part-1{
+    margin: 50px;
+}
+h1 {
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+/*  3 boxes */
+.benefits-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  margin: 2rem 0;
+  overflow: hidden; /* Prevent scrollbars by default */
+}
+
+/* Each box */
+.benefit-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2px;
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
+  min-width: 250px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.benefit-box .icon {
+  flex: 0 0 60px;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.benefit-box .icon img {
+  max-width: 100%;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.benefit-box  .title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+/* image */
+.person-image-wrapper {
+  position: relative;
+  z-index: -1;
+  margin-top: 30px;
+}
+
+.person-image {
+ width: 150%;
+  max-width: none;
+  height: auto;
+  position: relative;
+  left: -60px;
+  top: 100px;
+z-index: -1;
+}
+
+/* main boxes */
+.boxes{
+ display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  margin: 2rem 0;
+  /* overflow: hidden; */
+   
+}
+.box h2{
+    font-size: 20px;
+}
+
+.main-box{
+    display: flex;
+    border: 2px solid #eaeaeaea;
+    border-radius: 10px;
+     margin: 2rem 0;
+    padding: 10px;
+    max-width: 100%;
+     align-items: center;
+}
+.main-box img{
+     flex: 0 0 60px;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box-text{
+    font-weight: 600;
+  font-size: 14px;
+  color: #333;
+
+}
+
+.box-text h5{
+color: #FD7B20;
+}
+
+/* travel */
+.travel{
+    display: flex;
+    padding: 0 100px;
+}
+
+/* feture */
+.feature {
+  padding: 2rem;
+  text-align: center;
+  background-color: #F8F6F6;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+  gap: 3rem;
+}
+
+.feature-box {
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.icon {
+  width: 50px;
+  margin-bottom: 1rem;
+}
+.feature-text{
+text-align: start;
+}
+
+/* advantages */
+.main-adv h2{
+    margin: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.adv{
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+}
+.adv-box{
+    border: 2px solid #ffeadf ;
+     background: linear-gradient(90deg, #FFF2EB, white); 
+    background-color:  #fff7f3;
+    border-radius: 1rem;
+    margin:0 1.5rem 1.5rem  1.5rem ;
+    display: flex;
+    padding: 1.5rem;
+    gap: 1rem;
+    align-items: flex-start; 
+}
+.adv-icon{
+    font-size: 60px;
+    font-weight: lighter;
+    padding: 20px;
+    color: #c0392b;
+
+}
+.adv-text{
+    flex: 1;
+    padding: 10px;
+}
+.adv-text h5{
+    font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.adv-text p {
+  margin: 0.4rem 0 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* covered */
+
+
+/* Style the entire tab navigation bar with border and rounded corners */
+::ng-deep .p-tabview-nav-container {
+padding-left: 0;
+
+
+}
+/* Style all tabs */
+::ng-deep .p-tabview-nav {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px 8px 0 0 ;
+   
+}
+/* Style each tab item */
+::ng-deep .p-tabview-nav li {
+    font-size: 20px;
+  position: relative;
+  padding-left: 40px;
+
+}
+/* Tab link base style */
+::ng-deep .p-tabview-nav  .p-tabview-nav-link {
+   font-size: 16px;
+    max-width: 200px;
+  font-weight: 500;
+  padding: 1rem 0.5rem;
+  color: #666;
+  border: none;
+  background: none;
+  border-radius: 0;
+  transition: all 0.3s ease;
+    text-decoration: none !important;
+}
+
+/* Style for active tab only */
+::ng-deep .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  color: #fa5b0f;
+  font-weight: 600;
+}
+::ng-deep .p-tabview-nav li.p-highlight .p-tabview-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; /* overlays the bottom border */
+  left: 0;
+  width: 200px;
+  height: 3px;
+  background-color: #fa5b0f;
+  border-radius: 3px;
+}
+
+/* exclusion */
+.covered{
+    margin: 20px;
+    padding: 40px;  
+    border-bottom: 1px solid #E8E5E4;
+    border-radius: 8px;
+    
+}
+.exc-text{
+    font-size: 15px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === Mobile Scrollable View WITHOUT Scrollbar === */
+@media (max-width: 768px) {
+
+    .container{
+        padding: 0px;
+    }
+  .benefits-container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+     display: flex !important; 
+     gap: 1rem;
+}
+.part-1 h1{
+    display: none;
+}
+  .benefits-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  .benefit-box {
+     background-color:#FFF4E5 ;
+    min-width: 400px;
+    height: 80px ;
+    flex-shrink: 0;
+  }
+
+  /* image */
+  .person-image {
+ width: 200%;
+  max-width: none;
+  height: auto;
+ display: none;
+}
+
+/* main boxes */
+ .boxes{
+    width: 100%;
+    display: block;
+    margin: 30px;
+ }
+
+ /* travel */
+ .travel{
+    padding: 40px;
+ }
+ .travel h3{
+ text-align: center;
+ }
+.travel img{
+display: none;
+}
+
+/* features */
+
+.features-grid {
+  grid-template-columns: 1fr; /* 3 columns per row */ 
+}
+.feature h3{
+    text-align: start;
+}
+.feature{
+    padding: 1rem;
+}
+
+/* advantages */
+.adv {
+  grid-template-columns: 1fr; /* 3 columns per row */ 
+}
+.adv-icon{
+    font-size: 40px;
+    font-weight:normal;
+    padding: 20px;
+}
+
+ 
+}
+
+
+
+
