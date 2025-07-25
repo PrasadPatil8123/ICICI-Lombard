@@ -67,14 +67,10 @@ export class HealthClaimsComponent {
       this.connectOptions = res;
     })
   }
-
   //blogArticles data
   public onGetblogArticles() {
     this.healthService.onGetBlogArticles().subscribe((res: any) => {
       this.blogArticles = res;
     })
   }
-
-
-
 }
