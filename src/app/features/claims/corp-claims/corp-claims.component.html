@@ -1,0 +1,187 @@
+<div class="top-navbar">
+    <div class="container ">
+        <nav class="top-navbar d-flex justify-content-between align-items-center px-4 py-2">
+            <div class="d-flex align-items-center">
+                <img src="../../../../assets/claimsModuleImages/il-logo.png" alt="ICICI Logo" class="logo me-3">
+            </div>
+
+            <div class="text-white d-flex flex-wrap align-items-center gap-3">
+                <div>
+                    <i class="bi bi-telephone-fill me-1"></i> 1800 2666
+                </div>
+                <div class="border-start border-white ps-3">
+                    <i class="bi bi-envelope-fill me-1"></i>{{mail}}
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<div class="container my-4 col-md-6">
+    <h2 class="text-center mb-4">Welcome to ICICI Lombard Customer Claims Portal</h2>
+
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#corporateClaims">Corporate Claims</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#mobileClaims">Mobile & Appliances Claims</a>
+        </li>
+    </ul>
+
+    <div class="tab-content border border-top-0 p-4">
+        <!-- Corporate Claims Tab -->
+        <div class="tab-pane container" id="mobileClaims">
+            <div class="row">
+                <!-- Intimate a Claim -->
+                <div class="col-md-6">
+                    <h5>Intimate a Claim</h5>
+                    <form [formGroup]="intimateForm" (ngSubmit)="onIntimateSubmit()">
+                        <div>
+                            <input type="hidden" formControlName="id">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Policy Number"
+                                formControlName="policyNumber">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Mobile Number"
+                                formControlName="mobileNumber">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Enter IMEI/Serial Number"
+                                formControlName="imeiNumber">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Loan Account Number"
+                                formControlName="loanAccountNumber">
+                        </div>
+                        <button class="btn btn-warning w-100">Submit</button>
+                    </form>
+                </div>
+
+                <!-- Track a Claim -->
+                <div class="col-md-6">
+                    <h5>Track a Claim</h5>
+                    <form [formGroup]="trackForm" (ngSubmit)="onTrackSubmit()">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Claim Reference Number"
+                                formControlName="claimRef">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Loan Account Number"
+                                formControlName="loanNumber">
+                        </div>
+                        <button class="btn btn-warning w-100">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-4 text-danger fw-bold small">
+                You can now intimate your claim, upload documents, and know the status of your claim through
+                WhatsApp.
+                Send "Hi" on WhatsApp number <span class="text-primary">+91 7738282666</span> or
+                <span class="text-success">click here</span> for hassle-free claims management at your
+                fingertips—anytime, anywhere.
+            </div>
+        </div>
+
+        <div class="tab-content border p-4 bg-white rounded shadow-sm">
+            <!-- Corporate Claims -->
+            <div class="tab-pane fade show active" id="corporateClaims">
+                <div class="row">
+                    <!-- Intimate a Claim -->
+                    <div class="col-md-6 mb-3">
+                        <h5>Intimate a Claim</h5>
+                        <form [formGroup]="intimateForm" (ngSubmit)="onIntimateSubmit()">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" formControlName="policyNumber"
+                                    placeholder="Enter Policy Number *">
+                            </div>
+                            <div class="mb-3">
+                                <input type="date" class="form-control" formControlName="policyStartDate">
+                            </div>
+                            <button class="btn btn-warning w-100">Submit</button>
+                        </form>
+                    </div>
+
+                    <!-- Track a Claim -->
+                    <div class="col-md-6 mb-3">
+                        <h5>Track a Claim</h5>
+                        <form [formGroup]="trackForm" (ngSubmit)="onTrackSubmit()">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" formControlName="claimRefNumber"
+                                    placeholder="Enter Claim Reference Number *">
+                            </div>
+                            <div class="mb-3">
+                                <input type="date" class="form-control" formControlName="lossDate">
+                            </div>
+                            <button class="btn btn-warning w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Footer Message -->
+                <div class="mt-4 text-danger fw-bold small">
+                    You can now intimate your claim, upload documents, and know the status of your claim through
+                    WhatsApp.
+                    Send "Hi" on WhatsApp number <span class="text-primary">+91 7738282666</span> or
+                    <span class="text-success">click here</span> for hassle-free claims management at your
+                    fingertips—anytime, anywhere.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <p>If you are an existing policyholder of erstwhile Bharti AXA General Insurance, and want to intimate or
+        track claims, <a routerLink="">click here</a>.
+    </p>
+    <p>You can also call us on 1800-103-2292 or write to us at customersupport&#64;icicilombard.com</p>
+</div>
+
+<footer class="footer bg-light py-4 mt-5">
+    <div class="container">
+        <div class="row gy-4">
+            <!-- Left: Logo and Contact Info -->
+            <div class="col-md-6 col-lg-4">
+                <img src="../../../../assets/claimsModuleImages/il-logo.png" alt="ICICI Logo" height="40" class="mb-2">
+                <p class="fw-bold mb-1">ICICI Lombard General Insurance Company Limited</p>
+                <p class="mb-1">ICICI Lombard House, 414, Veer Savarkar Marg, Near Siddhi Vinayak Temple,<br>Prabhadevi,
+                    Mumbai - 400025.</p>
+                <p class="mb-1">Email: <a
+                        href="mailto:customersupport@icicilombard.com">customersupport&#64;icicilombard.com</a></p>
+                <p>Fax no: 022 61961323</p>
+                <div class="d-flex gap-3 fs-5">
+                    <a href="#"><i class="bi bi-facebook"><img src="../../../../assets/claimsModuleImages/fb-ico.svg"
+                                alt=""></i></a>
+                    <a href="#"><i class="bi bi-linkedin"><img src="../../../../assets/claimsModuleImages/lin-ico.svg"
+                                alt=""></i></a>
+                    <a href="#"><i class="bi bi-youtube"><img src="../../../../assets/claimsModuleImages/yt-ico.svg"
+                                alt=""></i></a>
+                    <a href="#"><i class="bi bi-instagram"><img src="../../../../assets/claimsModuleImages/inst-ico.svg"
+                                alt=""></i></a>
+                </div>
+            </div>
+
+            <!-- Middle: Support Links -->
+            <div class="col-md-3 col-lg-4">
+                <h6 class="fw-bold">SUPPORT</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Download Claim Forms</a></li>
+                    <li><a href="#">Grievance Redressal</a></li>
+                </ul>
+            </div>
+
+            <!-- Right: Legal Links -->
+            <div class="col-md-3 col-lg-4">
+                <h6 class="fw-bold">LEGAL</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">Surveyor Limit</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
