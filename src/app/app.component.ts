@@ -19,6 +19,7 @@ export class AppComponent {
       SubMenueList:['Contact Us','Grievance Redressal','Counter Offer Acceptance'],
       isSelected: false
     },
+    
     {
       Title:'Info Centre',
       SubMenueList:['Info Centre','Expert Blogs','FAQs','Tax Benefits','Downloads','Corporate India Risk Index',
@@ -48,6 +49,16 @@ export class AppComponent {
       SubMenueList:['Car Insurance','Bike Insurance','Motor Floater','Motor Insurance'],
       Img:'../assets/nav-images/motor-navigation.png',
       Link:'motor'
+    },
+    {
+      Title:'test code',
+      Img:'../assets/nav-images/motor-navigation.png',
+      SubMenueList: [
+      { label: 'Employee Benefit Insurance', route: '#' },
+      { label: 'Emoloyee (Workmen`s) Compensation ', route: '/' },
+      { label: 'Group Health insurance', route: '/' },
+      { label: 'Group Personal Accident ', route: '/' },
+    ]
     },
      {
       Title:'Health Insurance',

@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
+  
   {path : 'motor', loadChildren: ()=> import('./features/motor-insurance/motor-insurance.module')
     .then (mod => mod.MotorInsuranceModule)
   },
