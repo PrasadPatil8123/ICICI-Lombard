@@ -21,8 +21,8 @@ import { ClaimsModule } from './features/claims/claims.module';
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    Footer2Component,
+    // FooterComponent,
+    // Footer2Component,
     NavbarComponent,
     PipesPipe,
     DirectivesDirective,
@@ -35,7 +35,7 @@ import { ClaimsModule } from './features/claims/claims.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
+    Footer2Component,
     CommonModule,
     ButtonModule,
     ClaimsModule,

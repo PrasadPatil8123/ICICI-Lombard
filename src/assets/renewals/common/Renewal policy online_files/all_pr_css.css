@@ -1,0 +1,1134 @@
+/*---------Home Styles Start---*/
+body {
+    font-family: 'Muli','Roboto',sans-serif;
+}
+
+.home-banner {
+    position: relative;
+}
+
+    .home-banner .ilBannerImg {
+        width: 100%;
+    }
+
+.allpolicyrenewal--btn {
+    width: 12rem;
+    border-radius: 8px 0 0 8px;
+    padding: 2rem 1.5rem;
+    background: #ce561a;
+    background: -moz-linear-gradient(top,#df7625 0,#c13911 100%);
+    background: -webkit-linear-gradient(top,#df7625 0,#c13911 100%);
+    background: linear-gradient(to bottom,#df7625 0,#c13911 100%);
+    background-repeat: repeat-x;
+    outline: 0;
+    transition: all 0.5s ease;
+}
+
+.allpolicyrenewal--btn-block {
+    display: block;
+}
+
+.allpolicyrenewal--btn img {
+    transform: scaleX(-1);
+    margin-bottom: 0.8rem;
+}
+
+.textwhite {
+    color: #fff;
+}
+
+.allpolicyrenewal--btn-position {
+    position: absolute;
+    top: 25%;
+    right: 0;
+}
+
+.allpolicyrenewal--btn-font {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.5;
+    font-weight: 400 !important;
+}
+
+.rightArrow {
+    border: solid #fff;
+    border-width: 1.2px 0 0 1.2px;
+    display: inline-block;
+    padding: .25rem;
+    vertical-align: top;
+    transform: rotate(130deg);
+    -webkit-transform: rotate(130deg);
+    margin-left: 5px;
+    margin-top: 8px;
+    transition: all 0.5s ease;
+}
+
+.allpolicyrenewal--btn:hover .rightArrow {
+    margin-left: 12px;
+    transition: all 0.5s ease;
+}
+/*---------Home Styles End---*/
+
+/*---------Common Styles Start---*/
+.pad-top8 {
+    padding-top: 8rem;
+}
+
+.pad-top4 {
+    padding-top: 4rem;
+}
+
+.pad-top2 {
+    padding-top: 2rem;
+}
+.pad-top25 {
+    padding-top: 2.5rem;
+}
+.pad-bot6 {
+    padding-bottom: 6rem;
+}
+.pad-bot8 {
+    padding-bottom: 8rem;
+}
+.mar-top-0 {
+    margin-top:0 !important;
+}
+.mar-top--8 {
+    margin-top: -8px !important;
+}
+.pad-top-bot-3 {
+    padding: 3rem 0 3rem 0;
+}
+
+.bg-blue .input-block label {
+    color: #a2b0bd;
+}
+
+.bg-blue .input-policy-document {
+    margin-top: -4rem;
+    /*height: 48px;*/
+}
+
+    .bg-blue .input-policy-document > label {
+        position: relative;
+        cursor: initial;
+        padding: 0;
+        font-size: 1.3rem;
+        color: #fff;
+        font-weight: 300;
+        display: inline-block;
+        margin-top: 0.8rem;
+    }
+
+.bg-blue .input-below-details {
+    margin-top: -2rem;
+}
+
+    .bg-blue .input-below-details > label {
+        position: relative;
+        cursor: initial;
+        padding: 0;
+        font-size: 1.8rem;
+        color: #fff;
+        font-weight: 300;
+        display: inline-block;
+        margin-top: 0.8rem;
+    }
+
+.bg-blue .input-policy-document > label {
+    color: rgba(255,255,255,.5);
+}
+
+.ui-form-block .renew-with-select {
+    margin-bottom: 4rem;
+}
+
+.display-hide {
+    display: none;
+}
+
+.display-show {
+    display: block;
+}
+
+.mar-bottom-5 {
+    margin-bottom: 5rem !important;
+}
+.note .note-remeber {
+    cursor:pointer;
+}
+.note-remeber {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #fbbe5e !important;
+    padding-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    padding-right: 5px;
+    outline: 0;
+}
+
+.note-remeber-position {
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+    z-index: 9;
+}
+
+.note-remeber-hover:hover {
+    text-decoration: underline;
+}
+
+.input-block-height-initial {
+    height: initial;
+}
+
+ul.renewpolicy-list {
+    width: 100%;
+    margin: 0;
+}
+
+    ul.renewpolicy-list li, ul.policy-listbl li {
+        display: inline-block;
+        min-width: auto;
+        float: none;
+        padding: 0;
+        text-transform: none;
+        margin: 2rem 0 0;
+        cursor: pointer;
+        margin-right: 5rem;
+    }
+
+.renewpolicy-list li .radio, .policy-listbl li .radio {
+    margin: 0;
+}
+
+ul.renewpolicy-list li .radio label, ul.policy-listbl li .radio label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.vehicle-renew-policy .radio input[type=radio]:checked + .radio-label,
+ul.renewpolicy-list li .radio input[type=radio]:checked + .radio-label {
+    color: #fff;
+    cursor: pointer;
+}
+
+    .vehicle-renew-policy .radio input[type=radio]:checked + .radio-label:before,
+    ul.renewpolicy-list li .radio input[type=radio]:checked + .radio-label:before {
+        background-color: #ec6608;
+        -webkit-box-shadow: inset 0 0 0 5px #003d59;
+        box-shadow: inset 0 0 0 5px #003d59;
+        border: 1px solid #ec6608;
+    }
+
+.vehicle-renew-policy .radio input[type=radio] + .radio-label:before,
+ul.renewpolicy-list li .radio input[type=radio] + .radio-label:before {
+    border: 1px solid #5c748a;
+}
+
+.p-l-0 {
+    padding-left: 0;
+}
+
+.p-r-0 {
+    padding-right: 0;
+}
+.bg-blue span.ui-error {
+    display:initial;
+}
+/*---------Common Styles Start---*/
+/*---------Policy Renewal Styles Start---*/
+.aprBlock ul.ui-banner-list li {
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+    .aprBlock ul.ui-banner-list li img {
+        margin-right: 1.5rem;
+    }
+
+    .aprBlock ul.ui-banner-list li:nth-child(2) img {
+        margin-right: 1.5rem;
+    }
+
+.renew-with-select.ripple-bar.focus:after {
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+}
+
+.input-block select {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: .5rem;
+    padding-bottom: 10px;
+    font-weight: 300;
+    letter-spacing: .05rem;
+    -webkit-appearance: none;
+    position: relative;
+}
+
+.ripple-bar select {
+    cursor: pointer;
+    z-index: 2;
+    width: 100%;
+    outline: 0;
+    background: 0 0;
+}
+
+.bg-blue .ripple-bar select {
+    background: #00305a;
+    background-image: linear-gradient(45deg, transparent 50%, #fff 50%), linear-gradient(135deg, #fff 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+}
+
+.apr-submit-btn {
+    border: none;
+    position: relative;
+}
+
+    .apr-submit-btn:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #ffffff69;
+        -webkit-transform: translateX(-100%) rotate(45deg);
+        -ms-transform: translateX(-100%) rotate(45deg);
+        transform: translateX(-100%) rotate(45deg);
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        opacity: 0;
+    }
+    .apr-submit-btn:disabled {
+        background: #ababab;
+    }
+
+button:focus {
+    outline: 0;
+}
+
+.apr-section-content-padding {
+    padding: 6rem 0 12rem 0;
+}
+
+.input-block.policy-end-date label {
+    font-size: 1.6rem;
+    top: -22px;
+}
+
+.policy-end-date-wraper {
+    border-bottom: 1px solid #5c748a;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+}
+
+.input-block .input-block.policy-end-date-wraper {
+    max-width: 100%;
+    margin-bottom: 0rem;
+}
+
+    .input-block .input-block.policy-end-date-wraper.ripple-bar:after {
+        bottom: 0;
+    }
+
+.input-block .policy-end-date-wraper input {
+    margin-top: 0;
+    padding-bottom: 0;
+    max-width: 50px;
+    height: 55px;
+}
+
+    .input-block .policy-end-date-wraper input:last-child {
+        max-width: 80px;
+    }
+
+.input-block .policy-end-date-wraper span {
+    font-size: 2rem;
+    height: 55px;
+    line-height: 55px;
+    font-weight: 300;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    color: #a2b0bd;
+}
+
+.input-block .policy-end-date-wraper input::placeholder {
+    color: #a2b0bd;
+}
+
+.input-block .input-block.policy-end-date .ui-form-block span.error-bottom {
+    bottom: -4px;
+}
+
+.input-block .input-block.policy-end-date .note {
+    margin-top: 10px;
+}
+
+.aprBlock .ui-form-block .ui-submit-btn {
+    margin-top: 3rem;
+}
+/*---------Policy Renewal Styles End---*/
+
+/*---------Phone Number Styles Start---*/
+.input-block.phone-otp-section label {
+    font-size: 1.6rem;
+    top: -22px;
+}
+
+.phone-otp-wraper {
+    border-bottom: 0px solid #5c748a;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+.input-block .phone-otp-wraper .input-block {
+    max-width: 14.633%;
+    margin-left: 1rem;
+}
+
+    .input-block .phone-otp-wraper .input-block:first-child {
+        margin-left: 0rem;
+    }
+
+.input-block .phone-otp-wraper input {
+    margin-top: 0;
+    padding-bottom: 0;
+    max-width: 100%;
+    height: 55px;
+    border-bottom: 1px solid #5c748a;
+    text-align: center;
+}
+
+.input-block .phone-otp-wraper .ripple-bar:after {
+    bottom: 13px;
+}
+
+.bg-blue #apr-phone .input-policy-document {
+    margin-bottom: 3rem;
+}
+.apr-popup .content .input-policy-document {
+    margin-bottom: 4.5rem !important;
+}
+.apr-popup .content .ui-submit-btn {
+    margin-top: 0rem !important;
+}
+.apr-popup .bg-light .input-policy-document label {
+    margin-top: 0;
+}
+.bg-blue #apr-phone .note {
+    padding-top: 0.2rem;
+}
+
+.bg-blue #apr-phone .note.note-otp {
+    padding:0;
+    margin-top: -10px;
+}
+
+    .bg-blue #apr-phone .note.note-otp a.note-remeber, 
+    .bg-blue #apr-phone .note.note-otp .note-remeber {
+        padding: 2px 0 0 0;
+        cursor: pointer;
+    }
+    .bg-blue #apr-phone .note.note-otp .ui-error {
+        position: initial;
+        display: inline-block;
+        padding-bottom: 0.5rem;
+        display: inline-block;
+        width: 76%;
+        color: #fc9494;
+    }
+.otp-submit-section {
+    width: 100%;
+    padding-top: 4rem;
+}
+.bg-blue #apr-loan .input-policy-document {
+    margin-bottom: 2rem;
+}
+
+#apr-loan .note, #apr-policy .note, #apr-policy-edit .note {
+    margin-top: -0.6rem;
+}
+    #apr-policy .note .note-remeber, #apr-policy-edit .note .note-remeber, #apr-loan .note .note-remeber {
+        cursor: pointer;
+    }
+
+.ui-form-block #apr-loan span.error-bottom, .ui-form-block #apr-policy span.error-bottom, .ui-form-block #apr-policy-edit span.error-bottom {
+    bottom: -28px;
+}
+/*---------Phone Number Styles End---*/
+
+/*---------Popup Styles Start---*/
+.apr-popup .popup {
+    margin: 0;
+    height: 100%;
+    border-radius: 0;
+    background: #f7f6f6;
+}
+
+    .apr-popup .popup .bg-white {
+        background: transparent;
+    }
+
+.apr-popup .content {
+    padding: 8rem 10rem;
+}
+    .apr-popup .content h2, .apr-popup .content .bg-light h3, .apr-popup .content .bg-light p  {
+        color: #282828;
+    }
+
+    .apr-popup .content p {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #282828;
+    }
+
+.apr-popup .bg-light .input-block.mar-bottom {
+    margin-bottom: 1rem;
+}
+
+.apr-popup .bg-light .input-policy-document {
+    height: 18px;
+    margin-top: -2.5rem;
+}
+
+.apr-popup .bg-light .input-block label {
+    color: #969494;
+}
+
+.apr-popup .bg-light .input-policy-document label, .apr-popup .bg-light .check-feild label {
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.apr-popup .bg-light .input-block input {
+    border-bottom: 1px solid #b6b4b4;
+    color: #282828;
+}
+.apr-popup .bg-light .input-block.focus input:disabled {
+    opacity: 1;
+}
+
+.apr-popup .bg-light .input-block label sup, .apr-popup .bg-light .ui-error {
+    color: #e71a1a;
+}
+
+.apr-popup .bg-light .ripple-bar:after {
+    background: #585858;
+}
+
+.apr-popup .popup .close {
+    right: 3rem;
+    top: 2rem;
+    cursor: pointer;
+}
+
+    .apr-popup .popup .close:after, .apr-popup .popup .close:before {
+        left: 1rem;
+        top: -6px;
+        height: 4rem;
+        width: .2rem;
+    }
+
+.apr-popup .bg-light .input-check + label:before {
+    border: 1px solid #b6b4b4;
+    background: transparent;
+}
+
+.apr-popup .bg-light .input-check:checked + label:before {
+    border: solid #fe6625;
+    background: #fe6625;
+}
+
+.apr-popup .thankyou-section h3 {
+    margin-top: 4rem;
+    font-size: 3.5rem;
+    font-weight: 100;
+    color:#282828;
+}
+
+.apr-popup .thankyou-section p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.apr-popup .thankyou-section .thankyou-content p.ticket-no {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.apr-popup .thankyou-content p a {
+    font-size: 2rem;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.apr-popup .thankyou-section .section-content, .apr-popup .try-search-section .section-content {
+    padding: 0;
+}
+
+.ui-popup-card-wrap {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+    .ui-popup-card-wrap .card-main-block {
+        display: inline-block;
+        width: 46%;
+        margin: 0 3rem 1.5rem 0;
+        vertical-align: top;
+    }
+
+        .ui-popup-card-wrap .card-main-block:nth-child(2n+2) {
+            margin-right: 0;
+        }
+
+        .ui-popup-card-wrap .card-main-block .card-inner-block {
+            text-align: left;
+            padding: 2.5rem 3rem;
+            background: #fff;
+            border-radius: 5px;
+            background: #fff;
+            min-height: 5vh;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+    .ui-popup-card-wrap h4 {
+        font-weight: 800;
+        color: #282828;
+        position: relative;
+        padding-left: 1rem;
+    }
+
+    .ui-popup-card-wrap .card-phone-number h4 span {
+        width: 8px;
+        height: 12px;
+        background: url(/docs/default-source/angular/assets/images/arrow-right.png) no-repeat;
+        position: absolute;
+        top: 9px;
+        right: 5px;
+    }
+
+    .ui-popup-card-wrap h5, .ui-popup-card-wrap h6 {
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #6c6c6c;
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+    .ui-popup-card-wrap .card-im-block h6 {
+        color: #6c6c6c !important;
+    }
+
+    .ui-popup-card-wrap h5 {
+        padding-left: 1rem;
+    }
+
+    .ui-popup-card-wrap a, .ui-popup-card-wrap a:focus {
+        font-weight: 600;
+        text-decoration: underline;
+    }
+
+    .ui-popup-card-wrap h4 a, .ui-popup-card-wrap h4 a:hover, .ui-popup-card-wrap h4 a:focus {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #282828;
+        text-decoration: none;
+    }
+
+    .ui-popup-card-wrap p {
+        font-size: 1.5rem;
+        position: relative
+    }
+
+    .ui-popup-card-wrap .card-inner-block span {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #f26624;
+        text-align: center;
+        padding-bottom: 1rem;
+
+        text-decoration: underline;
+        padding-top: 0px;
+        margin-top: -18px;
+    }
+
+    .ui-popup-card-wrap .card-inner-block p span {
+        font-size: 1.5rem;
+        color: #282828;
+        padding: 0 2rem;
+        position: relative
+    }
+
+        .ui-popup-card-wrap .card-inner-block p span:after {
+            content: "";
+            background: #bebebe;
+            display: inline-block;
+            height: .4rem;
+            width: .4rem;
+            border-radius: 50px;
+            position: absolute;
+            top: 14px;
+            left: 100%;
+            right: auto
+        }
+
+    .ui-popup-card-wrap .card-inner-block span:last-child:after {
+        display: none
+    }
+
+    .ui-popup-card-wrap .card-result-block {
+        margin-top: 2rem;
+        margin-bottom: 0rem;
+        font-size: 1.5rem;
+        color: #282828;
+    }
+
+    .ui-popup-card-wrap .card-result-block-list {
+        position: relative;
+        padding: 0rem 2rem 1rem;
+        margin-bottom: 0 !important;
+    }
+
+        .ui-popup-card-wrap .card-result-block-list label {
+        }
+
+        .ui-popup-card-wrap .card-result-block-list:before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #282828;
+            position: absolute;
+            top: 6px;
+            left: 0;
+            z-index: 1;
+        }
+
+        .ui-popup-card-wrap .card-result-block-list:last-child:before {
+            top: 4px;
+        }
+
+        .ui-popup-card-wrap .card-result-block-list:after {
+            content: "";
+            width: 1px;
+            background: #282828;
+            position: absolute;
+            top: 6px;
+            left: 4px;
+            height: 100%;
+        }
+
+        .ui-popup-card-wrap .card-result-block-list:last-child:after {
+            display: none;
+        }
+
+    .ui-popup-card-wrap .card-im-innerblock {
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+        .ui-popup-card-wrap .card-im-innerblock .card-member-names {
+            width: 75%;
+            height: 19px;
+        }
+
+            .ui-popup-card-wrap .card-im-innerblock .card-member-names.viewmore-members{
+                height: auto;
+            }
+
+        .ui-popup-card-wrap .card-im-innerblock .card-member-1more {
+            max-width: 25%;
+        }
+
+        .ui-popup-card-wrap .card-im-innerblock .card-member-1more, .card-member-1more a {
+            font-size: 1.2rem;
+            padding-left: 1rem;
+            font-weight: 600;
+            padding-top: 0.1rem;
+            text-decoration: none;
+        }
+
+            .card-member-1more a, .card-member-1more a:focus {
+                color: #f26624;
+            }
+
+.card-due-renewal-date {
+    border-top: #eaeaea 1px solid;
+    margin-top: 2rem;
+}
+
+    .card-due-renewal-date h6 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #282828;
+        margin-top: 1.5rem;
+        padding-left: 1rem;
+    }
+
+.card-color-red h6 {
+    color: #e71a1a;
+}
+
+.card-im-block, .card-result-block {
+    padding-left: 1rem;
+}
+
+.renew-list-scroll {
+    max-height: 570px;
+    overflow-y: auto;
+}
+
+    .renew-list-scroll::-webkit-scrollbar {
+        width: 1em;
+    }
+
+    .renew-list-scroll::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .renew-list-scroll::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 0px solid slategrey;
+    }
+
+#all-renew-thankyou {
+    margin-top: 3rem;
+}
+
+#all-renew-trysearch .ui-form-block .ui-submit-btn {
+    margin-top: 0rem;
+}
+
+.whatsapp-preferences label {
+    font-weight: 200;
+}
+
+    .whatsapp-preferences label a {
+        font-weight: 500;
+        cursor: pointer;
+        color: #fe6625;
+    }
+.ui-form-block .ui-confirm-btn {
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.btn-orange {
+    touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    color: #fff;
+    padding: 1.5rem 4rem;
+    font-size: 1.8rem;
+    background: #ec6608;
+    -webkit-border-radius: 30rem;
+    border-radius: 30rem;
+    text-decoration: none;
+}
+
+    .btn-orange:hover {
+        color: #fff;
+    }
+
+        .btn-orange:hover:after {
+            opacity: 1;
+            -webkit-animation: fx-mask .3s ease-out;
+            -moz-animation: fx-mask .3s ease-out;
+            -ms-animation: fx-mask .3s ease-out;
+            animation: fx-mask .3s ease-out;
+        }
+
+    .btn-orange:focus {
+        color: #fff;
+    }
+
+.btn-white {
+    border: solid 1px #ee7205;
+    color: #ec6608 !important;
+    background: #fff !important;
+    margin-right: 4rem;
+    padding: 1.4rem 4rem;
+}
+
+    .btn-white:hover {
+        color: #ec6608 !important;
+        background: #fff !important;
+    }
+
+@-webkit-keyframes fx-mask {
+    0% {
+        -webkit-transform: translateX(-100%) rotate(45deg);
+        -ms-transform: translateX(-100%) rotate(45deg);
+        -moz-transform: translateX(-100%) rotate(45deg);
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        -webkit-transform: translateX(100%) rotate(45deg);
+        -moz-transform: translateX(100%) rotate(45deg);
+        -ms-transform: translateX(100%) rotate(45deg);
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+.apr-cancel-btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(236, 102, 8, 0.5);
+    -webkit-transform: translateX(-100%) rotate(45deg);
+    -ms-transform: translateX(-100%) rotate(45deg);
+    transform: translateX(-100%) rotate(45deg);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    opacity: 0;
+}
+
+@keyframes fx-mask {
+    0% {
+        -webkit-transform: translateX(-100%) rotate(45deg);
+        -moz-transform: translateX(-100%) rotate(45deg);
+        -ms-transform: translateX(-100%) rotate(45deg);
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        -webkit-transform: translateX(100%) rotate(45deg);
+        -ms-transform: translateX(100%) rotate(45deg);
+        -moz-transform: translateX(100%) rotate(45deg);
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+/*---------Popup Styles End---*/
+
+/*---------Policy Number Edit Styles Start---*/
+.policy-no-edit {
+    font-size: 1.3rem;
+    color: #f26624 !important;
+    float: right;
+    font-weight: 600;
+    text-decoration: underline;
+    position: absolute;
+    right: 3px;
+    top: 10px;
+    cursor:pointer;
+}
+.bg-blue .input-block input:disabled {
+    opacity: 1;
+}
+
+/*---------Policy Number Edit Styles End---*/
+
+
+/*---------Policy not found and purchase a fresh policy Styles Start---*/
+.purchase-fresh-policy-section {
+    width: 100%;
+    margin-top: 7rem;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    border: solid 1px #dddccb;
+    background-color: #f7f6f6;
+    font-size: 12px;
+}
+
+    .purchase-fresh-policy-section h5 {
+        font-size: 17px;
+        font-weight: 600;
+        color: #004a80;
+        letter-spacing: normal;
+        line-height: normal;
+        margin-bottom: 2rem;
+    }
+
+.section-border-lr {
+    border-left: solid 1px #dddccb;
+    border-right: solid 1px #dddccb;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.section-border-l {
+    padding-left: 3rem;
+}
+
+.purchase-fresh-policy-section a {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #282828;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+    .purchase-fresh-policy-section a:last-child {
+        margin-bottom: 0;
+    }
+
+    .purchase-fresh-policy-section a span {
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        background: url(/docs/default-source/angular/assets/images/arrow-right-black.png) no-repeat;
+        top: 1px;
+        position: relative;
+        margin-left: 8px;
+    }
+
+    .purchase-fresh-policy-section a:hover {
+        color: #ec6608;
+    }
+
+        .purchase-fresh-policy-section a:hover span {
+            background: url(/docs/default-source/angular/assets/images/arrow-right-org.png) no-repeat;
+        }
+
+    .purchase-fresh-policy-section a:not([href]) {
+        cursor: pointer;
+    }
+
+@media (max-width:768px) {
+    .section-border-lr {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .section-border-l {
+        padding-left: 2rem;
+    }
+}
+
+@media (max-width:767px) {
+    .section-border-lr {
+        border-left: solid 0px #dddccb;
+        border-right: solid 0px #dddccb;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    .section-border-l {
+        padding-left: 0rem;
+    }
+
+    .purchase-fresh-policy-section a:last-child, .purchase-fresh-policy-section a {
+        margin-bottom: 1rem;
+    }
+
+    .purchase-fresh-policy-section {
+        margin-top: 5rem;
+    }
+}
+
+/*---------Policy not found and purchase a fresh policy Styles End---*/
+
+/*---------OTP verfication Styles Start---*/
+.otp-back {
+    touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    color: #ec6608;
+    padding: 0rem 1rem 0rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: transparent;
+    -webkit-border-radius: 0rem;
+    border-radius: 0rem;
+    text-decoration: none;
+    top: 27px;
+    position: absolute;
+    opacity: 0.8;
+}
+
+    .otp-back img {
+        transform: rotate(180deg);
+        top: -1px;
+        position: relative;
+        margin-right: 5px;
+    }
+    .otp-error {
+
+        bottom: -52px;
+    }
+
+.apr-popup .bg-light .input-block label.phone-otp-label {
+    color: #282828;
+}
+
+.otp-resend {
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: #ec6608 !important;
+    padding-top: 10px;
+    display: inline-block;
+    padding-right: 5px;
+    position: absolute;
+    bottom: -21px;
+    right: 0;
+    z-index: 9;
+}
+.change-mobile {
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: #ec6608 !important;
+    padding-top: 10px;
+    display: inline-block;
+    padding-right: 5px;
+    position: absolute;
+    bottom: -21px;
+    z-index: 9;
+}
+
+@media(max-width:767px) {
+    .apr-popup .popup .close {
+        right: 2rem;
+        top: 2rem;
+    }
+
+    .input-block.phone-otp-section label {
+        top: -50px;
+    }
+
+    .otp-section h2 {
+        margin-bottom: 2rem;
+    }
+
+    .ui-form-block .input-block.phone-otp-section {
+        margin-top: 3rem;
+    }
+}
+/*---------OTP verfication Styles End---*/

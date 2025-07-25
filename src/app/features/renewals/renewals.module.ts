@@ -13,6 +13,7 @@ import { ButtonComponent } from './shared/button/button.component';
 import { CarBikeComponent } from './common/car-bike/car-bike.component';
 import { AllHealthComponent } from './common/all-health/all-health.component';
 import { DisclaimersComponent } from './common/disclaimers/disclaimers.component';
+import { Footer2Component } from 'src/app/common/all footer/footer2/footer2.component';
 
 
 const routes:Routes = [
@@ -41,7 +42,8 @@ const routes:Routes = [
     [RouterModule.forChild(routes)],
     FormsModule,
     ButtonModule,
-    RadioButtonModule
+    RadioButtonModule,
+    Footer2Component
   ]
 })
 export class RenewalsModule { }
