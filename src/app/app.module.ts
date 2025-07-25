@@ -15,6 +15,7 @@ import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
 import { ClaimsModule } from './features/claims/claims.module';
 import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
+import { DashboardModule } from './common/dashboard/dashboard.module';
 
 
 
@@ -36,10 +37,12 @@ import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
     HttpClientModule,
 
     ClaimsRoutingModule,
+  
 
     CommonModule,
     ButtonModule,
     ClaimsModule,
+    DashboardModule,
     BrowserAnimationsModule
 
   ],

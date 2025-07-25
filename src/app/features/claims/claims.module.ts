@@ -38,7 +38,10 @@ import { CorpClaimsComponent } from './corp-claims/corp-claims.component';
     CorpClaimsComponent,
   ],
   exports: [
-    HealthClaimsComponent
+    HealthClaimsComponent,
+    Navbar2Component,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
