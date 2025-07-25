@@ -15,6 +15,7 @@ import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
 import { ClaimsModule } from './features/claims/claims.module';
 import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -39,10 +40,11 @@ import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
 
     CommonModule,
     ButtonModule,
-    ClaimsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
 
+    RouterModule
   ],
+  exports: [FooterComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

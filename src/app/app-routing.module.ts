@@ -28,9 +28,13 @@ const routes: Routes = [
   },
   {path : 'travel-inc', loadChildren:()=> import('./features/travel-insurance/travel-insurance.module')
     .then(mod => mod.TravelInsuranceModule)
-  }
+  },
+ {path:"sme",loadChildren:()=>
+  import('../app/features/sme-insurance/sme-insurance.module')
+  .then((mod)=>mod.SmeInsuranceModule)
+ }
 
-]
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

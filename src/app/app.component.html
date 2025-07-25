@@ -90,7 +90,7 @@
                 <span class="navbar-toggler-icon icon-light"></span>
             </button>
             <div class="nav-brand">
-                <img [src]="iciLogo" class="ms-5">
+                <img [src]="iciLogo">
             </div>
             <div class="collapse navbar-collapse" id="sec-nav-coll" *ngIf="isShow">
                 <ul class="navbar-nav">
@@ -106,7 +106,7 @@
                         <div class="sub-menu-list">
                             <ul>
                                 <li *ngFor="let subMenue of menue.SubMenueList">
-                                    <a class="dropdown-item mb-3" routerLink ="menue.Link">{{subMenue.label}}</a>
+                                    <a class="dropdown-item mb-3" routerLink ="menue.Link">{{subMenue}}</a>
                                 </li>
                             </ul>
                         </div>
