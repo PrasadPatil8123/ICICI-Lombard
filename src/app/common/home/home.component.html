@@ -1,4 +1,629 @@
-<p>home works!</p>
-<h1>hi
-</h1>
-<h1>hello</h1>
+<!-- These section is for responsive desingn -->
+ <section class="home-banner-res">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="banner-color">
+                            <div class="banner-image position-relative">
+                                <h4>
+                                    Over 4 crore customers have faith in us because we care.
+                                </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-flex gap-3">
+                    <div class="col-6 d-flex justify-content-between bg-white rounded-3 p-2 aling-items-center">
+                        <span class="">Car</span>
+                        <span class="car-icon-bg-img mt-2 z-2"></span>
+                    </div>
+                    <div class="col-6 d-flex justify-content-between bg-white rounded-3 p-2 aling-items-center">
+                        <span class="">Bike</span>
+                        <span class="bike-icon-bg-img mt-2 position-relative z-1"></span>
+                    </div>
+                </div>
+                <div class="col-12 d-flex gap-3 mt-2">
+                    <div class="col-6 d-flex justify-content-between bg-white rounded-3 p-2 aling-items-center">
+                        <span class="">Travel</span>
+                        <span class="travel-icon-bg-img mt-2"></span>
+                    </div>
+                    <div class="col-6 d-flex justify-content-between bg-white rounded-3 p-2 aling-items-center">
+                        <span class="">Business</span>
+                        <span class="sme-icon-bg-img mt-2"></span>
+                    </div>
+                </div>
+                <div class="col-12 d-flex gap-3 mt-2">
+                    <div class="col-6 d-flex justify-content-between bg-white rounded-3 p-2 aling-items-center">
+                        <span class="">Health</span>
+                        <span class="health-icon-bg-img mt-2"></span>
+                    </div>
+                </div>
+                <div class="col-12 d-flex justify-content-between bg-white rounded-3 p-2 aling-items-center mt-2">
+                    <span class="">Renewals</span>
+                    <span class="renewal-icon-bg-img"></span>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- Main home page section -->
+        <section class="home-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="banner-image position-relative">
+                            <h3>
+                                Over 4 crore customers have faith in us because we care.
+                            </h3>
+                            <div class="right-banner position-absolute right-0 top-0">
+                                <img src="../../../assets/home-images/homepage-section-one-img.png">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <section class="secondpart-home">
+                <div class="container">
+                    <div class="row">
+                        <div class="slider-block d-flex gap-4">
+                            <div class="col-md-9 col-lg-9">
+                                <div class="main-product-box">
+                                    <div class="main-product-change-part">
+                                        <ul class="tab-section">
+                                               <li class="Car" *ngFor="let item of productLists" (click)="productClick(item)">
+                                                 <div class="tab-section-img" 
+                                                      [ngStyle]="{'border-bottom': item.tabBorderBottom}" 
+                                                      [ngClass]="{'active-class': item.isActive}">
+                                                    <div class="lable" [ngStyle]="{'background-color': item.labelBgColor}"> 
+                                                      <span class="car-icon-bg-img" [ngStyle]="{'background-image': 'url(' + item.bgImgUrl + ')'}"></span>
+                                                    </div>
+                                                      <span class="car">{{ item.Name }}</span>
+                                                 </div>
+                                                </li>
+                                        </ul>
+                                        <div class="tab-content-box ps-3">
+                                            <form>
+                                                <div class="row">
+                                                    <!-- Add the conditions for Bike And Car -->
+                                                    <div class="col-sm-3 col-md-3 col-lg-3 col-12" *ngIf="isProductActive('Car')">
+                                                        <label for="regitration" class="label1">Car registration no.<span class="text-orange">*</span>
+                                                        </label>
+                                                        <input class="border-bottom placeholder1" type="text" id="registration" name="reg.num" placeholder="E.G. MH01DF5698">
+                                                    </div>
+                                                    <!-- Condition For Bike -->
+                                                    <div class="col-sm-3 col-md-3 col-lg-3 col-12" *ngIf="isProductActive('Bike')">
+                                                        <label for="regitration" class="label1">Bike registration no.<span class="text-orange">*</span>
+                                                        </label>
+                                                        <input class="border-bottom placeholder1" type="text" id="registration" name="reg.num" placeholder="E.G. MH01DF5698">
+                                                    </div>
+                                                    <!-- Common Forms Part for car and bike -->
+                                                    <div class="col-sm-3 col-md-3 col-lg-3 col-12" *ngIf="isProductActive('Bike') || isProductActive('Car')">
+                                                        <label for="regitration" class="label2">Mobile no.<span class="text-orange">*</span>
+                                                        </label>
+                                                        <input class="border-bottom placeholder2" type="text" id="registration" name="reg.num" placeholder="Enter mobile no.">
+                                                    </div>
+                                                    <div class="col-sm-3 col-md-3 col-lg-3 col-12" *ngIf="isProductActive('Bike') || isProductActive('Car')">
+                                                        <label for="regitration" class="label3">Email<span class="text-orange">*</span>
+                                                        </label>
+                                                        <input class="border-bottom placeholder3" type="text" id="registration" name="reg.num" placeholder="Enter email addressed">
+                                                    </div>
+                                                    <!-- Condition For Health -->
+                                                    <div class="col-sm-3 col-md-3 col-lg-3 col-12" *ngIf="isProductActive('Health')">
+                                                        <label for="regitration" class="label1">Select Products<span class="text-orange">*</span>
+                                                        </label>
+                                                        <select class="form-select mt-3" aria-label="Default select example">
+                                                                 <option selected>Elevate</option>
+                                                                 <option value="MaxProtect">Max Protect</option>
+                                                                 <option value="ActivateBooster">Activate Booster</option>
+                                                                 <option value="HealthAdvantEdge">Health AdvantEdge</option>
+                                                                 <option value="ArogyaSanjeevani">Arogya Sanjeevani Policy, ICICI Lombard</option>
+                                                                 <option value="Personal Protect">Personal Protect</option>
+                                                        </select>
+                                                        
+                                                    </div>
+                                                    <div class="col-sm-3 col-md-3 col-lg-3 col-12" *ngIf="isProductActive('Health')">
+                                                        <label for="regitration" class="label2">Insure members<span class="text-orange">*</span>
+                                                        </label>
+                                                        <input class="border-bottom placeholder2" type="text" id="registration" name="reg.num" placeholder="Enter mobile no.">
+                                                    </div>
+                                                    <div class="col-sm-3 col-md-3 col-lg-3 col-12" *ngIf="isProductActive('Health')">
+                                                        <label for="regitration" class="label3">Contact Details<span class="text-orange">*</span>
+                                                        </label>
+                                                        <input class="border-bottom placeholder3" data-bs-toggle="modal" data-bs-target="#health-modal" type="text" id="registration" name="reg.num" placeholder="Add details">
+                                                    <!-- Modal Structure -->
+                                                    <div class="modal fade" id="health-modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                           <div class="modal-header d-flex justify-content-between">
+                                                       <!-- Correct Close Button (data-bs-dismiss) --> 
+                                                                 <button type="button" class="btn btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+                                                           </div>
+                                                           <div class="modal-body d-flex">
+                                                                <form [formGroup]="userForm" (ngSubmit)="onSubmitUserForm(userForm)" class="healthh-modal">
+                                                                    <div class="form-group">
+                                                                       <label for="mobile">Mobile no. <span class="required">*</span></label>
+                                                                        <br>
+                                                                        <input class=" form-control border-bottom" type="text" id="mobile" formControlName="mobile" name="mobile" placeholder="Enter mobile no" required [ngClass]="{'is-invalid': userForm.get('mobile').errors}">
+                                                                        <div class="text-danger" *ngIf="userForm.get('mobile').touched && userForm.get('mobile').errors">
+                                                                              Mobile no. is required
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                       <label for="email">Email <span class="required">*</span></label>
+                                                                       <br>
+                                                                       <input class=" form-control border-bottom" type="text" id="email" formControlName="email" name="email" placeholder="Enter email address" required [ngClass]="{'is-invalid': userForm.get('email').errors}">
+                                                                       <div class="text-danger" *ngIf="userForm.get('email').touched && userForm.get('email').errors">
+                                                                              Email is required
+                                                                       </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="pincode">Pincode <span class="required">*</span></label>
+                                                                        <br>
+                                                                        <input class=" form-control border-bottom" type="text" id="pincode" formControlName="pincode" name="pincode" placeholder="Enter Pincode" required [ngClass]="{'is-invalid': userForm.get('pincode').errors}">
+                                                                        <div class="text-danger" *ngIf="userForm.get('pincode').touched && userForm.get('pincode').errors">
+                                                                           Pincode is required
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                         <label for="name">Your Name <span class="required">*</span></label>
+                                                                        <br>
+                                                                        <input class=" form-control border-bottom" type="text" id="pincode" formControlName="name" name="name" placeholder="Enter your name" required [ngClass]="{'is-invalid': userForm.get('name').errors}">
+                                                                        <div class="text-danger" *ngIf="userForm.get('name').touched && userForm.get('name').errors">
+                                                                               Name is required
+                                                                        </div>
+                                                                    </div>
+                                                                   <button type="submit" class="btn btn-warning mt-2">Done</button>
+                                                                   <button type="reset" class="btn btn-info ms-3 mt-2">Reset</button>
+                                                                </form>
+                                                             </div>
+                                                            </div>
+                                                          </div>
+                                                       </div> 
+                                                    </div>
+                                                    <!-- Condition For Travel -->
+
+                                                <!-- commom part -->
+                                                    <div class="col-sm-3 col-md-2 col-lg-2 col-xs-12">
+                                                        <button class="orange home-btn">Get quote</button>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-10 col-lg-10">
+                                                        <a class="text-dark" href="Got a new vehical">Got a new vehicle</a>
+                                                    </div>
+                                                    <div class="col-md-2 col-lg-2">
+                                                        <a class="text-orange">Recent Quote</a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox-area col-12 mt-3 mb-5">
+                                        <form>
+                                            <input type="checkbox" value="i agree" class="checkbox1"> I agree to the terms & conditions &nbsp; &nbsp;| &nbsp;
+                                            <input type="checkbox" value="i want to get" class="checkbox1" data-bs-toggle="modal" data-bs-target="#sec-modal"> I want to get my quote and policy details on 
+                                            <img src="../../../assets/home-images/whatsapp-new-black.png">
+                                        </form>
+                                        <div class="modal" id="sec-modal">
+                                            <div class="modal-dialog modal-lg ps-3">
+                                                <div class="modal-content">
+                                                    <div class="d-flex gap-2">
+                                                        <img src="../../../assets/home-images/whatsapp-alert-ico-checkbox.png" height="30px" width="30px">
+                                                        <h3 class="text-danger d-inline">You don't want to miss this.</h3>
+                                                    </div>
+                                                    <h4 class="pb-5">By opting out of WhatsApp communication, you'll lose out on:</h4>
+                                                    <ul>
+                                                        <li>
+                                                            <img src="../../../assets/home-images/error-list-arrow-modal.png">
+                                                            Your personalised quote delivered directly on WhatsApp
+                                                        </li>
+                                                        <li>
+                                                            <img src="../../../assets/home-images/error-list-arrow-modal.png">
+                                                            WhatsApp notification on policy information, updates & announcements
+                                                        </li>
+                                                    </ul>
+                                                    <div class=" bootom-part-modal row text-orange me-2">
+                                                        <div class="col-5 text-orange">
+                                                            <b>Keep me posted on WhatsApp</b>
+                                                        </div>
+                                                        <div class="col-6 mt-3">
+                                                            Don't send me updates on WhatsApp.
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="home-block-list d-flex">
+                                        <div class="col-3 line">
+                                            <p class="text-orange">Discover product prices<br> here</p>
+                                            <h4 class="text-orange">28.08 Million</h4>
+                                            <h5>Policies issued</h5>
+                                        </div>
+                                        <div class="col-3">
+                                            <h4 class="text-orange">2.08<br> Million</h4>
+                                            <h5>Claims settled</h5>
+                                        </div>
+                                        <div class="col-3">
+                                            <h4 class="text-orange">13600+</h4>
+                                            <h5>Network garages</h5>
+                                            <small>As on Jan 3, 2025</small>
+                                        </div>
+                                        <div class="col-3">
+                                            <h4 class="text-orange">10200+
+                                            </h4>
+                                            <h5>Healthcare providers</h5>
+                                            <small>As on Jan 31, 2025</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 responsive-couresol">
+                                <div class="owl-stage-outer">
+                                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                       <div class="carousel-inner">
+                                       <!-- Use *ngFor to loop through images array -->
+                                       <div *ngFor="let image of images; let isFirst = first" class="carousel-item" [class.active]="isFirst">
+                                         <a href="">
+                                           <img [src]="image.src" [alt]="image.alt" class="d-block w-100">
+                                         </a>
+                                       </div>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="owl-stage-button">
+                                    <div class="button-active d-flex flex-wrap justify-content-center">
+                                        <div class="owl-dots active text-orange" *ngFor="let dot of dots">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        
+         <section class="bg-white-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-centre">
+                        <h2 class="heading-2">Why choose ICICI Lombard?</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="content-wrap d-flex">
+                        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                            <h3>Dependable</h3>
+                            <div class="para ps-5">
+                                <p>
+                                    <strong>You can rely on us at all times.</strong>
+                                </p>
+                                <p class="inner-para">
+                                    Be it during large calamities like Odisha cyclone or minor accidents like a broken tail-light, we have always stood by our customers in time of need. We have repeatedly introduced industry-leading practices for
+                                    nearly two decades . So, in times of trouble, be assured, we’ve got your back. We stand by our motto: <strong>“Nibhaye Vaade”.</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 text-right">
+                            <img src="../../../assets/home-images/dependable-img.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="content-wrap d-flex">
+                        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 text-left">
+                            <img src="../../../assets/home-images/approachable.png">
+                        </div>
+                        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                            <h3>Approachable</h3>
+                            <div class="para ps-5">
+                                <p>
+                                    <strong>You've got a friend in us.</strong>
+                                </p>
+                                <p class="inner-para">
+                            Value of insurance is realised when you make a claim. In your hour of need, be it a major surgery or a broken car, you need more than just claim support. Our team comprises highly trained professionals and
+                            functional experts to guide you through the right course of action during emergencies. So, don’t hesitate. Any questions you have or any help you need - just reach out to us.
+                         </p>
+                         <div class="approchable-bottom">
+                            <h4>We are available where you are.</h4>
+                            <ul class="d-flex">
+                                <li>Call Centre</li>
+                                <li>Chate</li>
+                                <li>320+ branches</li>
+                            </ul>
+                            <span class="ms-5 ps-5">(As on December 31, 2024)</span>
+                         </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="content-wrap d-flex">
+                        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                            <h3>Transparent</h3>
+                            <div class="para ps-5">
+                                <p>
+                                    <strong>We give you the power of clarity.</strong>
+                                </p>
+                                <p class="inner-para">
+                                    Insurance products are designed and priced through complicated mathematical models. But we strive to explain the extent of coverage to you in a simple manner. From policy issuance to claims, you can count on us for keeping it simple. We have always gone the extra mile to make things clear, right from pre-sales to claims support.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 text-right">
+                            <img src="../../../assets/home-images/transparent.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="our-product-section">
+            <div class="container">
+                <h2>Our Product</h2>
+            <div class="product-row">
+                <div class="product-item">
+                    <div class="product-header d-flex">
+                        <p class="block-title">Car</p>
+                        <div class="img-block">
+                            <img src="../../../assets/home-images/car-icon-img-ourproduct.svg">
+                        </div>
+                    </div>
+                <div class="block-content pt-1 ps-2 pe-2 pb-2">
+                    <ul class="block-list">
+                        <li>Doorstep cashless repair & claims process</li>
+                        <li>Kms-based plans for low mileage drivers</li>
+                        <li>AI-backed instant claims process</li>
+                        <li><a class="text-orange" href="">Check price</a></li>
+                    </ul>
+                    <span class="text-orange ms-4 mt-5"><a class="explore-lnk mt-5" href="">Explore <i class="fa-solid fa-angle-right text-orange"></i></a></span>
+                </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-header d-flex">
+                        <p class="block-title">Bike</p>
+                        <div class="img-block">
+                            <img src="../../../assets/home-images/bike-icon-img-product.svg">
+                        </div>
+                    </div>
+                <div class="block-content pt-1 ps-2 pe-2 pb-2">
+                    <ul class="block-list">
+                        <li>Cashless garage network</li>
+                        <li>Option of long-term policies</li>
+                        <li>Service guarantee on repairsE</li>
+                        <li><a class="text-orange" href="">Check price</a></li>
+                    </ul>
+                    <span class="text-orange ms-4 mt-5"><a class="explore-lnk mt-5" href="">Explore <i class="fa-solid fa-angle-right text-orange"></i></a></span>
+                </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-header d-flex">
+                        <p class="block-title">Health</p>
+                        <div class="img-block">
+                            <img src="../../../assets/home-images/health-icon-img-product.svg">
+                        </div>
+                    </div>
+                <div class="block-content pt-1 ps-2 pe-2 pb-2">
+                    <ul class="block-list">
+                        <li>Personalised policies for all budgets & ages</li>
+                        <li>Cashless treatment at any hospitalQ</li>
+                        <li>Coverage for mild sickness to hospitalisation</li>
+                        <li><a class="text-orange" href="">Check price</a></li>
+                    </ul>
+                    <span class="text-orange ms-4 mt-5"><a class="explore-lnk mt-5" href="">Explore <i class="fa-solid fa-angle-right text-orange"></i></a></span>
+                </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-header d-flex">
+                        <p class="block-title">Travel</p>
+                        <div class="img-block">
+                            <img src="../../../assets/home-images/travel-icon-img-product.svg">
+                        </div>
+                    </div>
+                <div class="block-content pt-1 ps-2 pe-2 pb-2">
+                    <ul class="block-list">
+                        <li>Cashless hospitalisation worldwide</li>
+                        <li>Coverage for missed flights, baggage & passport loss</li>
+                        <li>Instant online policy</li>
+                        <li><a class="text-orange" href="">Check price</a></li>
+                    </ul>
+                    <span class="text-orange ms-4 mt-5"><a class="explore-lnk mt-5" href="">Explore <i class="fa-solid fa-angle-right text-orange"></i></a></span>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="bg-blue">
+            <div class="lil-home-container">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <div class="app-img col-4 mb-4 me-0">
+                            <img class="mobile-img" src="../../../assets/home-images/il-take-care-mob.png">
+                        </div>
+                        <div class="mobile-app-content col-5 ms-0">
+                            <h2>Experience insurance on the go with our IL Take Care app.</h2>
+                            <p>Policy purchase, claim initiation, policy renewal, mobile self-inspection for expired policy - we've got all you need at your fingertips.</p>
+                            <div class="know-more">
+                                <a class="know-more" href="">Know More</a>
+                            </div>
+                            <div class="other-section mt-5">
+                                <div class="take-care-section d-flex gap-4">
+                                    <div class="take-care-logo">
+                                        &nbsp;
+                                    </div>
+                                    <div class="social-apps">
+                                        <h6>Download the IL Take Care app</h6>
+                                        <div class="social-img">
+                                            <img src="../../../assets/home-images/gpay-footer-img.png">
+                                            <img src="../../../assets/home-images/app-store-footer-img.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="vedio-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col">
+                        <div class="vedio-content">
+                            <div class="vedio-heading">
+                                <h2>#GameOfLife</h2>
+                                <p>The game of life is more unpredictable than ever. But now, be <br>prepared for what comes next with our insurance plans.</p>
+                            </div>
+                        </div>
+                        <div class="youtube-vedio text-centre">
+                            <div class="youtube-bg mb-5">
+                                <div class="you-tube-top-part d-flex justify-content-start mt-3">
+                                    <div class="you-tube-logo me-3"></div>
+                                    <div class="you-tube-title-text text-centre"><a href="https://www.youtube.com/watch?v=MQtUPhz6gHc" target="_self">Game Of Life | ICICI Lombard | Health | Motor | Business | Commercial</a></div>
+                                    <div class="you-tube-share-icon text-light d-flex flex-column ms-5">
+                                        <i class="fa-solid fa-share-all"></i>
+                                        <i class="fa-solid fa-share"></i>
+                                       <span class="text-light">Share</span>
+                                    </div>
+                                    <!-- <img class="text-centre" src="../Assets/youtubee-img.png"> -->
+                                </div>
+                                
+                                <!-- <iframe src="https://www.youtube.com/watch?v=MQtUPhz6gHc"></iframe> -->
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pmfby-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 d-flex ps-5 pe-5">
+                        <div class="pmfby-img-logo">
+                            &nbsp;
+                        </div>
+                        <div class="pmfby-content-box">
+                            <h2 class="pmfbt-heading">PMFBY</h2>
+                            <div class="pmfby-para">
+                                <p>
+                                    The PMFBY was launched in 2016 and replaces all the prevailing yield insurance schemes in India. The scheme has extended coverage under localized risks, post-harvest losses etc. and aims at adoption of technology
+                                    for the purpose of yield estimation. Through increased farmer awareness and low farmer premium rates the scheme aims at increasing the crop insurance penetration in India.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 d-flex ps-5 pe-5">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active d-flex">
+                                <div class="fraud-img-logo">
+                                    &nbsp;
+                                </div>
+                                <div class="pmfby-content-box">
+                                    <h2 class="pmfbt-heading">Fraud awareness</h2>
+                                    <div class="pmfby-para">
+                                        <p>Dear Policyholders,</p>
+                                        <p> 
+                                    All claims are processed as per the respective policy terms & conditions. If anyone demands money for
+                                    processing claim please do not pay, report it us on 
+                                        </p>
+                                        <strong>fraudinfo@icicilombard.com</strong>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="carousel-item active d-flex">
+                                <div class="fraud-img-logo">
+                                    &nbsp;
+                                </div>
+                                <div class="pmfby-content-box">
+                                    <h2 class="pmfbt-heading">Fraud awareness</h2>
+                                    <div class="pmfby-para">
+                                        <p>Dear Policyholders,</p>
+                                        <p> 
+                                            Motor Policy issued can be verified by scanning the QR Code available on the policy document. In case of discrepancy immediately email to
+                                        </p>
+                                        <strong>customersupport@icicilombard.com</strong>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="carousel-item active d-flex">
+                                <div class="fraud-img-logo">
+                                    &nbsp;
+                                </div>
+                                <div class="pmfby-content-box">
+                                    <h2 class="pmfbt-heading">Fraud awareness</h2>
+                                    <div class="pmfby-para">
+                                        <p>Dear Policyholders,</p>
+                                        <p>
+                                    All claims are processed as per the respective policy terms & conditions. If anyone demands money for
+                                    processing claim please do not pay, report it us on 
+                                        </p>
+                                        <strong>fraudinfo@icicilombard.com</strong>
+                                    </div>
+                                </div>
+                               </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    </div>
+                <!-- </div> -->
+            <!-- </div> -->
+        </section>
+        <section class="last-secton bg-white">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div class="ms-2 me-2">
+                        <h2 class="text-centre heading-two">A happy you, makes a happy us.</h2>
+                    <div class="coursole-slide">
+                        <div class="bg-img"></div>
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <div>
+                                    <img class="bm-5" src="../../../assets/home-images/profile-icon-male.png">
+                                    <h4 class="star">Arati Navelkar</h4>
+                                    <p>Loved the easy, digital claims process, had to just upload images of my damaged car to register my claim. The claims advisor (Mr. Aakash Dhume) was very friendly and helped me dedicatedly in settling the claim.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../../../assets/home-images/profile-icon-male.png">
+                                    <h4>Sagar Singh</h4>
+                                    <p>
+                                        The cashless hospitalisation feature is really useful. My wife's emergency surgery was completed with absolutely no delays. The network hospital attended to her immediately and admitted her on priority. Thanks guys!
+                                    </p>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../../../assets/home-images/profile-icon-male.png">
+                                    <h4>Krishna Patel</h4>
+                                    <p>Bought the ICICI Lombard travel insurance for my urgent trip to Europe this summer. I got my policy certificate within minutes. Simple, easy to follow, digital purchase process. Good work!</p>
+                               </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="me-2 ms-2">
+                            <h2 class="text-centre heading-two">Awards & recognition</h2>
+                        <div class="section-right-side">
+                            <img src="../../../assets/home-images/superbrand-img-section.jpg">
+                            <div class="right-side-subsection">
+                                <h6>Voted General Insurance Superbrand by Consumers</h6>
+                                <p>Being awarded as a Superbrand is a testimony of our customer-centric approach in providing insurance solutions, while delivering on our promise.</p>
+                            </div>
+                        </div>
+                        <div class="section-right-side-bottom">
+                            <img src="../../../assets/home-images/ficci-awards-img-secton.jpg">
+                            <div class="right-side-subsection">
+                                <h6>Triple Accolades at FICCI Awards </h6>
+                                <p>Our ‘AI-enabled vehicle inception facility’ won us the FICCI Awards in the ‘Most Innovative Insurance Offerings’ category.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-awards">
+                    <a class="text-orange" href="">More awards</a>
+                </div>
+            <!-- </div> -->
+            <div class="riya">
+                <img src="../../../assets/home-images/riya.png">
+            </div>
+           </section>
+     <!-- </main> -->
+    
+
