@@ -23,6 +23,7 @@ import { HomeClaimsComponent } from './home-claims/home-claims.component';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { DialogModule } from 'primeng/dialog';
+import { CorpClaimsComponent } from './corp-claims/corp-claims.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { DialogModule } from 'primeng/dialog';
     Navbar2Component,
     TravelClaimsComponent,
     HomeClaimsComponent,
+    CorpClaimsComponent,
   ],
   exports: [
     HealthClaimsComponent,
