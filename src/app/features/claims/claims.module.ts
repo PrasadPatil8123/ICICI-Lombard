@@ -24,6 +24,7 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { DialogModule } from 'primeng/dialog';
 import { CorpClaimsComponent } from './corp-claims/corp-claims.component';
+import { CustomStyleDirective } from './custom-style.directive';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import { CorpClaimsComponent } from './corp-claims/corp-claims.component';
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-
+    
     ReactiveFormsModule,
     DialogModule,
     ButtonModule,
