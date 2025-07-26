@@ -1,0 +1,43 @@
+.container .link-tag a {
+    text-decoration-line: none;
+}
+
+.bg-warning {
+    background-color: #e66900 !important;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.card-header {
+    font-size: 1rem;
+}
+
+.pi {
+    font-size: 1.5rem;
+}
+
+footer a {
+    color: #000;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #004b84;
+}
+
+.pi {
+    font-size: 1.3rem;
+}
+
+.container .footertext {
+    width: 89%;
+}
+
+footer {
+  border-top: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

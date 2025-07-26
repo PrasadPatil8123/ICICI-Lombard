@@ -1,25 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { SmeInsuranceComponent } from './sme-insurance/sme-insurance.component';
-import { MarineInsuranceComponent } from './marine-insurance/marine-insurance.component';
+import { CommonModule } from '@angular/common';
+import { Footer2Component } from './common/all footer/footer2/footer2.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SmeInsuranceComponent,
-    MarineInsuranceComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+     Footer2Component,
+    CommonModule,
+    // ButtonModule,
+    BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

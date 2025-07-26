@@ -1,0 +1,34 @@
+.margin{
+    margin-left:90px;
+    overflow:"-moz-hidden-unscrollable"
+}
+p{
+    margin: 0px;
+    padding: 0px;
+}
+p:hover{
+    color: chocolate;
+}
+
+.bgcolor{
+
+background-color:#66666626
+}
+
+.font{
+    font-size: small;
+    
+}
+.emailbg{
+color:#6666669e
+
+}
+.margintop{
+    margin-top: -50px;
+}
+
+.font2{
+    font-size: larger;
+    margin-left: 120px;
+    margin-top: 30px;
+}

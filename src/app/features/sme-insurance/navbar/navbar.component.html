@@ -1,0 +1,19 @@
+<nav class="navbar">
+  <ul class="menu">
+    <img src="../../../../assets/sme-img/il-logo.png" class="mb-2 ms-5">
+    <img src="../../../../assets/sme-img/primary_desk.svg" alt="">
+
+
+    <li *ngFor="let item of topMenu" class="menu-item" [class.has_dropdown]="item.options?.length">
+      <a href="#" class="menu-link">{{ item.label }} </a> 
+
+
+
+      <ul *ngIf="item.options?.length" class="dropdown">
+        <li *ngFor="let option of item.options">
+          <a [routerLink]="option.route">{{ option.label }}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
