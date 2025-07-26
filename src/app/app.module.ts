@@ -23,7 +23,6 @@ import { RouterModule } from '@angular/router';
   declarations: [
     AppComponent,
     FooterComponent,
-    Footer2Component,
     PipesPipe,
     DirectivesDirective,
     HeaderComponent,
@@ -35,14 +34,14 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
+    
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule,
-
+    
+    Footer2Component,
     RouterModule
   ],
-  exports: [FooterComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

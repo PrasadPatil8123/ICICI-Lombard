@@ -5,6 +5,8 @@ import { GroupHealthInsComponent } from './group-health-ins/group-health-ins.com
 import { Router, RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Footer2Component } from 'src/app/common/all footer/footer2/footer2.component';
+import { FooterComponent } from '../claims/footer/footer.component';
 
   
 const router :Routes=[
@@ -18,12 +20,13 @@ const router :Routes=[
   declarations: [
     WorkmensComponentComponent,
     GroupHealthInsComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(router),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Footer2Component,
   ]
 })
 export class SmeInsuranceModule { }
