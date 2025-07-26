@@ -36,7 +36,10 @@ import { DialogModule } from 'primeng/dialog';
     HomeClaimsComponent,
   ],
   exports: [
-    HealthClaimsComponent
+    HealthClaimsComponent,
+    NavbarComponent,
+    
+
   ],
   imports: [
     CommonModule,
