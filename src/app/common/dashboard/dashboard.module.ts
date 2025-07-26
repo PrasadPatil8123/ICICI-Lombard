@@ -5,7 +5,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule, Routes} from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { PoliciesComponent } from './policies/policies.component';
-import { ClaimsModule } from 'src/app/features/claims/claims.module';
 import { MenuModule } from 'primeng/menu';
 import { ButtonModule } from 'primeng/button';
 import { TabViewModule } from 'primeng/tabview';
@@ -42,7 +41,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule,
-    ClaimsModule,
+    
     MenuModule,
     ButtonModule,
     TabViewModule,

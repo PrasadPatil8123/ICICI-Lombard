@@ -13,8 +13,9 @@ import { HeaderComponent } from './common/header/header.component';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
+import { CustomStyleDirective } from './features/claims/custom-style.directive';
 // import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
-import { NavbarComponent } from './features/claims/navbar/navbar.component';
+// import { NavbarComponent } from './features/claims/navbar/navbar.component';
 
 
 
@@ -22,12 +23,12 @@ import { NavbarComponent } from './features/claims/navbar/navbar.component';
   declarations: [
     AppComponent,
     FooterComponent,
-    Footer2Component,
-    NavbarComponent,
+
     PipesPipe,
     DirectivesDirective,
     HeaderComponent,
     HomeComponent,
+    CustomStyleDirective,
     // CarInsuranceComponent
   ],
   imports: [
@@ -36,7 +37,7 @@ import { NavbarComponent } from './features/claims/navbar/navbar.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
+    
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule

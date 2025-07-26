@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { customValidators } from '../customValidators';
 
 @Component({
   selector: 'app-corp-claims',
@@ -31,7 +32,7 @@ export class CorpClaimsComponent {
   constructor(private fb: FormBuilder) {
     this.intimateForm = this.fb.group({
       id: ['1'],
-      policyNumber: ['', [Validators.required]],
+      policyNumber: ['', [Validators.required, customValidators.policyNumber]],
       mobileNumber: ['', [Validators.required]],
       imeiNumber: ['', [Validators.required]],
       loanAccountNumber: ['', [Validators.required]]
