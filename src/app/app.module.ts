@@ -13,9 +13,6 @@ import { HeaderComponent } from './common/header/header.component';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
-import { ClaimsModule } from './features/claims/claims.module';
-import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
-import { RouterModule } from '@angular/router';
 
 
 
@@ -23,10 +20,13 @@ import { RouterModule } from '@angular/router';
   declarations: [
     AppComponent,
     FooterComponent,
+    Footer2Component,
+    NavbarComponent,
     PipesPipe,
     DirectivesDirective,
     HeaderComponent,
     HomeComponent,
+    CarInsuranceComponent
   ],
   imports: [
     BrowserModule,
@@ -34,13 +34,11 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    
+
     CommonModule,
     ButtonModule,
-    BrowserAnimationsModule,
-    
-    Footer2Component,
-    RouterModule
+    BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,6 +9,7 @@ import { Navbar2Component } from './navbar2/navbar2.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TravelClaimsComponent } from './travel-claims/travel-claims.component';
 import { HomeClaimsComponent } from './home-claims/home-claims.component';
+import { CorpClaimsComponent } from './corp-claims/corp-claims.component';
 
 const routes: Routes = [
     { path: 'health-claims', component: HealthClaimsComponent },
@@ -18,7 +19,8 @@ const routes: Routes = [
     { path: 'navbar2', component: Navbar2Component },
     { path: 'travel', component: TravelClaimsComponent },
     { path: 'motor', component: MotorClaimsComponent },
-    { path: 'home-claims', component: HomeClaimsComponent }
+    { path: 'home-claims', component: HomeClaimsComponent },
+    { path: 'corp-claims', component : CorpClaimsComponent}
 ];
 
 @NgModule({
