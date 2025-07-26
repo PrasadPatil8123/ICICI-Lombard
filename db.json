@@ -1,4 +1,5 @@
 {
+
   "personalDetails": [
     {
       "id": 1,
@@ -35,24 +36,124 @@
   ],
   "policies": [
     {
-      "id": 101,
-      "userId": 1,
-      "type": "Car Insurance",
-      "status": "active",
-      "policyNumber": "ICICI-CAR-2023-001",
-      "startDate": "2023-07-01",
-      "endDate": "2024-06-30",
-      "premium": 7200
+      "id": "7ee5",
+      "industryCategory": "Construction",
+      "skilledWorkersCount": 5,
+      "skilledWorkerSalary": 2,
+      "semiSkilledWorkersCount": 1,
+      "semiSkilledWorkerSalary": 3,
+      "unskilledWorkersCount": 1,
+      "unskilledWorkerSalary": 1,
+      "policyPeriod": "2",
+      "lastClaim": "Nil or below ₹1 lakh"
     },
     {
-      "id": 102,
-      "userId": 1,
-      "type": "Bike Insurance",
-      "status": "pending",
-      "policyNumber": "ICICI-BIKE-2025-001",
-      "startDate": "",
-      "endDate": "",
-      "premium": 1800
+      "id": "2ec0",
+      "industryCategory": "",
+      "skilledWorkersCount": 0,
+      "skilledWorkerSalary": "salary",
+      "semiSkilledWorkersCount": 0,
+      "semiSkilledWorkerSalary": "salary",
+      "unskilledWorkersCount": 0,
+      "unskilledWorkerSalary": "salary",
+      "policyPeriod": 1,
+      "lastClaim": "Nil or below ₹1 lakh"
+    },
+    {
+      "id": "addb",
+      "industryCategory": "",
+      "skilledWorkersCount": 0,
+      "skilledWorkerSalary": "salary",
+      "semiSkilledWorkersCount": 0,
+      "semiSkilledWorkerSalary": "salary",
+      "unskilledWorkersCount": 0,
+      "unskilledWorkerSalary": "salary",
+      "policyPeriod": 1,
+      "lastClaim": "Nil or below ₹1 lakh"
+    },
+    {
+      "id": "f59e",
+      "industryCategory": "",
+      "skilledWorkersCount": 0,
+      "skilledWorkerSalary": "salary",
+      "semiSkilledWorkersCount": 0,
+      "semiSkilledWorkerSalary": "salary",
+      "unskilledWorkersCount": 0,
+      "unskilledWorkerSalary": "salary",
+      "policyPeriod": 1,
+      "lastClaim": "Nil or below ₹1 lakh"
+    },
+    {
+      "id": "a189",
+      "industryCategory": "",
+      "skilledWorkersCount": 0,
+      "skilledWorkerSalary": "salary",
+      "semiSkilledWorkersCount": 0,
+      "semiSkilledWorkerSalary": "salary",
+      "unskilledWorkersCount": 0,
+      "unskilledWorkerSalary": "salary",
+      "policyPeriod": 1,
+      "lastClaim": "Nil or below ₹1 lakh"
+    },
+    {
+      "id": "c4f6",
+      "industryCategory": "",
+      "skilledWorkersCount": 0,
+      "skilledWorkerSalary": "salary",
+      "semiSkilledWorkersCount": 0,
+      "semiSkilledWorkerSalary": "salary",
+      "unskilledWorkersCount": 0,
+      "unskilledWorkerSalary": "salary",
+      "policyPeriod": 1,
+      "lastClaim": "Nil or below ₹1 lakh"
+    },
+    {
+      "id": "0071",
+      "industryCategory": "",
+      "skilledWorkersCount": 0,
+      "skilledWorkerSalary": "salary",
+      "semiSkilledWorkersCount": 0,
+      "semiSkilledWorkerSalary": "salary",
+      "unskilledWorkersCount": 0,
+      "unskilledWorkerSalary": "salary",
+      "policyPeriod": 1,
+      "lastClaim": "Nil or below ₹1 lakh"
+    },
+    {
+      "id": "9ec7",
+      "industryCategory": "",
+      "skilledWorkersCount": 0,
+      "skilledWorkerSalary": "salary",
+      "semiSkilledWorkersCount": 0,
+      "semiSkilledWorkerSalary": "salary",
+      "unskilledWorkersCount": 0,
+      "unskilledWorkerSalary": "salary",
+      "policyPeriod": 1,
+      "lastClaim": "Nil or below ₹1 lakh"
+    },
+    {
+      "id": "60e5",
+      "industryCategory": "",
+      "skilledWorkersCount": 0,
+      "skilledWorkerSalary": "salary",
+      "semiSkilledWorkersCount": 0,
+      "semiSkilledWorkerSalary": "salary",
+      "unskilledWorkersCount": 0,
+      "unskilledWorkerSalary": "salary",
+      "policyPeriod": 1,
+      "lastClaim": "Nil or below ₹1 lakh"
+    },
+    {
+      "id": "f3d7",
+      "industryCategory": "",
+      "skilledWorkersCount": 0,
+      "skilledWorkerSalary": "salary",
+      "semiSkilledWorkersCount": 0,
+      "semiSkilledWorkerSalary": "salary",
+      "unskilledWorkersCount": 0,
+      "unskilledWorkerSalary": "salary",
+      "policyPeriod": 1,
+      "lastClaim": "Nil or below ₹1 lakh"
     },
     {
       "id": 103,
@@ -63,26 +164,6 @@
       "startDate": "2022-01-10",
       "endDate": "2023-01-09",
       "premium": 12500
-    },
-    {
-      "id": 201,
-      "userId": 2,
-      "type": "Life Insurance",
-      "status": "active",
-      "policyNumber": "LIC-LIFE-2023-015",
-      "startDate": "2023-03-01",
-      "endDate": "2043-03-01",
-      "premium": 10000
-    },
-    {
-      "id": 202,
-      "userId": 2,
-      "type": "Travel Insurance",
-      "status": "pending",
-      "policyNumber": "ICICI-TRAVEL-2025-003",
-      "startDate": "",
-      "endDate": "",
-      "premium": 2200
     }
   ],
   "payments": [
@@ -491,5 +572,86 @@
       "description": "Comprehensive explanation of family health insurance deductibles covering terms conditions and practical considerations for policy selection and usage.",
       "date": "2025-02-24"
     }
+  ],
+  "user": [
+    {
+      "vehicle_reg_no": "Mh452036",
+      "Mobile_Num": "7895461245",
+      "Email_id": "rina123@gmail.com",
+      "id": "bca5"
+    },
+    {
+      "vehicle_reg_no": "Mh452037",
+      "Mobile_Num": "7895771245",
+      "Email_id": "tina123@gmail.com",
+      "id": "b390"
+    },
+    {
+      "id": "3514"
+    },
+    {
+      "id": "ad6d"
+    },
+    {
+      "id": "02f3"
+    },
+    {
+      "id": "1346"
+    },
+    {
+      "id": "4c2e"
+    },
+    {
+      "id": "2cf0"
+    },
+    {
+      "id": "bb64"
+    },
+    {
+      "id": "6ca9"
+    },
+    {
+      "id": "45ab"
+    },
+    {
+      "id": "fff9"
+    },
+    {
+      "id": "400a"
+    },
+    {
+      "id": "c751"
+    },
+    {
+      "id": "f379"
+    },
+    {
+      "id": "7c74"
+    },
+    {
+      "id": "3979"
+    },
+    {
+      "id": "e8b1"
+    },
+    {
+      "id": "be92",
+      "regnum": "16598465",
+      "mobile_no": "",
+      "email_id": ""
+    },
+    {
+      "id": "b980",
+      "regnum": "16598465",
+      "mobile_no": "7020902886",
+      "email_id": "riju123@gmail.com"
+    },
+    {
+      "id": "bab1",
+      "regnum": "",
+      "mobile_no": "1325465462",
+      "email_id": "riju123@gmail.com"
+    }
+}
   ]
 }

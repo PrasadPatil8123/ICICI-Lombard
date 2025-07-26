@@ -13,9 +13,8 @@ import { HeaderComponent } from './common/header/header.component';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
-import { ClaimsModule } from './features/claims/claims.module';
-import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
-import { DashboardModule } from './common/dashboard/dashboard.module';
+// import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
+import { NavbarComponent } from './features/claims/navbar/navbar.component';
 
 
 
@@ -24,10 +23,12 @@ import { DashboardModule } from './common/dashboard/dashboard.module';
     AppComponent,
     FooterComponent,
     Footer2Component,
+    NavbarComponent,
     PipesPipe,
     DirectivesDirective,
     HeaderComponent,
     HomeComponent,
+    // CarInsuranceComponent
   ],
   imports: [
     BrowserModule,
@@ -36,13 +37,8 @@ import { DashboardModule } from './common/dashboard/dashboard.module';
     ReactiveFormsModule,
     HttpClientModule,
 
-    ClaimsRoutingModule,
-  
-
     CommonModule,
     ButtonModule,
-    ClaimsModule,
-    DashboardModule,
     BrowserAnimationsModule
 
   ],
