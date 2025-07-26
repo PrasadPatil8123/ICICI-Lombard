@@ -13,10 +13,8 @@ import { HeaderComponent } from './common/header/header.component';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
-import { ClaimsModule } from './features/claims/claims.module';
-import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
-// import { RiskManagementComponent } from './features/corporate-insurance/risk-management/risk-management.component';
-import { CorporateInsuranceModule } from "./features/corporate-insurance/corporate-insurance.module";
+// import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
+import { NavbarComponent } from './features/claims/navbar/navbar.component';
 
 
 
@@ -25,27 +23,25 @@ import { CorporateInsuranceModule } from "./features/corporate-insurance/corpora
     AppComponent,
     FooterComponent,
     Footer2Component,
+    NavbarComponent,
     PipesPipe,
     DirectivesDirective,
     HeaderComponent,
     HomeComponent,
-    
-   
+    // CarInsuranceComponent
   ],
-  
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ClaimsRoutingModule,
+
     CommonModule,
     ButtonModule,
-    ClaimsModule,
-    BrowserAnimationsModule,
-    CorporateInsuranceModule
-],
+    BrowserAnimationsModule
+
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
