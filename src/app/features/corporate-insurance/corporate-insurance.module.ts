@@ -4,7 +4,7 @@ import { RiskManagementComponent } from './risk-management/risk-management.compo
 import { RouterModule, Routes } from '@angular/router';
 
  let route :Routes=[
-   {path:"rskk",component:RiskManagementComponent}
+   {path:"rsk",component:RiskManagementComponent}
  ]
 
 

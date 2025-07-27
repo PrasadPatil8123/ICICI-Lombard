@@ -14,7 +14,7 @@ import { HeaderComponent } from './common/header/header.component';
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
 // import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
-import { NavbarComponent } from './features/claims/navbar/navbar.component';
+// import { NavbarComponent } from './features/claims/navbar/navbar.component';
 
 
 
@@ -22,8 +22,8 @@ import { NavbarComponent } from './features/claims/navbar/navbar.component';
   declarations: [
     AppComponent,
     // FooterComponent,
-    Footer2Component,
-    NavbarComponent,
+    // Footer2Component,
+    // NavbarComponent,
     PipesPipe,
     DirectivesDirective,
     HeaderComponent,

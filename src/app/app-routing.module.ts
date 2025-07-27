@@ -8,6 +8,10 @@ const routes: Routes = [
   {
     path: 'claims', loadChildren: () => import('./features/claims/claims.module')
       .then(mod => mod.ClaimsModule)
+  },
+  {
+  path: 'crpr', loadChildren: () => import('./features/corporate-insurance/corporate-insurance.module')
+      .then(mod => mod.CorporateInsuranceModule)
   }
 ]
 

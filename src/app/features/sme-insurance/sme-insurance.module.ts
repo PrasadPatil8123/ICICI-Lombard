@@ -5,19 +5,15 @@ import { MarineInsuranceComponent } from './marine-insurance/marine-insurance.co
 import { SmeInsuranceComponent } from './sme-insurance/sme-insurance.component';
 import { WorkmensComponentComponent } from './workmens-component/workmens-component.component';
 import { GroupHealthInsComponent } from './group-health-ins/group-health-ins.component';
-// import { Router, RouterModule, Routes } from '@angular/router';
 import { Navbar2Component, } from './navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Footer2Component } from 'src/app/common/all footer/footer2/footer2.component';
-// import { ReactiveFormsModule } from '@angular/forms';
-const router: Routes =[
-  {path:"smecomponents",component:SmeInsuranceComponent},
-  {path:"marinecomponents",component:MarineInsuranceComponent}
-]
-
+import { HealthInsuranceModule } from '../health-insurance/health-insurance.module';
 const routes: Routes = [
   { path: 'smecomponents', component: SmeInsuranceComponent },
-  { path: 'marinecomponents', component: MarineInsuranceComponent }
+  { path: 'marinecomponents', component: MarineInsuranceComponent },
+  { path: 'workmen', component: WorkmensComponentComponent },
+  { path: 'group-health', component:GroupHealthInsComponent}
 ];
 
 @NgModule({
