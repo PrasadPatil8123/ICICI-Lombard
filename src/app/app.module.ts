@@ -13,6 +13,8 @@ import { HeaderComponent } from './common/header/header.component';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
+import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
+import { ClaimsModule } from './features/claims/claims.module';
 
 
 
@@ -20,8 +22,7 @@ import { HomeComponent } from './common/home/home.component';
   declarations: [
     AppComponent,
     FooterComponent,
-    Footer2Component,
-    NavbarComponent,
+    // NavbarComponent,
     PipesPipe,
     DirectivesDirective,
     HeaderComponent,
@@ -29,6 +30,7 @@ import { HomeComponent } from './common/home/home.component';
     CarInsuranceComponent
   ],
   imports: [
+    Footer2Component,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -37,7 +39,7 @@ import { HomeComponent } from './common/home/home.component';
 
     CommonModule,
     ButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
 
   ],
   providers: [],

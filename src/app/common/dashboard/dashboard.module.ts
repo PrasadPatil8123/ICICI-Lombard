@@ -42,7 +42,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule,
-    ClaimsModule,
+    // ClaimsModule,
     MenuModule,
     ButtonModule,
     TabViewModule,
