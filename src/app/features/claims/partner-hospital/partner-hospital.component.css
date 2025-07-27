@@ -1,0 +1,117 @@
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.hospital-img {
+    background-image: url('../../../../assets/claimsModuleImages/hospital-search-banner.png');
+    height: 300px;
+}
+
+.container {
+    width: 850px;
+    background-color: white;
+}
+
+.network-hospital-sec {
+    width: 50%;
+    max-width: 878px;
+    margin: 0 auto 5rem;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 2.4rem 3rem 4rem;
+}
+
+.search-input-block .primary-btn {
+    width: 100%;
+    position: relative;
+    top: 5px;
+}
+
+.primary-btn {
+    color: #fff;
+    padding: 1.1rem 2.4rem;
+    font-size: 0.9rem;
+    background: #ec6625;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+.cashless-details-sec {
+    width: 100%;
+    max-width: 878px;
+    margin: 6rem auto 5rem;
+}
+
+.cashless-details-sec .cashless-details-block {
+    display: flex;
+    gap: 40px;
+}
+
+.cashless-details-sec .left-block,
+.cashless-details-sec .right-block {
+    width: 50%;
+    display: flex;
+    gap: 5px;
+}
+
+.cashless-details-sec .img-block {
+    width: 10%;
+    text-align: center;
+}
+
+.cashless-details-sec .content-block {
+    padding: 0;
+    width: 90%;
+}
+
+.cashless-details-sec .cashless-details-block h5 {
+    margin: 0;
+    color: #575757;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 1rem;
+}
+
+.cashless-details-sec .cashless-details-block p {
+    color: #838383;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+.cashless-details-sec .left-block,
+.cashless-details-sec .right-block {
+    width: 50%;
+    display: flex;
+    gap: 5px;
+}
+
+.cashless-details-sec .img-block {
+    width: 10%;
+    text-align: center;
+}
+
+.cashless-details-sec .note-block {
+    margin: 5rem 0 0;
+}
+
+.cashless-details-sec .note-block p {
+    color: #B2B2B2;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: italic;
+    padding-left: 4rem;
+    padding-bottom: 50px;
+}
+
+.cashless-details-sec .note-block span {
+    display: block;
+}

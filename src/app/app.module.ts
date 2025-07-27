@@ -5,21 +5,31 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './common/all footer/footer/footer.component';
+import { Footer2Component } from './common/all footer/footer2/footer2.component';
 import { PipesPipe } from './shared/pipes/pipes.pipe';
 import { DirectivesDirective } from './shared/directives/directives.directive';
 import { HeaderComponent } from './common/header/header.component';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
+import { CustomStyleDirective } from './features/claims/custom-style.directive';
+// import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
+// import { NavbarComponent } from './features/claims/navbar/navbar.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    FooterComponent,
+
     PipesPipe,
     DirectivesDirective,
     HeaderComponent,
     HomeComponent,
+    CustomStyleDirective,
+    // CarInsuranceComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +37,11 @@ import { HomeComponent } from './common/home/home.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

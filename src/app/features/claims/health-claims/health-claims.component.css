@@ -1,0 +1,286 @@
+.container .main-section {
+  width: 500px;
+  z-index: 100;
+}
+
+.container .main-section .text-area {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+  color: #282828;
+  margin: 0;
+}
+
+.container .main-section .text-area .text-highlited {
+  /* font-size: 6rem; */
+  font-weight: 800;
+}
+
+.container .main-section .img-section .text-highlited {
+  /* font-size: 6rem; */
+  font-weight: 800;
+}
+
+.container .main-section {
+  position: absolute;
+  padding-top: 30px;
+}
+
+.container .main-section .img-section {
+  position: absolute;
+  padding-top: 10px;
+
+}
+
+.container .main-section .img-section .googlePlay {
+  margin-right: 25px;
+  padding-top: inherit;
+}
+
+.container .main-section .img-section .appStore {
+  padding-top: inherit;
+}
+
+.container .main-section .video-section {
+  padding-top: 140px;
+  width: 391px;
+}
+
+.container .main-section .video-section .watchVideo {
+  padding-left: 110px;
+}
+
+.container .main-section .color-area {
+  /* padding-left: 110px; */
+  background-color: rgb(255, 199, 245);
+  width: 1351px;
+  height: 100px;
+}
+
+/* form in css */
+
+.form-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px;
+  background: #fff;
+}
+
+.claim-form {
+  background: white;
+  padding: 30px;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.claim-form h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.radio-group label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.claim-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #f76b1c;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #e66316;
+}
+
+
+/* next in css */
+
+.claim-wrapper {
+  position: relative;
+  padding-top: 177px;
+  /* padding-left: 100px; */
+  display: flex;
+  gap: 20px;
+  /* padding: 20px; */
+}
+
+.left-menu {
+  width: 30%;
+  border-right: 1px solid #ccc;
+}
+
+.left-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-menu li {
+  padding: 15px;
+  cursor: pointer;
+  height: 140px;
+  border-left: 4px solid transparent;
+  transition: all 0.3s;
+}
+
+.claim-wrapper .left-menu ul,
+li,
+p {
+  padding-left: 26px;
+}
+
+.left-menu li.active {
+  background: #e6f0ff;
+  border-left: 4px solid #0078d7;
+  /* height: 150px; */
+  font-weight: bold;
+}
+
+.right-content {
+  width: 800px;
+  height: auto;
+}
+
+.right-content .bg-orange {
+  background-color: #F86600 !important;
+  margin-left: 50px;
+}
+
+.right-content .inputText {
+  padding-right: 300px;
+}
+
+.right-content p {
+  a {
+    color: #F86600;
+  }
+}
+
+.right-content .block-separator {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #C9C9C9;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.right-content .block-separator span {
+  padding: 0 1.5rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 700;
+  background: #fff;
+  text-transform: uppercase;
+  z-index: 2;
+  text-align: center;
+  position: relative;
+  height: 3rem;
+  top: 8px;
+}
+
+.claim-wrapper .right-content .read-more-link {
+  font-size: 1.1rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+  color: #EC6608;
+  text-align: center;
+  text-decoration: underline;
+  display: block;
+  cursor: pointer;
+}
+
+.container .table-container {
+  padding: 6rem 0;
+}
+
+.container .table-container .heading {
+  font-size: 2.1rem;
+  /* line-height: 5rem; */
+  line-height: 4rem;
+  font-weight: 600;
+  color: #282828;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.container .table-container .sub-info {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: #282828;
+  text-align: center;
+}
+
+.card-body img {
+  max-height: 60px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+.bgColor {
+  background-color: #00305b;
+}
+
+.row {
+  margin-right: 158px;
+  margin-left: 151px;
+}
+
+.bg-dark-blue {
+  background-color: #002f5f;
+  /* or your preferred dark blue */
+}
+
+.btn-warning {
+  background-color: #f86600;
+  /* matches screenshot's orange button */
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #d85600;
+}
+
+.text-orange {
+  color: #f86600 !important;
+  border-color: #f86600 !important;
+}
+
+.text-orange:hover {
+  background-color: #f86600 !important;
+  color: white !important;
+}
+

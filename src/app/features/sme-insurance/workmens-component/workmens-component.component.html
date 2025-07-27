@@ -1,0 +1,441 @@
+<app-navbar></app-navbar>
+<div class="container-fluid bluebg d-none d-lg-block">
+    <div class="container bluemg ">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="backbtn"> back </div>
+                    <h1>Employee’s Compensation Insurance</h1>
+                    <p class="p">Protect your workers under a single policy.</p>
+                    <img [src]="bule_img1" class="img-fluid " style="height: 470px; width:570px">
+
+                </div>
+
+            </div>
+            <div class=" col">
+
+                <div class="container ">
+                    <form [formGroup]="myform" (ngSubmit)="onSubmit1()" class="form1" *ngIf="showfrm">
+                        <div class="">
+                            <h5>Employee’s Compensation Insurance</h5>
+                        </div>
+                        <input type="text" name="Mobile" placeholder=" Enter your Mobile Number" class="form-control"
+                            formControlName="mobile">
+                        <input type="email" name="email" placeholder="Enter Your Email " class="form-control"
+                            formControlName="mobile">
+                        <input type="text" name="company" placeholder="Enter your Company Name" class="form-control"
+                            formControlName="mobile">
+                        <input type="text" name="Mobile" placeholder="Enter your Pin-Code " class="form-control"
+                            formControlName="mobile">
+                        <button class="frmbtn" (click)="f2()">submit</button>
+                        <a href="" class="quote">Retrieve quote</a><br>
+                        <b class="boldtext">I agree to the terms and Conditions</b><br>
+                        <b class="boldtext">I want to receive updates on</b>
+                    </form>
+                    <!-- ------------------------------------------------------------------------------------ -->
+                    <form [formGroup]="insuranceForm" (ngSubmit)="onSubmit()" *ngIf="!showfrm" class="form3">
+
+                        <div class="form-group">
+                            <label>Industry Category</label>
+                            <select formControlName="industryCategory">
+                                <option value="" disabled selected>Select Industry</option>
+                                <option *ngFor="let category of industryCategories" [value]="category">{{ category }}
+                                </option>
+                            </select>
+                        </div>
+
+                        <!-- Skilled Workers -->
+                        <div class="worker-row">
+                            <div class="form-group">
+                                <label>Skilled Workers</label>
+                                <input type="number" formControlName="skilledWorkersCount" placeholder="Total count">
+                            </div>
+                            <div class="form-group">
+                                <label>&nbsp;</label>
+                                <input type="number" formControlName="skilledWorkerSalary"
+                                    placeholder="Salary per month">
+                            </div>
+                        </div>
+
+                        <!-- Semi Skilled Workers -->
+                        <div class="worker-row">
+                            <div class="form-group">
+                                <label>Semi Skilled Workers</label>
+                                <input type="number" formControlName="semiSkilledWorkersCount"
+                                    placeholder="Total count">
+                            </div>
+                            <div class="form-group">
+                                <label>&nbsp;</label>
+                                <input type="number" formControlName="semiSkilledWorkerSalary"
+                                    placeholder="Salary per month">
+                            </div>
+                        </div>
+
+                        <!-- Unskilled Workers -->
+                        <div class="worker-row">
+                            <div class="form-group">
+                                <label>Unskilled Workers</label>
+                                <input type="number" formControlName="unskilledWorkersCount" placeholder="Total count">
+                            </div>
+                            <div class="form-group">
+                                <label>&nbsp;</label>
+                                <input type="number" formControlName="unskilledWorkerSalary"
+                                    placeholder="Salary per month">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Policy Period (Months)</label>
+                            <select formControlName="policyPeriod">
+                                <option *ngFor="let month of policyMonths" [value]="month">{{ month }}</option>
+                            </select>
+                        </div>
+
+                        <!-- Radio Buttons -->
+                        <div class="form-group">
+                            <label>Did you claim in your last policy?</label>
+                            <div class="radio-row">
+                                <label class="radio-label">
+                                    <input type="radio" formControlName="lastClaim" value="Nil or below ₹1 lakh">
+                                    Nil or below ₹1 lakh
+                                </label>
+
+                                <label class="radio-label">
+                                    <input type="radio" formControlName="lastClaim" value="Above ₹1 lakh">
+                                    Above ₹1 lakh
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group text-center">
+                            <button type="submit" class="button3">Proceed to buy</button>
+                            <button type="submit" class="button3"(click)="f1()" >Go  Back </button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bluebg d-block d-lg-none">
+    <div class="container ">
+        <div class="row">
+            <div class="col">
+                <h1 class="mt-5">Employee’s Compensation Insurance</h1>
+                <div class="container mt-5">
+                    <form [formGroup]="myform" (ngSubmit)="onSubmit1()" class="form2" *ngIf="showfrm">
+                        <div class="">
+                            <h5>Employee’s Compensation Insurance</h5>
+                        </div>
+                        <input type="text" name="Mobile" placeholder=" Enter your Mobile Number" class="form-control"
+                            formControlName="mobile">
+                        <input type="email" name="email" placeholder="Enter Your Email " class="form-control"
+                            formControlName="mobile">
+                        <input type="text" name="company" placeholder="Enter your Company Name" class="form-control"
+                            formControlName="mobile">
+                        <input type="text" name="Mobile" placeholder="Enter your Pin-Code " class="form-control"
+                            formControlName="mobile">
+                        <button class="frmbtn" (click)="f2()"[disabled]="myform.invalid">submit</button>
+                        <a href="" class="quote">Retrieve quote</a><br>
+                        <b class="boldtext">I agree to the terms and Conditions</b><br>
+                        <b class="boldtext">I want to receive updates on</b>
+                    </form>
+
+
+
+                    <!-- form 2 -->
+
+                    <form [formGroup]="insuranceForm" (ngSubmit)="onSubmit()" *ngIf="!showfrm" class="form3">
+
+                        <div class="form-group">
+                            <label>Industry Category</label>
+                            <select formControlName="industryCategory">
+                                <option value="" disabled selected>Select Industry</option>
+                                <option *ngFor="let category of industryCategories" [value]="category">{{ category }}
+                                </option>
+                            </select>
+                        </div>
+
+                        <!-- Skilled Workers -->
+                        <div class="worker-row">
+                            <div class="form-group">
+                                <label>Skilled Workers</label>
+                                <input type="number" formControlName="skilledWorkersCount" placeholder="Total count">
+                            </div>
+                            <div class="form-group">
+                                <label>&nbsp;</label>
+                                <input type="number" formControlName="skilledWorkerSalary"
+                                    placeholder="Salary per month">
+                            </div>
+                        </div>
+
+                        <!-- Semi Skilled Workers -->
+                        <div class="worker-row">
+                            <div class="form-group">
+                                <label>Semi Skilled Workers</label>
+                                <input type="number" formControlName="semiSkilledWorkersCount"
+                                    placeholder="Total count">
+                            </div>
+                            <div class="form-group">
+                                <label>&nbsp;</label>
+                                <input type="number" formControlName="semiSkilledWorkerSalary"
+                                    placeholder="Salary per month">
+                            </div>
+                        </div>
+
+                        <!-- Unskilled Workers -->
+                        <div class="worker-row">
+                            <div class="form-group">
+                                <label>Unskilled Workers</label>
+                                <input type="number" formControlName="unskilledWorkersCount" placeholder="Total count">
+                            </div>
+                            <div class="form-group">
+                                <label>&nbsp;</label>
+                                <input type="number" formControlName="unskilledWorkerSalary"
+                                    placeholder="Salary per month">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Policy Period (Months)</label>
+                            <select formControlName="policyPeriod">
+                                <option *ngFor="let month of policyMonths" [value]="month">{{ month }}</option>
+                            </select>
+                        </div>
+
+                        <!-- Radio Buttons -->
+                        <div class="form-group">
+                            <label>Did you claim in your last policy?</label>
+                            <div class="radio-row">
+                                <label class="radio-label">
+                                    <input type="radio" formControlName="lastClaim" value="Nil or below ₹1 lakh">
+                                    Nil or below ₹1 lakh
+                                </label>
+
+                                <label class="radio-label">
+                                    <input type="radio" formControlName="lastClaim" value="Above ₹1 lakh">
+                                    Above ₹1 lakh
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group text-center">
+                            <button type="submit" class="button3"[disabled]="insuranceForm.invalid">Proceed to buy</button>
+                            <button type="submit" class="button3"(click)="f1()" >Go  Back </button>
+                        </div>
+
+                    </form>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" style="height: 400px;  width: 1010px;">
+    <h1 class="headline2 mb-3">What is Employee’s Compensation Insurance?</h1>
+    <pre class="pre-text">
+ What is Employee’s Compensation Insurance?       
+ Every company must ensure a safe workplace, but accidents can still happen. Injuries or, in severe cases,
+ death during employment require compensation under laws like the Employee’s Compensation Act 1923 
+ (previously called as the Workmen’s Compensation Act, 1923).
+
+ Not compensating can lead to legal issues, affecting employee confidence and the business's reputation.
+ Employee’s compensation insurance (commonly known as WC policy or WC insurance) helps financially, covering 
+ compensation and legal costs. It also protects against lawsuits, as employees usually give up the right to 
+ sue for workplace negligence when accepting benefits. Previously known as Workmen Compensation Insurance, it 
+ ensures both businesses and employees are financially protected.
+
+ ICICI Lombard’s Employee’s Compensation Insurance helps you financially safeguard your employees and their 
+ familiesagainst unfortunate workplace accidents and mishaps. Most importantly, it presents you as a thoughtful
+ and caring employer who values his workforce, an asset for any organization.</pre>
+    <h1 class="headline2 mb-3">What is the Employee’s Compensation Act?</h1>
+    <pre class="pre-text">
+The Employee’s Compensation Act, 1923 prescribes about financial compensation to employees if they encounter     
+an accident during the course of employment while doing/discharging their duties. Under this law, all full-time, 
+part-time or casual employees are liable to receive financial protection. The Act's provisions kick in when 
+employees suffer injuries that render them incapable to perform their duties or they succumb to their in
+       
+The compensation workers are eligible to receive under this Act are:
+    </pre>
+
+</div><br>
+
+<!-- ========================== -->
+
+<div class="container">
+    <table border="1" class="table">
+  <thead>
+    <tr>
+      <th>Scenarios</th>
+      <th>Compensation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of compensations">
+      <td>{{ item.scenario }}</td>
+      <td>
+        <ul style="padding-left: 16px;">
+          <li *ngFor="let line of item.details">{{ line }}</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- ==================== -->
+
+
+<div class="insurance-info-container">
+
+  <!-- SECTION 1: WHY YOU NEED -->
+  <section class="section-one">
+    <div class="section-one-text">
+      <h2>Why do you need an Employee’s Compensation Insurance Policy?</h2>
+      <p><strong>Having Employee’s Compensation Policy (previously known as Workmen Compensation Policy)</strong> is crucial for these reasons:</p>
+      <ul>
+        <li>It supports employees financially for work-related injuries, covering medical expenses</li>
+        <li>Prioritizing employee safety enhances your brand image, positively impacting customer and investor perceptions.</li>
+        <li>Compliance with contracts requiring employee’s (workmen’s) compensation ensures legal obligations, preventing disputes.</li>
+        <li>Mitigating financial risks, it acts as a safety net, fostering a win-win situation for productivity and revenues.</li>
+        <li>It provides peace of mind, fulfilling legal duties for employers and offering financial security for employees in case of job-related injuries.</li>
+      </ul>
+    </div>
+    <div class="section-one-img">
+      <img [src]="wc1" alt="Employee Safety" />
+    </div>
+  </section>
+
+  <!-- SECTION 2: WHAT IS COVERED -->
+  <section class="section-two">
+    <div class="section-two-img">
+      <img [src]="wc2" alt="Wheelchair Illustration" />
+    </div>
+    <div class="section-two-text">
+      <h2>What is Covered under Employee’s Compensation Insurance?</h2>
+      <p><strong>The policy covers legal liability of an employer under:</strong></p>
+      <ul>
+        <li>1. Workmen Compensation Act, 1923 [as amended through Employee’s Compensation (Amendment) Act, 2017], and subsequent amendments of the said Act prior to the date of issue of the policy.</li>
+        <li>2. Common law, only up to the limit of indemnity agreed under the respective policy</li>
+        <li>3. Fatal Accident Act 1855</li>
+      </ul>
+      <p><strong>Employee’s Compensation Policy provides coverage for:</strong></p>
+      <ul>
+        <li>Accidental death, Permanent total or Partial Disability and Temporary total disability suffered at the workplace during working hours</li>
+      </ul>
+      <p><strong>Additionally, add-on covers provided under Employee’s Compensation Insurance (previously: Workmen Compensation Policy) covers:</strong></p>
+      <ul>
+        <li>Occupational diseases specified under Schedule III of the Employee’s Compensation Act, such as diseases caused by the use of toxic compounds.</li>
+        <li>Contractor and subcontractors and their employees</li>
+        <li>Expenses incurred on medical surgeries in case of hospitalization for more than 24 hours</li>
+      </ul>
+      <p class="note">
+        Coverage under Employee’s Compensation Insurance (formerly known as Workmen Compensation Insurance) is provided if, at the time of the accident, the worker is engaged in the employer’s business and not doing something for personal benefit. Employee and employer relationship is one of the prerequisites for the policy’s benefits to kick in.
+      </p>
+    </div>
+  </section>
+
+</div>
+<section class="advantages-section">
+  <h2 class="section-title">
+    Advantages of ICICI Lombard’s Employee’s Compensation Policy
+  </h2>
+
+  <div class="container card-ctr">
+    <div class="advantages-grid">
+    <div class="advantage-card" *ngFor="let item of advantagesList">
+      <img [src]="item.icon" alt="Icon" class="icon" />
+      <div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<!-- ============ -->
+<section class="eligibility-section">
+  <div class="content-wrapper">
+    <img src="../../../../assets/sme-img/wc_benefits.png" alt="employer image" class="section-img" />
+
+    <div class="text-content">
+      <h2>{{ heading }}</h2>
+      <ul>
+        <li *ngFor="let point of points">
+          → {{ point }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="why-choose-section">
+  <div class="text-img-wrap">
+    <div class="text-block">
+      <h2>{{ title }}</h2>
+      <p class="subtitle">{{ subtitle }}</p>
+      <ul>
+        <li *ngFor="let item of benefits">
+          → {{ item }}
+        </li>
+      </ul>
+    </div>
+
+    <img src="../../../../assets/sme-img/why you should buy WC Policy.png" alt="support image" class="section-img" />
+  </div>
+</section>
+
+
+<!-- ========================== -->
+<section class="how-to-buy">
+  <div class="container">
+    <div class="text-block">
+      <h2>{{ title2 }}</h2>
+
+      <p class="p">Here’s how you can buy Employee’s Compensation Insurance online:</p>
+
+      <ul>
+        <li *ngFor="let step of steps">
+          <img src="../../../../assets/sme-img/green_ticks.svg"  />
+          <span [innerHTML]="step"></span>
+        </li>
+      </ul>
+
+      <div class="bottom-text" *ngFor="let para of bottomInfo">
+        <p [innerHTML]="para"></p>
+      </div>
+    </div>
+
+    <div class="img-block">
+      <img src="../../../../assets/sme-img/What is the Claiming Process.svg" alt="Construction worker" />
+    </div>
+  </div>
+</section>
+
+
+
+</div>
+
+
+
+<div class="container-fluid footer">
+    <app-footer2></app-footer2>
+
+  
+</div>

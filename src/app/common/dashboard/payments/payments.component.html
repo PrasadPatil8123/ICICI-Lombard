@@ -1,0 +1,16 @@
+<p-toast></p-toast>
+
+<p-panel header="Payments" styleClass="payments-panel">
+  <ng-container *ngIf="payments.length > 0; else noPayments">
+    <div class="payment-card" *ngFor="let p of payments">
+      <strong>Amount:</strong> ₹{{ p.amount }}<br />
+      <strong>Method:</strong> {{ p.method }}<br />
+      <strong>Date:</strong> {{ p.date | date:'medium' }}<br />
+      <strong>Transaction ID:</strong> {{ p.transactionId }}
+    </div>
+  </ng-container>
+
+  <ng-template #noPayments>
+    <div class="empty-state">You do not have any payment history.</div>
+  </ng-template>
+</p-panel>
