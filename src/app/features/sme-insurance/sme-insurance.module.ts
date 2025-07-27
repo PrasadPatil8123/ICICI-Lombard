@@ -1,32 +1,38 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { MarineInsuranceComponent } from './marine-insurance/marine-insurance.component';
+import { SmeInsuranceComponent } from './sme-insurance/sme-insurance.component';
 import { WorkmensComponentComponent } from './workmens-component/workmens-component.component';
 import { GroupHealthInsComponent } from './group-health-ins/group-health-ins.component';
-import { Router, RouterModule, Routes } from '@angular/router';
+// import { Router, RouterModule, Routes } from '@angular/router';
 import { Navbar2Component, } from './navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Footer2Component } from 'src/app/common/all footer/footer2/footer2.component';
-import { FooterComponent } from '../claims/footer/footer.component';
-
-  
-const router :Routes=[
-    {path:"workmen",component:WorkmensComponentComponent},
-    {path:"group-health",component:GroupHealthInsComponent},
+// import { ReactiveFormsModule } from '@angular/forms';
+const router: Routes =[
+  {path:"smecomponents",component:SmeInsuranceComponent},
+  {path:"marinecomponents",component:MarineInsuranceComponent}
 ]
 
-
+const routes: Routes = [
+  { path: 'smecomponents', component: SmeInsuranceComponent },
+  { path: 'marinecomponents', component: MarineInsuranceComponent }
+];
 
 @NgModule({
   declarations: [
+    SmeInsuranceComponent,
+    MarineInsuranceComponent,
     WorkmensComponentComponent,
     GroupHealthInsComponent,
     Navbar2Component,
   ],
   imports: [
-    CommonModule,
-    RouterModule.forChild(router),
-    ReactiveFormsModule,
     Footer2Component,
+    CommonModule,
+    ReactiveFormsModule,
+    RouterModule.forChild(routes)
   ]
 })
 export class SmeInsuranceModule { }

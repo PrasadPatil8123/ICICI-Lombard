@@ -1,5 +1,5 @@
 <!-- navbar.component.html -->
-<div class="bgColor">
+<div class="bgColor" appCustomStyle>
     <div class="container ">
         <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
             <div class="container-fluid">
@@ -14,8 +14,8 @@
                         <!-- Loop through menuList -->
                         <li class="nav-item dropdown" *ngFor="let menu of menuList">
                             <ng-container *ngIf="menu.dropdown; else noDropdown">
-                                <a class="nav-link dropdown-toggle text-white" href="#" id="{{ menu.label }}Dropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="{{ menu.label }}Dropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     {{ menu.label }}
                                 </a>
                                 <ul class="dropdown-menu">

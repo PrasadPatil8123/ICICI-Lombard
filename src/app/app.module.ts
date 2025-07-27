@@ -5,24 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { FooterComponent } from './common/all footer/footer/footer.component';
+import { CommonModule } from '@angular/common';
 import { Footer2Component } from './common/all footer/footer2/footer2.component';
 import { PipesPipe } from './shared/pipes/pipes.pipe';
 import { DirectivesDirective } from './shared/directives/directives.directive';
 import { HeaderComponent } from './common/header/header.component';
-import { CommonModule } from '@angular/common';
+// import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
 // import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 import { NavbarComponent } from './features/claims/navbar/navbar.component';
-import { ClaimsModule } from './features/claims/claims.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
+    // FooterComponent,
+    Footer2Component,
+    NavbarComponent,
     PipesPipe,
     DirectivesDirective,
     HeaderComponent,
@@ -37,9 +38,9 @@ import { ClaimsModule } from './features/claims/claims.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ClaimsModule,
+
     CommonModule,
-    ButtonModule,
+    // ButtonModule,
     BrowserAnimationsModule
 
   ],
