@@ -4,7 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path:"sme",loadChildren:()=>
     import('./features/sme-insurance/sme-insurance.module')
-    .then((mod)=>mod.SmeInsuranceModule)
+    .then((mod)=>mod.SmeInsuranceModule)},
+  {
+    path: 'claims', loadChildren: () => import('./features/claims/claims.module')
+      .then(mod => mod.ClaimsModule)
   }
 ];
 
