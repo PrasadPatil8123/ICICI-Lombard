@@ -6,7 +6,6 @@ export class customValidators {
         if (policy && (policy.length < 5 || policy.length > 10)) {
             return { policyNumberInvalid: true };
         }
-
         return null;
     }
 }
