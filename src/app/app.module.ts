@@ -4,7 +4,7 @@ import { TravelInsuranceModule } from './features/travel-insurance/travel-insura
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -16,8 +16,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
     BrowserModule,
     TravelInsuranceModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
     HttpClientModule,
     
   ],

@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of  } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,15 +12,18 @@ export class TravelInsuranceService {
     { name: 'Schengen' },
     { name: 'Rest of the world' }
   ];
+  //  private apiUrl = 'http://localhost:3000/travelForms';
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
     getGeographies(): Observable<any[]> {
     return of(this.regions);
   }
 
   submitForm(data: any): Observable<any> {
-    console.log('Form data:', data);
-    return of({ success: true });
+    console.log('Sending to server:', data);
+    of({ success: true });
+     return this.http.post('http://localhost:3000/travelForms', data);
+     
   }
 }

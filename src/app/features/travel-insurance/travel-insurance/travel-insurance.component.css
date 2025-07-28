@@ -146,10 +146,11 @@ color: #FD7B20;
 
 .icon {
   width: 50px;
-  margin-bottom: 1rem;
+  margin: 1rem;
 }
 .feature-text{
 text-align: start;
+padding-top:10px;
 }
 
 /* advantages */
@@ -169,7 +170,7 @@ text-align: start;
     border-radius: 1rem;
     margin:0 1.5rem 1.5rem  1.5rem ;
     display: flex;
-    padding: 1.5rem;
+    padding: 0rem;
     gap: 1rem;
     align-items: flex-start; 
 }
@@ -259,6 +260,30 @@ padding-left: 0;
     font-size: 15px;
   
 }
+
+/* documents */
+.policy-documents {
+  background-color: #F8F6F6;
+  padding: 50px;
+}
+
+.doc-box {
+  transition: all 0.3s ease;
+  border: 2px solid #cccbcbc7;
+  border-radius: 8px;
+}
+
+.doc-box:hover {
+  background-color: #fdf4ef;
+  cursor: pointer;
+}
+
+.text-orange {
+  color: #f26322;
+  font-weight: 400;
+  font-size: normal;
+}
+
 
 
 

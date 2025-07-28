@@ -105,7 +105,7 @@
 
 
  <!-- covered -->
- <div class="covered my-5">
+ <div class="covered my-2">
   <h2 class="text-center fw-bold mb-4">What’s covered under ICICI Lombard's travel insurance?</h2>
 
   <p-tabView>
@@ -201,6 +201,45 @@
 
   </p-tabView>
 </div>
+
+<!-- documents -->
+ <div class="policy-documents p-5">
+  <!-- Show stacked layout on small screens -->
+  <div class="d-block d-md-none">
+     <h5 class="text-dark mb-2">Policy documents:</h5>
+    <div *ngFor="let doc of policyDocs" class="doc-box p-1 mb-2  d-flex justify-content-between align-items-center">
+      <span class="text-orange cursor-pointer" (click)="openLink(doc.link)">
+        {{ doc.title }}
+      </span>
+      <i class="pi pi-chevron-right text-orange small"></i>
+    </div>
+  </div>
+
+  <!-- Show inline layout on medium and larger screens -->
+  <div class="d-none d-md-flex flex-wrap align-items-center gap-2">
+    <h6 class="mb-0 me-2 fw-bold">Policy documents:</h6>
+    <ng-container *ngFor="let doc of policyDocs; let last = last">
+      <a (click)="openLink(doc.link)" class="text-orange text-decoration-underline cursor-pointer">{{ doc.title }}</a>
+      <span *ngIf="!last" class="text-muted mx-2">|</span>
+    </ng-container>
+  </div>
+</div>
+
+<!-- why -->
+<!-- <div class="why my-2">
+    <div class="row p-5">
+        <div class="col-lg-6 col-md-12 col-sm-12 d-md-flex">
+            <h2 class="text-left ">Why should you purchase an online travel insurance plan?</h2>
+             <div class="why-list">
+                <div *ngFor="let wh of why" class="why-box ">
+               <div class="why-icon"></div>
+                <div class="why-text">
+              <p>{{wh.list}}</p></div>
+      </div>
+    </div>
+        </div>
+    </div>
+</div> -->
 
     
      

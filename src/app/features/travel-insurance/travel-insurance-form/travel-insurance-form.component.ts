@@ -144,7 +144,7 @@ validateCheckboxes(): void {
       this.dateError ||
       (this.tripType === 'single' && (!this.travelDate || !this.returnDate))
     ) {
-      console.warn('Validation failed.');
+      console.warn('plz enter valid data');
       return;
     }
 
@@ -166,6 +166,19 @@ validateCheckboxes(): void {
       next: (res) => {
         console.log('Form submitted:', res);
         alert('Form submitted successfully!');
+        // Reset relevant fields
+this.tripType = 'single';
+this.geoOrCountry = 'geography';
+this.selectedRegion = '';
+this.selectedCountries = [];
+this.travelDate = null;
+this.returnDate = null;
+this.hasVisa = false;
+this.agreeTerms = false;
+this.selectedAgeGroup = '3-50';
+this.selectedDuration = 30;
+this.tripStartDate = null;
+
       },
       error: (err) => {
         console.error('Submission failed:', err);

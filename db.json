@@ -1,0 +1,85 @@
+{
+  "travelForms": [
+    {
+      "id": "4554",
+      "tripType": "single",
+      "geoOrCountry": "geography",
+      "selectedRegion": "usa",
+      "selectedCountries": [],
+      "travelDate": "2025-07-25T18:30:00.000Z",
+      "returnDate": "2025-08-17T18:30:00.000Z",
+      "hasVisa": [
+        null
+      ],
+      "agreeTerms": [
+        null
+      ],
+      "selectedAgeGroup": "3-50",
+      "selectedDuration": 30,
+      "tripStartDate": null
+    },
+    {
+      "tripType": "single",
+      "geoOrCountry": "country",
+      "selectedRegion": "",
+      "selectedCountries": [
+        "Australia"
+      ],
+      "travelDate": "2025-07-29T18:30:00.000Z",
+      "returnDate": "2025-08-24T18:30:00.000Z",
+      "hasVisa": [
+        null
+      ],
+      "agreeTerms": [
+        null
+      ],
+      "selectedAgeGroup": "3-50",
+      "selectedDuration": 30,
+      "tripStartDate": null,
+      "id": "ohIiZG6"
+    },
+    {
+      "tripType": "single",
+      "geoOrCountry": "geography",
+      "selectedRegion": "usa",
+      "selectedCountries": [],
+      "travelDate": "2025-07-25T18:30:00.000Z",
+      "returnDate": "2025-08-17T18:30:00.000Z",
+      "hasVisa": [
+        null
+      ],
+      "agreeTerms": [
+        null
+      ],
+      "selectedAgeGroup": "3-50",
+      "selectedDuration": 30,
+      "tripStartDate": null,
+      "id": "LLWGhTU"
+    },
+    {
+      "tripType": "multi",
+      "geoOrCountry": "geography",
+      "selectedRegion": "",
+      "selectedCountries": [],
+      "travelDate": null,
+      "returnDate": null,
+      "hasVisa": [
+        null
+      ],
+      "agreeTerms": [
+        null,
+        null
+      ],
+      "selectedAgeGroup": {
+        "label": "3 mo - 50 yrs",
+        "value": "3-50"
+      },
+      "selectedDuration": {
+        "label": "30 days",
+        "value": 30
+      },
+      "tripStartDate": "2025-07-13T18:30:00.000Z",
+      "id": "TT0VVoR"
+    }
+  ]
+}

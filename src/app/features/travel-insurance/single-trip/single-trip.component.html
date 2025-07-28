@@ -1,1 +1,34 @@
-<p>single-trip works!</p>
+<div class="container">
+    <div class="part-1">
+      <div class="row text-left">
+        <!-- left side -->
+        <div class="col-md-12 col-xs-12 col-sm-12 col-lg-7 order-1 order-lg-1">
+            <h1 class="page-head">Your passport to travelling </h1>
+            <h1> with peace of mind</h1>
+            <h3>Travel insurance starting at just {{ 22 | currencySymbol:'INR' }}/day</h3>
+           
+            <!-- 3 boxes -->
+            <div class="benefits-container row">
+                   <div class="benefit-box col-lg-4 col-md-6 col-12" *ngFor="let card of cards">
+                     <div class="icon">
+                             <img [src]="card.imgPath" alt="icon" class="img-fluid"/>
+                     </div>
+                        <div class="title">{{ card.title }}</div>
+                   </div>
+            </div>
+            <!-- image -->
+               <div class="person-image-wrapper  mt-3 order-3 ">
+        <img src="../../../../assets/travel-insurance/0.1.png" class=" person-image" alt="image">
+     </div>
+        </div>
+     
+
+<!-- this is form  part -->
+ <div class="col-md-12 col-xs-12 col-sm-12 col-lg-5 order-2 order-lg-1">
+                <div class="mt-5">
+                <app-travel-insurance-form></app-travel-insurance-form>
+                </div>
+ </div>
+  </div>
+    </div>
+</div>

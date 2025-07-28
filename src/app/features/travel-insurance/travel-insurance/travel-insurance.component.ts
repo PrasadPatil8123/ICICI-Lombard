@@ -6,7 +6,7 @@ import { Component,OnInit } from '@angular/core';
   templateUrl: './travel-insurance.component.html',
   styleUrls: ['./travel-insurance.component.css']
 })
-export class TravelInsuranceComponent {
+export class TravelInsuranceComponent implements OnInit {
  
   //  3 bxes
     cards: { imgPath: string; title: string}[] = [
@@ -94,6 +94,29 @@ export class TravelInsuranceComponent {
       title:'Emergency cash',
       describe : 'If you need emergency cash during your trip because of a lost wallet, we will help you arrange it.'
     }
-  ]
+  ];
+
+  // document
+
+  policyDocs = [
+    { title: 'Travel insurance policy wordings', link: 'assets/travel-insurance/doc/international-travel-insurance-policy-wording.pdf' },
+    { title: 'Policy wordings for Schenegen countries', link: 'assets/travel-insurance/doc/international-travel-insurance-schegen_policy-wordings.pdf' },
+    { title: 'Brochure', link: 'assets/travel-insurance/doc/tripsecure-brochure_v12.pdf' },
+    { title: 'Glossary', link: 'assets/docs/glossary.pdf' }
+  ];
+
+  openLink(url: string): void {
+    window.open(url, '_blank');
+  }
+
+  ngOnInit(): void {}
+
+  // why
+  // why = [
+  //   {
+  //     list
+  //   }
+  // ]
+
 
 }
