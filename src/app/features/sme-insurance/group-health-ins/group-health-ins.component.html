@@ -1,0 +1,287 @@
+<p>group-health-ins works!</p>
+<div class="gh-container">
+    <div class="gh-left">
+        <h1>Group health insurance</h1>
+
+        <div class="features">
+            <div class="feature-card">
+                <img src="../../../../assets/sme-group-health/craft-plan.svg" alt="Plan Icon" />
+                <p><strong>Exclusively crafted health plans</strong> for your employees</p>
+            </div>
+            <div class="feature-card">
+                <img src="../../../../assets/sme-group-health/affor-customise.svg" alt="Custom Icon" />
+                <p><strong>Simple, affordable,</strong> and customized insurance</p>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div><strong>40,000 +</strong><br />Policies issued</div>
+            <div><strong>1.8 Cr +</strong><br />Lives insured</div>
+            <div><strong>99.49%</strong><br />Claims settled</div>
+        </div>
+
+        <p class="as-on">As on December 31, 2023</p>
+
+        <img src="../../../../assets/sme-group-health/group-health-banner.svg" alt="Team Illustration"
+            class="illustration" />
+    </div>
+
+    <div class="gh-right">
+        <form [formGroup]="ghForm" (ngSubmit)="onSubmit()">
+            <input formControlName="mobile" placeholder="Mobile Number" type="tel" required />
+            <input formControlName="pincode" placeholder="Pincode" type="text" required />
+            <input formControlName="company" placeholder="Name of corporate" type="text" required />
+            <input formControlName="email" placeholder="Email" type="email" required />
+
+            <button type="submit" class="submit-btn">Proceed to Buy</button>
+
+            <div class="form-bottom">
+                <label>
+                    <input type="checkbox" formControlName="agree" />
+                    I agree to the <a href="#">terms and conditions</a>
+                </label>
+
+                <label>
+                    <input type="checkbox" formControlName="whatsapp" />
+                    I want to receive updates on <div class="wpimg"><img
+                            src="../../../../assets/sme-group-health/whatsup.png" alt="WhatsApp" /></div>
+                </label>
+
+                <div class="existing-user">
+                    <span>Are you an existing customer?</span>
+                    <a href="#">click here</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- ================= -->
+<div class="health-info-container container">
+    <div class="text-section">
+        <h2>What is group health insurance?</h2>
+        <p>
+            Group health insurance, as the name suggests, offers coverage to a group of people.
+            It generally covers employees of a company or members. A group health insurance policy
+            plays a vital role in ensuring employees' well-being by offering financial protection
+            against medical expenses.
+        </p>
+        <p>
+            Affordability is a significant benefit of group health insurance. The premium of group
+            health plans tends to be lower than individual health insurance plans. This makes it a
+            cost-effective option for both employers and employees.
+        </p>
+        <p>
+            Group health insurance plans generally offer extensive coverage for various medical expenses.
+            This includes hospitalisation, surgeries, medications and even post-hospitalisation expenses
+            for certain days. Some plans may also offer coverage for outpatient treatments.
+        </p>
+        <a href="#" class="read-more">Read more</a>
+    </div>
+
+    <div class="image-section">
+        <img src="../../../../assets/sme-group-health/Group-familys.svg" alt="Group Insurance Illustration" />
+    </div>
+</div>
+
+<div class="section-container">
+    <h2>Why is group health insurance important for employers and employees?</h2>
+    <p class="subtitle">Here's how a group health insurance policy benefits employers and employees:</p>
+
+    <div class="tabs">
+        <div class="tab" [class.active]="activeTab === 'employers'" (click)="activeTab = 'employers'">
+            <img src="../../../../assets/sme-group-health/employees-active.svg" alt="Employer" />
+            <span>For Employers</span>
+        </div>
+        <div class="tab" [class.active]="activeTab === 'employees'" (click)="activeTab = 'employees'">
+            <img src="../../../../assets/sme-group-health/employers-active.svg" alt="Employee" />
+            <span>For Employees</span>
+        </div>
+    </div>
+
+    <div class="tab-content" *ngIf="activeTab === 'employers'">
+        <div class="point">
+            <strong>📉 Cost-effective coverage</strong>
+            <p>
+                Group health medical insurance plans generally command lower premiums than individual plans.
+                This is because risk is distributed across a broader pool.
+            </p>
+        </div>
+        <div class="point">
+            <strong>💰 Tax Benefits</strong>
+            <p>
+                Contributions towards corporate health insurance qualify for tax deduction under section 37(1)
+                of the Income Tax Act.
+            </p>
+        </div>
+    </div>
+
+    <div class="tab-content" *ngIf="activeTab === 'employees'">
+        <div class="point">
+            <strong>🏥 Medical Coverage</strong>
+            <p>
+                Employees get access to hospitalization, surgeries, and post-treatment benefits without extra cost.
+            </p>
+        </div>
+        <div class="point">
+            <strong>💼 Job Satisfaction</strong>
+            <p>
+                Better coverage improves employee morale, retention, and loyalty toward the organization.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Section: Who should buy group health insurance -->
+<div class="buyer-section container">
+    <h2>Who should buy group health insurance?</h2>
+    <p class="subtitle">It is vital for organizations of all sizes, ranging from small to large corporations.</p>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="../../../../assets/sme-group-health/small-business.svg" alt="Small" />
+            <h4>Small businesses</h4>
+            <p>For companies with 20–50 employees, offering group insurance is both affordable and valuable.</p>
+        </div>
+        <div class="card">
+            <img src="../../../../assets/sme-group-health/medium-business.svg" alt="Medium" />
+            <h4>Medium businesses</h4>
+            <p>Medium-sized firms with 50–250 employees benefit greatly from corporate health insurance.</p>
+        </div>
+        <div class="card">
+            <img src="../../../../assets/sme-group-health/large-business.svg" alt="Large" />
+            <h4>Large businesses</h4>
+            <p>For 250+ employee companies, this is an essential tool for employee engagement and retention.</p>
+        </div>
+    </div>
+</div>
+<!-- ============== -->
+
+<section class="features-section">
+    <div class="container">
+        <h2 class="main-heading">Features of ICICI Lombard’s group health insurance policy</h2>
+        <p class="sub-heading">
+            With our group medical insurance policy, you get the following benefits:
+        </p>
+
+        <div class="features-grid">
+            <div class="" *ngFor="let feature of features">
+                <div><img [src]="feature.icon" [alt]="feature.title" class="feature-icon" /></div>
+                <div>
+                    <h3 class="feature-title">{{ feature.title }}</h3>
+                </div>
+                <div>
+                    <p class="feature-description">
+                        {{ feature.description }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ============= -->
+<section class="features-section2">
+    <div class="container">
+        <h2 class="main-heading">What is covered under a group health insurance policy?</h2>
+        <p class="sub-heading">
+            Our group health insurance provides coverage for the following.
+        </p>
+
+        <div class="features-grid">
+            <div class="" *ngFor="let feature2 of features2">
+                <h1>{{ feature2.num}}</h1>
+                <div>
+                    <h6 class="feature2-title">{{ feature2.title }}</h6>
+                </div>
+                <div>
+                    <p class="feature2-description">
+                        {{ feature2.description }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container-fluid hedline">
+    <h1 style="color: black;">Difference between group health insurance and individual health plan</h1>
+    <div class="container">
+        <p>The table captures the key differences between them on various parameters:</p>
+    </div>
+</div>
+
+
+<div class="container redius">
+    <table border="1" class="table">
+        <thead>
+            <tr>
+                <th>Scenarios</th>
+                <th>Compensation</th>
+                <th>test</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of compensations">
+                <td class="p-4">{{ item.scenario1 }}</td>
+                <td class="p-4">{{ item.scenario2 }}</td>
+                <td class="p-4">{{ item.scenario3 }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <section class="section-one mt-5">
+        <div class="section-one-text">
+            <h1 style="color: black;">What is the claiming process for a group health insurance policy?</h1>
+            <p><strong>The claim process from a group health medical insurance plan is simple.All you need to do
+                    is:</strong></p>
+            <ul>
+                <li><span> <b class="me-3">1</b></span>
+                    Inform the insurer promptly. Use the various channels of communication. The earlier you inform, the
+                    better it is.</li>
+                <li><span> <b class="me-3">2</b></span>Prioritizing employee safety enhances your brand image,
+                    positively impacting customer and investor
+                    perceptions.</li>
+                <li><span> <b class="me-3">3</b></span>Compliance with contracts requiring employee’s (workmen’s)
+                    compensation ensures legal obligations,
+                    preventing disputes.</li>
+
+                <li><span> <b class="me-3">3</b></span>It provides peace of mind, fulfilling legal duties for employers
+                    and offering financial security for
+                    employees in case of job-related injuries.</li>
+            </ul>
+        </div>
+        <div class="section-one-img">
+            <img  class='mt-5'src="../../../../assets/sme-group-health/claiming-process.svg" alt="Employee Safety" />
+        </div>
+    </section>
+    <!-- ================ -->
+    <section class="section-two">
+        <div class="section-two-img">
+            <img src="../../../../assets/sme-group-health/brouchers.svg" alt="Wheelchair Illustration" />
+        </div>
+        <div class="section-two-text">
+            <h1 style="color: black;">Buy group health insurance policy</h1>
+            <p><strong>The policy covers legal liability of an employer under:</strong></p>
+             <p class="note">
+               You need to provide certain basic and essential documents to buy a group health medical insurance. The common documents you need to provide are:
+            </p>
+            <ul>
+                <li><span> <b class="me-3">1</b></span> Workmen Compensation Act, 1923 [as amended through Employee’s Compensation (Amendment) Act,
+                    2017], and subsequent amendments of the said Act prior to the date of issue of the policy.</li>
+                <li><span> <b class="me-3">2</b></span> Common law, only up to the limit of indemnity agreed under the respective policy</li>
+                <li><span> <b class="me-3">3</b></span> Fatal Accident Act 1855</li>
+            </ul>
+            
+            <p class="note">
+               Check with the insurer regarding any additional documents that you need to provide. Make sure you provide all the documents requested by your insurer. Failure to do so can result in application rejection. Also, ensure that the documents are in proper condition where everything is legible.
+            </p>
+        </div>
+    </section>
+
+   </div>
+   
+    
+    
+        <app-footer></app-footer>
+        <app-footer2></app-footer2>
