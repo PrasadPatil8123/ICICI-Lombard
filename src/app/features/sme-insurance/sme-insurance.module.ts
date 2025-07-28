@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Footer2Component } from 'src/app/common/all footer/footer2/footer2.component';
 import { FooterComponent } from '../claims/footer/footer.component';
+import { Footer1Component } from 'src/app/common/all footer/footer/footer.component';
 
   
 const router :Routes=[
@@ -27,6 +28,7 @@ const router :Routes=[
     RouterModule.forChild(router),
     ReactiveFormsModule,
     Footer2Component,
+    Footer1Component,
   ]
 })
 export class SmeInsuranceModule { }

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { FooterComponent } from './common/all footer/footer/footer.component';
+import { Footer1Component } from './common/all footer/footer/footer.component';
 import { Footer2Component } from './common/all footer/footer2/footer2.component';
 import { PipesPipe } from './shared/pipes/pipes.pipe';
 import { DirectivesDirective } from './shared/directives/directives.directive';
@@ -21,7 +21,7 @@ import { ClaimsModule } from './features/claims/claims.module';
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
+    // FooterComponent,
     // NavbarComponent,
     PipesPipe,
     DirectivesDirective,
@@ -31,6 +31,7 @@ import { ClaimsModule } from './features/claims/claims.module';
   ],
   imports: [
     Footer2Component,
+    Footer1Component,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

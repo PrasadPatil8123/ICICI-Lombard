@@ -1,5 +1,4 @@
 {
-
   "personalDetails": [
     {
       "id": 1,
@@ -652,6 +651,25 @@
       "mobile_no": "1325465462",
       "email_id": "riju123@gmail.com"
     }
-}
+  ],
+  "group-health": [
+    {
+      "mobile": "9326834227",
+      "pincode": "431103",
+      "company": "xyz",
+      "email": "ghulenilesh34@gmail.com",
+      "agree": true,
+      "whatsapp": false,
+      "id": 1
+    },
+    {
+      "id": "a277",
+      "mobile": "9326834227",
+      "pincode": "431103",
+      "company": "xyz",
+      "email": "test12@gmail.com",
+      "agree": true,
+      "whatsapp": false
+    }
   ]
 }
