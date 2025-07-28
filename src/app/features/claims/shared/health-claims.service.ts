@@ -9,7 +9,7 @@ export class HealthClaimsService {
 
   constructor(private http: HttpClient) { }
 
-   public onGetData(): Observable<any> {
+  public onGetData(): Observable<any> {
     return this.http.get('http://localhost:3000/reimbursementClaim');
   }
 
@@ -106,5 +106,9 @@ export class HealthClaimsService {
 
   public hospitalListName() {
     return this.http.get('http://localhost:3000/allHospitals');
+  }
+
+  public onSendData(data: any) {
+    return this.http.post('http://localhost:3000/allHospitals', data);
   }
 }

@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <table *ngIf="listHospital.length > 0" class="table table-bordered border-success mt-2">
+        <thead>
+            <b>Letters add hospital data</b>
+            <tr>
+                <th style="width:25%" *ngFor="let head of heading">{{head}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of listHospital">
+                <td>{{ data.name }}</td>
+                <td>{{ data.phone }}</td>
+                <td>{{ data.pincode }}</td>
+                <td>{{ data.city }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table *ngIf="oldHospitalDataList.length > 0" class="table table-bordered border-primary mt-4">
+        <thead>
+            <b>All Hospital List</b>
+            <tr>
+                <th style="width:25%" *ngFor="let head of heading">{{head}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let list of oldHospitalDataList">
+                <td>{{ list.name }}</td>
+                <td>{{ list.phone }}</td>
+                <td>{{ list.pincode }}</td>
+                <td>{{ list.city }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary" (click)="backParentComponent()">Back</button>
+    <button class="btn btn-success ms-3" (click)="oldHospitalData()" *ngIf="listHospital.length> 0">Old Hospital Data</button>
+</div>
