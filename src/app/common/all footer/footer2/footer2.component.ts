@@ -5,7 +5,9 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-footer2',
   templateUrl: './footer2.component.html',
-  styleUrls: ['./footer2.component.css']
+  styleUrls: ['./footer2.component.css'],
+  standalone:true,
+  imports: [CommonModule]
 })
 export class Footer2Component {
 

@@ -7,6 +7,7 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Footer2Component } from 'src/app/common/all footer/footer2/footer2.component';
 import { Footer1Component } from 'src/app/common/all footer/footer/footer.component';
+import { NavbarComponent } from '../claims/navbar/navbar.component';
 
   
 const router :Routes=[
@@ -20,7 +21,7 @@ const router :Routes=[
   declarations: [
     WorkmensComponentComponent,
     GroupHealthInsComponent,
-    // NavbarComponent,
+    NavbarComponent,
   ],
   imports: [
     CommonModule,

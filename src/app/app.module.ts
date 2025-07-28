@@ -17,6 +17,7 @@ import { HomeComponent } from './common/home/home.component';
 import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 import { ClaimsModule } from './features/claims/claims.module';
 import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
+import { Footer1Component } from './common/all footer/footer/footer.component';
 // import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 // import { NavbarComponent } from './features/claims/navbar/navbar.component';
 
@@ -31,19 +32,19 @@ import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
     DirectivesDirective,
     HeaderComponent,
     HomeComponent,
-    // CarInsuranceComponent
+    CarInsuranceComponent
+   
   ],
   imports: [
-    Footer2Component,
-    // Footer1Component,
+  
     BrowserModule,
-    Footer2Component,
+
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
 
-    ClaimsRoutingModule,
+    // ClaimsRoutingModule,
   
 
     CommonModule,

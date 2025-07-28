@@ -14,6 +14,7 @@ import { CarBikeComponent } from './common/car-bike/car-bike.component';
 import { AllHealthComponent } from './common/all-health/all-health.component';
 import { DisclaimersComponent } from './common/disclaimers/disclaimers.component';
 import { Footer2Component } from 'src/app/common/all footer/footer2/footer2.component';
+import { Footer1Component } from 'src/app/common/all footer/footer/footer.component';
 
 
 const routes:Routes = [
@@ -43,7 +44,9 @@ const routes:Routes = [
     FormsModule,
     ButtonModule,
     RadioButtonModule,
+    Footer1Component,
     Footer2Component
+
   ]
 })
 export class RenewalsModule { }
