@@ -1,0 +1,41 @@
+<footer>
+    <div class="container">
+       <div class="row">
+         <div class="left col-md-4">
+            <div class="info">
+                <h6>{{title}}</h6>
+                <p>{{adress}}</p>
+                <p>{{contactDetails}}</p>
+            </div>
+
+            <div class="links" *ngFor="let link of imageLinks">
+                <a [href]="link.url" [title]="link.title">
+                    <img [src]="link.img" alt="{{link.name}}">
+                </a>
+               
+            </div>
+        </div>
+
+        <div class="right col-md-8">
+            <div class="para">
+                <p>{{para1}}</p>
+                <p>{{para2}}</p>
+            </div>
+            
+            <div class="d-flex gap-3 mt-3">
+                <img *ngFor="let image of images"  [src]="image.img" alt="{{image.name}}">
+
+                <select class="dropdown">
+                   
+                    <option value="">Group Companies</option>
+                    <option value="" *ngFor="let company of companies">{{company}}</option>
+                </select>
+            </div>
+
+
+
+        </div>
+       </div>
+    </div>
+
+</footer>
