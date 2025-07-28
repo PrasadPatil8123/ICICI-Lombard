@@ -12,6 +12,7 @@ import { HeaderComponent } from './common/header/header.component';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
+import { MainInterInterceptor } from './shared/interceptor/main-inter.interceptor';
 // import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 // import { NavbarComponent } from './features/claims/navbar/navbar.component';
 
@@ -24,7 +25,7 @@ import { HomeComponent } from './common/home/home.component';
     PipesPipe,
     HeaderComponent,
     HomeComponent,
-  
+ 
     // CarInsuranceComponent
   ],
   imports: [
@@ -33,13 +34,18 @@ import { HomeComponent } from './common/home/home.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
+  
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule
 
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,
+    useClass:MainInterInterceptor,
+    multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
