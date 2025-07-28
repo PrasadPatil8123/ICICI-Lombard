@@ -23,7 +23,7 @@ import { DashboardModule } from './common/dashboard/dashboard.module';
   declarations: [
     AppComponent,
     FooterComponent,
-    Footer2Component,
+    // Footer2Component,
     PipesPipe,
     DirectivesDirective,
     HeaderComponent,
@@ -35,6 +35,7 @@ import { DashboardModule } from './common/dashboard/dashboard.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+     Footer2Component,
 
     ClaimsRoutingModule,
   
