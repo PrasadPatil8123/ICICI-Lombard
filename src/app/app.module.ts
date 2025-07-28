@@ -16,27 +16,23 @@ import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
 import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 import { ClaimsModule } from './features/claims/claims.module';
-// import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 // import { NavbarComponent } from './features/claims/navbar/navbar.component';
+// import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    // FooterComponent,
-    // NavbarComponent,
     PipesPipe,
     DirectivesDirective,
     HeaderComponent,
     HomeComponent,
-    // CarInsuranceComponent
   ],
   imports: [
     Footer2Component,
     Footer1Component,
     BrowserModule,
-    Footer2Component,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

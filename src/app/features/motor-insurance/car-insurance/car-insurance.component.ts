@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { CarRegDataService } from 'src/app/core/services/car-reg-data.service';
@@ -5,7 +6,8 @@ import { CarRegDataService } from 'src/app/core/services/car-reg-data.service';
 @Component({
   selector: 'app-car-insurance',
   templateUrl: './car-insurance.component.html',
-  styleUrls: ['./car-insurance.component.css']
+  styleUrls: ['./car-insurance.component.css'],
+  // imports: [CommonModule],
 })
 export class CarInsuranceComponent {
 

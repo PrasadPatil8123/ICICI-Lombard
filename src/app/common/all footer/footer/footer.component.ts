@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-footer1',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css'],
   standalone: true,
