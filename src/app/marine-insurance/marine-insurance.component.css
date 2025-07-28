@@ -1,0 +1,364 @@
+/* Navbar */
+.bg-gradient-red {
+  background: transparent linear-gradient(180deg, #EF7D00 0%, #AD2221 100%) 0% 0% no-repeat padding-box !important;
+  color: white !important;
+}
+
+.bg-gradient-red .navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.bg-gradient-red .navbar-nav .nav-link:hover {
+  color: #ffe0b2 !important; 
+}
+
+.bg-gradient-red .navbar-brand img {
+  filter: brightness(100%) contrast(100%);
+}
+
+.top-bar {
+  font-size: 14px;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.top-bar a:hover {
+  text-decoration: underline;
+}
+
+/* Marine Insurance */
+.mi-landing-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 30px;
+  position: relative;
+  min-height: 100vh; 
+}
+
+
+.mi-left-content {
+  flex: 1 1 55%;
+  max-width: 55%;
+}
+
+.mi-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.mi-stats {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.mi-highlight {
+  color: #f15a24;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.mi-orange {
+  display: inline-block;
+  color: #f15a24;
+  font-size: 0.9rem;
+}
+
+.mi-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.mi-feature-card {
+  background: #fff4ed;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.mi-icon {
+  color: #f15a24;
+  font-size: 1.2rem;
+}
+
+.mi-note {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 20px;
+}
+
+.mi-right-form {
+  flex: 1 1 35%;
+  max-width: 35%;
+  background: #f8f9fb;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.mi-form-title {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mi-step {
+  background: #e0f7ff;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  color: #007b8e;
+}
+
+.mi-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mi-form input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.mi-form button {
+  background: #f15a24;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.mi-form button:hover {
+  background: #d1481b;
+}
+
+.mi-form-footer {
+  font-size: 0.8rem;
+  margin-top: 15px;
+}
+
+.mi-form-footer a {
+  color: #f15a24;
+  text-decoration: none;
+}
+
+.mi-background-image {
+  background: url('https://www.icicilombard.com/business-insurance/marine-insurance/assets/images/marine-bg-landing.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* What is marine Insurance */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.custom-img {
+  max-height: 300px;
+  object-fit: contain;
+}
+
+/* How does marine Insurance work? */
+.mi-section {
+  background-color: #e5f6fd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mi-title {
+  font-weight: 700;
+  font-size: 28px;
+  color: #1a1a1a;
+}
+
+.mi-subtitle {
+  font-weight: 600;
+  color: #333;
+}
+
+.mi-list li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+}
+
+.mi-list i {
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+.mi-illustration {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* What are the features of marine Insurance */
+.mf-section {
+  background-color: #002d62;
+}
+
+.mf-title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.mf-subtitle {
+  font-size: 16px;
+  color: #dce9f5;
+  font-weight: 500;
+}
+
+.mf-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: flex-start;
+}
+
+.mf-number {
+  font-size: 36px;
+  font-weight: bold;
+  margin-right: 15px;
+  color: #b23b3b;
+  background: linear-gradient(45deg, #f36d33, #b03030);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Types of marine Insurance */
+h2 {
+  font-size: 28px;
+}
+
+h6 {
+  font-size: 17px;
+}
+
+img {
+  flex-shrink: 0;
+}
+
+
+/* Who should buy marine insurance */
+.who-should-buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003865;
+  color: #ffffff;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+}
+
+.content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.content h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.buyer-list {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.buyer-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.buyer-list li {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.buyer-list span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.illustration {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+
+.illustration img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* What’s not covered in ICICI Lombard’s Marine Insurance? */
+.bg-light-orange {
+  background-color: #fff4f0;
+}
+
+ul li {
+  color: white;
+  margin-bottom: 8px;
+}
+
+.text-orange {
+  color: #d0421b;
+  text-decoration: none;
+}
+
+.text-orange:hover {
+  text-decoration: underline;
+}
+
+.btn-outline-orange {
+  border: 1px solid #d0421b;
+  color: #d0421b;
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+.btn-outline-orange:hover {
+  background-color: #d0421b;
+  color: #fff;
+}
