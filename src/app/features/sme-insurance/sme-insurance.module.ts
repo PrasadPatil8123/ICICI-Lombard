@@ -10,10 +10,11 @@ import { NavbarComponent } from '../claims/navbar/navbar.component';
 import { Navbar2Component } from './navbar/navbar.component';
 import { MarineInsuranceComponent } from './marine-insurance/marine-insurance.component';
 import { SmeInsuranceComponent } from './sme-insurance/sme-insurance.component';
+import { mydeactive } from './guards.guard';
 
   
 const router :Routes=[
-    {path:"workmen",component:WorkmensComponentComponent},
+    {path:"workmen",component:WorkmensComponentComponent,canDeactivate:[mydeactive]},
     {path:"group-health",component:GroupHealthInsComponent},
     {path:"marine",component:MarineInsuranceComponent},
     {path:"sme-ins",component:SmeInsuranceComponent},

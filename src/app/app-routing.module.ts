@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { canmatch } from './features/sme-insurance/guards.guard';
 
 const routes: Routes = [
   {path:"sme",loadChildren:()=>
     import('./features/sme-insurance/sme-insurance.module')
-    .then((mod)=>mod.SmeInsuranceModule)},
+    .then((mod)=>mod.SmeInsuranceModule),
+    canMatch:[canmatch]
+  },
+    
     {
     path: 'crpr', loadChildren: () => import('./features/corporate-insurance/corporate-insurance.module')
         .then(mod => mod.CorporateInsuranceModule)

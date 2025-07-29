@@ -10,6 +10,17 @@ import { FormServiceService } from 'src/app/core/services/form-service.service';
   
 })
 export class WorkmensComponentComponent {
+
+
+  isFormDirty: boolean = true;
+
+  canDeactivate() {
+    return this.isFormDirty
+      ? confirm('Your data is not saved,  you want to leave this page ?')
+      : true;
+
+  }
+
      public myform:any=[]
      public showfrm : boolean=true
      
@@ -27,10 +38,10 @@ export class WorkmensComponentComponent {
  public tick:any='../../../../assets/sme-img/tick_marine.png'
  constructor( private fb : FormBuilder,private http:HttpClient){
    this.myform=this.fb.group({
-    mobail:[""],
-    email:[""],
-    company:[""],
-    pincode:[""],
+    mobile:["",[Validators.required,Validators.pattern(/^[6-9]\d{9}$/)]],
+    email:["",[Validators.required,Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]],
+    company:["",[Validators.required]],
+    pincode:["",[Validators.required,Validators.pattern(/^[1-9][0-9]{5}$/)]],
    });
     
   }
@@ -52,15 +63,17 @@ export class WorkmensComponentComponent {
     unskilledWorkerSalary: ['salary'],
     policyPeriod: [1],
     lastClaim: ['Nil or below ₹1 lakh']
+    
   });
 }
 
 
   onSubmit() {
     if (this.insuranceForm.valid) {
-      this.http.post('http://localhost:3000/policies', this.insuranceForm.value).subscribe(res => {
+      this.http.post('http://localhost:3000/policies2', this.insuranceForm.value).subscribe(res => {
         console.log('Data stored:', res);
         alert('Data submitted successfully!');
+        this.insuranceForm.reset()
       });
     }
   }
@@ -68,7 +81,14 @@ export class WorkmensComponentComponent {
 
 //  form1
  onSubmit1(){
-  
+  if(this.myform){
+     this.http.post("http://localhost:3000/form-info",this.myform.value).subscribe((res:any)=>{
+      console.log( "form-submited",res)
+      alert(" form submitted successfully!")
+        this.myform.reset()
+
+     })
+    }
  }
 //  ==========================================
 compensations = [

@@ -33,7 +33,7 @@
       }
     }
   ],
-  "policies": [
+  "policies2": [
     {
       "id": "7ee5",
       "industryCategory": "Construction",
@@ -187,6 +187,30 @@
       "unskilledWorkerSalary": 5000,
       "policyPeriod": 1,
       "lastClaim": "Above ₹1 lakh"
+    },
+    {
+      "id": "1b78",
+      "industryCategory": "",
+      "skilledWorkersCount": 0,
+      "skilledWorkerSalary": "salary",
+      "semiSkilledWorkersCount": 0,
+      "semiSkilledWorkerSalary": "salary",
+      "unskilledWorkersCount": 0,
+      "unskilledWorkerSalary": "salary",
+      "policyPeriod": 1,
+      "lastClaim": "Nil or below ₹1 lakh"
+    },
+    {
+      "id": "38f5",
+      "industryCategory": "",
+      "skilledWorkersCount": 0,
+      "skilledWorkerSalary": "salary",
+      "semiSkilledWorkersCount": 0,
+      "semiSkilledWorkerSalary": "salary",
+      "unskilledWorkersCount": 11111111,
+      "unskilledWorkerSalary": 19000000000000,
+      "policyPeriod": 1,
+      "lastClaim": "Nil or below ₹1 lakh"
     }
   ],
   "payments": [
@@ -742,6 +766,86 @@
       "email": "test12@gmail.com",
       "agree": true,
       "whatsapp": false
+    }
+  ],
+  "form-info": [
+    {},
+    {
+      "id": "0d85",
+      "mobail": "",
+      "email": "",
+      "company": "",
+      "pincode": ""
+    },
+    {
+      "id": "c4eb",
+      "mobail": "",
+      "email": "",
+      "company": "",
+      "pincode": ""
+    },
+    {
+      "id": "608f",
+      "mobail": "",
+      "email": "",
+      "company": "",
+      "pincode": ""
+    },
+    {
+      "id": "a4fc",
+      "mobail": "",
+      "email": "",
+      "company": "",
+      "pincode": ""
+    },
+    {
+      "id": "d625",
+      "mobile": "",
+      "email": "",
+      "company": "",
+      "pincode": ""
+    },
+    {
+      "id": "b2ca",
+      "mobile": "",
+      "email": "",
+      "company": "",
+      "pincode": ""
+    },
+    {
+      "id": "fc02",
+      "mobile": "",
+      "email": "",
+      "company": "",
+      "pincode": ""
+    },
+    {
+      "id": "ab24",
+      "mobile": "",
+      "email": "",
+      "company": "",
+      "pincode": ""
+    },
+    {
+      "id": "8034",
+      "mobile": "9999999999",
+      "email": "test12@gmail.com",
+      "company": "aaaa",
+      "pincode": "111111"
+    },
+    {
+      "id": "382f",
+      "mobile": "9999999999",
+      "email": "test12@gmail.com",
+      "company": "aaaa",
+      "pincode": "111111"
+    },
+    {
+      "id": "3afa",
+      "mobile": "9932654888",
+      "email": "test12@gmail.com",
+      "company": "ssss",
+      "pincode": "333333"
     }
   ]
 }
