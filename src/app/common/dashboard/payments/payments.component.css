@@ -1,0 +1,21 @@
+.payments-panel {
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.payment-card {
+  background-color: #f3f3f3;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 16px;
+  color: #555;
+  background-color: #fafafa;
+  border-radius: 8px;
+}

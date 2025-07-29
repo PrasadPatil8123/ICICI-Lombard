@@ -1,0 +1,42 @@
+<p-panel header="My Policies" styleClass="custom-panel">
+  <p-tabView [(activeIndex)]="activeIndex">
+    <p-tabPanel header="Active Policies">
+      <ng-container *ngIf="getPoliciesByStatus('active').length; else noActive">
+        <div *ngFor="let p of getPoliciesByStatus('active')" class="policy-card">
+          <strong>{{ p.type }}</strong> – {{ p.policyNumber }}<br/>
+          Premium: ₹{{ p.premium }}<br/>
+          Valid: {{ p.startDate }} to {{ p.endDate }}
+        </div>
+      </ng-container>
+      <ng-template #noActive>
+        <div class="empty-state">You do not have any active policy.</div>
+      </ng-template>
+    </p-tabPanel>
+
+    <p-tabPanel header="Pending Policies">
+      <ng-container *ngIf="getPoliciesByStatus('pending').length; else noPending">
+        <div *ngFor="let p of getPoliciesByStatus('pending')" class="policy-card">
+          <strong>{{ p.type }}</strong> – {{ p.policyNumber }}<br/>
+          Premium: ₹{{ p.premium }}<br/>
+          Start Date: {{ p.startDate || 'TBD' }}
+        </div>
+      </ng-container>
+      <ng-template #noPending>
+        <div class="empty-state">You do not have any pending policy.</div>
+      </ng-template>
+    </p-tabPanel>
+
+    <p-tabPanel header="Expired Policies">
+      <ng-container *ngIf="getPoliciesByStatus('expired').length; else noExpired">
+        <div *ngFor="let p of getPoliciesByStatus('expired')" class="policy-card">
+          <strong>{{ p.type }}</strong> – {{ p.policyNumber }}<br/>
+          Premium: ₹{{ p.premium }}<br/>
+          Expired on: {{ p.endDate }}
+        </div>
+      </ng-container>
+      <ng-template #noExpired>
+        <div class="empty-state">You do not have any expired policy.</div>
+      </ng-template>
+    </p-tabPanel>
+  </p-tabView>
+</p-panel>

@@ -24,7 +24,8 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { DialogModule } from 'primeng/dialog';
 import { CorpClaimsComponent } from './corp-claims/corp-claims.component';
-
+import { CommanTableComponent } from './comman-table/comman-table.component';
+import { TableModule } from 'primeng/table';
 @NgModule({
   declarations: [
     HealthClaimsComponent,
@@ -36,6 +37,7 @@ import { CorpClaimsComponent } from './corp-claims/corp-claims.component';
     TravelClaimsComponent,
     HomeClaimsComponent,
     CorpClaimsComponent,
+    CommanTableComponent,
   ],
   exports: [
     HealthClaimsComponent
@@ -54,6 +56,7 @@ import { CorpClaimsComponent } from './corp-claims/corp-claims.component';
     MatSelectModule,
     MatInputModule,
 
+    TableModule,
     ReactiveFormsModule,
     DialogModule,
     ButtonModule,

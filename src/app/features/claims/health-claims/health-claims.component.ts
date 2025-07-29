@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HealthClaimsService } from '../shared/health-claims.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-health-claims',
@@ -17,19 +18,19 @@ export class HealthClaimsComponent {
   public showDateInput: any = '';
 
 
-  public allHealthClaimData:any=[];
-  public claimIdCount:number =1;
-  public objectOfHealth={
-    id:1,
-    claimNumber:'',
-    claimsDay:''
+  public allHealthClaimData: any = [];
+  public claimIdCount: number = 1;
+  public objectOfHealth = {
+    id: 1,
+    claimNumber: '',
+    claimsDay: ''
   }
 
-  onSendDataClaimsProcess(){
-    this.objectOfHealth.id =  this.claimIdCount++;
-    this.allHealthClaimData.push({...this.objectOfHealth});
+  onSendDataClaimsProcess() {
+    this.objectOfHealth.id = this.claimIdCount++;
+    this.allHealthClaimData.push({ ...this.objectOfHealth });
     console.log(this.allHealthClaimData);
-    
+
   }
   selectedOption = 'emergency';
 
@@ -42,7 +43,7 @@ export class HealthClaimsComponent {
   public assistanceItems: any = [];
   public connectOptions: any = [];
   public blogArticles: any = [];
-  constructor(private healthService: HealthClaimsService) {
+  constructor(private healthService: HealthClaimsService, private route: Router) {
     this.onGetReimbursement()
     this.onGetAssistance()
     this.onGetConnectOptions()
@@ -67,7 +68,6 @@ export class HealthClaimsComponent {
       this.connectOptions = res;
     })
   }
-
   //blogArticles data
   public onGetblogArticles() {
     this.healthService.onGetBlogArticles().subscribe((res: any) => {
@@ -75,6 +75,9 @@ export class HealthClaimsComponent {
     })
   }
 
-
-
+  // public onShowMoreData() {
+  //   this.route.navigate(['claims/commanTable'], {
+  //     queryParams: { data: JSON.stringify(this.rows) }
+  //   });
+  // }
 }

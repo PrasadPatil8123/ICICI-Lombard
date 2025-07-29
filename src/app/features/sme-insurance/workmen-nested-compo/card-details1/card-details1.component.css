@@ -1,0 +1,93 @@
+.container{
+    width:60%;
+
+}
+
+.trip-fall-section {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  ul {
+    padding-left: 1rem;
+    list-style: none;
+  }
+
+  li::before {
+    content: "→ ";
+    color: #333;
+    margin-right: 5px;
+  }
+
+  p {
+    margin-top: 0.5rem;
+  }
+}
+
+
+.advice-container,
+.newsletter-container {
+  background-color: #eaf7ff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 1rem auto;
+}
+
+.newsletter-container {
+  background-color: #f8f9fa;
+}
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.call-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.call-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+input,
+select {
+  padding: 10px;
+  margin: 0.5rem;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 1rem 0;
+  background: transparent;
+  border: 2px solid orange;
+  color: #e76600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.text-center{
+    display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+

@@ -1,0 +1,69 @@
+<p>card-details1 works!</p>
+<app-navbar2></app-navbar2>
+<div class="container">
+    <div class="article" *ngFor="let article of articles" (click)="navigateTo(article.route)">
+  <p class="category">{{ article.category }}</p>
+  <h3>{{ article.title }}</h3>
+  <p class="description">{{ article.shortDescription }}</p>
+  <p class="date">{{ article.date }} • {{ article.timeToRead }} • {{ article.views }} views</p>
+</div>
+
+
+<div class="trip-fall-section" *ngFor="let section of tripAndFallCauses">
+  <h3>{{ section.heading }}</h3>
+  <p>{{ section.description }}</p>
+  
+  <ul>
+    <li *ngFor="let item of section.items"> {{ item }}</li>
+  </ul>
+
+  <p *ngIf="section.footer">{{ section.footer }}</p>
+</div>
+
+
+
+<!-- Tailored Advice Section -->
+<div class="advice-container">
+  <h3>Looking for tailored advice?</h3>
+  <p>Schedule a call with our insurance advisors</p>
+
+  <div class="call-row">
+    <span>OR</span>
+    <div class="call-info">
+      <span class="material-icons">call</span>
+      <span class="number">1800 2666</span>
+    </div>
+  </div>
+
+  <form [formGroup]="adviceForm" (ngSubmit)="submitAdviceForm()">
+    <input type="text" formControlName="name" placeholder="Name" />
+    <input type="text" formControlName="mobile" placeholder="Mobile number" />
+    <select formControlName="category">
+      <option value="" disabled selected>Select Product</option>
+      <option *ngFor="let option of categories" [value]="option">{{ option }}</option>
+    </select>
+    <button type="submit" [disabled]="adviceForm.invalid">Submit</button>
+  </form>
+</div>
+
+<!-- Newsletter Section -->
+<div class="newsletter-container">
+  <h3>Subscribe to our newsletter</h3>
+  <p>
+    Understand insurance better by reading our helpful guides, articles, blogs and other information.
+  </p>
+  <form [formGroup]="newsletterForm" (ngSubmit)="submitNewsletterForm()">
+    <input type="text" formControlName="fullName" placeholder="Full Name" />
+    <input type="email" formControlName="email" placeholder="Email ID" />
+    <button type="submit" [disabled]="newsletterForm.invalid" class="ms-4">Submit</button>
+  </form>
+</div>
+
+<ng-container *ngFor="let btn of backbutton" class="button-center">
+    <button (click)="btn.route && navigateTo(btn.route)">GO BACK</button>
+</ng-container>
+ 
+
+</div>
+
+<app-footer2></app-footer2>

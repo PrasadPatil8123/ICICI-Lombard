@@ -10,17 +10,19 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { TravelClaimsComponent } from './travel-claims/travel-claims.component';
 import { HomeClaimsComponent } from './home-claims/home-claims.component';
 import { CorpClaimsComponent } from './corp-claims/corp-claims.component';
+import { CommanTableComponent } from './comman-table/comman-table.component';
 
 const routes: Routes = [
     { path: 'health-claims', component: HealthClaimsComponent },
     { path: 'motor-claims', component: MotorClaimsComponent },
-    { path: 'partner', component: PartnerHospitalComponent }, 
+    { path: 'partner', component: PartnerHospitalComponent },
     { path: 'navbar', component: NavbarComponent },
     { path: 'navbar2', component: Navbar2Component },
     { path: 'travel', component: TravelClaimsComponent },
     { path: 'motor', component: MotorClaimsComponent },
     { path: 'home-claims', component: HomeClaimsComponent },
-    { path: 'corp-claims', component : CorpClaimsComponent}
+    { path: 'corp-claims', component: CorpClaimsComponent },
+    { path: 'commanTable/:addList', component: CommanTableComponent }
 ];
 
 @NgModule({

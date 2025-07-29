@@ -1,0 +1,19 @@
+<p-panel header="Saved Quotes" styleClass="saved-quote-panel">
+  <ng-container *ngIf="savedQuotes.length > 0; else noQuotes">
+    <div class="grid">
+      <div class="col-12 md:col-6 lg:col-4" *ngFor="let q of savedQuotes">
+        <p-card>
+          <div class="card-title mb-2">{{ q.type }}</div>
+          <div><strong>Coverage:</strong> ₹{{ q.coverageAmount | number }}</div>
+          <div><strong>Premium:</strong> ₹{{ q.premium | number }}</div>
+          <div><strong>Reference:</strong> {{ q.quoteReference }}</div>
+          <div><strong>Created:</strong> {{ q.createdDate | date:'medium' }}</div>
+        </p-card>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #noQuotes>
+    <div class="empty-message">You do not have any saved quote.</div>
+  </ng-template>
+</p-panel>
