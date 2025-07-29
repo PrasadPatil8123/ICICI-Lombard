@@ -9,11 +9,13 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { Footer2Component } from './common/all footer/footer2/footer2.component';
 import { PipesPipe } from './shared/pipes/pipes.pipe';
-import { DirectivesDirective } from './shared/directives/directives.directive';
 import { HeaderComponent } from './common/header/header.component';
 // import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
+
+import { MainInterInterceptor } from './shared/interceptor/main-inter.interceptor';
+
 import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 import { ClaimsModule } from './features/claims/claims.module';
 import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
@@ -24,12 +26,14 @@ import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
+
     // FooterComponent,
     // NavbarComponent,
+
     PipesPipe,
-    DirectivesDirective,
     HeaderComponent,
     HomeComponent,
+
     // CarInsuranceComponent
   ],
   imports: [
@@ -49,7 +53,12 @@ import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
     BrowserAnimationsModule,
 
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,
+    useClass:MainInterInterceptor,
+    multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
