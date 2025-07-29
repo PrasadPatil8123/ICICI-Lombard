@@ -13,8 +13,12 @@ import { HeaderComponent } from './common/header/header.component';
 // import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
+
 import { MainInterInterceptor } from './shared/interceptor/main-inter.interceptor';
+
+import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 import { ClaimsModule } from './features/claims/claims.module';
+
 // import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 // import { NavbarComponent } from './features/claims/navbar/navbar.component';
 
@@ -23,11 +27,14 @@ import { ClaimsModule } from './features/claims/claims.module';
 @NgModule({
   declarations: [
     AppComponent,
+
     // FooterComponent,
     // NavbarComponent,
+
     PipesPipe,
     HeaderComponent,
     HomeComponent,
+
     // CarInsuranceComponent
   ],
   imports: [
