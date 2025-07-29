@@ -35,8 +35,8 @@
             <p>{{ filteredHospitals.length }} hospitals found</p>
             <div *ngFor="let hospital of filteredHospitals" class="card mb-3">
                 <div class="card-body">
-                    <h5 class="card-title">{{ hospital.name }}</h5>
-                    <p class="card-text">{{ hospital.address }}</p>
+                    <h5 class="card-title">{{ hospital.name | custom}}</h5>
+                    <p class="card-text">{{ hospital.address | custom}}</p>
                     <p class="mb-0"><strong>Phone:</strong> {{ hospital.phone }}</p>
                     <p><strong>Pincode:</strong> {{ hospital.pincode }}</p>
                 </div>
