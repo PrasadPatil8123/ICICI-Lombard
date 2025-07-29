@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { canmatch } from './features/sme-insurance/guards.guard';
 
 const routes: Routes = [
   {path:"sme",loadChildren:()=>
     import('./features/sme-insurance/sme-insurance.module')
-    .then((mod)=>mod.SmeInsuranceModule)},
+    .then((mod)=>mod.SmeInsuranceModule),
+    canMatch:[canmatch]
+  },
+    
     {
     path: 'crpr', loadChildren: () => import('./features/corporate-insurance/corporate-insurance.module')
         .then(mod => mod.CorporateInsuranceModule)
@@ -12,6 +16,18 @@ const routes: Routes = [
   {
     path: 'claims', loadChildren: () => import('./features/claims/claims.module')
       .then(mod => mod.ClaimsModule)
+  },
+  {
+    path: 'motor', loadChildren: () => import('./features/motor-insurance/motor-insurance.module')
+      .then(mod => mod.MotorInsuranceModule)
+  },
+   {
+    path: 'dashboard', loadChildren: () => import('./common/dashboard/dashboard.module')
+      .then(mod => mod.DashboardModule)
+  },
+   {
+    path: 'renewals', loadChildren: () => import('./features/renewals/renewals.module')
+      .then(mod => mod.RenewalsModule)
   },
 ]
 

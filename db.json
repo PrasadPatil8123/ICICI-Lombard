@@ -33,7 +33,7 @@
       }
     }
   ],
-  "policies": [
+  "policies2": [
     {
       "id": "7ee5",
       "industryCategory": "Construction",
@@ -187,6 +187,30 @@
       "unskilledWorkerSalary": 5000,
       "policyPeriod": 1,
       "lastClaim": "Above ₹1 lakh"
+    },
+    {
+      "id": "1b78",
+      "industryCategory": "",
+      "skilledWorkersCount": 0,
+      "skilledWorkerSalary": "salary",
+      "semiSkilledWorkersCount": 0,
+      "semiSkilledWorkerSalary": "salary",
+      "unskilledWorkersCount": 0,
+      "unskilledWorkerSalary": "salary",
+      "policyPeriod": 1,
+      "lastClaim": "Nil or below ₹1 lakh"
+    },
+    {
+      "id": "38f5",
+      "industryCategory": "",
+      "skilledWorkersCount": 0,
+      "skilledWorkerSalary": "salary",
+      "semiSkilledWorkersCount": 0,
+      "semiSkilledWorkerSalary": "salary",
+      "unskilledWorkersCount": 11111111,
+      "unskilledWorkerSalary": 19000000000000,
+      "policyPeriod": 1,
+      "lastClaim": "Nil or below ₹1 lakh"
     }
   ],
   "payments": [
@@ -775,5 +799,63 @@
       "agree": true,
       "whatsapp": false
     }
- ]
+
+  ],
+  "form-info": [
+    {},
+    {
+      "id": "0d85",
+      "mobail": "",
+      "email": "",
+      "company": "",
+      "pincode": ""
+    },
+    {
+      "id": "c4eb",
+      "mobail": "",
+      "email": "",
+      "company": "",
+      "pincode": ""
+    },
+    {
+      "id": "608f",
+      "mobail": "",
+      "email": "",
+      "company": "",
+      "pincode": ""
+    },
+    {
+      "id": "a4fc",
+      "mobail": "",
+      "email": "",
+      "company": "",
+      "pincode": ""
+    },
+    {
+      "id": "d625",
+      "mobile": "",
+      "email": "",
+      "company": "",
+      "pincode": ""
+    }
+  ],
+  "submitform1": [
+    {},
+    {
+      "id": "fa61",
+      "name": "nilesh",
+      "mobile": "9326834227",
+      "category": "Health Insurance"
+    }
+  ],
+  "submitform2": [
+    {},
+    {
+      "id": "d053",
+      "fullName": "nilesh",
+      "email": "ghule12@gmail.com"
+    }
+
+  ]
+
 }

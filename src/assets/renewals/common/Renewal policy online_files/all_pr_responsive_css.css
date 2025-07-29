@@ -1,0 +1,159 @@
+@media(max-width:1360px) {
+}
+@media(max-width:1199px) {
+}
+@media(max-width:1024px) and (min-width:768px) {
+    .apr-popup .content.content-heightauto {
+        height:100%;
+    }
+    .renew-list-scroll {
+        max-height: 90vh;
+    }
+    .ui-popup-card-wrap .card-main-block .card-inner-block {
+        min-height: 20vh;
+    }
+}
+@media(max-width:991px) {
+}
+@media(max-width:768px) {
+    .apr-popup .content {
+        padding: 8rem 2rem;
+        min-height: 100vh;
+    }
+    .ui-popup-card-wrap .card-im-innerblock .card-member-names {
+       max-width: 65%; 
+    }
+    .ui-popup-card-wrap .card-im-innerblock .card-member-1more {
+        max-width: 35%;
+    }
+    .ui-popup-card-wrap .card-main-block .card-inner-block {
+        min-height: initial;
+    }
+    .renew-list-scroll {
+        max-height: 90vh;
+    }
+    .apr-popup .thankyou-section h3 {
+        margin-top: 0rem;
+        text-align:center;
+    }
+    .thankyou-content img {
+        margin-bottom: 2rem;
+    }
+    .card-main-block p {
+       text-align: center; 
+    }
+}
+@media(max-width:767px) {
+    .apr-popup .content {
+        min-height: 100vh;
+    }
+    .ui-form-block.pad-top8 {
+        padding-top: 3rem;
+    }
+    .apr-section-content-padding {
+        padding: 2rem 0 12rem 0;
+    }
+    .phone-otp-section span.ui-error {
+      width: 75%;
+      font-size: 1.1rem;  
+    }
+    .ui-submit-btn.fixedBtn .apr-submit-btn {
+        width: 90%;
+    }
+    .apr-popup .content {
+        padding: 8rem 2rem;
+    }
+    .apr-popup .section-content {
+        padding: 0rem 0 6rem 0;
+    }
+    .apr-popup .ui-submit-btn {
+       padding-top: 1rem !important;
+       padding-bottom: 3rem !important; 
+    }
+    .ui-popup-card-wrap .card-main-block {
+        width: 100%;
+        margin: 0 0rem 2rem 0 !important;
+    }
+    .ui-popup-card-wrap .card-main-block .card-inner-block {
+        padding: 2.5rem 1.5rem;
+    }
+    .ui-popup-card-wrap .card-im-innerblock .card-member-names {
+       max-width: 65%; 
+    }
+    .ui-popup-card-wrap .card-im-innerblock .card-member-1more {
+        max-width: 35%;
+    }
+    .ui-popup-card-wrap .card-result-block {
+        font-size: 1.3rem;
+    }
+    .ui-popup-card-wrap h4, .ui-popup-card-wrap h4 a, .ui-popup-card-wrap h4 a:hover, .ui-popup-card-wrap h4 a:focus {
+       font-size: 1.6rem; 
+    }
+    .ui-popup-card-wrap .card-im-innerblock, .card-due-renewal-date h6 {
+       font-size: 1.3rem; 
+    }
+    .apr-popup .popup {
+        height: initial;
+    }
+    .mobile-thankyou-height {
+        height: 80vh;
+    }
+    .renew-list-scroll {
+        min-height: 90vh;
+    }
+    .policyform-section .ui-form-block .row div:first-child {
+        margin-bottom: 2rem;
+    }
+    .policyform-section .ui-form-block .row .card-member-names div > div:first-child {
+        margin-bottom: 0rem;
+    }
+    .aprBlock ul.ui-banner-list li {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        width: 47%;
+        float: left;
+        margin-right: 3%;
+        font-weight: 600;
+    }
+    .aprBlock ul.ui-banner-list li img {
+        width:20px;
+    }
+    .aprBlock ul.ui-banner-list li:last-child {
+        width: 100%;
+    }
+    .btn-white {
+        margin-right: 0.5rem;
+    }
+    .ui-form-block .ui-submit-btn {
+        position: fixed;
+        bottom: 0;
+        background: #00305a;
+        left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0 -3px 8px 1px rgba(0, 0, 0, 0.11);
+        z-index: 9;
+    }
+
+    .apr-popup .ui-submit-btn {
+        position: fixed;
+        bottom: -1px;
+        background: #f7f6f6;
+        left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0 -3px 8px 1px rgba(0, 0, 0, 0.11);
+        z-index: 9;
+        margin-bottom: 0 !important;
+        padding-bottom: 10px !important;
+    }
+}
+@media(max-width:480px) {
+}
+@media(max-width:320px) {
+    .aprBlock ul.ui-banner-list li {
+        width: 100%;
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+}
