@@ -26,6 +26,7 @@ import { DialogModule } from 'primeng/dialog';
 import { CorpClaimsComponent } from './corp-claims/corp-claims.component';
 import { CommanTableComponent } from './comman-table/comman-table.component';
 import { TableModule } from 'primeng/table';
+import { CustomPipe } from './shared/custom.pipe';
 @NgModule({
   declarations: [
     HealthClaimsComponent,
@@ -38,6 +39,7 @@ import { TableModule } from 'primeng/table';
     HomeClaimsComponent,
     CorpClaimsComponent,
     CommanTableComponent,
+    CustomPipe,
   ],
   exports: [
     HealthClaimsComponent
@@ -55,7 +57,7 @@ import { TableModule } from 'primeng/table';
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-
+    
     TableModule,
     ReactiveFormsModule,
     DialogModule,

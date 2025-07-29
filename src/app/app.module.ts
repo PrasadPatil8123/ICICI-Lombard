@@ -45,18 +45,20 @@ import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
     ReactiveFormsModule,
     HttpClientModule,
 
+
     ClaimsRoutingModule,
   
 
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule,
-
+    ClaimsModule
   ],
   providers: [
-    {provide:HTTP_INTERCEPTORS,
-    useClass:MainInterInterceptor,
-    multi:true
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MainInterInterceptor,
+      multi: true
     }
   ],
   bootstrap: [AppComponent]
