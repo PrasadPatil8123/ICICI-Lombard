@@ -11,6 +11,9 @@ import { Navbar2Component } from './navbar/navbar.component';
 import { MarineInsuranceComponent } from './marine-insurance/marine-insurance.component';
 import { SmeInsuranceComponent } from './sme-insurance/sme-insurance.component';
 import { mydeactive } from './guards.guard';
+import { CardDetails1Component } from './workmen-nested-compo/card-details1/card-details1.component';
+import { CardDetails2Component } from './workmen-nested-compo/card-details2/card-details2.component';
+import { CardDetails3Component } from './workmen-nested-compo/card-details3/card-details3.component';
 
   
 const router :Routes=[
@@ -18,6 +21,9 @@ const router :Routes=[
     {path:"group-health",component:GroupHealthInsComponent},
     {path:"marine",component:MarineInsuranceComponent},
     {path:"sme-ins",component:SmeInsuranceComponent},
+    {path:"card1",component:CardDetails1Component},
+    {path:"card2",component:CardDetails2Component},
+    {path:"card3",component:CardDetails3Component},
 ]
 
 
@@ -29,13 +35,16 @@ const router :Routes=[
     SmeInsuranceComponent,
     MarineInsuranceComponent,
     Navbar2Component,
+    CardDetails1Component,
+    CardDetails2Component,
+    CardDetails3Component,
   ],
   imports: [
+    Footer1Component,
     Footer2Component,
     CommonModule,
     RouterModule.forChild(router),
     ReactiveFormsModule,
-    Footer1Component,
   ],
   exports:[Navbar2Component,]
 })

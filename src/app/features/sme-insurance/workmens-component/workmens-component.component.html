@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar2></app-navbar2>
 <div class="container-fluid bluebg d-none d-lg-block">
   <div class="container bluemg ">
     <div class="row">
@@ -6,7 +6,18 @@
         <div class="row">
           <div class="backbtn"> back </div>
           <h1>Employee’s Compensation Insurance</h1>
-          <p class="p">Protect your workers under a single policy.</p>
+
+
+          <div class="toggle-container">
+            <p class="main-text">{{ activeContent.text }}</p>
+
+            <div class="toggle-buttons">
+              <div class="toggle-dot" [class.active]="activeIndex === 0" (click)="switchContent(0)"></div>
+              <div class="toggle-dot" [class.active]="activeIndex === 1" (click)="switchContent(1)"></div>
+            </div>
+          </div>
+
+
           <img [src]="bule_img1" class="img-fluid " style="height: 470px; width:570px">
 
         </div>
@@ -44,7 +55,7 @@
             <input type="text" name="pincode" placeholder="Enter your Pin-Code" class="form-control"
               formControlName="pincode" [ngClass]="{'is-invalid':myform.get('pincode').errors}">
             <div class="text-danger ms-4" *ngIf="myform.get('pincode').touched">
-              <div class="text-danger "  *ngIf="myform.get('pincode').errors?.['required']">Enter Pin Code </div>
+              <div class="text-danger " *ngIf="myform.get('pincode').errors?.['required']">Enter Pin Code </div>
               <div class="text-danger" *ngIf="myform.get('pincode').errors?.['pattern']"> Enter Valid Pin</div>
             </div>
 
@@ -56,7 +67,7 @@
           </form>
 
 
-       
+
           <!-- ------------------------------------------------------------------------------------ -->
           <form [formGroup]="insuranceForm" (ngSubmit)="onSubmit()" *ngIf="!showfrm" class="form3">
 
@@ -153,8 +164,8 @@
             <div class="">
               <h5>Employee’s Compensation Insurance</h5>
             </div>
-            
-                    <input type="text" name="Mobile" placeholder=" Enter your Mobile Number" class="form-control"
+
+            <input type="text" name="Mobile" placeholder=" Enter your Mobile Number" class="form-control"
               formControlName="mobile" [ngClass]="{'is-invalid':myform.get('mobile').errors}">
             <div class=" text-danger ms-4" *ngIf="myform.get('mobile').touched">
               <div class="text-danger" *ngIf="myform.get('mobile').errors?.['required']"> Enter Number</div>
@@ -169,10 +180,10 @@
               <div class="text-danger" *ngIf="myform.get('email').errors?.['pattern']">Enter Valid Email</div>
             </div>
 
-           <input type="text" name="company" placeholder="Enter your Company Name" class="form-control"
+            <input type="text" name="company" placeholder="Enter your Company Name" class="form-control"
               formControlName="company" [ngClass]="{'is-invalid':myform.get('company').errors}">
             <div class="text-danger ms-4" *ngIf="myform.get('company').touched">
-              <div class="text-danger" *ngIf="myform.get('company').errors?.['required']">Enter  Company Name </div>
+              <div class="text-danger" *ngIf="myform.get('company').errors?.['required']">Enter Company Name </div>
             </div>
 
             <input type="text" name="pincode" placeholder="Enter your Pin-Code" class="form-control"
@@ -180,7 +191,7 @@
             <div class="text-danger ms-4" *ngIf="myform.get('pincode').touched">
               <div class="text-danger" *ngIf="myform.get('pincode').errors?.['required']">Enter Pin Code </div>
               <div class="text-danger" *ngIf="myform.get('pincode').errors?.['pattern']"> Enter Valid Pin</div>
-            </div> 
+            </div>
 
 
 
@@ -428,7 +439,7 @@ The compensation workers are eligible to receive under this Act are:
         <h2>{{ heading }}</h2>
         <ul>
           <li *ngFor="let point of points">
-            → {{ point }}
+             {{ point }}
           </li>
         </ul>
       </div>
@@ -444,7 +455,7 @@ The compensation workers are eligible to receive under this Act are:
         <p class="subtitle">{{ subtitle }}</p>
         <ul>
           <li *ngFor="let item of benefits">
-            → {{ item }}
+             {{ item }}
           </li>
         </ul>
       </div>
@@ -455,11 +466,11 @@ The compensation workers are eligible to receive under this Act are:
 
 
   <!-- ========================== -->
-  
+
 </div>
 
 <div class="container-fluid m-0">
-<section class="how-to-buy">
+  <section class="how-to-buy">
     <div class="container">
       <div class="text-block">
         <h2 style="color: aliceblue;">{{ title2 }}</h2>
@@ -483,11 +494,26 @@ The compensation workers are eligible to receive under this Act are:
       </div>
     </div>
   </section>
+</div>
 
+<div class="articles-container">
+  <div class="article-card" (click)="article.route && navigateTo(article.route)" *ngFor="let article of articles">
+    <img [src]="article.img" alt="Article Image"
+      style="cursor: pointer" />
 
+    <div class="content">
+      <h3>{{ article.title }}</h3>
+      <p class="description">{{ article.discription }}</p>
+      <p class="date">{{ article.date }}</p>
+    </div>
+  </div>
+
+  <div class="read-more">
+    <button class="read-more-btn">Read more articles</button>
+  </div>
 </div>
 
 
-    <app-footer2 class="container-fluid footer"></app-footer2>
 
-  
+
+<app-footer2 class="container-fluid footer"></app-footer2>

@@ -16,6 +16,7 @@ import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
 import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 import { ClaimsModule } from './features/claims/claims.module';
+import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
 // import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 
 
@@ -34,13 +35,13 @@ import { ClaimsModule } from './features/claims/claims.module';
   imports: [
   
     BrowserModule,
-    Footer2Component,
+    // Footer2Component,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
 
-    // ClaimsRoutingModule,
+    ClaimsRoutingModule,
   
 
     CommonModule,

@@ -804,49 +804,23 @@
       "email": "",
       "company": "",
       "pincode": ""
-    },
+    }
+  ],
+  "submitform1": [
+    {},
     {
-      "id": "b2ca",
-      "mobile": "",
-      "email": "",
-      "company": "",
-      "pincode": ""
-    },
+      "id": "fa61",
+      "name": "nilesh",
+      "mobile": "9326834227",
+      "category": "Health Insurance"
+    }
+  ],
+  "submitform2": [
+    {},
     {
-      "id": "fc02",
-      "mobile": "",
-      "email": "",
-      "company": "",
-      "pincode": ""
-    },
-    {
-      "id": "ab24",
-      "mobile": "",
-      "email": "",
-      "company": "",
-      "pincode": ""
-    },
-    {
-      "id": "8034",
-      "mobile": "9999999999",
-      "email": "test12@gmail.com",
-      "company": "aaaa",
-      "pincode": "111111"
-    },
-    {
-      "id": "382f",
-      "mobile": "9999999999",
-      "email": "test12@gmail.com",
-      "company": "aaaa",
-      "pincode": "111111"
-    },
-    {
-      "id": "3afa",
-      "mobile": "9932654888",
-      "email": "test12@gmail.com",
-      "company": "ssss",
-      "pincode": "333333"
+      "id": "d053",
+      "fullName": "nilesh",
+      "email": "ghule12@gmail.com"
     }
   ]
 }
-

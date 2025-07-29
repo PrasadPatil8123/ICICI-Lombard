@@ -24,7 +24,6 @@ public companies = [
 
 
 
-  selectedCompany = '';
 
 
 
