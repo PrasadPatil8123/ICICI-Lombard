@@ -25,6 +25,10 @@ const routes: Routes = [
     path: 'dashboard', loadChildren: () => import('./common/dashboard/dashboard.module')
       .then(mod => mod.DashboardModule)
   },
+   {
+    path: 'renewals', loadChildren: () => import('./features/renewals/renewals.module')
+      .then(mod => mod.RenewalsModule)
+  },
 ]
 
 @NgModule({
