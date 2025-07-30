@@ -1,0 +1,302 @@
+
+
+
+.container {
+  max-width: 100%;
+  margin: auto;
+  border: 1px solid #DCDDDE;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px #ccc; */
+  padding: 40px;
+  background-color:#FFFFFF;
+}
+
+.card{
+    border: 1px solid #ccc;
+    /* padding: 10px; */
+}
+
+/* single multi trip */
+.trip-tabs {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+}
+.trip-tabs div {
+  flex: 1;
+   padding: 0 0 0 20px;
+  /* border: 1px solid rgb(150, 149, 149); */
+
+  /* padding: 12px; */
+  text-align: start;
+  cursor: pointer;
+  font-weight: normal;
+}
+.trip-tabs div.active {
+  border-bottom: 3px solid orange;
+  background-color: #fff4e5;
+}
+
+.trip-tabs p{
+    font-size: small;
+    font-weight:normal
+}
+
+
+
+
+
+/* region */
+.region-cards {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.region-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.region-card {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.region-card img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.region-card.selected {
+  background-color: #EC6625;
+  box-shadow: 0 0 6px rgba(255, 102, 0, 0.4);
+}
+
+.region-label {
+  margin-top: 6px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: normal;
+  color: #333;
+}
+.text{
+    color: #6a6969;
+    font-size: 15px;
+}
+
+
+/* country */
+.travel-input {
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 15px;
+  /* border: 1px solid #ccc; */
+}
+.travel-input:hover{
+    border-color: #EC6625;
+    border: 3px solid #EC6625;
+}
+
+.popular-container {
+  /* border: 1px solid #ddd; */
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 16px;
+  background-color: #fff;
+}
+
+.popular-country-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.country-tag {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s;
+}
+
+.country-tag:hover {
+  background-color: #e2e2e2;
+  border-color: #EC6625;
+}
+
+.country-tag.selected {
+  background-color: #ccc;
+  font-weight: 600;
+  color: #000;
+  border-color: #aaa;
+}
+
+
+/* date */
+/* .grid{
+    width: 400px;
+    display: flex;
+} */
+
+::ng-deep .custom-calendar .p-inputtext {
+  border-radius: 10px;
+  border: 1px solid #d1d1d1;
+  background-color: #fff;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #444;
+}
+
+::ng-deep .custom-calendar.p-calendar .p-inputtext:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 0.2rem rgba(249, 115, 22, 0.25);
+}
+
+::ng-deep .p-calendar {
+  width: 100%;
+}
+
+::ng-deep .p-datepicker {
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+::ng-deep .p-datepicker table td span.p-disabled {
+  color: #ccc;
+  cursor: not-allowed;
+  background-color: #f9f9f9;
+}
+
+::ng-deep .p-datepicker table td {
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+::ng-deep .p-datepicker table td.p-datepicker-today > span {
+  border: 1px solid #f97316;
+  border-radius: 50%;
+}
+
+::ng-deep .p-datepicker table td > span:hover {
+  background-color: #f97316;
+  color: white;
+}
+
+::ng-deep .p-datepicker-header {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.pi {
+    border-radius: 2px;
+  background: transparent !important;
+  color: inherit;
+}
+
+.text-success{
+    color: red;
+    
+}
+
+
+/* checkbox */
+.checkbox{
+    font-size: 16px;
+    padding: 2px;
+}
+.link{
+    color: #898888;
+}
+.textinfo{
+    color: #838282;
+    font-size: 14px;
+
+}
+.checked-orange .p-checkbox-box.p-highlight {
+  border-color: orange !important;
+  background: orange !important;
+}
+
+.checked-orange .p-checkbox-icon {
+  color: white !important;
+}
+
+/* Optional: red border if not selected but required */
+.checkbox-error .p-checkbox-box {
+  border: 2px solid red !important;
+}
+
+
+/* multitrip */
+::ng-deep .custom-select-button .p-button {
+    width: 100px;
+    height: 50px;
+    padding: none;
+  background-color:#F0EFEE;
+  border: 2px solid transparent;
+  color: #333;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  font-size: 12px;
+  /* display: flex; */
+  transition: all 0.2s ease-in-out;
+}
+
+::ng-deep .custom-select-button .p-button.p-highlight  {
+  background-color: #FFF2EB;
+  border-color: #fd7e14;  /* Orange border */
+ outline: none ;
+ box-shadow: 0 0 0 1px #fd7e14; ;
+}
+
+::ng-deep .custom-select-button .p-button:hover {
+  background-color: #eaeaea;
+}
+
+.form-container {
+  /* padding: 1rem; */
+  max-width: 500px;
+  margin: auto;
+}
+
+h4 {
+  margin: 1.2rem 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.btn{
+    background-color:#FD7B20 ;
+}
+
+@media (max-width: 768px) {
+    .container{
+        margin: 0;
+        padding:0 70px 1px  70px ;
+         box-shadow: 0 ;
+    }
+}
+
+
+
+
+
+
+
+
+
