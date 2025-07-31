@@ -18,6 +18,7 @@ import { MainInterInterceptor } from './shared/interceptor/main-inter.intercepto
 
 import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 import { ClaimsModule } from './features/claims/claims.module';
+import { MotorInsuranceModule } from './features/motor-insurance/motor-insurance.module';
 
 // import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 // import { NavbarComponent } from './features/claims/navbar/navbar.component';
@@ -49,7 +50,8 @@ import { ClaimsModule } from './features/claims/claims.module';
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule,
-    ClaimsModule
+    ClaimsModule,
+    MotorInsuranceModule
   ],
   providers: [
     {

@@ -3,7 +3,8 @@ import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
-  HttpInterceptor
+  HttpInterceptor,
+  HttpResponse
 } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 
@@ -25,7 +26,9 @@ export class MainInterInterceptor implements HttpInterceptor {
     // console.log(modifiRequest);
     return next.handle(modifiRequest).pipe(
       tap((event: HttpEvent<any>) => {
-        console.log(event);
+        if (event instanceof HttpResponse) {
+          console.log(event);
+        }
       })
     );
   }
