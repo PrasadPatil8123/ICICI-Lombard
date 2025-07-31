@@ -1,6 +1,6 @@
 <!-- <app-navbar></app-navbar> -->
 
-<app-navbar2></app-navbar2>
+<app-navbar3></app-navbar3>
 <div class="container-fluid bluebg d-none d-lg-block">
   <div class="container bluemg ">
     <div class="row">
@@ -441,7 +441,7 @@ The compensation workers are eligible to receive under this Act are:
         <h2>{{ heading }}</h2>
         <ul>
           <li *ngFor="let point of points">
-             {{ point }}
+            {{ point }}
           </li>
         </ul>
       </div>
@@ -457,7 +457,7 @@ The compensation workers are eligible to receive under this Act are:
         <p class="subtitle">{{ subtitle }}</p>
         <ul>
           <li *ngFor="let item of benefits">
-             {{ item }}
+            {{ item }}
           </li>
         </ul>
       </div>
@@ -500,8 +500,7 @@ The compensation workers are eligible to receive under this Act are:
 
 <div class="articles-container">
   <div class="article-card" (click)="article.route && navigateTo(article.route)" *ngFor="let article of articles">
-    <img [src]="article.img" alt="Article Image"
-      style="cursor: pointer" />
+    <img [src]="article.img" alt="Article Image" style="cursor: pointer" />
 
     <div class="content">
       <h3>{{ article.title }}</h3>
@@ -511,11 +510,150 @@ The compensation workers are eligible to receive under this Act are:
   </div>
 
   <div class="read-more">
-    <button class="read-more-btn">Read more articles</button>
+    <button class="read-more-btn"(click)=" card()">Read more articles</button>
+  </div>
+</div>
+
+
+<div class="section-container">
+  <h1 style="color: black;">Frequently Asked Questions – Employee’s Compensation Policy</h1>
+  <p class="subtitle">Here's how a group health insurance policy benefits employers and employees:</p>
+
+  <div class="tabs">
+    <div class="tab" [class.active]="activeTab === 'tab1'" (click)="activeTab = 'tab1'">
+      <span><b>General</b></span>
+    </div>
+    <div class="tab" [class.active]="activeTab === 'tab2'" (click)="activeTab = 'tab2'">
+      <span><b>Cover</b></span>
+    </div>
+    <div class="tab" [class.active]="activeTab === 'tab3'" (click)="activeTab = 'tab3'">
+      <span><b>Policy</b></span>
+    </div>
+    <div class="tab" [class.active]="activeTab === 'tab4'" (click)="activeTab = 'tab4'">
+      <span><b>Claims</b></span>
+    </div>
+
+
+
+  </div>
+
+  <div class="tab-content" *ngIf="activeTab === 'tab1'">
+    <div class="point">
+      <strong>What types of injuries or illnesses are typically excluded from coverage under Employee’s (Workmen’s)
+        Compensation Insurance?</strong>
+      <p>
+        For complete list of exclusions, read the policy wordings
+      </p>
+    </div>
+    <div class="point">
+      <strong>How does the nature of employment or work-related tasks impact the exclusions under Employee’s (Worker’s)
+        compensation insurance?</strong>
+      <p>
+        obs involving high-risk activities such as construction, firefighting and mining may have different exclusions
+        compared to office-based roles as in the former, as chances of injuries are higher.
+      </p>
+    </div>
+    <div class="point">
+      <strong>Are there any pre-existing health conditions that may be excluded from coverage under Employee’s
+        (Workmen’s) Compensation insurance?</strong>
+      <p>
+        obs involving high-risk activities such as construction, firefighting and mining may have different exclusions
+        compared to office-based roles as in the former, as chances of injuries are higher.
+      </p>
+    </div>
+  </div>
+
+  <div class="tab-content" *ngIf="activeTab === 'tab2'">
+    <div class="point">
+      <strong>What is Employee's compensation insurance?</strong>
+      <p>
+        The Employee's Compensation Insurance provides for payment of compensation to Employer on behalf of its
+        employees in case of accidental injury to at workplace arising out of and in the course of employment and
+        resulting in death or disablement
+
+        Employee's compensation claims are for accidents within work premises and during working hours
+        It also covers direct travel of employees from office to home and vice-versa
+        At the time of injury, workman must have been engaged in the business of the employer and must not be doing
+        something for his personal benefit
+        Employer and employee relationship is an important prerequisite for issuance of Employee's compensation (EC)
+        policy
+      </p>
+    </div>
+
+<div class="point">
+      <strong>What is covered under Contractor /Sub Contractor Coverage?</strong>
+      <p>
+        The Employee's Compensation Insurance provides for payment of compensation to Employer on behalf of its
+        employees in case of accidental injury to at workplace arising out of and in the course of employment and
+        resulting in death or disablement
+
+        Employee's compensation claims are for accidents within work premises and during working hours
+        It also covers direct travel of employees from office to home and vice-versa
+        At the time of injury, workman must have been engaged in the business of the employer and must not be doing
+        something for his personal benefit
+        Employer and employee relationship is an important prerequisite for issuance of Employee's compensation (EC)What is covered under Contractor /Sub Contractor Coverage?
+        policy
+      </p>
+    </div>
+
+
+
+    
+    <div class="point">
+      <strong>How is Employee's Compensation policy different from ESIC (Employee State Insurance)?</strong>
+      <p>
+       How is Employee's Compensation policy different from ESIC (Employee State Insurance)?How is Employee's Compensation policy different from ESIC (Employee State Insurance)?How is Employee's Compensation policy different from ESIC (Employee State Insurance)?How is Employee's Compensation policy different from ESIC (Employee State Insurance)?How is Employee's Compensation policy different from ESIC (Employee State Insurance)?
+      </p>
+    </div>
+    <div class="point">
+      <strong>What is Compressed Air Disease cover?</strong>
+      <p>
+        Compressed air disease is one of the occupational illnesses covered under Employee's compensation policy. It is a sickness attributed to the working environments where air pressure may be higher or lower than the normal surface air pressure. Ex. Underground or underwater works.
+      </p>
+    </div>
+  </div>
+
+  <div class="tab-content" *ngIf="activeTab === 'tab3'">
+    <div class="point">
+      <strong>What is the purpose of Employee’s Compensation Insurance (earlier known as WC insurance)?</strong>
+      <p>
+      The primary purpose of Employee’s (workmen) compensation insurance is to protect both employers and employees. For employers, it helps cover the costs associated with workplace injuries or illnesses for their employees,. For employees, it gives them the necessary financial cushion and support during injuries suffered at the workplace.
+      </p>
+    </div>
+    <div class="point">
+      <strong>Who is responsible for obtaining and maintaining Employee’s Compensation Insurance (earlier known as Workmen Compensation Policy)?</strong>
+      <p>
+       Employers are responsible for obtaining and maintaining Employee’s Compensation Insurance. As an employer, you must ensure that the coverage meets the requirements set by law and remains active and up-to-date.
+      </p>
+    </div>
+    <div class="point">
+      <strong>Are there any pre-existing health conditions that may be excluded from coverage under Employee’s (Workmen’s) Compensation insurance?</strong>
+      <p>
+        obs involving high-risk activities such as construction, firefighting and mining may have different exclusions compared to office-based roles as in the former, as chances of injuries are higher.
+      </p>
+    </div>
+  </div>
+
+  <div class="tab-content" *ngIf="activeTab === 'tab4'">
+
+    <div class="point">
+      <strong>What is the process for filing a claim under Employee’s compensation insurance?</strong>
+      <p>
+        The first thing is to inform the employer about the injury or illness, post which the employer will ask to
+        furnish details of the accident. After this, the employer will notify the insurance company about the accident,
+        fill out the claim form, and provide the necessary documents related to the accident. Post this, the insurance
+        company will verify the claim's authenticity, based on which the claim can be approved or denied. If you’ve
+        purchased the Employee’s Compensation Insurance (previously known as Workmen Compensation Insurance and WC
+        policy) from ICICI Lombard, you can intimate the claim, upload the documents, and track the claim status via
+        this link - .
+        <a style="color: chocolate;" href="https://ilhc.icicilombard.com/Customer/ClaimIntimationOnlineTracking">
+          https://ilhc.icicilombard.com/Customer/ClaimIntimationOnlineTracking</a>
+      </p>
+    </div>
   </div>
 </div>
 
 
 
-
-<app-footer2 class="container-fluid footer"></app-footer2>
+<app-footer1 ></app-footer1>
+<app-footer2></app-footer2>

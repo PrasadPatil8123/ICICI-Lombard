@@ -1,5 +1,4 @@
-<p>card-details1 works!</p>
-<app-navbar2></app-navbar2>
+<app-navbar3></app-navbar3>
 <div class="container">
     <div class="article" *ngFor="let article of articles" (click)="navigateTo(article.route)">
   <p class="category">{{ article.category }}</p>
@@ -20,6 +19,27 @@
   <p *ngIf="section.footer">{{ section.footer }}</p>
 </div>
 
+<!-- Success Modal1 -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <h5 class="modal-title mb-3" id="successModalLabel">Thank You!</h5>
+      <p>Dear Client, your form has been submitted successfully. We will contact you as soon as possible.</p>
+      <button type="button" class="btn btn-primary mt-2" data-bs-dismiss="modal">OK</button>
+    </div>
+  </div>
+</div>
+
+<!-- Success Modal2 -->
+<div class="modal fade" id="newsletterSuccessModal" tabindex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <h5 class="modal-title mb-3" id="newsletterModalLabel">Subscription Confirmed</h5>
+      <p>Dear client, congratulations! You are now a subscribed member.</p>
+      <button type="button" class="btn btn-success mt-2" data-bs-dismiss="modal">OK</button>
+    </div>
+  </div>
+</div>
 
 
 <!-- Tailored Advice Section -->

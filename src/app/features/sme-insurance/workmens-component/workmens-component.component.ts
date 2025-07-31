@@ -8,9 +8,11 @@ import { FormServiceService } from 'src/app/core/services/form-service.service';
   selector: 'app-workmens-component',
   templateUrl: './workmens-component.component.html',
   styleUrls: ['./workmens-component.component.css']
-
+  
 })
 export class WorkmensComponentComponent {
+
+activeTab:string="tab1"
 
   contents = [
     { text: 'Protect your workers under a single policy.' },
@@ -26,14 +28,17 @@ export class WorkmensComponentComponent {
     this.activeIndex = index;
   }
 
+
+
   isFormDirty: boolean = true;
 
   canDeactivate() {
     return this.isFormDirty
-      ? confirm('Your data is not saved,  you want to leave this page ?')
+      ? confirm('you want to leave this page ?')
       : true;
 
   }
+
 
 
 
@@ -61,15 +66,44 @@ export class WorkmensComponentComponent {
       pincode: ["", [Validators.required, Validators.pattern(/^[1-9][0-9]{5}$/)]],
     });
 
+
+     public myform:any=[]
+     public showfrm : boolean=true
+     
+     f1(){
+      this.showfrm=true
+     }
+      f2(){
+      this.showfrm=false
+     }
+    
+ public bule_img1:any='../../../../assets/sme-img/wc_banner_new.png'
+ public marking:any='../../../../assets/sme-img/tick_marine.png'
+ public wc1:any='../../../../assets/sme-img/wc_who_needs.png'
+ public wc2:any='../../../../assets/sme-img/wc_whatis_included.png'
+ public tick:any='../../../../assets/sme-img/tick_marine.png'
+ constructor( private fb : FormBuilder,private http:HttpClient,private router1 : Router){
+   this.myform=this.fb.group({
+    mobile:["",[Validators.required,Validators.pattern(/^[6-9]\d{9}$/)]],
+    email:["",[Validators.required,Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]],
+    company:["",[Validators.required]],
+    pincode:["",[Validators.required,Validators.pattern(/^[1-9][0-9]{5}$/)]],
+   });
+    
+  }
+  card(){
+    this.router1.navigateByUrl('sme/main')
+
   }
   insuranceForm!: FormGroup;
 
-  industryCategories = ['Construction', 'Manufacturing', 'Textile', 'IT', 'Logistics'];
+ industryCategories = ['Construction', 'Manufacturing', 'Textile', 'IT', 'Logistics'];
 
-  policyMonths = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-
+  policyMonths = [1,2,3,4,5,6,7,8,9,10,11,12];
+    
 
   ngOnInit() {
+
     this.insuranceForm = this.fb.group({
       industryCategory: [''],
       skilledWorkersCount: [0],
@@ -83,6 +117,20 @@ export class WorkmensComponentComponent {
 
     });
   }
+
+  this.insuranceForm = this.fb.group({
+    industryCategory: [''],
+    skilledWorkersCount: [0],
+    skilledWorkerSalary: ["salary"],
+    semiSkilledWorkersCount: [0],
+    semiSkilledWorkerSalary: ["salary"],
+    unskilledWorkersCount: [0],
+    unskilledWorkerSalary: ['salary'],
+    policyPeriod: [1],
+    lastClaim: ['Nil or below ₹1 lakh']
+    
+  });
+}
 
 
   onSubmit() {
@@ -102,44 +150,55 @@ export class WorkmensComponentComponent {
       this.http.post("http://localhost:3000/form-info", this.myform.value).subscribe((res: any) => {
         console.log("form-submited", res)
         alert(" form submitted successfully!")
+
+//  form1
+ onSubmit1(){
+  if(this.myform){
+     this.http.post("http://localhost:3000/form-info",this.myform.value).subscribe((res:any)=>{
+      console.log( "form-submited",res)
+      alert(" form submitted successfully!")
+
         this.myform.reset()
 
       })
     }
+
+
+ }
+//  ==========================================
+compensations = [
+  {
+    scenario: 'Death resulting from an injury',
+    details: [
+      'Amount equal to 50% of the monthly wages of the deceased employee multiplied by the relevant factor.',
+      'OR',
+      'An amount of Rs 1.2 lakhs, whichever is more'
+    ]
+  },
+  {
+    scenario: 'Permanent total disablement from injury',
+    details: [
+      'An amount equal to 60% of the monthly wages of the injured employee multiplied by the relevant factor.',
+      'OR',
+      'An amount of Rs 1.4 lakhs, whichever is more'
+    ]
+  },
+  {
+    scenario: 'Permanent partial disablement result from the injury',
+    details: [
+      'In the case of an injury specified in Part II of Schedule I, Percentage of the loss of earning capacity caused by that injury (I)',
+      'in the case of an injury not specified in Schedule I, Proportionate to the loss of earning capacity as assessed by the qualified medical practitioner permanently caused by the injury (I)'
+    ]
+  },
+  {
+    scenario: 'Temporary disablement whether total or partial results from the injury',
+    details: [
+      'A half monthly payment of the sum equivalent to 25% of monthly wages of the employee to be paid in accordance with the provisions of sub-section (2) section 4 of Employee’s Compensation Act, 1923.'
+    ]
+
   }
-  //  ==========================================
-  compensations = [
-    {
-      scenario: 'Death resulting from an injury',
-      details: [
-        'Amount equal to 50% of the monthly wages of the deceased employee multiplied by the relevant factor.',
-        'OR',
-        'An amount of Rs 1.2 lakhs, whichever is more'
-      ]
-    },
-    {
-      scenario: 'Permanent total disablement from injury',
-      details: [
-        'An amount equal to 60% of the monthly wages of the injured employee multiplied by the relevant factor.',
-        'OR',
-        'An amount of Rs 1.4 lakhs, whichever is more'
-      ]
-    },
-    {
-      scenario: 'Permanent partial disablement result from the injury',
-      details: [
-        'In the case of an injury specified in Part II of Schedule I, Percentage of the loss of earning capacity caused by that injury (I)',
-        'in the case of an injury not specified in Schedule I, Proportionate to the loss of earning capacity as assessed by the qualified medical practitioner permanently caused by the injury (I)'
-      ]
-    },
-    {
-      scenario: 'Temporary disablement whether total or partial results from the injury',
-      details: [
-        'A half monthly payment of the sum equivalent to 25% of monthly wages of the employee to be paid in accordance with the provisions of sub-section (2) section 4 of Employee’s Compensation Act, 1923.'
-      ]
-    }
-  ];
-  advantagesList = [
+];
+advantagesList = [
     {
       icon: '../../../../assets/sme-img/Comprehensive and Flexible Coverage.png',
       title: 'Comprehensive and Flexible Coverage',
@@ -168,14 +227,14 @@ export class WorkmensComponentComponent {
   ];
 
   // ====================
-  heading = 'Who Can Buy an Employee’s Compensation Policy Online?';
+   heading = 'Who Can Buy an Employee’s Compensation Policy Online?';
   points = [
     'Any employer, whether as a principal or contractor, engaging “employees” as defined in the Employee’s Compensation Act, 1923.',
     'Any employer of such employees who do not qualify as an employee as per the said act but, virtue of the nature of engagement with an employer, share a like employee-employer relationship.'
   ];
 
 
-  title = `Why You Should Buy ICICI Lombard’s Employee’s Compensation Insurance Policy?`;
+    title = `Why You Should Buy ICICI Lombard’s Employee’s Compensation Insurance Policy?`;
   subtitle = `Our policy (popularly known as WC policy and WC insurance) provides you and your workers comprehensive coverage and helps you fulfil your legal obligations.`;
 
   benefits = [
@@ -230,6 +289,5 @@ export class WorkmensComponentComponent {
 
     }
   ]
-
 
 }

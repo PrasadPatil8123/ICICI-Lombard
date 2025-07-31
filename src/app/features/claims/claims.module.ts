@@ -16,7 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { PartnerHospitalComponent } from './partner-hospital/partner-hospital.component';
-import { Navbar2Component } from './navbar2/navbar2.component';
+// import { Navbar2Component } from './navbar2/navbar2.component';
 import { TravelClaimsComponent } from './travel-claims/travel-claims.component';
 import { HomeClaimsComponent } from './home-claims/home-claims.component';
 
@@ -28,6 +28,9 @@ import { CommanTableComponent } from './comman-table/comman-table.component';
 import { TableModule } from 'primeng/table';
 import { CustomPipe } from './shared/custom.pipe';
 import { OtherImpComponent } from './other-imp/other-imp.component';
+
+import { Navbar2Component } from './navbar2/navbar2.component';
+
 @NgModule({
   declarations: [
     HealthClaimsComponent,
@@ -41,10 +44,12 @@ import { OtherImpComponent } from './other-imp/other-imp.component';
     CorpClaimsComponent,
     CommanTableComponent,
     CustomPipe,
+
     OtherImpComponent,
+
   ],
   exports: [
-    HealthClaimsComponent
+    HealthClaimsComponent,Navbar2Component
   ],
   imports: [
     CommonModule,
