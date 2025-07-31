@@ -5,7 +5,6 @@ import { BikeInsuranceComponent } from './bike-insurance/bike-insurance.componen
 import { ReactiveFormsModule } from '@angular/forms';
 
 
-
 @NgModule({
   declarations: [
     CarInsuranceComponent,
@@ -13,7 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class MotorInsuranceModule { }

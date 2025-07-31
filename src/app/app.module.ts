@@ -13,14 +13,18 @@ import { HeaderComponent } from './common/header/header.component';
 // import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
-
 import { MainInterInterceptor } from './shared/interceptor/main-inter.interceptor';
-
 import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 import { ClaimsModule } from './features/claims/claims.module';
+import { MotorInsuranceModule } from './features/motor-insurance/motor-insurance.module';
 import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
+
+// import { SmeInsuranceModule } from './features/sme-insurance/sme-insurance.module';
+
+
 import { SmeInsuranceModule } from './features/sme-insurance/sme-insurance.module';
 import { SafeUrlPipe } from './features/sme-insurance/health-nested-compo/pipe.pipe';
+
 // import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 
 
@@ -28,13 +32,15 @@ import { SafeUrlPipe } from './features/sme-insurance/health-nested-compo/pipe.p
 @NgModule({
   declarations: [
     AppComponent,
-
     // FooterComponent,
     // NavbarComponent,
+
+    PipesPipe,
+
     // CarInsuranceComponent,
+
     HeaderComponent,
     HomeComponent,
-
     // CarInsuranceComponent
   ],
   imports: [
@@ -47,12 +53,21 @@ import { SafeUrlPipe } from './features/sme-insurance/health-nested-compo/pipe.p
     HttpClientModule,
 
     ClaimsRoutingModule,
+    CommonModule,
+    ButtonModule,
+    BrowserAnimationsModule,
+    ClaimsModule,
+    MotorInsuranceModule
+
+
+    ClaimsRoutingModule,
 
 
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule,
     SmeInsuranceModule
+
   ],
   providers: [
     {

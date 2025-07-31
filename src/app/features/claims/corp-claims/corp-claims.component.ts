@@ -27,6 +27,9 @@ export class CorpClaimsComponent {
 
   // policyNumber: any;
   constructor(private fb: FormBuilder) {
+
+    sessionStorage.setItem('id', `${this.mail}`);
+
     this.intimateForm = this.fb.group({
       id: ['1'],
       policyNumber: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],

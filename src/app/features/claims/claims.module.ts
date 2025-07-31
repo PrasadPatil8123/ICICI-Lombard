@@ -27,7 +27,10 @@ import { CorpClaimsComponent } from './corp-claims/corp-claims.component';
 import { CommanTableComponent } from './comman-table/comman-table.component';
 import { TableModule } from 'primeng/table';
 import { CustomPipe } from './shared/custom.pipe';
+import { OtherImpComponent } from './other-imp/other-imp.component';
+
 import { Navbar2Component } from './navbar2/navbar2.component';
+
 @NgModule({
   declarations: [
     HealthClaimsComponent,
@@ -41,7 +44,9 @@ import { Navbar2Component } from './navbar2/navbar2.component';
     CorpClaimsComponent,
     CommanTableComponent,
     CustomPipe,
-    
+
+    OtherImpComponent,
+
   ],
   exports: [
     HealthClaimsComponent,Navbar2Component
