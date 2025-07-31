@@ -12,4 +12,6 @@ buyers = [
     ['Logistics operators', 'Merchant exporters'],
     ['C&F agents', '']
   ];
+
+  public mail:any ="businessinsurance@icicilombard.com";
 }

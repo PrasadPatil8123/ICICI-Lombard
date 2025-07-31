@@ -119,7 +119,7 @@ export class HealthClaimsService {
     return this.http.get(`https://jsonplaceholder.typicode.com/users?name_like=${searchTerm}`)
   }
 
-  public currentMess = new BehaviorSubject("Test value");
+  public currentMess = new BehaviorSubject(" vTestalue");
   public message = this.currentMess.asObservable();
 
   public onSentValueBS(data: any) {

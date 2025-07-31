@@ -13,17 +13,13 @@ import { HeaderComponent } from './common/header/header.component';
 // import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { HomeComponent } from './common/home/home.component';
-
 import { MainInterInterceptor } from './shared/interceptor/main-inter.interceptor';
-
 import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 import { ClaimsModule } from './features/claims/claims.module';
-<<<<<<< HEAD
 import { MotorInsuranceModule } from './features/motor-insurance/motor-insurance.module';
-
-=======
 import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
->>>>>>> a82f9780b54c3c034f83cd4e8c8a408f057145f9
+// import { SmeInsuranceModule } from './features/sme-insurance/sme-insurance.module';
+
 // import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 
 
@@ -31,29 +27,21 @@ import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
-
     // FooterComponent,
     // NavbarComponent,
-
     PipesPipe,
     HeaderComponent,
     HomeComponent,
-
     // CarInsuranceComponent
   ],
   imports: [
-  
     BrowserModule,
     // Footer2Component,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
-
     ClaimsRoutingModule,
-  
-
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule,
