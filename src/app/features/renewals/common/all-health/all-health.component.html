@@ -1,0 +1,33 @@
+<div class="main">
+    <div class="container">
+        <div class="left">
+            <h1>
+                {{title}}
+            </h1>
+
+            <div class="benefits" *ngFor="let b of benefits">
+                <img [src]="b.url" [alt]="b.text">
+                <span class="text">{{b.text}}</span>
+            </div>
+        </div>
+
+        <!-- section Renew with -->
+        <div class="right">
+            <label class="form-label"> Renew With</label>
+            <select (change)="onOptionChange($event)" class="form-select">
+                <option *ngFor="let opt of options" [value]="opt.value">{{opt.label}}</option>
+            </select>
+
+            <input [type]="inputType" [(ngModel)]="enteredValue" [placeholder]="placeholder" class="form-control" required> 
+
+
+            <p class="placeholder-text">{{text}}</p>
+
+            <div class="custom-button">
+                <app-button (click)="proceed()" type="submit">Proceed</app-button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

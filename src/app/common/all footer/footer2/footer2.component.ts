@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './footer2.component.html',
   styleUrls: ['./footer2.component.css'],
   standalone:true,
-  imports:[CommonModule, FormsModule]
+  imports: [CommonModule]
 })
 export class Footer2Component {
 
@@ -24,7 +24,6 @@ public companies = [
 
 
 
-  selectedCompany = '';
 
 
 

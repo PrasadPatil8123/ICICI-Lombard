@@ -55,7 +55,14 @@
             </div>
             <div class="col"><img src="../assets/img/c-logo2.png" class="img-fluid"></div>
             <div class="col">
-               <p class="font2"> Group Companies</p>
+                <div class="group-companies font2">
+                    <select>
+                        <option value="" disabled selected hidden>Group Companies</option>
+                        <option *ngFor="let company of companies" [value]="company" placeholder="Group-Companies">{{
+                            company }}
+                        </option>
+                    </select>
+                </div>
                 <hr>
             </div>
         </div>

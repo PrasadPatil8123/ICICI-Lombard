@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { FormServiceService } from 'src/app/core/services/form-service.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { FormServiceService } from 'src/app/core/services/form-service.service';
 
 })
 export class WorkmensComponentComponent {
+
   public myform: any = []
   public showfrm: boolean = true
 
@@ -33,6 +35,58 @@ export class WorkmensComponentComponent {
       pincode: [""],
     });
 
+
+
+  contents = [
+    { text: 'Protect your workers under a single policy.' },
+    { text: 'Get policy in 5 minutes' }
+  ];
+
+  activeIndex = 0;
+  get activeContent() {
+    return this.contents[this.activeIndex];
+  }
+
+  switchContent(index: number) {
+    this.activeIndex = index;
+  }
+
+  isFormDirty: boolean = true;
+
+  canDeactivate() {
+    return this.isFormDirty
+      ? confirm('Your data is not saved,  you want to leave this page ?')
+      : true;
+
+  }
+
+
+
+
+     public myform:any=[]
+     public showfrm : boolean=true
+     
+     f1(){
+      this.showfrm=true
+     }
+      f2(){
+      this.showfrm=false
+     }
+    
+ public bule_img1:any='../../../../assets/sme-img/wc_banner_new.png'
+ public marking:any='../../../../assets/sme-img/tick_marine.png'
+ public wc1:any='../../../../assets/sme-img/wc_who_needs.png'
+ public wc2:any='../../../../assets/sme-img/wc_whatis_included.png'
+ public tick:any='../../../../assets/sme-img/tick_marine.png'
+ constructor( private fb : FormBuilder,private http:HttpClient,private router1 : Router){
+   this.myform=this.fb.group({
+    mobile:["",[Validators.required,Validators.pattern(/^[6-9]\d{9}$/)]],
+    email:["",[Validators.required,Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]],
+    company:["",[Validators.required]],
+    pincode:["",[Validators.required,Validators.pattern(/^[1-9][0-9]{5}$/)]],
+   });
+    
+
   }
   insuranceForm!: FormGroup;
 
@@ -42,6 +96,7 @@ export class WorkmensComponentComponent {
 
 
   ngOnInit() {
+
     this.insuranceForm = this.fb.group({
       industryCategory: [''],
       skilledWorkersCount: [0],
@@ -55,12 +110,28 @@ export class WorkmensComponentComponent {
     });
   }
 
+  this.insuranceForm = this.fb.group({
+    industryCategory: [''],
+    skilledWorkersCount: [0],
+    skilledWorkerSalary: ["salary"],
+    semiSkilledWorkersCount: [0],
+    semiSkilledWorkerSalary: ["salary"],
+    unskilledWorkersCount: [0],
+    unskilledWorkerSalary: ['salary'],
+    policyPeriod: [1],
+    lastClaim: ['Nil or below ₹1 lakh']
+    
+  });
+}
+
+
 
   onSubmit() {
     if (this.insuranceForm.valid) {
-      this.http.post('http://localhost:3000/policies', this.insuranceForm.value).subscribe(res => {
+      this.http.post('http://localhost:3000/policies2', this.insuranceForm.value).subscribe(res => {
         console.log('Data stored:', res);
         alert('Data submitted successfully!');
+        this.insuranceForm.reset()
       });
     }
   }
@@ -68,6 +139,49 @@ export class WorkmensComponentComponent {
 
   //  form1
   onSubmit1() {
+
+
+//  form1
+ onSubmit1(){
+  if(this.myform){
+     this.http.post("http://localhost:3000/form-info",this.myform.value).subscribe((res:any)=>{
+      console.log( "form-submited",res)
+      alert(" form submitted successfully!")
+        this.myform.reset()
+
+     })
+    }
+ }
+
+compensations = [
+  {
+    scenario: 'Death resulting from an injury',
+    details: [
+      'Amount equal to 50% of the monthly wages of the deceased employee multiplied by the relevant factor.',
+      'OR',
+      'An amount of Rs 1.2 lakhs, whichever is more'
+    ]
+  },
+  {
+    scenario: 'Permanent total disablement from injury',
+    details: [
+      'An amount equal to 60% of the monthly wages of the injured employee multiplied by the relevant factor.',
+      'OR',
+      'An amount of Rs 1.4 lakhs, whichever is more'
+    ]
+  },
+  {
+    scenario: 'Permanent partial disablement result from the injury',
+    details: [
+      'In the case of an injury specified in Part II of Schedule I, Percentage of the loss of earning capacity caused by that injury (I)',
+      'in the case of an injury not specified in Schedule I, Proportionate to the loss of earning capacity as assessed by the qualified medical practitioner permanently caused by the injury (I)'
+    ]
+  },
+  {
+    scenario: 'Temporary disablement whether total or partial results from the injury',
+    details: [
+      'A half monthly payment of the sum equivalent to 25% of monthly wages of the employee to be paid in accordance with the provisions of sub-section (2) section 4 of Employee’s Compensation Act, 1923.'
+    ]
 
   }
   //  ==========================================
@@ -148,6 +262,9 @@ export class WorkmensComponentComponent {
   ];
 
   // =========================
+
+
+  
   title2 = `How to Buy Employee’s Compensation Insurance Policy from ICICI Lombard?`;
 
   steps = [
@@ -162,7 +279,36 @@ export class WorkmensComponentComponent {
     `You can also take the help of our responsive and intelligent assistant, RIA, to buy the policy. You can also fill out our ‘Request a callback’ form, whereby our executives will call you at your chosen time slot to help you with policy queries and buying.`,
     `You can also write to us at <strong class="highlight-email">businessinsurance@icicilombard.com</strong> to learn more about the policy and buying process.`
   ];
+  navigateTo(path: string) {
+    this.router1.navigate([path]);
+  }
 
+
+  articles = [
+    {
+      img: "assets/sme-group-health/workers-compensation-insurance-for-small-businesses.jpg",
+         route: 'sme/card1',
+      title: 'Workplace safety guide: Preventing slip, trip and fall incidents',
+      discription:
+        'Workplace safety is important for employers and employees in India. Slips, trips and falls are some of the common accidents seen in offices, factories, shops and other workplaces. These may seem like trivial incidents, but they can cause serious injuries, lost working days, productivity drops and insurance claims.',
+      date: "09-09-2025"
+    },{
+       route: 'sme/card1',
+      img:"../../../../assets/sme-group-health/reduce-business-risks-labour-insurance.jpg",
+      title:'Types of full body safety harnesses',
+      discription:'When working at heights or in risky environments, safety is a priority. One of the most essential pieces of equipment you will come across is the safety harness full body type. These harnesses are designed to protect workers by distributing the force of a fall over the strongest parts of the body, such as the thighs, chest and shoulders. But not all harnesses are the same. In this guide, s',
+      date:"09-9-2025",
+
+    },{
+       route: 'sme/card1',
+      img:"../../../../assets/sme-group-health/StratToWC.png",
+      title:'What is occupational contact dermatitis?',
+      discription:'Occupational contact dermatitis is a type of eczema caused by workplace exposure to irritants or allergens. It affects various professions, including healthcare workers, cleaners, and construction workers. Symptoms include itchy, dry, or cracked skin, redness, and blisters. Treatment involves avoiding triggers, using topical corticosteroids, and moisturizers. ',
+      date:"09-9-2025",
+
+    }
+  ]
+  
 
 
 
