@@ -1,4 +1,4 @@
-.my-button {
+/* .my-button {
   background-color: var(--primaryColor);
   color: var(--primaryTextColor);
   font-family: var(--fontFamily);
@@ -6,4 +6,44 @@
   border-radius: 5px;
   border: none;
   cursor: pointer;  
+} */
+
+html, body {
+  height: 100%;
+  margin: 0;
 }
+/* Full viewport height and no margin */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Container for flex layout */
+.layout-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 280px; /* Fixed width */
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+/* Main content takes remaining space */
+.main-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  background-color: #b04444;
+  margin-left: 400px;
+}
+
+

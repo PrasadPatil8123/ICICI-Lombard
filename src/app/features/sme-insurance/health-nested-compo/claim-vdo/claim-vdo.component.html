@@ -1,0 +1,142 @@
+<app-navbar2></app-navbar2>
+<!-- Top Banner -->
+
+<div class="top-banner text-white d-flex align-items-center justify-content-center">
+    <div class="text-center">
+        <h4>Count on us for solutions to all your queries.</h4>
+        <h5><strong>Your trust, Our commitment!</strong></h5>
+    </div>
+</div>
+
+<!-- Digital Solutions -->
+<section class="py-5 text-center">
+    <h3>Digital solutions at your fingertips</h3>
+    <div class="container d-flex justify-content-center gap-4 flex-wrap mt-4">
+        <div class="card p-3 w-25">
+            <img src="../../../../../assets/sme-card/call-aap" class="mb-2" alt="IL App" width="50">
+            <h5>IL TakeCare App</h5>
+            <p>Address all your insurance and wellness needs, and stay in charge of your policies.</p>
+            <a href="#">Download the IL TakeCare App</a>
+        </div>
+        <div class="card p-3 w-25">
+            <img src="../../../../../assets/sme-card/call-center" class="mb-2" alt="Ask RIA" width="50">
+            <h5>Ask RIA</h5>
+            <p>Experience hassle-free solutions with RIA, our Responsive & Intelligent Assistant.</p>
+            <a href="#">Get in touch with RIA</a>
+        </div>
+        <div class="card p-3 w-25">
+            <img src="../../../../../assets/sme-card/call-whatsup" class="mb-2" alt="WhatsApp" width="50">
+            <h5>Say Hi to RIA on WhatsApp</h5>
+            <p>Access a variety of services through WhatsApp.</p>
+            <a href="#">WhatsApp us at 7738282666</a>
+        </div>
+    </div>
+</section>
+
+<!-- Online Requests -->
+<section class="bg-light py-5">
+    <div class="container">
+        <h3 class="text-center mb-5">Online Requests</h3>
+        <div class="row g-4">
+
+            <!-- Column 1 -->
+            <div class="col-md-4 ">
+                <div class="box boxx">
+                    <h6>Request changes to your policy</h6>
+                    <ul>
+                        <li><a href="#">Pay as you use top-up</a></li>
+                        <li><a href="#">Address correction</a></li>
+                        <li><a href="#">Telephone/mobile no. correction</a></li>
+                        <li><a href="#">Gender correction</a></li>
+                        <li><a href="#">Registration no. addition/correction</a></li>
+                        <li><a href="#">Nominee addition</a></li>
+                        <li><a href="#">Email id correction</a></li>
+                        <li><a href="#">Insured complete name change</a></li>
+                        <li><a href="#">Insured name correction</a></li>
+                        <li><a href="#">Policy start date change</a></li>
+                        <li><a href="#">Pin code correction</a></li>
+                        <li><a href="#">Nominee removal</a></li>
+                        <li><a href="#">ECS removal</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-md-4">
+                <div class="box">
+                    <h6>Need help with claims</h6>
+                    <ul>
+                        <li><a href="#">Download claim form</a></li>
+                        <li><a href="#">Track your motor claim</a></li>
+                        <li><a href="#">Track your health claim</a></li>
+                        <li><a href="#">Cashless garage</a></li>
+                        <li><a href="#">Cashless hospital</a></li>
+                        <li><a href="#">Claim status</a></li>
+                    </ul>
+                </div>
+                <div class="box mt-4">
+                    <h6>Other service requests</h6>
+                    <ul>
+                        <li><a href="#">Refund related</a></li>
+                        <li><a href="#">Extension required</a></li>
+                        <li><a href="#">Track your service request</a></li>
+                        <li><a href="#">Split or merge your policies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-md-4">
+                <div class="box">
+                    <h6>Request policy copy</h6>
+                    <ul>
+                        <li><a href="#">Print health card</a></li>
+                        <li><a href="#">Re-issue policy copy</a></li>
+                        <li><a href="#">Online policy not received after payment</a></li>
+                        <li><a href="#">Download policy details <span class="badge bg-warning text-dark">mp</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box mt-4">
+                    <h6>Health check up</h6>
+                    <ul>
+                        <li><a href="#">Schedule complimentary health check-up</a></li>
+                        <li><a href="#">Diagnostic Center List</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<div class="container-fluid vdo-t2">
+
+    <div class="row">
+        <div class="col-4 "><a (click)="goback()" class="edit-link">Back</a></div>
+        <div class="col">
+            <div class="vdo-t">
+                <h1>Video Tutorials & Guides</h1>
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+
+<div class="video-section">
+    <div class="main-video">
+        <iframe *ngIf="selectedVideoUrl" [src]="selectedVideoUrl" frameborder="0" allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="related-videos">
+        <h3>Related</h3>
+        <div class="video-card" *ngFor="let video of videoList" (click)="playVideo(video.url)">
+            <img [src]="video.thumbnail" alt="Video thumbnail" />
+            <div>
+                <p class="video-title">{{ video.title }}</p>
+                <p class="video-subtitle">ICICI Lombard</p>
+            </div>
+        </div>
+    </div>
+</div>

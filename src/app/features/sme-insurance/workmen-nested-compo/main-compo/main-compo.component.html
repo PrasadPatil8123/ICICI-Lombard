@@ -1,0 +1,29 @@
+<div class="cantainer text-center">
+  <h1>Blogs on Business Insurance</h1>
+</div>
+
+<div class="layout-container">
+  <div class="sidebar">
+    <ul>
+      <li (click)="setActive('marine')" [class.active]="activeComponent === 'marine'">Marine Insurance</li>
+      <li (click)="setActive('group')"[class.active]="activeComponent === 'group'">Group Health Insurance</li>
+      <li (click)="setActive('emp')"[class.active]="activeComponent === 'emp'">emp-compensation</li>
+      <li (click)="setActive('fire')"[class.active]="activeComponent === 'fire'">Fire Insurance</li>
+      <li (click)="setActive('Liability')"[class.active]="activeComponent === 'Liability'">Liability Insurance</li>
+      <li (click)="setActive('Engineering')"[class.active]="activeComponent === 'Engineering'">Engineering Insurance</li>
+      <li (click)="setActive('Other')"[class.active]="activeComponent === 'Other'">Other Insurance</li>
+      
+
+    </ul>
+  </div>
+
+  <div class="content-area">
+    <app-matine-ins *ngIf="activeComponent === 'marine'"></app-matine-ins>
+    <app-group-health-ins2 *ngIf="activeComponent === 'group'"></app-group-health-ins2 >
+     <app-emp-compensation *ngIf="activeComponent === 'emp'"></app-emp-compensation>
+    <app-fire-ins *ngIf="activeComponent === 'fire'"></app-fire-ins>
+    <app-liability-ins *ngIf="activeComponent === 'Liability'"></app-liability-ins>
+    <app-engineering-ins *ngIf="activeComponent === 'Engineering'"></app-engineering-ins>
+    <app-other-ins *ngIf="activeComponent === 'Other'"></app-other-ins>
+  </div>
+</div>

@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-group-health-ins',
@@ -10,18 +11,33 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class GroupHealthInsComponent {
 ghForm: FormGroup;
+public array: any=[];
 activeTab: string = 'employers';
-
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+activeTab2:string="tab1"
+isFormDirty:boolean=true;
+  constructor(private fb: FormBuilder, private http: HttpClient,private router :Router) {
     this.ghForm = this.fb.group({
       mobile: ['', [Validators.required, Validators.pattern(/^[6-9]\d{9}$/)]],
       pincode: ['', [Validators.required, Validators.pattern(/^\d{6}$/)]],
       company: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       agree: [true, Validators.requiredTrue],
-      whatsapp: [false]
+      whatsapp: [false],
+
     });
+     
   }
+  canDeactivate() {
+    return this.isFormDirty
+      ? confirm('you want to leave this page ?')
+      : true;
+
+  }
+
+  card(){
+    this.router.navigateByUrl('sme/main')
+  }
+
 
   onSubmit() {
     if (this.ghForm.valid) {
@@ -31,6 +47,7 @@ activeTab: string = 'employers';
           console.log('Response:', res);
           alert('Submitted successfully!');
           this.ghForm.reset(); // clear form after submit
+        
         },
         error: (err) => {
           console.error('Submission error:', err);
@@ -41,6 +58,19 @@ activeTab: string = 'employers';
       alert('Please fill all fields correctly.');
     }
   }
+
+  queries() {
+  const formData = this.ghForm.value;
+
+  this.router.navigate(["sme/claim-vdo"] , { queryParams: formData }  );
+}
+
+  emp_d() {
+  const formData = this.ghForm.value;
+  this.router.navigate(["sme/emp-d"], { queryParams: formData });
+}
+
+
 
   features = [
   {
@@ -152,6 +182,90 @@ compensations = [
   },
  
 ];
+navigateTo(path: string) {
+    this.router.navigate([path]);
+  }
 
+articles = [
+    {
+      img: "assets/sme-group-health/workers-compensation-insurance-for-small-businesses.jpg",
+         route: 'sme/card1',
+      title: 'Workplace safety guide: Preventing slip, trip and fall incidents',
+      discription:
+        'Workplace safety is important for employers and employees in India. Slips, trips and falls are some of the common accidents seen in offices, factories, shops and other workplaces. These may seem like trivial incidents, but they can cause serious injuries, lost working days, productivity drops and insurance claims.',
+      date: "09-09-2025"
+    },{
+       route: 'sme/card1',
+      img:"../../../../assets/sme-group-health/reduce-business-risks-labour-insurance.jpg",
+      title:'Types of full body safety harnesses',
+      discription:'When working at heights or in risky environments, safety is a priority. One of the most essential pieces of equipment you will come across is the safety harness full body type. These harnesses are designed to protect workers by distributing the force of a fall over the strongest parts of the body, such as the thighs, chest and shoulders. But not all harnesses are the same. In this guide, s',
+      date:"09-9-2025",
+
+    },{
+       route: 'sme/card1',
+      img:"../../../../assets/sme-group-health/StratToWC.png",
+      title:'What is occupational contact dermatitis?',
+      discription:'Occupational contact dermatitis is a type of eczema caused by workplace exposure to irritants or allergens. It affects various professions, including healthcare workers, cleaners, and construction workers. Symptoms include itchy, dry, or cracked skin, redness, and blisters. Treatment involves avoiding triggers, using topical corticosteroids, and moisturizers. ',
+      date:"09-9-2025",
+
+    }
+  ]
+
+  // ============
+testimonials = [
+    {
+      name: 'Prachi Dua',
+      company: 'NucleusTeq Consulting Pvt Ltd',
+      message: `We recently took the group health insurance policy from the SME website of the ICICI Lombard...`
+    },
+    {
+      name: 'Pratikshya Behera',
+      company: 'Jeeva Organic Pvt Ltd',
+      message: `It's very difficult to find an insurance company when you make a claim. ICICI Lombard is one of the best...`
+    },
+    {
+      name: 'Ravi Kumar',
+      company: 'TechCorp Solutions',
+      message: `Their response was quick, and the onboarding process was smooth.`
+    },
+    {
+      name: 'Aarti Singh',
+      company: 'Medline India',
+      message: `Excellent claim handling process. Seamless from start to finish.`
+    },
+    {
+      name: 'Pratikshya Behera',
+      company: 'Jeeva Organic Pvt Ltd',
+      message: `It's very difficult to find an insurance company when you make a claim. ICICI Lombard is one of the best...`
+    },
+    {
+      name: 'Ravi Kumar',
+      company: 'TechCorp Solutions',
+      message: `Their response was quick, and the onboarding process was smooth.`
+    },
+    {
+      name: 'Aarti Singh',
+      company: 'Medline India',
+      message: `Excellent claim handling process. Seamless from start to finish.`
+    }
+  ];
+
+  currentIndex = 0;
+
+  next() {
+    if (this.currentIndex + 1<= this.testimonials.length) {
+      this.currentIndex += 1;
+    }
+  }
+
+  prev() {
+    if (this.currentIndex >= 0) {
+      this.currentIndex -= 1;
+    }
+  }
+
+  setSlide(index: number) {
+    this.currentIndex = index;
+  }
 
 }

@@ -19,6 +19,8 @@ import { MainInterInterceptor } from './shared/interceptor/main-inter.intercepto
 import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 import { ClaimsModule } from './features/claims/claims.module';
 import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
+import { SmeInsuranceModule } from './features/sme-insurance/sme-insurance.module';
+import { SafeUrlPipe } from './features/sme-insurance/health-nested-compo/pipe.pipe';
 // import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 
 
@@ -29,15 +31,14 @@ import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
 
     // FooterComponent,
     // NavbarComponent,
-
-    PipesPipe,
+    // CarInsuranceComponent,
     HeaderComponent,
     HomeComponent,
 
     // CarInsuranceComponent
   ],
   imports: [
-  
+
     BrowserModule,
     // Footer2Component,
     AppRoutingModule,
@@ -46,17 +47,18 @@ import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
     HttpClientModule,
 
     ClaimsRoutingModule,
-  
+
 
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule,
-
+    SmeInsuranceModule
   ],
   providers: [
-    {provide:HTTP_INTERCEPTORS,
-    useClass:MainInterInterceptor,
-    multi:true
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MainInterInterceptor,
+      multi: true
     }
   ],
   bootstrap: [AppComponent]

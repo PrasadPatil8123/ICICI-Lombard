@@ -11,7 +11,7 @@ import { FormServiceService } from 'src/app/core/services/form-service.service';
   
 })
 export class WorkmensComponentComponent {
-
+activeTab:string="tab1"
   contents = [
     { text: 'Protect your workers under a single policy.' },
     { text: 'Get policy in 5 minutes' }
@@ -26,11 +26,13 @@ export class WorkmensComponentComponent {
     this.activeIndex = index;
   }
 
+
+
   isFormDirty: boolean = true;
 
   canDeactivate() {
     return this.isFormDirty
-      ? confirm('Your data is not saved,  you want to leave this page ?')
+      ? confirm('you want to leave this page ?')
       : true;
 
   }
@@ -62,12 +64,15 @@ export class WorkmensComponentComponent {
    });
     
   }
+  card(){
+    this.router1.navigateByUrl('sme/main')
+  }
   insuranceForm!: FormGroup;
 
  industryCategories = ['Construction', 'Manufacturing', 'Textile', 'IT', 'Logistics'];
 
   policyMonths = [1,2,3,4,5,6,7,8,9,10,11,12];
-
+    
 
   ngOnInit() {
   this.insuranceForm = this.fb.group({

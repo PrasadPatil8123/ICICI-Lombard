@@ -1,3 +1,4 @@
+declare var bootstrap: any;
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -110,25 +111,47 @@ export class CardDetails1Component {
     
 
   submitAdviceForm() {
-    if (this.adviceForm.valid) {
-      console.log('Advice Form Data:', this.adviceForm.value);
-      // TODO: Send data to backend or show success message
-      this.http.post("http://localhost:3000/submitform1",this.adviceForm.value).subscribe((res:any)=>{
-        console.log(res)
-        alert(" form sumited successfully")
-      })
-    }
-  }
+  if (this.adviceForm.valid) {
+    this.http.post("http://localhost:3000/submitform1", this.adviceForm.value)
+      .subscribe({
+        next: (res: any) => {
+          console.log('Server Response:', res);
+          this.adviceForm.reset();
 
-  submitNewsletterForm() {
-    if (this.newsletterForm.valid) {
-      console.log('Newsletter Form Data:', this.newsletterForm.value);
-       this.http.post("http://localhost:3000/submitform2",this.newsletterForm.value).subscribe((res:any)=>{
-        console.log(res)
-        alert(" form sumited successfully")
-       })
-    }
+          // Show modal
+          const modalElement = document.getElementById('successModal');
+          const modal = new bootstrap.Modal(modalElement);
+          modal.show();
+        },
+        error: (err) => {
+          console.error('Submission error:', err);
+          alert("Something went wrong. Please try again later.");
+        }
+      });
+  } else {
+    alert("Please fill all required fields before submitting.");
   }
+}
+  submitNewsletterForm() {
+  if (this.newsletterForm.valid) {
+    this.http.post("http://localhost:3000/submitform2", this.newsletterForm.value).subscribe({
+      next: (res: any) => {
+        console.log('Newsletter Response:', res);
+        this.newsletterForm.reset();
+
+        const modalElement = document.getElementById('newsletterSuccessModal');
+        const modal = new bootstrap.Modal(modalElement);
+        modal.show();
+      },
+      error: (err) => {
+        console.error('Newsletter error:', err);
+        alert("Something went wrong. Please try again later.");
+      }
+    });
+  } else {
+    alert("Please fill all required fields.");
+  }
+}
 }
 
 

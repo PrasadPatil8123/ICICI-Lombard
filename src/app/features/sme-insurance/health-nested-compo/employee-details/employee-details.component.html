@@ -1,0 +1,117 @@
+<app-navbar2></app-navbar2>
+<div class="fluid">
+  <div class="left-box">
+  <h2>Group Health Insurance</h2>
+  <a (click)="goback()" class="edit-link">Back</a>
+
+  <div class="info-row">
+    <span class="label">Name of Corporate</span>
+    <span class="value">{{ corporateDetails.company }}</span>
+  </div>
+
+  <div class="info-row">
+    <span class="label">Pincode</span>
+    <span class="value2">{{ corporateDetails.pincode }}</span>
+  </div>
+
+  <div class="info-row">
+    <span class="label">Email</span>
+    <span class="value3">{{ corporateDetails.email }}</span>
+  </div>
+
+  <div class="info-row">
+    <span class="label">Mobile Number</span>
+    <span class="value4">{{ corporateDetails.mobile }}</span>
+  </div>
+</div>
+
+
+<div class="form-container">
+  <h2>Fill in employee details.</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    
+    <!-- First-time insurance -->
+    <div class="form-group">
+      <label>Is this the first time your company would have a health insurance plan?*</label>
+      <div class="radio-group">
+        <label><input type="radio" value="yes" formControlName="isFirstPolicy"> Yes</label>
+        <label><input type="radio" value="no" formControlName="isFirstPolicy"> No</label>
+      </div>
+    </div>
+
+    <!-- Policy source -->
+    <div class="form-group">
+      <label>We are renewing the existing policy</label>
+      <div class="radio-group">
+        <label><input type="radio" value="ICICI" formControlName="policySource"> Existing ICICI Lombard policy</label>
+        <label><input type="radio" value="Other" formControlName="policySource"> Other insurance company policy</label>
+      </div>
+    </div>
+
+    <!-- Two-column row: policy lives & claim amount -->
+    <div class="form-row">
+      <div class="form-col">
+        <label>Existing policy lives*</label>
+        <input formControlName="existingPolicyLives" type="text">
+      </div>
+      <div class="form-col">
+        <label>Claim amount (Received + Outstanding)*</label>
+        <input formControlName="claimAmount" type="text">
+      </div>
+    </div>
+
+    <!-- Start date -->
+    <div class="form-group">
+      <label>Existing policy start date*</label>
+      <input formControlName="startDate" type="date">
+    </div>
+
+    <!-- Disclaimer -->
+    <p class="disclaimer">
+      ⚠️ Disclaimer: Any misinformation may result in policy cancellation
+    </p>
+
+    <!-- Two-column row: employee count & family -->
+    <div class="form-row">
+      <div class="form-col">
+        <label>Number of employees*</label>
+        <div class="counter">
+          <button type="button" (click)="decrement()">−</button>
+          <input [value]="form.get('employeeCount')?.value" readonly>
+          <button type="button" (click)="increment()">+</button>
+        </div>
+      </div>
+      <div class="form-col">
+        <label>Family definition*</label>
+        <select formControlName="familyDefinition">
+          <option value="">Select</option>
+          <option>Employee</option>
+          <option>Employee, Spouse & Children</option>
+          <option>Employee, Spouse, Children & Parents</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Sum Insured -->
+    <div class="form-group">
+      <label>Sum Insured (Non Floater)*</label>
+      <select formControlName="sumInsured">
+        <option value="">Select</option>
+        <option>1 Lakh</option>
+        <option>2 Lakhs</option>
+        <option>3 Lakhs</option>
+        <option>5 Lakhs</option>
+      </select>
+    </div>
+
+    <!-- Submit -->
+    <div class="submit-btn">
+      <button type="submit">Submit</button>
+    </div>
+
+  </form>
+</div>
+</div>
+<!-- <app-footer1></app-footer1> -->
+<app-footer2></app-footer2>

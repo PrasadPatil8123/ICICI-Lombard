@@ -12,18 +12,33 @@ import { MarineInsuranceComponent } from './marine-insurance/marine-insurance.co
 import { SmeInsuranceComponent } from './sme-insurance/sme-insurance.component';
 import { mydeactive } from './guards.guard';
 import { CardDetails1Component } from './workmen-nested-compo/card-details1/card-details1.component';
-import { CardDetails2Component } from './workmen-nested-compo/card-details2/card-details2.component';
-import { CardDetails3Component } from './workmen-nested-compo/card-details3/card-details3.component';
+import { MainCompoComponent } from './workmen-nested-compo/main-compo/main-compo.component';
+import { MatineInsComponent } from './workmen-nested-compo/matine-ins/matine-ins.component';
+import { EmpCompensationComponent } from './workmen-nested-compo/emp-compensation/emp-compensation.component';
+import { FireInsComponent } from './workmen-nested-compo/fire-ins/fire-ins.component';
+import { LiabilityInsComponent } from './workmen-nested-compo/liability-ins/liability-ins.component';
+import { EngineeringInsComponent } from './workmen-nested-compo/engineering-ins/engineering-ins.component';
+import { OtherInsComponent } from './workmen-nested-compo/other-ins/other-ins.component';
+import { SideNavComponent } from './workmen-nested-compo/side-nav/side-nav.component';
+import { GroupHealthIns2Component } from './workmen-nested-compo/group-health-ins2/group-health-ins2.component';
+import { ClaimVdoComponent } from './health-nested-compo/claim-vdo/claim-vdo.component';
+import { EmployeeDetailsComponent } from './health-nested-compo/employee-details/employee-details.component';
 
   
 const router :Routes=[
     {path:"workmen",component:WorkmensComponentComponent,canDeactivate:[mydeactive]},
-    {path:"group-health",component:GroupHealthInsComponent},
+    {path:"group-health",component:GroupHealthInsComponent,canDeactivate:[mydeactive]},
     {path:"marine",component:MarineInsuranceComponent},
     {path:"sme-ins",component:SmeInsuranceComponent},
     {path:"card1",component:CardDetails1Component},
-    {path:"card2",component:CardDetails2Component},
-    {path:"card3",component:CardDetails3Component},
+    {path:"main",component:MainCompoComponent},
+    {path:"claim-vdo",component:ClaimVdoComponent},
+    {path:"emp-d",component:EmployeeDetailsComponent},
+
+    
+
+
+
 ]
 
 
@@ -36,8 +51,18 @@ const router :Routes=[
     MarineInsuranceComponent,
     Navbar2Component,
     CardDetails1Component,
-    CardDetails2Component,
-    CardDetails3Component,
+    MainCompoComponent,
+    MatineInsComponent,
+    EmpCompensationComponent,
+    FireInsComponent,
+    LiabilityInsComponent,
+    EngineeringInsComponent,
+    OtherInsComponent,
+    SideNavComponent,
+    GroupHealthIns2Component,
+    ClaimVdoComponent,
+    EmployeeDetailsComponent,
+    
   ],
   imports: [
     Footer1Component,
@@ -46,6 +71,6 @@ const router :Routes=[
     RouterModule.forChild(router),
     ReactiveFormsModule,
   ],
-  exports:[Navbar2Component,]
+  exports:[Navbar2Component,SideNavComponent]
 })
 export class SmeInsuranceModule { }
