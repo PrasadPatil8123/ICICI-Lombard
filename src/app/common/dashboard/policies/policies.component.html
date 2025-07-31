@@ -4,7 +4,7 @@
       <ng-container *ngIf="getPoliciesByStatus('active').length; else noActive">
         <div *ngFor="let p of getPoliciesByStatus('active')" class="policy-card">
           <strong>{{ p.type }}</strong> – {{ p.policyNumber }}<br/>
-          Premium: ₹{{ p.premium }}<br/>
+          Premium: {{ p.premium | currency : 'INR' }}<br/>
           Valid: {{ p.startDate }} to {{ p.endDate }}
         </div>
       </ng-container>
@@ -17,7 +17,7 @@
       <ng-container *ngIf="getPoliciesByStatus('pending').length; else noPending">
         <div *ngFor="let p of getPoliciesByStatus('pending')" class="policy-card">
           <strong>{{ p.type }}</strong> – {{ p.policyNumber }}<br/>
-          Premium: ₹{{ p.premium }}<br/>
+          Premium: {{ p.premium | currency : 'INR' }}<br/>
           Start Date: {{ p.startDate || 'TBD' }}
         </div>
       </ng-container>
@@ -30,7 +30,7 @@
       <ng-container *ngIf="getPoliciesByStatus('expired').length; else noExpired">
         <div *ngFor="let p of getPoliciesByStatus('expired')" class="policy-card">
           <strong>{{ p.type }}</strong> – {{ p.policyNumber }}<br/>
-          Premium: ₹{{ p.premium }}<br/>
+          Premium: {{ p.premium | currency : 'INR'}}<br/>
           Expired on: {{ p.endDate }}
         </div>
       </ng-container>
