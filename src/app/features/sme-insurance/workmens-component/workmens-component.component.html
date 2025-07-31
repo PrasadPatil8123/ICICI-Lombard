@@ -1,0 +1,105 @@
+<app-navbar></app-navbar>
+<div class="container-fluid bluebg d-none d-lg-block">
+    <div class="container bluemg ">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="backbtn"> back </div>
+                    <h1>Employee’s Compensation Insurance</h1>
+                    <p>Protect your workers under a single policy.</p>
+                    <img [src]="bule_img1" class="img-fluid " style="height: 470px; width:570px">
+
+                </div>
+
+            </div>
+            <div class=" col">
+
+                <div class="container mt-5">
+                    <form [formGroup]="myform" (ngSubmit)="onSubmit()" class="form1">
+                        <div class="">
+                            <h5>Employee’s Compensation Insurance</h5>
+                        </div>
+                        <input type="text" name="Mobile" placeholder=" Enter your Mobile Number" class="form-control"
+                            formControlName="mobile">
+                        <input type="email" name="email" placeholder="Enter Your Email " class="form-control"
+                            formControlName="mobile">
+                        <input type="text" name="company" placeholder="Enter your Company Name" class="form-control"
+                            formControlName="mobile">
+                        <input type="text" name="Mobile" placeholder="Enter your Pin-Code " class="form-control"
+                            formControlName="mobile">
+                        <button class="frmbtn">submit</button>
+                        <a href="" class="quote">Retrieve quote</a><br>
+                        <b class="boldtext">I agree to the terms and Conditions</b><br>
+                        <b class="boldtext">I want to receive updates on</b>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bluebg d-block d-lg-none">
+    <div class="container ">
+        <div class="row">
+            <div class="col">
+                <h1 class="mt-5">Employee’s Compensation Insurance</h1>
+                <div class="container mt-5">
+                    <form [formGroup]="myform" (ngSubmit)="onSubmit()" class="form2">
+                        <div class="ms-4">
+                            <h5>Employee’s Compensation Insurance</h5>
+                        </div>
+                        <input type="text" name="Mobile" placeholder=" Enter your Mobile Number" class="form-control"
+                            formControlName="mobile">
+                        <input type="email" name="email" placeholder="Enter Your Email " class="form-control"
+                            formControlName="mobile">
+                        <input type="text" name="company" placeholder="Enter your Company Name" class="form-control"
+                            formControlName="mobile">
+                        <input type="text" name="Mobile" placeholder="Enter your Pin-Code " class="form-control"
+                            formControlName="mobile">
+                        <button class="frmbtn">submit</button>
+                        <a href="" class="quote">Retrieve quote</a><br>
+                        <img [src]="marking" alt="">
+                        <b class="boldtext">I agree to the terms and Conditions</b><br>
+                        <b class="boldtext">I want to receive updates on</b>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="height: 400px;  width: 1010px;">
+    <h1 class="headline2 mb-3">What is Employee’s Compensation Insurance?</h1>
+    <pre class="pre-text">
+ What is Employee’s Compensation Insurance?
+ Every company must ensure a safe workplace, but accidents can still happen. Injuries or, in severe cases,
+ death during employment require compensation under laws like the Employee’s Compensation Act 1923 
+ (previously called as the Workmen’s Compensation Act, 1923).
+
+ Not compensating can lead to legal issues, affecting employee confidence and the business's reputation.
+ Employee’s compensation insurance (commonly known as WC policy or WC insurance) helps financially, covering 
+ compensation and legal costs. It also protects against lawsuits, as employees usually give up the right to 
+ sue for workplace negligence when accepting benefits. Previously known as Workmen Compensation Insurance, it 
+ ensures both businesses and employees are financially protected.
+
+ ICICI Lombard’s Employee’s Compensation Insurance helps you financially safeguard your employees and their 
+ familiesagainst unfortunate workplace accidents and mishaps. Most importantly, it presents you as a thoughtful
+ and caring employer who values his workforce, an asset for any organization.</pre>
+        <h1 class="headline2 mb-3">What is the Employee’s Compensation Act?</h1>
+<pre  class="pre-text">
+The Employee’s Compensation Act, 1923 prescribes about financial compensation to employees if they encounter 
+an accident during the course of employment while doing/discharging their duties. Under this law, all full-time, 
+part-time or casual employees are liable to receive financial protection. The Act's provisions kick in when 
+employees suffer injuries that render them incapable to perform their duties or they succumb to their in
+       
+The compensation workers are eligible to receive under this Act are:
+    </pre>
+   
+</div>
+
+
+
+
+
+<!-- <app-footer></app-footer> -->

@@ -16,6 +16,7 @@ import { HomeComponent } from './common/home/home.component';
 import { ClaimsModule } from './features/claims/claims.module';
 import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
 import { DashboardModule } from './common/dashboard/dashboard.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -43,9 +44,10 @@ import { DashboardModule } from './common/dashboard/dashboard.module';
     ButtonModule,
     ClaimsModule,
     DashboardModule,
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
+    RouterModule
   ],
+  exports: [FooterComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -157,7 +157,31 @@
       "premium": 7200,
       "coverageAmount": 500000,
       "status": "generated"
+    }
+  ],
+  "HealthContactDetails": [
+    {
+      "id": "8ead",
+      "mobile": "374463294746",
+      "email": "xyz@gmail.com",
+      "pincode": "414502",
+      "name": "Prasad Patil"
     },
+    {
+      "id": "e0aa",
+      "mobile": "374463294746",
+      "email": "xyz@gmail.com",
+      "pincode": "414502",
+      "name": "Prasad Patil"
+    },
+    {
+      "id": "49d8",
+      "mobile": "374463294746",
+      "email": "xyz@gmail.com",
+      "pincode": "414502",
+      "name": "Prasad Patil"
+    }
+    ,
     {
       "id": 2,
       "userId": 2,
