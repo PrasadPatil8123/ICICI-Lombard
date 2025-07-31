@@ -2,10 +2,10 @@
 <p>testing code</p>
 
 
-<div ><a routerLink="sme/workmen" >workmen</a></div>
-<!-- <div ><a routerLink="sme/group-health" >group-health</a></div> -->
-<div ><a routerLink="sme/card1" >group-health</a></div>
- <!-- <div ><a routerLink="sme/marine" >marine</a></div>
+<!-- <div ><a routerLink="sme/workmen" >workmen</a></div>
+ <div ><a routerLink="sme/group-health" >group-health</a></div> -->
+<!--<div ><a routerLink="sme/card1" >group-health</a></div>
+  <div ><a routerLink="sme/marine" >marine</a></div>
 <div ><a routerLink="sme/sme-ins" >sme-ins</a></div>
 <div ><a routerLink="crpr/rsk" >rsk</a></div>
 <div ><a routerLink="claims/health-claims" >health-claims</a></div>
@@ -20,13 +20,35 @@
 <div ><a routerLink="dashboard/dashboard/users" >dashboard-users</a></div>
 <div ><a routerLink="dashboard/dashboard/policies" >dashboard-policies</a></div>
 <div ><a routerLink="dashboard/dashboard/payments" >dashboard-payments</a></div>
-<div ><a routerLink="dashboard/dashboard/savedquotes" >dashboard-savedquotes</a></div> -->
-<div ><a routerLink="travel-insurance/travel-insurance" >travel-insurance</a></div>
-      <router-outlet></router-outlet>
+<div ><a routerLink="dashboard/dashboard/savedquotes" >dashboard-savedquotes</a></div> 
+<div ><a routerLink="travel-insurance/travel-insurance" >travel-insurance</a></div> -->
+    
 
-
-
-
+ <nav>
+  <ul>
+    <li><a routerLink="/sme/workmen">Workmen</a></li>
+    <li><a routerLink="/sme/card1">Group Health</a></li>
+    <li><a routerLink="/sme/marine">Marine</a></li>
+    <li><a routerLink="/sme/sme-ins">SME Insurance</a></li>
+    <li><a routerLink="/crpr/rsk">RSK</a></li>
+    <li><a routerLink="/claims/health-claims">Health Claims</a></li>
+    <li><a routerLink="/claims/motor-claims">Motor Claims</a></li>
+    <li><a routerLink="/claims/partner">Partner</a></li>
+    <li><a routerLink="claims/motor">Motor</a></li>
+    <li><a routerLink="claims/home-claims">Home Claims</a></li>
+    <li><a routerLink="claims/corp-claims">Corporate Claims</a></li>
+    <li><a routerLink="motor/car-ins">Car Insurance</a></li>
+    <li><a routerLink="motor/motor-ins">Motor Insurance</a></li>
+    <li><a routerLink="dashboard/dashboard">Dashboard</a></li>
+    <li><a routerLink="dashboard/dashboard/users">Dashboard - Users</a></li>
+    <li><a routerLink="dashboard/dashboard/policies">Dashboard - Policies</a></li>
+    <li><a routerLink="dashboard/dashboard/payments">Dashboard - Payments</a></li>
+    <li><a routerLink="dashboard/dashboard/savedquotes">Dashboard - Saved Quotes</a></li>
+     <li><a routerLink="/abc/travel">Travel Insurance</a></li> 
+  </ul>
+</nav>
+  <router-outlet></router-outlet>
+ 
 
 
 
@@ -36,6 +58,6 @@
 <!-- <app-travel-insurance></app-travel-insurance> -->
 <!-- <app-single-trip></app-single-trip> -->
 
-<!-- <a routerLink="/travel-insurance">Travel Insurance Form</a> -->
+<!-- <a routerLink="/travel-insurance-form">Travel Insurance Form</a> -->
 <!-- <router-outlet></router-outlet> -->
  

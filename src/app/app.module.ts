@@ -53,6 +53,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule
+    
 
   ],
   providers: [

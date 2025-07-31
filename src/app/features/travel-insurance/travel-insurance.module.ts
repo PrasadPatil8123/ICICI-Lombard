@@ -24,12 +24,12 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { CardModule } from 'primeng/card';
 import { TabViewModule } from 'primeng/tabview';
 import { RouterModule, Routes } from '@angular/router';
+// import { TravelInsuranceRoutingModule } from './travel-insurance-routing.module';
 
 
 
-const routes: Routes = [
-  { path: '', redirectTo: 'travel-insurance', pathMatch: 'full' },
-  { path: 'travel-insurance', component: TravelInsuranceFormComponent },
+const router: Routes = [
+  { path: 'travel', component: TravelInsuranceComponent },
   { path: 'single-trip', component: SingleTripComponent },
   { path: 'multi-trip', component: GoldMultiTripComponent },
   { path: 'student-travel', component: StudentTravelComponent }
@@ -46,6 +46,7 @@ const routes: Routes = [
   ],
   imports: [
     HttpClientModule,
+    // TravelInsuranceRoutingModule,
     ReactiveFormsModule,
     CommonModule,
     SelectButtonModule,
@@ -58,7 +59,8 @@ const routes: Routes = [
     InputMaskModule,
     MultiSelectModule,
     CardModule,
-    TabViewModule
+    TabViewModule,
+    RouterModule.forChild(router)
   ],
    exports: [
     TravelInsuranceFormComponent, // if used in other modules

@@ -5,8 +5,8 @@ import { HealthClaimsComponent } from './health-claims/health-claims.component';
 import { MotorClaimsComponent } from './motor-claims/motor-claims.component';
 import { PartnerHospitalComponent } from './partner-hospital/partner-hospital.component';
 
-import { Navbar2Component } from './navbar2/navbar2.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { Navbar2Component } from '../../common/navbar2/navbar2.component';
+import { NavbarComponent } from '../../common/navbar/navbar.component';
 import { TravelClaimsComponent } from './travel-claims/travel-claims.component';
 import { HomeClaimsComponent } from './home-claims/home-claims.component';
 import { CorpClaimsComponent } from './corp-claims/corp-claims.component';

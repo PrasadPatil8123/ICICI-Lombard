@@ -6,7 +6,7 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Footer2Component } from 'src/app/common/all footer/footer2/footer2.component';
 import { Footer1Component } from 'src/app/common/all footer/footer/footer.component';
-import { NavbarComponent } from '../claims/navbar/navbar.component';
+// import { NavbarComponent } from '../claims/navbar/navbar.component';
 import { Navbar2Component } from './navbar/navbar.component';
 import { MarineInsuranceComponent } from './marine-insurance/marine-insurance.component';
 import { SmeInsuranceComponent } from './sme-insurance/sme-insurance.component';
