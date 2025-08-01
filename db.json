@@ -523,39 +523,7 @@
       "email_id": "riju123@gmail.com"
     }
   ],
-  "form-info": [
-    {
-      "id": "6599"
-    },
-    {
-      "id": "c8b8",
-      "mobile": "9326834227",
-      "email": "test23@gmail.com",
-      "company": "xyz",
-      "pincode": "333333"
-    },
-    {
-      "id": "7f8d",
-      "mobile": "9326834227",
-      "email": "ghukenilesh123@gmail.com",
-      "company": "xyz",
-      "pincode": "222332"
-    },
-    {
-      "id": "525e",
-      "mobile": "9326834227",
-      "email": "test12@gmail.com",
-      "company": "xyz",
-      "pincode": "388897"
-    },
-    {
-      "id": "bc4e",
-      "mobile": "9326834227",
-      "email": "test12@gmail.com",
-      "company": "xyz",
-      "pincode": "442123"
-    }
-  ],
+  
   "submitform1": [
     {
       "id": "c55c"
