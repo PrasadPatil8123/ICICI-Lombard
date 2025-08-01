@@ -61,37 +61,7 @@ increment() {
   }
 
   // ==========
-testimonials = [
-    {
-      name: 'Prachi Dua',
-      company: 'NucleusTeq Consulting Pvt Ltd',
-      message: `We recently took the group health insurance policy from the SME website of the ICICI Lombard...`,
-    },
-    {
-      name: 'Pratikshya Behera',
-      company: 'Jeeva Organic Pvt Ltd',
-      message: `It's very difficult to find an insurance company when you make a claim...`,
-    },
-    // Add more testimonials if needed
-  ];
 
-  currentIndex = 0;
-
-  prev() {
-    if (this.currentIndex > 0) {
-      this.currentIndex -= 2;
-    }
-  }
-
-  next() {
-    if (this.currentIndex + 2 < this.testimonials.length) {
-      this.currentIndex += 2;
-    }
-  }
-
-  isActiveDot(index: number): boolean {
-    return index === this.currentIndex;
-  }
 
 
 }

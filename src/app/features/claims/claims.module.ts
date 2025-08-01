@@ -16,7 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { PartnerHospitalComponent } from './partner-hospital/partner-hospital.component';
-import { Navbar2Component } from './navbar2/navbar2.component';
+// import { Navbar2Component } from './navbar2/navbar2.component';
 import { TravelClaimsComponent } from './travel-claims/travel-claims.component';
 import { HomeClaimsComponent } from './home-claims/home-claims.component';
 
@@ -26,6 +26,8 @@ import { DialogModule } from 'primeng/dialog';
 import { CorpClaimsComponent } from './corp-claims/corp-claims.component';
 import { CommanTableComponent } from './comman-table/comman-table.component';
 import { TableModule } from 'primeng/table';
+import { CustomPipe } from './shared/custom.pipe';
+import { Navbar2Component } from './navbar2/navbar2.component';
 @NgModule({
   declarations: [
     HealthClaimsComponent,
@@ -38,9 +40,11 @@ import { TableModule } from 'primeng/table';
     HomeClaimsComponent,
     CorpClaimsComponent,
     CommanTableComponent,
+    CustomPipe,
+    
   ],
   exports: [
-    HealthClaimsComponent
+    HealthClaimsComponent,Navbar2Component
   ],
   imports: [
     CommonModule,
@@ -55,7 +59,7 @@ import { TableModule } from 'primeng/table';
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-
+    
     TableModule,
     ReactiveFormsModule,
     DialogModule,

@@ -14,12 +14,12 @@ export class MainInterInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const loginToken = sessionStorage.getItem('token');
-    console.log(loginToken);
+    console.log("JWT token:", loginToken);
 
     const modifiRequest = request.clone({
       setHeaders: {
         'Content-Type': 'application/json',
-        'JWTToken': `${loginToken}`
+        'JWTToken': ` ${loginToken}`
       }
     })
     // console.log(modifiRequest);

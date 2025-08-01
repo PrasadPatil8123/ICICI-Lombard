@@ -707,6 +707,17 @@
       "email": "test12@gmail.com",
       "agree": true,
       "whatsapp": false
+    }
+
+  ],
+  "form-info": [
+    {},
+    {
+      "id": "0d85",
+      "mobail": "",
+      "email": "",
+      "company": "",
+      "pincode": ""
     },
     {
       "id": "ee1e",
@@ -740,4 +751,5 @@
       "sumInsured": "2 Lakhs"
     }
   ]
+
 }

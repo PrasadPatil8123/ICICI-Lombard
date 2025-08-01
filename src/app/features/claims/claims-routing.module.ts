@@ -11,9 +11,10 @@ import { TravelClaimsComponent } from './travel-claims/travel-claims.component';
 import { HomeClaimsComponent } from './home-claims/home-claims.component';
 import { CorpClaimsComponent } from './corp-claims/corp-claims.component';
 import { CommanTableComponent } from './comman-table/comman-table.component';
+import { authGuard } from './auth/auth.guard';
 
 const routes: Routes = [
-    { path: 'health-claims', component: HealthClaimsComponent },
+    { path: 'health-claims', component: HealthClaimsComponent, canActivate :[authGuard] },
     { path: 'motor-claims', component: MotorClaimsComponent },
     { path: 'partner', component: PartnerHospitalComponent },
     { path: 'navbar', component: NavbarComponent },
@@ -27,6 +28,6 @@ const routes: Routes = [
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
+    exports: [RouterModule,]
 })
 export class ClaimsRoutingModule { }

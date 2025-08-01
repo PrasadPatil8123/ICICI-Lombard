@@ -36,7 +36,7 @@
                 <!-- Intimate a Claim -->
                 <div class="col-md-6">
                     <h5>Intimate a Claim</h5>
-                    <form [formGroup]="intimateForm" (ngSubmit)="onIntimateSubmit()">
+                    <!-- <form [formGroup]="intimateForm" (ngSubmit)="onIntimateSubmit()">
                         <div>
                             <input type="hidden" formControlName="id">
                         </div>
@@ -67,7 +67,70 @@
                                 [ngClass]="{ 'is-invalid': intimateForm.get('loanAccountNumber')?.invalid && intimateForm.get('loanAccountNumber')?.touched }">
                         </div>
                         <button class="btn btn-warning w-100">Submit</button>
+                    </form> -->
+
+                    <form [formGroup]="intimateForm" (ngSubmit)="onIntimateSubmit()">
+                        <input type="hidden" formControlName="id">
+
+                        <!-- Policy Number -->
+                        <div class="mb-3">
+                            <input type="text" class="form-control" formControlName="policyNumber"
+                                placeholder="Enter Policy Number"
+                                [ngClass]="{ 'is-invalid': intimateForm.get('policyNumber')?.invalid && intimateForm.get('policyNumber')?.touched }">
+                            <div class="invalid-feedback" *ngIf="intimateForm.get('policyNumber')?.touched">
+                                <div *ngIf="intimateForm.get('policyNumber')?.hasError('required')">Policy number is
+                                    required.</div>
+                                <div *ngIf="intimateForm.get('policyNumber')?.hasError('minlength')">Minimum 5
+                                    characters required.</div>
+                                <div *ngIf="intimateForm.get('policyNumber')?.hasError('maxlength')">Maximum 10
+                                    characters allowed.</div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Number -->
+                        <div class="mb-3">
+                            <input type="text" class="form-control" formControlName="mobileNumber"
+                                placeholder="Enter Mobile Number"
+                                [ngClass]="{ 'is-invalid': intimateForm.get('mobileNumber')?.invalid && intimateForm.get('mobileNumber')?.touched }">
+                            <div class="invalid-feedback" *ngIf="intimateForm.get('mobileNumber')?.touched">
+                                <div *ngIf="intimateForm.get('mobileNumber')?.hasError('required')">Mobile number is
+                                    required.</div>
+                                <div *ngIf="intimateForm.get('mobileNumber')?.hasError('pattern')">Enter a valid
+                                    10-digit mobile number.</div>
+                            </div>
+                        </div>
+
+                        <!-- IMEI Number -->
+                        <div class="mb-3">
+                            <input type="text" class="form-control" formControlName="imeiNumber"
+                                placeholder="Enter IMEI/Serial Number"
+                                [ngClass]="{ 'is-invalid': intimateForm.get('imeiNumber')?.invalid && intimateForm.get('imeiNumber')?.touched }">
+                            <div class="invalid-feedback" *ngIf="intimateForm.get('imeiNumber')?.touched">
+                                <div *ngIf="intimateForm.get('imeiNumber')?.hasError('required')">IMEI number is
+                                    required.</div>
+                                <div *ngIf="intimateForm.get('imeiNumber')?.hasError('minlength')">At least 10
+                                    characters required.</div>
+                            </div>
+                        </div>
+
+                        <!-- Loan Account Number -->
+                        <div class="mb-3">
+                            <input type="text" class="form-control" formControlName="loanAccountNumber"
+                                placeholder="Enter Loan Account Number"
+                                [ngClass]="{ 'is-invalid': intimateForm.get('loanAccountNumber')?.invalid && intimateForm.get('loanAccountNumber')?.touched }">
+                            <div class="invalid-feedback" *ngIf="intimateForm.get('loanAccountNumber')?.touched">
+                                <div *ngIf="intimateForm.get('loanAccountNumber')?.hasError('required')">Loan account
+                                    number is required.</div>
+                                <div *ngIf="intimateForm.get('loanAccountNumber')?.hasError('minlength')">At least 8
+                                    characters required.</div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-warning w-100" type="submit" [disabled]="intimateForm.invalid">Submit</button>
                     </form>
+
+
+
                 </div>
 
                 <!-- Track a Claim -->

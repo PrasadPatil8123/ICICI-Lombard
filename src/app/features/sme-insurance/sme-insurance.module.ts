@@ -7,7 +7,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Footer2Component } from 'src/app/common/all footer/footer2/footer2.component';
 import { Footer1Component } from 'src/app/common/all footer/footer/footer.component';
 import { NavbarComponent } from '../claims/navbar/navbar.component';
-import { Navbar2Component } from './navbar/navbar.component';
 import { MarineInsuranceComponent } from './marine-insurance/marine-insurance.component';
 import { SmeInsuranceComponent } from './sme-insurance/sme-insurance.component';
 import { mydeactive } from './guards.guard';
@@ -23,6 +22,7 @@ import { SideNavComponent } from './workmen-nested-compo/side-nav/side-nav.compo
 import { GroupHealthIns2Component } from './workmen-nested-compo/group-health-ins2/group-health-ins2.component';
 import { ClaimVdoComponent } from './health-nested-compo/claim-vdo/claim-vdo.component';
 import { EmployeeDetailsComponent } from './health-nested-compo/employee-details/employee-details.component';
+import { Navbar3Component } from './navbar/navbar.component';
 
   
 const router :Routes=[
@@ -49,7 +49,6 @@ const router :Routes=[
     GroupHealthInsComponent,
     SmeInsuranceComponent,
     MarineInsuranceComponent,
-    Navbar2Component,
     CardDetails1Component,
     MainCompoComponent,
     MatineInsComponent,
@@ -62,7 +61,7 @@ const router :Routes=[
     GroupHealthIns2Component,
     ClaimVdoComponent,
     EmployeeDetailsComponent,
-    
+    Navbar3Component,
   ],
   imports: [
     Footer1Component,
@@ -71,6 +70,6 @@ const router :Routes=[
     RouterModule.forChild(router),
     ReactiveFormsModule,
   ],
-  exports:[Navbar2Component,SideNavComponent]
+  exports:[Navbar3Component,SideNavComponent]
 })
 export class SmeInsuranceModule { }
