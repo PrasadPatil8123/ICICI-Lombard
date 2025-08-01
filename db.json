@@ -535,6 +535,18 @@
       "name": "rahul",
       "mobile": "9326834227",
       "category": "Health Insurance"
+    },
+    {
+      "id": "5a98",
+      "name": "ganesh",
+      "mobile": "9326834227",
+      "category": "Travel Insurance"
+    },
+    {
+      "id": "1d35",
+      "name": "sagar",
+      "mobile": "9326834227",
+      "category": "Motor Insurance"
     }
   ],
   "submitform2": [
@@ -547,6 +559,11 @@
       "id": "812b",
       "fullName": "shekar ",
       "email": "shekar12@gmail.com"
+    },
+    {
+      "id": "109f",
+      "fullName": "ganesh ",
+      "email": "ganesh122@gmail.com"
     }
   ],
   "policies2": [
@@ -560,6 +577,18 @@
       "unskilledWorkersCount": "20",
       "unskilledWorkerSalary": "10000",
       "policyPeriod": "12",
+      "lastClaim": "Nil or below ₹1 lakh"
+    },
+    {
+      "id": "518a",
+      "industryCategory": "",
+      "skilledWorkersCount": 0,
+      "skilledWorkerSalary": "salary",
+      "semiSkilledWorkersCount": 0,
+      "semiSkilledWorkerSalary": "salary",
+      "unskilledWorkersCount": 0,
+      "unskilledWorkerSalary": "salary",
+      "policyPeriod": 1,
       "lastClaim": "Nil or below ₹1 lakh"
     }
   ],
@@ -577,7 +606,7 @@
   "form-info": [
     {
       "id": "0d85",
-      "mobail": "rahul ",
+      "mobail": "988888898",
       "email": "test12@gmail.com",
       "company": "xyz",
       "pincode": "121232"
@@ -586,6 +615,13 @@
       "id": "dda7",
       "mobile": "9326834227",
       "email": "test12@gmail.com",
+      "company": "xyz",
+      "pincode": "232312"
+    },
+    {
+      "id": "8e62",
+      "mobile": "9326834227",
+      "email": "atul12@gamil.com",
       "company": "xyz",
       "pincode": "232312"
     }
@@ -667,6 +703,17 @@
       "employeeCount": 10,
       "familyDefinition": "Employee",
       "sumInsured": "2 Lakhs"
+    },
+    {
+      "id": "2e7c",
+      "isFirstPolicy": "yes",
+      "policySource": "Other",
+      "existingPolicyLives": "5",
+      "claimAmount": "500000",
+      "startDate": "2025-08-29",
+      "employeeCount": 9,
+      "familyDefinition": "Employee, Spouse & Children",
+      "sumInsured": "5 Lakhs"
     }
   ]
 }
