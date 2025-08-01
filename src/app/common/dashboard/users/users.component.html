@@ -1,1 +1,28 @@
-<p>users works!</p>
+<p-panel header="Personal Details" styleClass="user-details-panel">
+  <ng-container *ngIf="personalDetails.length > 0; else noUser">
+    <div class="grid">
+      <div *ngFor="let user of personalDetails" class="col-12 md:col-6 lg:col-4">
+        <p-card>
+          <div><strong>Mobile:</strong> {{ user.mobile }}</div>
+          <div><strong>DOB:</strong> {{ user.dateOfBirth | date }}</div>
+          <div><strong>Gender:</strong> {{ user.gender | titlecase }}</div>
+          <div><strong>Email:</strong> <a href="mailto:{{ user.email }}">{{ user.email }}</a></div>
+          <hr />
+          <div class="mb-2"><strong>Address:</strong></div>
+          <div>{{ user.address.street }}</div>
+          <div>{{ user.address.landmark }}</div>
+          <div>{{ user.address.cityState }} – {{ user.address.pincode }}</div>
+          <hr />
+          <div><strong>Notes:</strong> {{ user.additional.notes }}</div>
+          <div class="text-muted">
+            <small>Last Updated: {{ user.additional.lastUpdated | date:'medium' }}</small>
+          </div>
+        </p-card>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #noUser>
+    <div class="empty-message">No user data available.</div>
+  </ng-template>
+</p-panel>

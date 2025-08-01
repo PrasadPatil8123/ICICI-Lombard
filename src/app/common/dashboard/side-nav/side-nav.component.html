@@ -1,10 +1,10 @@
 <div class="profile-card">
   <div class="profile-header">
     <img src="../../../../assets/dashboard/guestico.png" class="profile-img" alt="Profile" />
-    <div class="profile-details">
-      <h2>Prasad Patil</h2>
-      <p class="text-muted">prasadpatil2003128.com</p>
-      <p class="text-muted">9175156049</p>
+    <div class="profile-details" *ngFor="let user of personalDetails">
+      <h2>{{ user.name | titlecase}}</h2>
+      <p class="text-muted">{{ user.email }}</p>
+      <p class="text-muted">{{ user.mobile }}</p>
     </div>
   </div>
 

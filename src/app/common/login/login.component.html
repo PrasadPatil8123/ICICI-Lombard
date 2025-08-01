@@ -1,0 +1,82 @@
+<!-- personal-info-form.component.html -->
+<form [formGroup]="detailsForm" (ngSubmit)="onSubmit()" class="card p-4 shadow-sm rounded bg-light">
+  <h5 class="mb-3 text-primary">Personal Information</h5>
+
+  <div class="form-group mb-3">
+    <label>Name</label>
+    <input type="text" formControlName="name" class="form-control"
+      [ngClass]="{'is-invalid': detailsForm.get('name').errors}">
+    <div *ngIf="detailsForm.get('name').errors" class="text-danger">
+      *enter the name
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label>Mobile Number</label>
+    <input type="text" formControlName="mobile" class="form-control"
+      [ngClass]="{'is-invalid': detailsForm.get('mobile').errors}">
+    <div *ngIf="detailsForm.get('mobile').errors" class="text-danger">
+      *enter the mobile
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label>Date of Birth</label>
+    <input type="date" formControlName="dateOfBirth" class="form-control"
+      [ngClass]="{'is-invalid': detailsForm.get('dateOfBirth').errors}">
+    <div *ngIf="detailsForm.get('dateOfBirth').errors" class="text-danger">
+      *enter the Date Of Birth
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="gender">gender:</label>
+    <input type="radio" value="male" name="gender" class="form-check-input" formControlName="gender">
+    <label for="male">Male</label>
+    <input type="radio" value="female" name="gender" class="form-check-input" formControlName="gender">
+    <label for="female">Female</label>
+  </div>
+
+  <div class="form-group mb-3">
+    <label>Email</label>
+    <input type="email" formControlName="email" class="form-control"
+      [ngClass]="{'is-invalid': detailsForm.get('email').errors}">
+    <div *ngIf="detailsForm.get('email').errors" class="text-danger">
+      *enter the email
+    </div>
+  </div>
+
+  <div formGroupName="address">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Street</label>
+        <input type="text" formControlName="street" class="form-control" />
+      </div>
+      <div class="col-md-6 mb-3">
+        <label>Pincode</label>
+        <input type="text" formControlName="pincode" class="form-control" />
+      </div>
+      <div class="col-md-6 mb-3">
+        <label>City & State</label>
+        <input type="text" formControlName="cityState" class="form-control" />
+      </div>
+      <div class="col-md-6 mb-3">
+        <label>Landmark</label>
+        <input type="text" formControlName="landmark" class="form-control" />
+      </div>
+    </div>
+  </div>
+
+  <div formGroupName="additional">
+    <div class="form-group mb-3">
+      <label>Additional Notes</label>
+      <textarea formControlName="notes" rows="3" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group mb-3">
+      <label>Last Updated</label>
+      <input type="text" formControlName="lastUpdated" class="form-control" />
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary w-100" [disabled]="!detailsForm.valid">Submit</button>
+</form>

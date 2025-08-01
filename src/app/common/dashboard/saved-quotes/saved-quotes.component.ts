@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { SavedQuote } from '../services/user-view';
+import { UserDataService } from '../services/user-data.service';
 
 
 @Component({
@@ -8,19 +9,20 @@ import { SavedQuote } from '../services/user-view';
   templateUrl: './saved-quotes.component.html',
   styleUrls: ['./saved-quotes.component.css']
 })
-export class SavedQuotesComponent implements OnInit{
+export class SavedQuotesComponent {
 
   savedQuotes: SavedQuote[] = [];
-  userId = 1; // dynamically inject later
+  userId:any;
 
-  constructor(private http: HttpClient) {}
-
-  ngOnInit() {
-    this.http.get<SavedQuote[]>('http://localhost:3000/savedQuotes')
-      .subscribe(data => {
-        this.savedQuotes = data.filter(q => q.userId === this.userId && q.status === 'saved');
-      });
+  constructor(private userDataService: UserDataService) {
+    
   }
 
+    ngOnInit() {
+    this.userId = this.userDataService.getUserId();
+    this.userDataService.loadUserData(this.userId).subscribe(data => {
+      this.savedQuotes = data.savedQuotes;
 
+    });
+   }
 }

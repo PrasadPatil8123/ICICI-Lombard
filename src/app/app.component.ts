@@ -1,4 +1,7 @@
 import { Component, HostBinding } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { HomeService } from './core/services/home.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -104,4 +107,21 @@ export class AppComponent {
   click(){
     this.isShow = true;
   }
-}
+
+  constructor(private fb: FormBuilder , private homeSer : HomeService ,private router: Router){}
+
+
+   loginForm = this.fb.group({
+    mobileNo: ['']
+   });
+    login() {
+   const mobile:any = this.loginForm.value.mobileNo;
+   this.homeSer.getPersonalDetails().subscribe(details => {
+  const userId = this.homeSer.findUserIdByMobile(details, mobile);
+  console.log('Found ID:', userId);
+  this.router.navigate(['dashboard', userId]);
+   });
+
+  };
+
+};

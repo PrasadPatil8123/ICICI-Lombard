@@ -32,10 +32,30 @@ export interface Policy {
   quoteReference: string;
 }
 
-
-export interface UserView {
-// profile?: PersonalDetails;
-policies: Policy[];
-payments: Payment[];
-quotes: SavedQuote[];
+export interface PersonalDetails {
+  id: number;
+  name: string;
+  mobile: string;
+  dateOfBirth: string;
+  gender: string;
+  email: string;
+  address: {
+    street: string;
+    pincode: string;
+    cityState: string;
+    landmark: string;
+  };
+  additional: {
+    notes: string;
+    lastUpdated: string;
+  };
 }
+
+
+
+// export interface UserView {
+// profile?: PersonalDetails;
+// policies: Policy[];
+// payments: Payment[];
+// quotes: SavedQuote[];
+// }

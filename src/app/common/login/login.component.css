@@ -1,0 +1,10 @@
+.card {
+  max-width: 700px;
+  margin: auto;
+}
+label {
+  font-weight: 500;
+}
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+  border-color: #dc3545;
+}

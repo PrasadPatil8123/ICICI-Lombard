@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { Payment } from '../services/user-view';
+import { UserDataService } from '../services/user-data.service';
 
 
 @Component({
@@ -10,19 +11,17 @@ import { Payment } from '../services/user-view';
   styleUrls: ['./payments.component.css']
 })
 export class PaymentsComponent {
-payments: Payment[] = [];
-  userId = 2;
+ payments: Payment[] = [];
+ userId:any;
 
-  constructor(private http: HttpClient, private messageService: MessageService) {}
+  constructor(private userDataService : UserDataService) {
+  }
 
   ngOnInit() {
-    this.http.get<Payment[]>('http://localhost:3000/payments')
-      .subscribe(data => {
-        this.payments = data.filter(p => p.userId === this.userId);
-        if (this.payments.length > 0) {
-          this.messageService.add({ severity: 'success', summary: 'Loaded', detail: 'Payment history found.' });
-        }
-      });
-  }
+    this.userId = this.userDataService.getUserId();
+       this.userDataService.loadUserData(this.userId).subscribe(data => {
+    this.payments = data.payments;
+    });
+   }
 
 }

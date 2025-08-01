@@ -17,6 +17,7 @@ import { ClaimsModule } from './features/claims/claims.module';
 import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
 import { DashboardModule } from './common/dashboard/dashboard.module';
 import { RouterModule } from '@angular/router';
+import { LoginComponent } from './common/login/login.component';
 
 
 
@@ -29,6 +30,7 @@ import { RouterModule } from '@angular/router';
     DirectivesDirective,
     HeaderComponent,
     HomeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

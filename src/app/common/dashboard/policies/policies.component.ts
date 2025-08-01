@@ -8,18 +8,24 @@ import { UserDataService } from '../services/user-data.service';
   templateUrl: './policies.component.html',
   styleUrls: ['./policies.component.css']
 })
-export class PoliciesComponent implements OnInit {
+export class PoliciesComponent{
 
  activeIndex = 0;
  policies: Policy[] = [];
+ userId:any;
 
-  constructor(private http: HttpClient) {}
+  constructor(private userDataService : UserDataService) {
 
-  ngOnInit() {
-    this.http.get<Policy[]>('http://localhost:3000/policies')
-      .subscribe(data => this.policies = data.filter(p => p.userId === 1));
+    
   }
 
+   ngOnInit() {
+    this.userId = this.userDataService.getUserId();
+    this.userDataService.loadUserData(this.userId).subscribe(data => {
+     this.policies = data.policies;
+    });
+   }
+  
   getPoliciesByStatus(status: string): Policy[] {
     return this.policies.filter(p => p.status === status);
   }

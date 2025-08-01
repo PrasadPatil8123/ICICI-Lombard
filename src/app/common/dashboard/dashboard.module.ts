@@ -18,7 +18,7 @@ import { CardModule } from 'primeng/card';
 
 const routes: Routes = [
  {
-    path: 'dashboard',
+    path: 'dashboard/:id',
     component: DashboardComponent,
     children: [
       { path: 'users', component: UsersComponent },
@@ -36,7 +36,7 @@ const routes: Routes = [
     UsersComponent,
     PoliciesComponent,
     PaymentsComponent,
-    SavedQuotesComponent,
+    SavedQuotesComponent
 
   ],
   imports: [

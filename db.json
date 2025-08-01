@@ -2,8 +2,10 @@
   "personalDetails": [
     {
       "id": 1,
+      "name": "Prasad Patil",
       "mobile": "9175156049",
       "dateOfBirth": "2003-12-08",
+      "gender": "male",
       "email": "prasadpatil2003128@gmail.com",
       "address": {
         "street": "House number & name, street name",
@@ -18,8 +20,10 @@
     },
     {
       "id": 2,
+      "name": "Rahul Sharma",
       "mobile": "9876543210",
       "dateOfBirth": "1990-05-15",
+      "gender": "male",
       "email": "rahul.sharma@example.com",
       "address": {
         "street": "Flat 12B, Green Residency",
@@ -31,12 +35,29 @@
         "notes": "Prefers WhatsApp updates",
         "lastUpdated": "2025-07-16T09:15:00"
       }
+    },
+    {
+      "id": 3,
+      "name": "prasad anil patil",
+      "mobile": "9764156012",
+      "dateOfBirth": "2025-08-03",
+      "gender": "male",
+      "email": "prasadpatil2003128@gmail.com",
+      "address": {
+        "street": "Chidoba Nagar,Hinjewadi",
+        "pincode": "411057",
+        "cityState": "Pune",
+        "landmark": "Chidoba Mandir"
+      },
+      "additional": {
+        "notes": "q",
+        "lastUpdated": "dd"
+      }
     }
-
   ],
   "policies": [
     {
-      "id": 101,
+      "id": "101",
       "userId": 1,
       "type": "Car Insurance",
       "status": "active",
@@ -46,7 +67,7 @@
       "premium": 7200
     },
     {
-      "id": 102,
+      "id": "102",
       "userId": 1,
       "type": "Bike Insurance",
       "status": "pending",
@@ -56,7 +77,7 @@
       "premium": 1800
     },
     {
-      "id": 103,
+      "id": "103",
       "userId": 1,
       "type": "Health Insurance",
       "status": "expired",
@@ -66,7 +87,7 @@
       "premium": 12500
     },
     {
-      "id": 201,
+      "id": "201",
       "userId": 2,
       "type": "Life Insurance",
       "status": "active",
@@ -76,7 +97,7 @@
       "premium": 10000
     },
     {
-      "id": 202,
+      "id": "202",
       "userId": 2,
       "type": "Travel Insurance",
       "status": "pending",
@@ -85,11 +106,10 @@
       "endDate": "",
       "premium": 2200
     }
-
   ],
   "payments": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 1,
       "policyId": 101,
       "date": "2023-07-01T10:00:00",
@@ -98,8 +118,8 @@
       "status": "completed",
       "transactionId": "TXN-CAR-7200-ICICI"
     },
-     {
-      "id": 2,
+    {
+      "id": "2",
       "userId": 2,
       "policyId": 201,
       "date": "2023-03-01T08:45:00",
@@ -108,11 +128,10 @@
       "status": "completed",
       "transactionId": "TXN-LIFE-10000-LIC"
     }
-
   ],
   "savedQuotes": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 1,
       "type": "Health Insurance",
       "coverageAmount": 500000,
@@ -122,7 +141,7 @@
       "quoteReference": "QUOTE-HI-2025-0001"
     },
     {
-      "id": 2,
+      "id": "2",
       "userId": 1,
       "type": "Motor Insurance",
       "coverageAmount": 200000,
@@ -132,7 +151,7 @@
       "quoteReference": "QUOTE-MI-2025-0002"
     },
     {
-      "id": 3,
+      "id": "3",
       "userId": 2,
       "type": "Home Insurance",
       "coverageAmount": 1000000,
@@ -141,11 +160,10 @@
       "status": "saved",
       "quoteReference": "QUOTE-HOME-2025-0003"
     }
-
   ],
   "carInsuranceQuotes": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 1,
       "vehicleRegistrationNumber": "MH01A1234",
       "mobile": "9175156049",
@@ -180,10 +198,9 @@
       "email": "xyz@gmail.com",
       "pincode": "414502",
       "name": "Prasad Patil"
-    }
-    ,
+    },
     {
-      "id": 2,
+      "id": "2",
       "userId": 2,
       "vehicleRegistrationNumber": "MH02B7890",
       "mobile": "9876543210",
@@ -196,6 +213,5 @@
       "coverageAmount": 400000,
       "status": "generated"
     }
-
   ]
 }

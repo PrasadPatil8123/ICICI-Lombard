@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './common/home/home.component';
+import { LoginComponent } from './common/login/login.component';
 
 
 
@@ -8,6 +9,8 @@ import { HomeComponent } from './common/home/home.component';
 const routes: Routes = [
   
   {path :"" , component : HomeComponent},
+
+  {path:'login', component:LoginComponent},
 
   {path : 'motor', loadChildren: ()=> import('./features/motor-insurance/motor-insurance.module')
     .then (mod => mod.MotorInsuranceModule)
