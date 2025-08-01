@@ -66,8 +66,8 @@ import { SafeUrlPipe } from './features/sme-insurance/health-nested-compo/pipe.p
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule,
-    SmeInsuranceModule
-
+    SmeInsuranceModule,
+     Footer2Component
   ],
   providers: [
     {

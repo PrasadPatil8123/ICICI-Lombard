@@ -11,4 +11,13 @@ export class AppComponent {
   constructor() {
     sessionStorage.setItem('token', '6dcba45g39cf6h8559floghh55ff77');
   }
+
+
+  isLoggedIn = false;
+  loginAttempted = false;
+
+  onLoginSuccess(status: boolean) {
+    this.loginAttempted = true;
+    this.isLoggedIn = status;
+  }
 }

@@ -1,10 +1,6 @@
-<p>side-nav works!</p>
-<!-- <ul class="sidebar">
-  <li routerLink="sme/card3" routerLinkActive="active">Marine card 3</li>
-  <li routerLink="/emp" routerLinkActive="active">Employee's Compensation</li>
-  <li routerLink="/group-health" routerLinkActive="active">Group Health Insurance</li>
-  <li routerLink="/fire" routerLinkActive="active">Fire Insurance</li>
-  <li routerLink="/liability" routerLinkActive="active">Liability Insurance</li>
-  <li routerLink="/engineering" routerLinkActive="active">Engineering Insurance</li>
-  <li routerLink="/other" routerLinkActive="active">Other Insurance</li>
-</ul> -->
+<div class="login-box">
+  <h3>Login</h3>
+  <input type="text" [(ngModel)]="username" placeholder="Username" class="form-control mb-2" />
+  <input type="password" [(ngModel)]="password" placeholder="Password" class="form-control mb-2" />
+  <button class="btn btn-primary" (click)="login()">Login</button>
+</div>

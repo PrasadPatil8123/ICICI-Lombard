@@ -652,8 +652,18 @@ The compensation workers are eligible to receive under this Act are:
     </div>
   </div>
 </div>
+<!-- =======login======= -->
+<button class="btn btn-success" (dblclick)="clicklogin()" (click)="clicklogout()">DataBase Section</button>
 
+<div class="container-fluid" *ngIf="gologin">
+  <app-side-nav *ngIf="!isLoggedIn" (loginSuccess)="onLoginSuccess($event)"></app-side-nav>
 
+<app-emp-data *ngIf="isLoggedIn"></app-emp-data>
+
+<p *ngIf="loginAttempted && !isLoggedIn" style="color:red; text-align:center;">
+  ❌ You don't have the correct permissions to enter this section.
+</p>
+</div>
 
 <app-footer1 ></app-footer1>
 <app-footer2></app-footer2>

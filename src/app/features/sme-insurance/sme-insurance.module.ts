@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { WorkmensComponentComponent } from './workmens-component/workmens-component.component';
 import { GroupHealthInsComponent } from './group-health-ins/group-health-ins.component';
 import { Router, RouterModule, Routes } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Footer2Component } from 'src/app/common/all footer/footer2/footer2.component';
 import { Footer1Component } from 'src/app/common/all footer/footer/footer.component';
 import { NavbarComponent } from '../claims/navbar/navbar.component';
@@ -23,6 +23,8 @@ import { GroupHealthIns2Component } from './workmen-nested-compo/group-health-in
 import { ClaimVdoComponent } from './health-nested-compo/claim-vdo/claim-vdo.component';
 import { EmployeeDetailsComponent } from './health-nested-compo/employee-details/employee-details.component';
 import { Navbar3Component } from './navbar/navbar.component';
+import { EmpDataComponent } from './emp-data/emp-data.component';
+import { HttpClientModule } from '@angular/common/http';
 
   
 const router :Routes=[
@@ -34,6 +36,7 @@ const router :Routes=[
     {path:"main",component:MainCompoComponent},
     {path:"claim-vdo",component:ClaimVdoComponent},
     {path:"emp-d",component:EmployeeDetailsComponent},
+    {path:"emp-Data",component:EmpDataComponent},
 
     
 
@@ -62,6 +65,7 @@ const router :Routes=[
     ClaimVdoComponent,
     EmployeeDetailsComponent,
     Navbar3Component,
+    EmpDataComponent,
   ],
   imports: [
     Footer1Component,
@@ -69,7 +73,10 @@ const router :Routes=[
     CommonModule,
     RouterModule.forChild(router),
     ReactiveFormsModule,
+     FormsModule,
+     HttpClientModule,
+    //  EmpDataComponent
   ],
-  exports:[Navbar3Component,SideNavComponent]
+  exports:[Navbar3Component,SideNavComponent,EmpDataComponent]
 })
 export class SmeInsuranceModule { }

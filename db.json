@@ -523,17 +523,7 @@
       "email_id": "riju123@gmail.com"
     }
   ],
- 
   "submitform1": [
-    {
-      "id": "c55c"
-    },
-    {
-      "id": "fa61",
-      "name": "nilesh",
-      "mobile": "9326834227",
-      "category": "Health Insurance"
-    },
     {
       "id": "5c07",
       "name": "nilesh",
@@ -542,69 +532,21 @@
     },
     {
       "id": "650e",
-      "name": "nilesh",
+      "name": "rahul",
       "mobile": "9326834227",
       "category": "Health Insurance"
-    },
-    {
-      "id": "a64b",
-      "name": "nilesh ",
-      "mobile": "9326834227",
-      "category": "Health Insurance"
-    },
-    {
-      "id": "33d9",
-      "name": "nilesh",
-      "mobile": "9326834227",
-      "category": "Health Insurance"
-    },
-    {
-      "id": "c46e",
-      "name": "nilesh",
-      "mobile": "9326834227",
-      "category": "Life Insurance"
-    },
-    {
-      "id": "443b",
-      "name": "nilesh ",
-      "mobile": "9326834227",
-      "category": "Health Insurance"
-    },
-    {
-      "id": "6a13",
-      "name": "nilesh",
-      "mobile": "9326834227",
-      "category": "Life Insurance"
     }
   ],
   "submitform2": [
     {
-      "id": "35cd"
-    },
-    {
       "id": "d053",
-      "fullName": "nilesh",
+      "fullName": "rahul",
       "email": "ghule12@gmail.com"
     },
     {
-      "id": "ff1a",
-      "fullName": "nilesh sanjay ghule ",
-      "email": "ghulenilesh123@gmail.com"
-    },
-    {
-      "id": "b2be",
-      "fullName": "nilesh sanjay ghule ",
-      "email": "ghulenilesh123@gmail.com"
-    },
-    {
-      "id": "1483",
-      "fullName": "nilesh sanjay ghule ",
-      "email": "test12@gmail.com"
-    },
-    {
-      "id": "d8b6",
-      "fullName": "nilesh sanjay ghule",
-      "email": "test12@gmail.com"
+      "id": "812b",
+      "fullName": "shekar ",
+      "email": "shekar12@gmail.com"
     }
   ],
   "policies2": [
@@ -612,49 +554,13 @@
       "id": "7ee5",
       "industryCategory": "Construction",
       "skilledWorkersCount": 5,
-      "skilledWorkerSalary": 2,
-      "semiSkilledWorkersCount": 1,
-      "semiSkilledWorkerSalary": 3,
-      "unskilledWorkersCount": 1,
-      "unskilledWorkerSalary": 1,
-      "policyPeriod": "2",
-      "lastClaim": "Nil or below ₹1 lakh"
-    },
-    {
-      "id": "2ec0",
-      "industryCategory": "",
-      "skilledWorkersCount": 0,
-      "skilledWorkerSalary": "salary",
-      "semiSkilledWorkersCount": 0,
-      "semiSkilledWorkerSalary": "salary",
-      "unskilledWorkersCount": 0,
-      "unskilledWorkerSalary": "salary",
-      "policyPeriod": 1,
-      "lastClaim": "Nil or below ₹1 lakh"
-    },
-    {
-      "id": "addb",
-      "industryCategory": "",
-      "skilledWorkersCount": 0,
-      "skilledWorkerSalary": "salary",
-      "semiSkilledWorkersCount": 0,
-      "semiSkilledWorkerSalary": "salary",
-      "unskilledWorkersCount": 0,
-      "unskilledWorkerSalary": "salary",
-      "policyPeriod": 1,
-      "lastClaim": "Nil or below ₹1 lakh"
-    },
-    {
-      "id": "ab6e",
-      "industryCategory": "",
-      "skilledWorkersCount": 5,
-      "skilledWorkerSalary": 50000,
-      "semiSkilledWorkersCount": 10,
-      "semiSkilledWorkerSalary": 20000,
-      "unskilledWorkersCount": 20,
-      "unskilledWorkerSalary": 10000,
+      "skilledWorkerSalary": "500000",
+      "semiSkilledWorkersCount": "10",
+      "semiSkilledWorkerSalary": "20000",
+      "unskilledWorkersCount": "20",
+      "unskilledWorkerSalary": "10000",
       "policyPeriod": "12",
-      "lastClaim": "Above ₹1 lakh"
+      "lastClaim": "Nil or below ₹1 lakh"
     }
   ],
   "group-health": [
@@ -666,44 +572,22 @@
       "agree": true,
       "whatsapp": false,
       "id": "1"
-    },
-    {
-      "id": "a277",
-      "mobile": "9326834227",
-      "pincode": "431103",
-      "company": "xyz",
-      "email": "test12@gmail.com",
-      "agree": true,
-      "whatsapp": false
     }
-
   ],
   "form-info": [
-    {},
     {
       "id": "0d85",
-      "mobail": "",
-      "email": "",
-      "company": "",
-      "pincode": ""
-    },
-    {
-      "id": "ee1e",
-      "mobile": "9326834227",
-      "pincode": "431103",
-      "company": "adasdf",
-      "email": "text12@gmail.com",
-      "agree": true,
-      "whatsapp": false
-    },
-    {
-      "id": "6c92",
-      "mobile": "9326834227",
-      "pincode": "431103",
-      "company": "nilesh",
+      "mobail": "rahul ",
       "email": "test12@gmail.com",
-      "agree": true,
-      "whatsapp": false
+      "company": "xyz",
+      "pincode": "121232"
+    },
+    {
+      "id": "dda7",
+      "mobile": "9326834227",
+      "email": "test12@gmail.com",
+      "company": "xyz",
+      "pincode": "232312"
     }
   ],
   "employees": [
@@ -711,13 +595,78 @@
       "id": "d1e5",
       "isFirstPolicy": "yes",
       "policySource": "ICICI",
-      "existingPolicyLives": "112",
-      "claimAmount": "12333333431",
+      "existingPolicyLives": "5",
+      "claimAmount": "700000",
+      "startDate": "2025-06-11",
+      "employeeCount": 10,
+      "familyDefinition": "Employee",
+      "sumInsured": "5 Lakhs"
+    },
+    {
+      "id": "d1e7",
+      "isFirstPolicy": "yes",
+      "policySource": "ICICI",
+      "existingPolicyLives": "no",
+      "claimAmount": "200000",
+      "startDate": "2025-07-23",
+      "employeeCount": 10,
+      "familyDefinition": "Employee",
+      "sumInsured": "2 Lakhs"
+    },
+    {
+      "id": "d1e8",
+      "isFirstPolicy": "yes",
+      "policySource": "ICICI",
+      "existingPolicyLives": "no",
+      "claimAmount": "200000",
+      "startDate": "2025-07-23",
+      "employeeCount": 10,
+      "familyDefinition": "Employee",
+      "sumInsured": "2 Lakhs"
+    },
+    {
+      "id": "d1e9",
+      "isFirstPolicy": "yes",
+      "policySource": "ICICI",
+      "existingPolicyLives": "no",
+      "claimAmount": "200000",
+      "startDate": "2025-07-23",
+      "employeeCount": 10,
+      "familyDefinition": "Employee",
+      "sumInsured": "2 Lakhs"
+    },
+    {
+      "id": "d110",
+      "isFirstPolicy": "yes",
+      "policySource": "ICICI",
+      "existingPolicyLives": "no",
+      "claimAmount": "200000",
+      "startDate": "2025-07-23",
+      "employeeCount": 10,
+      "familyDefinition": "Employee",
+      "sumInsured": "2 Lakhs"
+    },
+    {
+      "id": "d1e11",
+      "isFirstPolicy": "yes",
+      "policySource": "ICICI",
+      "existingPolicyLives": "no",
+      "claimAmount": "200000",
+      "startDate": "2025-07-23",
+      "employeeCount": 10,
+      "familyDefinition": "Employee",
+      "sumInsured": "2 Lakhs"
+    },
+    {
+      "id": "d1e12",
+      "isFirstPolicy": "yes",
+      "policySource": "ICICI",
+      "existingPolicyLives": "no",
+      "claimAmount": "400000",
       "startDate": "2025-07-23",
       "employeeCount": 10,
       "familyDefinition": "Employee",
       "sumInsured": "2 Lakhs"
     }
   ]
-
 }
