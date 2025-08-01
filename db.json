@@ -711,7 +711,7 @@
 
   ],
   "form-info": [
-    {},
+   
     {
       "id": "0d85",
       "mobail": "",
@@ -750,6 +750,59 @@
       "familyDefinition": "Employee",
       "sumInsured": "2 Lakhs"
     }
-  ]
+  ],
 
+  "mobile": [
+    {
+      "id": "1",
+      "mobile": "9890234517"
+    },
+    {
+      "id": "2",
+      "mobile": "9078564321"
+    }
+  ],
+  "policy": [
+    {
+      "id": "3",
+      "policyNo": "1234567890"
+    },
+    {
+      "id": "4",
+      "policyNo": "4325678943"
+    }
+  ],
+  "bussiness": [
+    {
+      "id": "5",
+      "policyNo": "34567800333",
+      "endDate": "29/07/2025"
+    },
+    {
+      "id": "2da6",
+      "policyNo": "44r66tg",
+      "endDate": "2025-08-05"
+    },
+    {
+      "id": "dd04",
+      "policyNo": "12wei6tyutyu",
+      "endDate": "2025-08-08"
+    }
+  ],
+  "renewalPolicies": [
+    {
+      "id": "10",
+      "policyNumber": "ICICI123456",
+      "phoneNumber": "9922523989",
+      "loanAccountNumber": "LN00112233",
+      "renewalDate": "2025-10-15"
+    },
+    {
+      "id": "20",
+      "policyNumber": "ICICI654321",
+      "phoneNumber": "9657892363",
+      "loanAccountNumber": "LN00998877",
+      "renewalDate": "2025-11-01"
+    }
+  ]
 }
