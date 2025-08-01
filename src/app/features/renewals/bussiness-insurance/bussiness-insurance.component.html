@@ -1,0 +1,50 @@
+<div class="bussiness">
+    <div class="container">
+        <div class="row">
+            <div class="left col-md-6">
+                <h1>{{title1}}</h1>
+                <h3>{{title2}}</h3>
+            </div>
+
+            <!-- section form -->
+
+            <div class="right col-md-6">
+                <form [formGroup]="policyForm" (ngSubmit)="onSubmit()">
+
+                    <!-- policy no -->
+                    <label for="policyNo" class="form-label">{{label1}}</label>
+                    <input type="text" id="policyNo" formControlName="policyNo" placeholder={{placeholder1}}
+                        class="form-control"
+                        [ngClass]="{'is-invalid' : form.policyNo.invalid && form.policyNo.touched}">
+                    <div class="invalid-feedback" *ngIf="form.policyNo.invalid && form.policyNo.touched ">
+                        Please enter policy number
+                    </div>
+
+                    <!-- data -->
+                    <label for="endDate">{{label2}}</label>
+                    <input type="date" id="endDate" formControlName="endDate" class="form-control" placeholder=" " 
+                    [ngClass]="{'is-invalid' : form.endDate.invalid && form.endDate.touched}">
+                    <div class="invalid-feedback" *ngIf="form.endDate.touched && form.endDate.invalid">
+                        <div *ngIf="form.endDate.errors?.['required']">
+                                 Please enter policy end date
+                        </div>
+
+                        <div *ngIf="form.endDate.errors?.['futureDateValidation']">
+                             Please enter future end date
+                        </div>
+                    </div>
+
+                    <app-button class="custon-button">Submit</app-button>
+                </form>
+
+            </div>
+        </div>
+
+       
+    </div>
+
+     
+</div>
+
+<app-footer1></app-footer1>
+        <app-footer2></app-footer2>

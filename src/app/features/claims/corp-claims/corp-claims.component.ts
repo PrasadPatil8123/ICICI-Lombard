@@ -11,9 +11,6 @@ export class CorpClaimsComponent {
   intimateForm: FormGroup;
   trackForm: FormGroup;
   public mail: any = "customersupport@icicilombard.com";
-  public customerMail: any = `customersupport@icicilombard.com.`
-
-  public email: any = 'customersupport@icicilombard.com';
   public listOfData: any = [];
   public countId: number = 1;
 
@@ -30,12 +27,15 @@ export class CorpClaimsComponent {
 
   // policyNumber: any;
   constructor(private fb: FormBuilder) {
+
+    sessionStorage.setItem('id', `${this.mail}`);
+
     this.intimateForm = this.fb.group({
       id: ['1'],
-      policyNumber: ['', [Validators.required, customValidators.policyNumber]],
-      mobileNumber: ['', [Validators.required]],
-      imeiNumber: ['', [Validators.required]],
-      loanAccountNumber: ['', [Validators.required]]
+      policyNumber: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
+      mobileNumber: ['', [Validators.required, Validators.pattern(/^[6-9]\d{9}$/)]],
+      imeiNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(20)]],
+      loanAccountNumber: ['', [Validators.required, Validators.minLength(8)]]
     });
 
     this.trackForm = this.fb.group({
@@ -59,10 +59,7 @@ export class CorpClaimsComponent {
   onIntimateSubmit() {
     this.intimateForm.value.id = this.countId++;
     this.listOfData.push({ ...this.intimateForm.value });
-    alert("Data submit successfully !!");
-    if (this.intimateForm.valid) {
-      console.log("Intimate Claim Data:", this.intimateForm.value);
-    }
+    console.log(this.listOfData);
     this.intimateForm.reset();
   }
 
@@ -81,7 +78,7 @@ export class CorpClaimsComponent {
     this.intimateClaimDataList.push({ ...this.intimateClaim });
     alert("Data submit successfully !!");
     console.log(this.intimateClaimDataList);
-    
+
     this.intimateClaim.reset();
   }
   public trackClaimSubmit() {
@@ -89,7 +86,7 @@ export class CorpClaimsComponent {
     this.trackClaimsListData.push({ ...this.trackClaim })
     alert("Data submit successfully !!");
     console.log(this.trackClaimsListData);
-    
+
     this.trackClaim.reset();
   }
 

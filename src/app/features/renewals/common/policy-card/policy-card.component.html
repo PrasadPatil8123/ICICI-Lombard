@@ -1,0 +1,10 @@
+
+<div class="card">
+  <ng-container *ngIf="policy && policy.policyNumber; else noPolicy">
+    <h2>{{ policy.policyNumber }}</h2>
+  </ng-container>
+
+  <ng-template #noPolicy>
+    <p>No matching</p>
+  </ng-template>
+</div>

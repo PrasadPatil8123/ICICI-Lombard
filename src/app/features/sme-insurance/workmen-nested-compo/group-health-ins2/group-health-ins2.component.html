@@ -1,0 +1,9 @@
+<div class="grid">
+  <div class="card" *ngFor="let img of images">
+    <img [src]="img.src" alt="marine" />
+    <h4>{{ img.title }}</h4>
+    <a href="{{ img.link }}" target="_blank">Read more</a>
+  </div>
+</div>
+
+<img src="../../../../../assets/sme-card/IntermediateStorageMarine.png" alt="">

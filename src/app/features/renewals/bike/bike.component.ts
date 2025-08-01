@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class BikeComponent {
   public title:string = "Bike Insurance Renewal";
   public subTitle:string = "Please Enter Your Bike Policy Number";
-  public policyNo:string = "Policy No"
+  public policyNumber:string = "Policy No"
 
   // table 
 

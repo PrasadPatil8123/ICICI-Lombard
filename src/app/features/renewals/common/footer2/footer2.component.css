@@ -1,6 +1,6 @@
 footer{
     background-color:rgb(236,233,233);
-    padding-top: 30px;
+    padding-top: 40px;
     padding-bottom: 30px;
 }
 
@@ -10,7 +10,8 @@ h6{
 
 .info p{
     white-space : pre-line;
-    font-size : 10px
+    font-size : 10px;
+    /* padding-top: 20px; */
 }
 
 .links{
@@ -20,13 +21,14 @@ h6{
 
 .links img{
      height: 20px;
-     padding-right: 30px;
+     padding-right: 20px;
   
 }
 
 
 .right p {
     font-size: 10px;
+    padding-top: 20px;
 }
 
 .right img{
@@ -38,7 +40,7 @@ h6{
 .right .dropdown{
     margin-top: 20px;
     height: 30px;
-    margin-left: 200px;
+    /* margin-left: 200px; */
     width: 200px;
     background-color: aliceblue;
     font-size: 14px;

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-navbar3',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
   // standalone:true,
 })
-export class Navbar2Component {
+export class Navbar3Component {
 
    topMenu = [
   {

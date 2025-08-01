@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HomeService } from '../shared/services/home.service';
 
 @Component({
   selector: 'app-car',
@@ -8,18 +9,18 @@ import { Router } from '@angular/router';
 })
 export class CarComponent {
 
-  constructor(private router:Router){
+  constructor(private router: Router, private homeService:HomeService) {
 
   }
 
   public title: string = "Car Insurance Renewal";
   public subTitle: string = "Choose below option to retrieve your policy";
-  public policyNo: any = "Policy No"
+  public policyNumber: string = ""
 
 
   // table 
 
-  public tableHead:any = ["Product", "Product Code", "UIN No."];
+  public tableHead: any = ["Product", "Product Code", "UIN No."];
 
   public tableData: any = [
     {
@@ -51,14 +52,17 @@ export class CarComponent {
 
   // disclaimer para 
 
-  public para1:string = 'Disclaimers: *If there is any revision in Motor Third Party (TP) rates, the    difference in premium due to the revised rates will be payable by the policyholder immediately, and if such revised premium is not paid then the motor insurance policy will not be valid.'
- 
-  public para2:string = ` *We have masked your personal information for security.`
+  public para1: string = 'Disclaimers: *If there is any revision in Motor Third Party (TP) rates, the    difference in premium due to the revised rates will be payable by the policyholder immediately, and if such revised premium is not paid then the motor insurance policy will not be valid.'
+
+  public para2: string = ` *We have masked your personal information for security.`
 
   // disclaimer link
 
-  onDisclaimer(){
+  onDisclaimer() {
     this.router.navigate(["disclaimers"])
 
   }
-}
+
+
+    
+  }

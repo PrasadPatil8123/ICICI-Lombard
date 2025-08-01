@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Injectable, Pipe } from '@angular/core';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ export class HealthClaimsService {
 
   constructor(private http: HttpClient) { }
 
-   public onGetData(): Observable<any> {
+  public onGetData(): Observable<any> {
     return this.http.get('http://localhost:3000/reimbursementClaim');
   }
 
@@ -106,5 +106,23 @@ export class HealthClaimsService {
 
   public hospitalListName() {
     return this.http.get('http://localhost:3000/allHospitals');
+  }
+
+  public onSendData(data: any) {
+    return this.http.post('http://localhost:3000/allHospitals', data);
+  }
+  public onMergeMap(id: any): Observable<any> {
+    return this.http.get(`https://jsonplaceholder.typicode.com/users/${id}`);
+  }
+
+  public switchMap(searchTerm: any) {
+    return this.http.get(`https://jsonplaceholder.typicode.com/users?name_like=${searchTerm}`)
+  }
+
+  public currentMess = new BehaviorSubject(" vTestalue");
+  public message = this.currentMess.asObservable();
+
+  public onSentValueBS(data: any) {
+    this.currentMess.next(data);
   }
 }

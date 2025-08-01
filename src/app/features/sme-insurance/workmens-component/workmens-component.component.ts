@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { FormServiceService } from 'src/app/core/services/form-service.service';
 
 @Component({
@@ -10,16 +11,34 @@ import { FormServiceService } from 'src/app/core/services/form-service.service';
   
 })
 export class WorkmensComponentComponent {
+activeTab:string="tab1"
+  contents = [
+    { text: 'Protect your workers under a single policy.' },
+    { text: 'Get policy in 5 minutes' }
+  ];
+
+  activeIndex = 0;
+  get activeContent() {
+    return this.contents[this.activeIndex];
+  }
+
+  switchContent(index: number) {
+    this.activeIndex = index;
+  }
+
 
 
   isFormDirty: boolean = true;
 
   canDeactivate() {
     return this.isFormDirty
-      ? confirm('Your data is not saved,  you want to leave this page ?')
+      ? confirm('you want to leave this page ?')
       : true;
 
   }
+
+
+
 
      public myform:any=[]
      public showfrm : boolean=true
@@ -36,7 +55,7 @@ export class WorkmensComponentComponent {
  public wc1:any='../../../../assets/sme-img/wc_who_needs.png'
  public wc2:any='../../../../assets/sme-img/wc_whatis_included.png'
  public tick:any='../../../../assets/sme-img/tick_marine.png'
- constructor( private fb : FormBuilder,private http:HttpClient){
+ constructor( private fb : FormBuilder,private http:HttpClient,private router1 : Router){
    this.myform=this.fb.group({
     mobile:["",[Validators.required,Validators.pattern(/^[6-9]\d{9}$/)]],
     email:["",[Validators.required,Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]],
@@ -45,12 +64,15 @@ export class WorkmensComponentComponent {
    });
     
   }
+  card(){
+    this.router1.navigateByUrl('sme/main')
+  }
   insuranceForm!: FormGroup;
 
  industryCategories = ['Construction', 'Manufacturing', 'Textile', 'IT', 'Logistics'];
 
   policyMonths = [1,2,3,4,5,6,7,8,9,10,11,12];
-
+    
 
   ngOnInit() {
   this.insuranceForm = this.fb.group({
@@ -168,6 +190,9 @@ advantagesList = [
   ];
 
   // =========================
+
+
+  
   title2 = `How to Buy Employee’s Compensation Insurance Policy from ICICI Lombard?`;
 
   steps = [
@@ -182,7 +207,34 @@ advantagesList = [
     `You can also take the help of our responsive and intelligent assistant, RIA, to buy the policy. You can also fill out our ‘Request a callback’ form, whereby our executives will call you at your chosen time slot to help you with policy queries and buying.`,
     `You can also write to us at <strong class="highlight-email">businessinsurance@icicilombard.com</strong> to learn more about the policy and buying process.`
   ];
+  navigateTo(path: string) {
+    this.router1.navigate([path]);
+  }
 
+  articles = [
+    {
+      img: "assets/sme-group-health/workers-compensation-insurance-for-small-businesses.jpg",
+         route: 'sme/card1',
+      title: 'Workplace safety guide: Preventing slip, trip and fall incidents',
+      discription:
+        'Workplace safety is important for employers and employees in India. Slips, trips and falls are some of the common accidents seen in offices, factories, shops and other workplaces. These may seem like trivial incidents, but they can cause serious injuries, lost working days, productivity drops and insurance claims.',
+      date: "09-09-2025"
+    },{
+       route: 'sme/card1',
+      img:"../../../../assets/sme-group-health/reduce-business-risks-labour-insurance.jpg",
+      title:'Types of full body safety harnesses',
+      discription:'When working at heights or in risky environments, safety is a priority. One of the most essential pieces of equipment you will come across is the safety harness full body type. These harnesses are designed to protect workers by distributing the force of a fall over the strongest parts of the body, such as the thighs, chest and shoulders. But not all harnesses are the same. In this guide, s',
+      date:"09-9-2025",
+
+    },{
+       route: 'sme/card1',
+      img:"../../../../assets/sme-group-health/StratToWC.png",
+      title:'What is occupational contact dermatitis?',
+      discription:'Occupational contact dermatitis is a type of eczema caused by workplace exposure to irritants or allergens. It affects various professions, including healthcare workers, cleaners, and construction workers. Symptoms include itchy, dry, or cracked skin, redness, and blisters. Treatment involves avoiding triggers, using topical corticosteroids, and moisturizers. ',
+      date:"09-9-2025",
+
+    }
+  ]
   
 
 

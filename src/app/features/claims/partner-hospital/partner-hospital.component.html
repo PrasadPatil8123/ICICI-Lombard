@@ -16,7 +16,11 @@
             <input class="form-check-input" type="radio" name="searchType" [(ngModel)]="searchType" value="pincode">
             <label class="form-check-label">Pincode</label>
         </div>
-
+        <div class="form-check form-check-inline">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">
+                add Hospital
+            </button>
+        </div>
         <input type="text" class="form-control mt-3" [(ngModel)]="city" [placeholder]="searchType"
             (input)="filterHospitals()">
         <div class="mt-2">
@@ -31,18 +35,14 @@
             <p>{{ filteredHospitals.length }} hospitals found</p>
             <div *ngFor="let hospital of filteredHospitals" class="card mb-3">
                 <div class="card-body">
-                    <h5 class="card-title">{{ hospital.name }}</h5>
-                    <p class="card-text">{{ hospital.address }}</p>
+                    <h5 class="card-title">{{ hospital.name | custom}}</h5>
+                    <p class="card-text">{{ hospital.address | custom}}</p>
                     <p class="mb-0"><strong>Phone:</strong> {{ hospital.phone }}</p>
                     <p><strong>Pincode:</strong> {{ hospital.pincode }}</p>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
     <div class="col-lg-12">
         <div class="cashless-details-sec">
             <div class="cashless-details-block">
@@ -78,5 +78,50 @@
         </div>
     </div>
 
+
+    <div class="container">
+
+        <!-- Modal -->
+        <div class="modal fade" id="formModal" #formModal tabindex="-1" aria-labelledby="formModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form (ngSubmit)="onSubmitData()" #form="ngForm">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="formModalLabel">User Form</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                             <div class="mb-3">
+                                <input type="hidden" [(ngModel)]="user.id">
+                             </div>
+                            <div class="mb-3">                                
+                                <label>Name</label>
+                                <input type="text" class="form-control" [(ngModel)]="user.name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label>Phone</label>
+                                <input type="tel" class="form-control" [(ngModel)]="user.phone" name="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label>Pincode</label>
+                                <input type="text" class="form-control" [(ngModel)]="user.pincode" name="pincode"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label>City</label>
+                                <input type="text" class="form-control" [(ngModel)]="user.city" name="city" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 </div>
