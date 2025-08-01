@@ -710,34 +710,7 @@
     }
 
   ],
-  "form-info": [
-    {},
-    {
-      "id": "0d85",
-      "mobail": "",
-      "email": "",
-      "company": "",
-      "pincode": ""
-    },
-    {
-      "id": "ee1e",
-      "mobile": "9326834227",
-      "pincode": "431103",
-      "company": "adasdf",
-      "email": "text12@gmail.com",
-      "agree": true,
-      "whatsapp": false
-    },
-    {
-      "id": "6c92",
-      "mobile": "9326834227",
-      "pincode": "431103",
-      "company": "nilesh",
-      "email": "test12@gmail.com",
-      "agree": true,
-      "whatsapp": false
-    }
-  ],
+ 
   "employees": [
     {
       "id": "d1e5",
