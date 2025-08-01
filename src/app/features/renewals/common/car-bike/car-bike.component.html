@@ -1,60 +1,67 @@
 <div class="item-renewals">
   <div class="form-box">
-  <div class="container form" *ngIf="title || subTitle|| policyNo">
-    <h2 class="title">{{title}}</h2>
-    <p class="subTitle">{{subTitle}}</p>
+    <div class="container form" *ngIf="title || subTitle|| policyNumber">
+      <h2 class="title">{{title}}</h2>
+      <p class="subTitle">{{subTitle}}</p>
 
 
-    <!-- section : radio button and label -->
-    <div class="form-check form-check-inline">
-      <input class="form-check-input custom-radio" type="radio" name="policy" id="policy1" value="Policy No"
-        [(ngModel)]="policyNo" checked>
-      <label class="form-check-label" for="policy1">Policy No</label>
+      <!-- section : radio button and label -->
+      <div class="form-check form-check-inline">
+        <input class="form-check-input custom-radio" type="radio" name="policy" id="policy" checked>
+        <label class="form-check-label" for="policy">Policy No</label>
+      </div>
+
+      <!-- section : input field -->
+      <input type="text" class="form-control custom-input" placeholder="Enter Policy No." [value]="policyNumber"
+        id="policy1" [(ngModel)]="policyNumber">
+
+      <!-- section : button -->
+      <div class="btn" (click)="onProceed()">
+        <app-button>Proceed</app-button>
+      </div>
+
+
     </div>
 
-    <!-- section : input field -->
-    <input type="text" class="form-control custom-input" placeholder="Enter Policy No.">
+  </div>
 
-    <!-- section : button -->
-    <div class="btn">
-      <app-button>Proceed</app-button>
+  <!-- <app-policy-card *ngIf="selectedPolicy" [policy]="selectedPolicy"></app-policy-card> -->
+<!-- <p *ngIf="!selectedPolicy">No matching policy found.</p> -->
+
+
+  <!-- section table -->
+  <div class="table-box">
+    <div class="container table mt-5">
+      <div class="row">
+        <div class="col-12 table-responsive-sm">
+          <table class="table table-bordered table-striped text-center table-sm align-middle w-100 ">
+            <thead class="table-dark">
+              <tr>
+                <th *ngFor="let heading of tableHead" class="text-wrap small">{{heading}}</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let data of tableData">
+                <td class="text-wrap small">{{data.product}}</td>
+                <td class="text-wrap small">{{data.productCode}}</td>
+                <td class="text-wrap small">{{data.UIN}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 
-</div>
-
-
-<!-- section table -->
-<div class="table-box">
-  <div class="container table mt-5">
-    <table class="table table-border table-striped text-center">
-      <thead class="table-dark">
-        <tr>
-          <th *ngFor="let heading of tableHead">{{heading}}</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr *ngFor="let data of tableData">
-          <td>{{data.product}}</td>
-          <td>{{data.productCode}}</td>
-          <td>{{data.UIN}}</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- section disclamer -->
+  <div class="container disclamer">
+    <p> {{para1}}</p>
+    <p>{{para2}}</p>
   </div>
+
+  <!-- sectionc Desclaimers link -->
+  <p class="container">
+    <a (click)="goToDisclaimer()" class="disclaimer-router-link">Disclaimers</a>
+  </p>
 </div>
-
-<!-- section disclamer -->
-<div class="container disclamer">
-  <p> {{para1}}</p>
-  <p>{{para2}}</p>
-</div>
-
-<!-- sectionc Desclaimers link -->
-<p class="container">
-  <a (click)="goToDisclaimer()" class="disclaimer-router-link">Disclaimers</a>
-</p>
-</div>
-
-
