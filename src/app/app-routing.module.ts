@@ -13,6 +13,10 @@ const routes: Routes = [
       .then(mod => mod.ClaimsModule)
   },
   {
+    path: 'sme', loadChildren: () => import('./features/sme-insurance/sme-insurance.module')
+      .then(mod => mod.SmeInsuranceModule)
+  },
+  {
 
     path: 'motor-ins', loadChildren: () => import('./features/motor-insurance/motor-insurance.module')
       .then(mod => mod.MotorInsuranceModule)

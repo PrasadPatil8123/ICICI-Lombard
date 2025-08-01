@@ -57,7 +57,7 @@ import { SafeUrlPipe } from './features/sme-insurance/health-nested-compo/pipe.p
     ButtonModule,
     BrowserAnimationsModule,
     ClaimsModule,
-    MotorInsuranceModule
+    MotorInsuranceModule,
 
 
     ClaimsRoutingModule,
