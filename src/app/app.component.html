@@ -1,33 +1,153 @@
-<p>testing code</p>
 
 
-<div><a routerLink="sme/workmen">workmen</a></div>
-<div ><a routerLink="sme/group-health" >group-health</a></div>
-<div><a routerLink="sme/claim-vdo">vdo</a></div>  <div><a routerLink="sme/main">main</a></div>
-<div ><a routerLink="sme/marine" >marine</a></div>
-<div ><a routerLink="sme/sme-ins" >sme-ins</a></div>
-<div ><a routerLink="crpr/rsk" >rsk</a></div>
-<div ><a routerLink="claims/health-claims" >health-claims</a></div>
-<div ><a routerLink="claims/motor-claims" >motor-claims</a></div>
-<div ><a routerLink="claims/partner" >partner</a></div>
-<div ><a routerLink="claims/motor" >motor</a></div>
-<div ><a routerLink="claims/home-claims" >home-claims</a></div>
-<div ><a routerLink="claims/corp-claims" >corp-claims</a></div>
-<div ><a routerLink="motor/car-ins" >car-ins</a></div>
-<div ><a routerLink="motor/motor-ins" >motor-ins</a></div>
-<div ><a routerLink="dashboard/dashboard" >dashboard</a></div>
-<div ><a routerLink="dashboard/dashboard/users" >dashboard-users</a></div>
-<div ><a routerLink="dashboard/dashboard/policies" >dashboard-policies</a></div>
-<div ><a routerLink="dashboard/dashboard/payments" >dashboard-payments</a></div>
-<div ><a routerLink="dashboard/dashboard/savedquotes" >dashboard-savedquotes</a></div>
+<!-- <div><a routerLink="sme/workmen">workmen</a></div>
+<div><a routerLink="sme/group-health">group-health</a></div>
+<div><a routerLink="sme/claim-vdo">vdo</a></div>
+<div><a routerLink="sme/main">main</a></div>
+<div><a routerLink="sme/marine">marine</a></div>
+<div><a routerLink="sme/sme-ins">sme-ins</a></div>
+<div><a routerLink="crpr/rsk">rsk</a></div>
+<div><a routerLink="claims/health-claims">health-claims</a></div>
+<div><a routerLink="claims/motor-claims">motor-claims</a></div>
+<div><a routerLink="claims/partner">partner</a></div>
+<div><a routerLink="claims/motor">motor</a></div>
+<div><a routerLink="claims/home-claims">home-claims</a></div>
+<div><a routerLink="claims/corp-claims">corp-claims</a></div>
+<div><a routerLink="motor/car-ins">car-ins</a></div>
+<div><a routerLink="motor/motor-ins">motor-ins</a></div>
+<div><a routerLink="dashboard/dashboard">dashboard</a></div>
+<div><a routerLink="dashboard/dashboard/users">dashboard-users</a></div>
+<div><a routerLink="dashboard/dashboard/policies">dashboard-policies</a></div>
+<div><a routerLink="dashboard/dashboard/payments">dashboard-payments</a></div>
+<div><a routerLink="dashboard/dashboard/savedquotes">dashboard-savedquotes</a></div> -->
+
+
+<!-- <div><a routerLink="dashboard/dashboard/savedquotes">dashboard-savedquotes</a></div> -->
+
+
+
+
+
+
+
+<!-- First Navbar -->
+<nav class="navbar navbar-expand-lg bg-secondary-subtle col-12 col-md-12">
+    <div class="container-fluid text-black d-flex aling-items-centre justify-content-between" id="">
+        <ul class="navbar-nav text-black">
+            <li class="nav-item text-black">
+                <a class="nav-link" href="tel:1800 26666">
+                    <span class="call-us text-body-emphasis">
+                        <img [src]="callUsImg">
+                        1800 26666
+                    </span>
+                    <small class="text-body-emphasis">
+                        (Available 24 x 7)
+                    </small>
+                </a>
+            </li>
+        </ul>
+        <div class="collapse navbar-collapse mt-2">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-body-emphasis">
+                        | &nbsp; <img [src]="callBackImg">
+                        Call Back
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link text-body-emphasis">
+                        | &nbsp;
+                        <button class="btn btn-sm bg-white text-body-emphasis rounded-pill" id="btnn">
+                            <span class="dotsgreen">
+                            </span>
+                            Live Chat
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse ms-lg-4 dropdown">
+            <ul class="navbar-nav ms-lg-5 ">
+                <li class="nav-item" *ngFor="let items of topMenuList" [ngClass]="{'blue':items.isSelected}">
+                    <a href="" class="nav-link">
+                        {{items.Title}}
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li *ngFor="let subitem of items.SubMenueList">
+                            <a class="dropdown-item" href="#">{{subitem}}</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- Modal Structure -->
+        <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-between">
+                        <div>
+                            <h3 class="mb-4">Login</h3>
+                            <!-- Enter your mobile number to login -->
+                        </div>
+                        <!-- Correct Close Button (data-bs-dismiss) -->
+                        <button type="button" class="btn btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Input Field for Mobile Number -->
+                        <div>
+                            <input class="col-12 mt-5 p-2" type="text" name="mo-num" placeholder="Mobile no.">
+                        </div>
+                        <!-- Send OTP Button -->
+                        <div>
+                            <button class="btn col-12 orange mt-5 p-2">Send OTP</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Trigger Button to Open Modal -->
+        <button class="btn btn-sm orange ms-3 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#login-modal">
+            Login&nbsp;
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- Second Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sec-nav-color">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img [src]="iciLogo" alt="ICICI Logo" style="height: 40px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li *ngFor="let item of secondNavMenueList" class="nav-item dropdown position-relative">
+          <a class="nav-link nav-linkk" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            {{ item.title }} 
+            <i class="fa fa-chevron-down ms-1"></i>
+          </a>
+          <div class="sub-menu-wrap">
+            <ul class="sub-menu-list">
+              <li *ngFor="let sub of item.submenu">
+                <a class="dropdown-item" [routerLink]="sub.route">{{ sub.name }}</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
 <router-outlet></router-outlet>
-
-<div ><a routerLink="dashboard/dashboard/savedquotes" >dashboard-savedquotes</a></div>
-
-
-
-
-
-
-<router-outlet></router-outlet>
+<!-- <app-home></app-home> -->
+<app-footer1></app-footer1>
+<app-footer2></app-footer2>

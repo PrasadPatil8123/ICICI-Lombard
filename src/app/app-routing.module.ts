@@ -1,40 +1,39 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { canmatch } from './features/sme-insurance/guards.guard';
+import { HomeComponent } from './common/home/home.component';
+
+
 
 const routes: Routes = [
-
-  {
-    path: 'crpr', loadChildren: () => import('./features/corporate-insurance/corporate-insurance.module')
-      .then(mod => mod.CorporateInsuranceModule)
+   
+  {path:'',component:HomeComponent},
+  {path : 'motor', loadChildren: ()=> import('./features/motor-insurance/motor-insurance.module')
+    .then (mod => mod.MotorInsuranceModule)
   },
-  {
-    path: 'claims', loadChildren: () => import('./features/claims/claims.module')
-      .then(mod => mod.ClaimsModule)
+  {path : 'claim', loadChildren:() => import('./features/claims/claims.module')
+    .then(mod => mod.ClaimsModule)
   },
-  {
-    path: 'sme', loadChildren: () => import('./features/sme-insurance/sme-insurance.module')
-      .then(mod => mod.SmeInsuranceModule)
+  {path : 'corporate-inc', loadChildren:() => import('./features/corporate-insurance/corporate-insurance.module')
+    .then(mod => mod.CorporateInsuranceModule)
   },
-  {
-
-    path: 'motor-ins', loadChildren: () => import('./features/motor-insurance/motor-insurance.module')
-      .then(mod => mod.MotorInsuranceModule)
+  {path : 'health-inc', loadChildren:() => import('./features/health-insurance/health-insurance.module')
+    .then(mod => mod.HealthInsuranceModule)
   },
-  {
-    path: 'motor', loadChildren: () => import('./features/motor-insurance/motor-insurance.module')
-      .then(mod => mod.MotorInsuranceModule)
+  {path : 'other-inc', loadChildren:()=> import('./features/other-insurance/other-insurance.module')
+    .then(mod => mod.OtherInsuranceModule)
   },
-  {
-    path: 'dashboard', loadChildren: () => import('./common/dashboard/dashboard.module')
-      .then(mod => mod.DashboardModule)
+  {path : 'renewal-inc', loadChildren:()=> import('./features/renewals/renewals.module')
+    .then(mod => mod.RenewalsModule)
   },
-  {
-    path: 'renewals', loadChildren: () => import('./features/renewals/renewals.module')
-      .then(mod => mod.RenewalsModule)
+  {path : 'sme', loadChildren:()=> import('./features/sme-insurance/sme-insurance.module')
+    .then(mod => mod.SmeInsuranceModule)
+  },
+  {path : 'travel-inc', loadChildren:()=> import('./features/travel-insurance/travel-insurance.module')
+    .then(mod => mod.TravelInsuranceModule)
   },
 
-]
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
