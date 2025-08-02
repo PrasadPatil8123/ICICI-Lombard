@@ -65,20 +65,5 @@ export class Navbar3Component {
       { label: 'Event Insurance', route: '/' },
     ]
   }
-  
- 
-
- 
-
- 
-
- 
-
-
-];
-
-  
-
-
-
+ ];
 }
