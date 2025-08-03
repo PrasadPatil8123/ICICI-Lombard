@@ -5,7 +5,7 @@
         <thead>
             <b>Letters add hospital data</b>
             <tr>
-                <th style="width:25%" *ngFor="let head of heading">{{head}}</th>
+                <th style="width:25%" *ngFor="let head of headingLettesData">{{head}}</th>
             </tr>
         </thead>
         <tbody>
@@ -31,9 +31,104 @@
                 <td>{{ list.phone }}</td>
                 <td>{{ list.pincode }}</td>
                 <td>{{ list.city }}</td>
+                <td><button class="btn btn-danger" (click)="onDelete(list)">Delete</button></td>
+                <td><button class="btn btn-warning" (click)="onEidt(list)" data-bs-toggle="modal"
+                        data-bs-target="#addformModal">Edit</button></td>
             </tr>
         </tbody>
     </table>
     <button class="btn btn-primary" (click)="backParentComponent()">Back</button>
-    <button class="btn btn-success ms-3" (click)="oldHospitalData()" *ngIf="listHospital.length> 0">Old Hospital Data</button>
+    <button class="btn btn-success ms-3" (click)="oldHospitalData()" *ngIf="listHospital.length> 0">Old Hospital
+        Data</button>
+    <div class="form-check form-check-inline">
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">
+            Add Hospital
+        </button>
+    </div>
+</div>
+<!-- <div class="form-check form-check-inline">
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">
+        add Hospital
+    </button>
+</div> -->
+<!-- Add Hospital button -->
+
+<div class="container">
+    <div class="modal fade" id="addformModal" #addformModal tabindex="-1" aria-labelledby="formModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form [formGroup]="hospitalForm" (ngSubmit)="onUpdateHospitalData()">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="formModalLabel">User Form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <!-- <div class="mb-3">
+                                <input type="hidden" [(ngModel)]="user.id">
+                             </div> -->
+                        <div class="mb-3">
+                            <label>Name</label>
+                            <input type="text" class="form-control" formControlName="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>Phone</label>
+                            <input type="tel" class="form-control" formControlName="phone" name="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>Pincode</label>
+                            <input type="text" class="form-control" formControlName="pincode" name="pincode" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>City</label>
+                            <input type="text" class="form-control" formControlName="city" name="city" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" [disabled]="!hospitalForm.valid">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+    <div class="modal fade" id="formModal" #formModal tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form [formGroup]="hospitalForm" (ngSubmit)="onAddHospital()">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="formModalLabel">User Form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="mb-3">
+                            <label>Name</label>
+                            <input type="text" class="form-control" formControlName="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>Phone</label>
+                            <input type="tel" class="form-control" formControlName="phone" name="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>Pincode</label>
+                            <input type="text" class="form-control" formControlName="pincode" name="pincode" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>City</label>
+                            <input type="text" class="form-control" formControlName="city" name="city" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" [disabled]="!hospitalForm.valid">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </div>

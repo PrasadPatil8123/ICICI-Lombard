@@ -35,96 +35,119 @@
                     <!-- <button class="btn btn-warning me-3 rounded-pill px-4">Raise a claim</button> -->
                     <!-- BUTTON -->
                     <button type="button" class="btn btn-outline-warning rounded-pill px-4" data-bs-toggle="modal"
-                        data-bs-target="#raiseClaimModal">
+                        data-bs-target="#addformModal">
                         Raise a claim
                     </button>
 
                     <!-- MODAL -->
-                    <div class="modal fade" id="raiseClaimModal" tabindex="-1" aria-labelledby="raiseClaimModalLabel"
-                        aria-hidden="true">
+                    <div class="modal fade" id="addformModal" #addformModal tabindex="-1"
+                        aria-labelledby="raiseClaimModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down"
                             style="max-width: 50vw;">
                             <div class="modal-content" style="height: 90vh;">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="raiseClaimModalLabel">Let's begin with a few details
-                                    </h5>
+                                <form [formGroup]="vehicleForm" (ngSubmit)="onGetDataFormUser()">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Please enter your information below</p>
 
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Please enter your information below</p>
-                                    <div class="mb-3 row">
-                                        <div class="col-sm-9">
-                                            <input type="hidden" [(ngModel)]="detailsOfCar.id">
+                                        <input type="hidden" formControlName="id">
+
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" formControlName="policyNo"
+                                                    placeholder="Policy/Cover note number"
+                                                    [ngClass]="{ 'is-invalid': vehicleForm.get('policyNo')?.invalid && vehicleForm.get('policyNo')?.touched }">
+                                                <div class="text-danger"
+                                                    *ngIf="vehicleForm.get('policyNo')?.invalid && vehicleForm.get('policyNo')?.touched">
+                                                    Required Policy/Cover note number
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" formControlName="vehicleReg"
+                                                    placeholder="Chassis/Vehicle registration no*"
+                                                    [ngClass]="{ 'is-invalid': vehicleForm.get('vehicleReg')?.invalid && vehicleForm.get('vehicleReg')?.touched }">
+                                                <div class="text-danger"
+                                                    *ngIf="vehicleForm.get('vehicleReg')?.invalid && vehicleForm.get('vehicleReg')?.touched">
+                                                    Required Chassis/Vehicle registration no*
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h5>Nature of incident</h5>
+                                        <div class="form-check form-check-inline me-3">
+                                            <input class="form-check-input" type="radio" formControlName="raiseTypeCar"
+                                                value="accident" id="accident">
+                                            <label class="form-check-label ms-1" for="accident">Accident</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" formControlName="raiseTypeCar"
+                                                value="stolen" id="stolen">
+                                            <label class="form-check-label ms-1" for="stolen">Stolen</label>
+                                        </div>
+
+                                        <div class="text-danger mt-2"
+                                            *ngIf="vehicleForm.get('raiseTypeCar')?.invalid && vehicleForm.get('raiseTypeCar')?.touched">
+                                            Nature of incident is required.
                                         </div>
                                     </div>
-                                    <div class="mb-3 row">
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="policyNo"
-                                                placeholder="Policy/Cover note number"
-                                                [(ngModel)]="detailsOfCar.policyNo" required #policyNo="ngModel"
-                                                [ngClass]="{'is-is-invaild':policyNo.invalid && policyNo.touched}">
-                                            <div class="text-danger" *ngIf="policyNo.invalid && policyNo.touched">
-                                                Required Policy/Cover note number</div>
 
-                                        </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="btn btn-primary"
+                                            [disabled]="vehicleForm.invalid">Save</button>
                                     </div>
-
-                                    <div class="mb-3 row">
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="vehicleReg"
-                                                placeholder="Chassis/Vehicle registration no*"
-                                                [(ngModel)]="detailsOfCar.vehicleReg" required #vehicleReg="ngModel"
-                                                [ngClass]="{'is-is-invaild':vehicleReg.invalid && vehicleReg.touched}">
-                                            <div class="text-danger" *ngIf="vehicleReg.invalid && vehicleReg.touched">
-                                                Required Chassis/Vehicle registration no*</div>
-                                        </div>
-                                    </div>
-                                    <h5>Nature of incident</h5>
-                                    <div class="form-check form-check-inline me-3">
-                                        <input class="form-check-input" type="radio" value="accident"
-                                            [(ngModel)]="detailsOfCar.raiseTypeCar" name="raiseType" id="accident">
-                                        <label class="form-check-label ms-1" for="accident">Accident</label>
-                                    </div>
-
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="stolen"
-                                            [(ngModel)]="detailsOfCar.raiseTypeCar" name="raiseType" id="stolen">
-                                        <label class="form-check-label ms-1" for="stolen">Stolen</label>
-                                    </div>
-                                </div>
-
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Cancel</button>
-                                    <button type="button" class="btn btn-primary"
-                                        (click)="onGetDataFormUser()">Save</button>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-outline-warning rounded-pill px-4">Submit an e-claim</button>
+
                 </div>
 
                 <div class="bg-info text-white rounded p-3 mt-4 d-inline-block">
                     <!-- Modal 2 -->
-                    <div class="modal fade" id="mobileModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal fade" #formModal id="mobileModal" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-lg">
                             <div class="modal-content rounded-0" style="height: 80vh;">
                                 <div class="modal-body p-5">
                                     <button type="button" class="btn-close float-end" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
+
                                     <h2 class="fw-bold mb-2">Let's begin with a few details</h2>
                                     <p class="text-muted mb-4">Please enter your information below</p>
-                                    <div class="mb-4">
-                                        <label class="form-label">Registered mobile number <span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control border-0 border-bottom"
-                                            placeholder="Enter mobile number" />
-                                    </div>
-                                    <button class="btn btn-warning rounded-pill px-4">Get OTP</button>
-                                    <div class="d-flex align-items-center gap-3">
+
+                                    <form [formGroup]="mobileForm" (ngSubmit)="onGetOtp()">
+                                        <div class="mb-4">
+                                            <label class="form-label">Registered mobile number <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control border-0 border-bottom"
+                                                placeholder="Enter mobile number" formControlName="mobileNumber"
+                                                [ngClass]="{ 'is-invalid': mobileForm.get('mobileNumber')?.invalid && mobileForm.get('mobileNumber')?.touched }" />
+                                            <div class="text-danger mt-1"
+                                                *ngIf="mobileForm.get('mobileNumber')?.touched && mobileForm.get('mobileNumber')?.errors">
+                                                <div *ngIf="mobileForm.get('mobileNumber')?.errors?.['required']">
+                                                    Mobile number is required.
+                                                </div>
+                                                <div *ngIf="mobileForm.get('mobileNumber')?.errors?.['pattern']">
+                                                    Enter a valid 10-digit mobile number starting with 6–9.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-warning rounded-pill px-4"
+                                            [disabled]="mobileForm.invalid">
+                                            Get OTP
+                                        </button>
+                                    </form>
+
+                                    <div class="d-flex align-items-center gap-3 mt-3">
                                         <a href="#" class="text-danger text-decoration-none" data-bs-dismiss="modal"
                                             data-bs-toggle="modal" data-bs-target="#policyModal">
                                             Search claim with registered mobile no.
@@ -135,8 +158,9 @@
                         </div>
                     </div>
 
+
                     <!-- Modal 1 -->
-                    <div class="modal fade" id="policyModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal fade" id="policyModal" #policyModalRef tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog modal-lg modal-dialog-centered">
                             <div class="modal-content rounded-0" style="height: 90vh;">
                                 <div class="modal-body p-7">
@@ -144,36 +168,43 @@
                                         aria-label="Close"></button>
                                     <h2 class="fw-bold mb-2">Let's begin with a few details</h2>
                                     <p class="text-muted mb-4">Please enter your information below</p>
-                                    <form name="registration" #registration="ngForm" (ngSubmit)=" onSubmitData()">
+
+                                    <form [formGroup]="policyForm" (ngSubmit)="onSubmitData()">
                                         <div class="row">
                                             <div class="col-md-6 mb-4">
                                                 <label class="form-label">Search your claim using*</label>
                                                 <input type="text" class="form-control border-0 border-bottom"
-                                                    name="policyNo" placeholder="Policy No."
-                                                    [(ngModel)]="registCarNo.policyNo">
+                                                    formControlName="policyNo" placeholder="Policy No."
+                                                    [ngClass]="{'is-invalid': policyForm.get('policyNo')?.touched && policyForm.get('policyNo')?.invalid}" />
                                             </div>
+
                                             <div class="col-md-6 mb-4">
                                                 <label class="form-label">Enter policy number*</label>
                                                 <input type="text" class="form-control border-0 border-bottom"
-                                                    name="policyNumber" [(ngModel)]="registCarNo.policyNumber">
+                                                    formControlName="policyNumber"
+                                                    [ngClass]="{'is-invalid': policyForm.get('policyNumber')?.touched && policyForm.get('policyNumber')?.invalid}" />
                                             </div>
 
                                             <div class="col-md-6 mb-4">
                                                 <label class="form-label">Select option*</label>
                                                 <input type="text" class="form-control border-0 border-bottom"
-                                                    name="vehicleReg" placeholder="Vehicle Registration No"
-                                                    [(ngModel)]="registCarNo.vehicleReg">
+                                                    formControlName="vehicleReg" placeholder="Vehicle Registration No"
+                                                    [ngClass]="{'is-invalid': policyForm.get('vehicleReg')?.touched && policyForm.get('vehicleReg')?.invalid}" />
                                             </div>
+
                                             <div class="col-md-6 mb-4">
                                                 <label class="form-label">Enter vehicle registration number*</label>
                                                 <input type="text" class="form-control border-0 border-bottom"
-                                                    name="vehicleRegNo" [(ngModel)]="registCarNo.vehicleRegNo">
+                                                    formControlName="vehicleRegNo"
+                                                    [ngClass]="{'is-invalid': policyForm.get('vehicleRegNo')?.touched && policyForm.get('vehicleRegNo')?.invalid}" />
                                             </div>
                                         </div>
 
                                         <!-- Submit + Link to open Modal 2 -->
                                         <div class="d-flex align-items-center gap-3">
-                                            <button class="btn btn-warning rounded-pill px-4">Submit</button>
+                                            <button type="submit" class="btn btn-warning rounded-pill px-4"
+                                                [disabled]="policyForm.invalid">Submit</button>
+
                                             <a href="#" class="text-danger text-decoration-none" data-bs-dismiss="modal"
                                                 data-bs-toggle="modal" data-bs-target="#mobileModal">
                                                 Search claim with registered mobile no.
@@ -184,17 +215,9 @@
                             </div>
                         </div>
                     </div>
-
-
-
                     <button class="bg-info text-white " data-bs-toggle="modal" data-bs-target="#policyModal">
                         Check claim status and upload docs
                     </button>
-
-
-
-
-
                 </div>
 
                 <div class="mt-4 p-3 bg-dark text-white rounded-3 shadow-sm w-75">
