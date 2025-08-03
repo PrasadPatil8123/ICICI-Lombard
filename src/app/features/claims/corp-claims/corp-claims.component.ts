@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { customValidators } from '../customValidators';
+import { HealthClaimsService } from '../shared/health-claims.service';
 
 @Component({
   selector: 'app-corp-claims',
@@ -11,11 +12,6 @@ export class CorpClaimsComponent {
   intimateForm: FormGroup;
   trackForm: FormGroup;
   public mail: any = "customersupport@icicilombard.com";
-  public listOfData: any = [];
-  public countId: number = 1;
-
-  public trackListData: any = [];
-  public trackCountId: number = 1;
 
   intimateClaim: FormGroup;
   public intimateClaimDataList: any = []
@@ -26,12 +22,12 @@ export class CorpClaimsComponent {
   public trackClaimsCountId: number = 1;
 
   // policyNumber: any;
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private getService: HealthClaimsService) {
 
     sessionStorage.setItem('id', `${this.mail}`);
 
     this.intimateForm = this.fb.group({
-      id: ['1'],
+      // id: ['1'],
       policyNumber: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
       mobileNumber: ['', [Validators.required, Validators.pattern(/^[6-9]\d{9}$/)]],
       imeiNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(20)]],
@@ -46,47 +42,43 @@ export class CorpClaimsComponent {
 
     this.intimateClaim = fb.group({
       id: [''],
-      policyNumbe: ['', [Validators.required]],
+      policyNumber: ['', [Validators.required]],
       policyStartDate: ['', [Validators.required]]
     })
     this.trackClaim = fb.group({
-      id: [''],
+      // id: [''],
       claimRefNumber: ['', [Validators.required]],
       lossDate: ['', [Validators.required]]
     })
   }
 
   onIntimateSubmit() {
-    this.intimateForm.value.id = this.countId++;
-    this.listOfData.push({ ...this.intimateForm.value });
-    console.log(this.listOfData);
+    this.getService.onSendappMobileIntimateClaim(this.intimateForm.value).subscribe((res: any) =>
+      console.log(res)
+    )
     this.intimateForm.reset();
   }
 
   onTrackSubmit() {
-    this.trackForm.value.id = this.trackCountId++;
-    this.trackListData.push({ ...this.trackForm.value });
-    alert("Data submit successfully !!");
-    if (this.trackForm.valid) {
-      console.log("Track Claim Data:", this.trackForm.value);
-    }
+    this.getService.onSendTrackClaim(this.trackForm.value).subscribe((res: any) => {
+      console.log(res);
+      alert("Data submit successfully !!");
+    })
     this.trackForm.reset();
   }
 
   public intimateClaimSubmit() {
-    this.intimateClaim.value.id = this.intimateClaimCountId++;
-    this.intimateClaimDataList.push({ ...this.intimateClaim });
+    this.getService.onSendCorporateIntimateClaims(this.intimateClaim.value).subscribe((res: any) => {
+      console.log(res);
+    })
     alert("Data submit successfully !!");
-    console.log(this.intimateClaimDataList);
-
     this.intimateClaim.reset();
   }
   public trackClaimSubmit() {
-    this.trackClaim.value.id = this.trackClaimsCountId++;
-    this.trackClaimsListData.push({ ...this.trackClaim })
+    this.getService.onSendCorporateTrackClaims(this.trackClaim.value).subscribe((res: any) => {
+      console.log(res);
+    })
     alert("Data submit successfully !!");
-    console.log(this.trackClaimsListData);
-
     this.trackClaim.reset();
   }
 
