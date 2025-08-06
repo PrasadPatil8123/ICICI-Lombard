@@ -1,7 +1,8 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild, ViewChildren } from '@angular/core';
 import { HealthClaimsService } from '../shared/health-claims.service';
 import { combineLatest, concat, concatMap, debounceTime, from, mergeMap, switchMap } from 'rxjs';
 import { FormControl } from '@angular/forms';
+import { OtherImp2Component } from '../other-imp2/other-imp2.component';
 @Component({
   selector: 'app-other-imp',
   templateUrl: './other-imp.component.html',
@@ -10,6 +11,10 @@ import { FormControl } from '@angular/forms';
 export class OtherImpComponent {
   searchControl = new FormControl();
   users: any = [];
+  public data: any = "data from parent component to child component";
+
+  @ViewChild(OtherImp2Component) childComponentData: any;
+  @ViewChildren(OtherImp2Component) childViewChildren: any;
   constructor(private getService: HealthClaimsService) {
     getService.message.subscribe((res: any) => {
       console.log(res);
@@ -55,4 +60,21 @@ export class OtherImpComponent {
     this.getService.onSendData(this.searchControl);
   }
 
+  public childData: any = '';
+  public childData2: any = '';
+  public receiveData(even: any) {
+    this.childData = even;
+  }
+
+  public onGetViewChildMethod() {
+    console.log(this.childComponentData.childDataMethod());
+    console.log(this.childComponentData.dataSend);
+ 
+  }
+  ngAfterViewInit() {
+    this.childViewChildren.forEach((ele: any) => {
+      console.log(this.childComponentData.childDataMethod());
+      console.log(this.childComponentData.dataSend);
+    });
+  }
 }
