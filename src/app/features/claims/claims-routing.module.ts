@@ -13,9 +13,10 @@ import { CorpClaimsComponent } from './corp-claims/corp-claims.component';
 import { CommanTableComponent } from './comman-table/comman-table.component';
 import { authGuard } from './auth/auth.guard';
 import { OtherImpComponent } from './other-imp/other-imp.component';
+import { OtherImp2Component } from './other-imp2/other-imp2.component';
 
 const routes: Routes = [
-    { path: 'health-claims', component: HealthClaimsComponent, canActivate :[authGuard] },
+    { path: 'health-claims', component: HealthClaimsComponent, canActivate: [authGuard] },
     { path: 'motor-claims', component: MotorClaimsComponent },
     { path: 'partner', component: PartnerHospitalComponent },
     { path: 'navbar', component: NavbarComponent },
@@ -25,7 +26,8 @@ const routes: Routes = [
     { path: 'home-claims', component: HomeClaimsComponent },
     { path: 'corp-claims', component: CorpClaimsComponent },
     { path: 'commanTable/:addList', component: CommanTableComponent },
-    { path : 'other', component:OtherImpComponent}
+    { path: 'other', component: OtherImpComponent },
+    { path: 'other2', component: OtherImp2Component }
 ];
 
 @NgModule({

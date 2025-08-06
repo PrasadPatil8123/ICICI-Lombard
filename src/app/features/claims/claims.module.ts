@@ -30,6 +30,7 @@ import { CustomPipe } from './shared/custom.pipe';
 import { OtherImpComponent } from './other-imp/other-imp.component';
 
 import { Navbar2Component } from './navbar2/navbar2.component';
+import { OtherImp2Component } from './other-imp2/other-imp2.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { Navbar2Component } from './navbar2/navbar2.component';
     CustomPipe,
 
     OtherImpComponent,
+      OtherImp2Component,
 
   ],
   exports: [

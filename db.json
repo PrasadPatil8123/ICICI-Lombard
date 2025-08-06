@@ -908,6 +908,11 @@
       "claimRefNumber": "3020",
       "lossDate": "2022-05-22",
       "id": 2
+    },
+    {
+      "claimRefNumber": "",
+      "lossDate": "",
+      "id": 3
     }
   ],
   "vehicleRaiseClaim": [
