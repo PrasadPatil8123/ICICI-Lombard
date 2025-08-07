@@ -33,6 +33,14 @@ const routes: Routes = [
     path: 'renewals', loadChildren: () => import('./features/renewals/renewals.module')
       .then(mod => mod.RenewalsModule)
   },
+  {
+    path: 'travel', loadChildren: () => import('./features/travel-insurance/travel-insurance.module')
+      .then(mod => mod.TravelInsuranceModule)
+  },
+  {
+    path: 'abc', loadChildren: () => import('./features/travels-module/travels-module.module')
+      .then(mod => mod.TravelsModuleModule)
+  },
 
 ]
 

@@ -25,6 +25,7 @@ import { ClaimsRoutingModule } from './features/claims/claims-routing.module';
 import { SmeInsuranceModule } from './features/sme-insurance/sme-insurance.module';
 import { SafeUrlPipe } from './features/sme-insurance/health-nested-compo/pipe.pipe';
 
+
 // import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
 
 
@@ -34,13 +35,13 @@ import { SafeUrlPipe } from './features/sme-insurance/health-nested-compo/pipe.p
     AppComponent,
     // FooterComponent,
     // NavbarComponent,
-
     PipesPipe,
 
     // CarInsuranceComponent,
 
     HeaderComponent,
     HomeComponent,
+  
     // CarInsuranceComponent
   ],
   imports: [
@@ -58,11 +59,7 @@ import { SafeUrlPipe } from './features/sme-insurance/health-nested-compo/pipe.p
     BrowserAnimationsModule,
     ClaimsModule,
     MotorInsuranceModule,
-
-
     ClaimsRoutingModule,
-
-
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule,
@@ -74,7 +71,9 @@ import { SafeUrlPipe } from './features/sme-insurance/health-nested-compo/pipe.p
       provide: HTTP_INTERCEPTORS,
       useClass: MainInterInterceptor,
       multi: true
-    }
+    },
+    AppRoutingModule
+
   ],
   bootstrap: [AppComponent]
 })

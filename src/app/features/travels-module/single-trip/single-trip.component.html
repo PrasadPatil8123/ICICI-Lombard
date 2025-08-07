@@ -1,0 +1,275 @@
+   
+<div class="single-container"> 
+   
+   <div class="part-1 row text-left">
+ <!-- left side -->
+         <div class="col-md-12 col-xs-12 col-sm-12 col-lg-7 order-1 order-lg-1">
+          <div class="d-flex page-head-part">
+            <img src="assets/travel-insurance/single-ins/1.svg" alt="text-img" class="head-img img-fluid">
+              <p class="page-head">Your ultimate travel companion </p>
+              </div>
+                <h6  class="head-text mb-3">There’s a cover for every journey</h6> 
+                
+                
+            <!-- 3 boxes -->
+              <div class="benefits-part row mt-5">
+                   <div class="benefit-box ms-2 col-lg-4 col-md-4 col-sm-12" *ngFor="let card of cards">
+                       <div class="b-icon">
+                             <img [src]="card.imgPath" alt="icon" class="img-fluid"/>
+                        </div>
+                      <div class="b-title">{{ card.title }}</div>
+                   </div>
+              </div>
+            
+               <div class="person-image-wrapper  mt-3 order-3 ">
+                   <img src="assets/travel-insurance/single-ins/5.svg" class=" person-image" alt="image">
+              </div>
+         </div> 
+    
+<!--right side form -->
+       <div class="col-md-12 col-xs-12 col-sm-12 col-lg-5 order-2 order-lg-1">
+                <div class="mt-5">
+                   <app-form></app-form>
+                </div>
+         </div>
+  </div>
+
+        
+
+<!-- travel -->
+    <div class="travel">
+        <img src="assets/travel-insurance/img/10.png" alt="travel img" class="img-fluid">
+      <div>
+        <h3>Travel Insurance</h3>
+        <p>TripSecure+ is a comprehensive single trip travel insurance policy designed to provide all-around protection against unforeseen events during your journey. It stands out with its extensive range of coverages, ensuring you are safeguarded no matter the circumstances. Whether you’re seeking travel insurance with pre-existing medical conditions or seeking protection for adventure sports activities, this single-trip travel insurance plan has it all.</p>
+      </div>
+    </div>
+
+<!-- feature -->
+    <div class="feature">
+      <h3>Features of TripSecure+</h3>
+           <div class="features-grid">
+              <div class="feature-box" *ngFor="let feature of features">
+                  <img [src]="feature.icon" alt="icon" class="icon img-fluid" />
+                  <div class="feature-text">
+                    <h5>{{ feature.title }}</h5>
+                    <p>{{ feature.description }}</p>
+                  </div>
+               </div>
+          </div>
+     </div> 
+
+<!-- benefits -->
+   <div class="main-ben mt-5">
+      <h2 class="align-center">Benefits of Single Trip Holiday Insurance</h2>
+      <p class="text-center">This single trip travel insurance policy offers numerous benefits, including:</p>
+    <div class="ben">
+       <div *ngFor="let bn of benefits;" class="ben-box ">
+            <div class="ben-text">
+              <h5>{{bn.title}}</h5>
+              <p>{{bn.description}}</p></div>
+           </div>
+       </div>
+   </div>
+
+   <!-- resons -->
+    <div class="res-part text-white ">
+      <div class="res-head text-center">
+          <h2>Reasons to Buy Single Trip Travel Insurance</h2>
+          <p>Some compelling reasons to buy this single trip travel insurance plan include:</p>
+      </div>
+      <div class="res-text row ">
+        <div class="res-left col-lg-6 col-md-12 col-sm-12">
+          <h5 class="mt-3 mb-3">Holistic Coverage</h5>
+          <p>This single trip travel insurance policy provides comprehensive coverage, ensuring you are protected throughout your journey. Whether you're traveling for business, leisure, or any other purpose, it safeguards you against unexpected events such as medical emergencies, trip cancellations, lost baggage, or flight delays.</p>
+          <p>With this one trip travel insurance plan, you can travel with peace of mind, knowing you have all-around protection in case things don't go as planned.</p>
+        </div>
+        <div class="res-right col-lg-6 col-md-12 col-sm-12">
+          <h5 class="mt-3 mb-3">Add-ons to Fortify Coverage</h5>
+          <p>This single trip insurance policy provides a range of valuable add-ons designed to enhance and strengthen the coverage. These additional features can be tailored to suit your needs, ensuring comprehensive protection throughout the journey. Some add-ons available with this single trip insurance plan are:</p>
+           <ul class="arrow-list">
+            <li>Child care expenses due to hospitalisation add-on</li>
+            <li>Reimbursement of cancellation charges of pre-booked events add-on</li>
+            <li>Rental vehicle return add-on</li>
+            <li>Refund of VISA fee add-on and so on</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+   
+  
+
+ <!-- covered -->
+      <div class="covered my-2 mt-5">
+          <h2 class="text-center fw-bold mb-4">What is Not Covered in Single Trip Travel Insurance?</h2>
+         <p-tabView>
+            <p-tabPanel header="Inclusions">
+               <div class="row gy-4">
+                  <div class="col-md-6 d-flex text-dark">
+                      <i class="pi pi-check-circle text-success fs-3 me-3 mt-1"></i>
+                     <div>
+                     <h6 class=" mb-0 fw-bold">Cruise Insurance</h6>
+                     <p class="mb-0">This one trip travel insurance policy provides comprehensive coverage for a cruise journey, ensuring you are protected against unforeseen events during your trip. The cruise insurance coverage includes coverage for medical emergencies, trip cancellations, delays, lost luggage, and other travel-related issues, offering peace of mind while cruising.</p>
+                      </div>
+                </div>
+
+            <div class="col-md-6 d-flex">
+                 <i class="pi pi-check-circle text-success fs-3 me-3 mt-1"></i>
+              <div>
+            <h6 class=" mb-0 fw-bold">Adventure Travel Insurance</h6>
+            <p class="mb-0">This single trip holiday insurance policy serves as specialised travel insurance for adventure travel, offering coverage for medical treatment required due to accidents sustained during adventure sports. Whether you're engaging in activities like skiing or bungee jumping, this travel insurance covering extreme sports ensures that you are financially protected in the event of an injury.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 d-flex">
+          <i class="pi pi-check-circle text-success fs-3 me-3 mt-1"></i>
+          <div>
+            <h6 class=" mb-0 fw-bold">EBC Trek Insurance</h6>
+            <p class="mb-0">This single trip holiday insurance policy provides comprehensive coverage for trekkers embarking on the Everest Base Camp (EBC) trek, ensuring protection against unforeseen circumstances. Designed specifically for the demanding conditions of the EBC trek, the policy financially safeguards you throughout your journey in one of the world's most challenging regions. This EBC trek insurance is tailored to meet the unique risks of high-altitude trekking and remote areas.</p>
+          </div>
+        </div>
+
+      </div>
+    </p-tabPanel>
+
+     <!-- exclusion  -->
+           <p-tabPanel header="Exclusions">
+               <div class=" row gy-2">
+              <div class="col-md-6 d-flex">
+                 <i class="pi pi-times-circle text-danger me-2 fs-5"></i>
+                   <p class="mb-0 exc-text">Events before the trip starts or after it ends</p>
+               </div>
+
+    <div class="col-md-6 d-flex">
+    <i class="pi pi-times-circle text-danger me-2 fs-5"></i>
+      <p class="mb-0 exc-text">Intentional self-injury, suicide, or intoxication</p>
+    </div>
+
+    <div class="col-md-6 d-flex">
+        <i class="pi pi-times-circle text-danger me-3 fs-5"></i>
+      <p class="mb-0 exc-text">Fraudulent claims, false declarations, or willful damage by the insured</p>
+    </div>
+
+    <div class="col-md-6 d-flex">
+       <i class="pi pi-times-circle text-danger me-3 fs-5"></i>
+      <p class="mb-0 exc-text">Involvement in murder, assault, or criminal acts</p>
+    </div>
+
+    <div class="col-md-6 d-flex">
+        <i class="pi pi-times-circle text-danger me-3 fs-5"></i>
+      <p class="mb-0 exc-text">The insured travelling against medical advice, awaiting specific treatments, with terminal prognosis, seeking treatment, or involved in military/naval operations</p>
+    </div>
+
+    <div class="col-md-6 d-flex">
+       <i class="pi pi-times-circle text-danger me-3 fs-5"></i>
+      <p class="mb-0 exc-text">Professional/semi-professional sports without prior declaration</p>
+    </div>
+
+    <div class="col-md-6 d-flex">
+       <i class="pi pi-times-circle text-danger me-3 fs-5"></i>
+      <p class="mb-0 exc-text">Participation in hazardous/adventure sports (unless premium is paid for coverage)</p>
+    </div>
+
+    <div class="col-md-6 d-flex">
+        <i class="pi pi-times-circle text-danger me-3 fs-5"></i>
+      <p class="mb-0 exc-text">Overseas trips exceeding 90 days on an immigrant visa</p>
+    </div>
+
+    <div class="col-md-6 offset-md-6 d-flex">
+        <i class="pi pi-times-circle text-danger me-3 fs-5"></i>
+      <p class=" exc-text mb-0">Claims below the deductible or time excess in the policy schedule.</p>
+    </div>
+  </div>
+
+  <p class=" mt-1 exc-text">
+    There are cover-specific exclusions apart from general exclusions which need to be referred to. The details are available in the product’s policy wording.
+  </p>
+  </p-tabPanel>
+
+  </p-tabView>
+</div> 
+
+<!-- documents -->
+    <div class="d-block d-md-none m-5">
+     <h5 class="text-dark mb-2">Policy documents:</h5>
+    <div *ngFor="let doc of policyDocs" class="doc-box p-1 mb-2  d-flex justify-content-between align-items-center">
+      <span class="text-orange cursor-pointer" (click)="openLink(doc.link)">
+        {{ doc.title }}
+      </span>
+      <i class="pi pi-chevron-right text-orange small"></i>
+    </div>
+  </div>  
+
+  <!-- Show inline layout on medium and larger screens -->
+    <div class="d-none d-md-flex flex-wrap align-items-center gap-2">
+    <h6 class="mb-0 me-2 fw-bold">Policy documents:</h6>
+    <ng-container *ngFor="let doc of policyDocs; let last = last">
+      <a (click)="openLink(doc.link)" class="text-orange text-decoration-underline cursor-pointer">{{ doc.title }}</a>
+      <span *ngIf="!last" class="text-muted mx-2">|</span>
+    </ng-container>
+  </div>
+
+  <!-- should -->
+   <div class="sh-part ">
+    <div class="row ">
+      <div class="sh-left col-lg-6 col col-sm-12 col-md-12 text-white mt-5 mb-3">
+        <h3 class="m-3">Why should you buy TripSecure+ travel insurance online?</h3>
+        <ul>
+          <li class="mt-3"><b>Customisable coverage-</b> TripSecure+ allows you to easily adjust your coverage to suit your travel plans. Whether it’s adding adventure sports cover or protecting your car rental, you can build a policy that works for you.</li>
+          <li class="mt-3"><b>Quick and easy- </b> Purchase TripSecure+ online with just a few clicks, and have your travel insurance policy delivered directly to your inbox. No need to visit an office or deal with paperwork.</li>
+           <li class="mt-3"><b>Contactless and secure-</b> Buying travel insurance online means getting a fully digital policy that ensures you're covered for all your trip essentials, right from your mailbox.</li>
+        </ul>
+      </div>
+      <div class="sh-left col-lg-6 d-lg-block  d-md-none d-sm-none mt-5 mb-3">
+        <img src="assets/travel-insurance/single-ins/11.svg" alt="img" class="img-fluids ms-5">
+      </div>
+    </div>
+   </div>
+
+   <!-- type -->
+   <div class="type-of mt-5">
+     <div class="row">
+      <div class="col-lg-6 d-lg-block d-md-none d-sm-none">
+        <img src="assets/travel-insurance/single-ins/11.svg" alt="travel"class="img-fluids me-5">
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 type-box">
+        <h3>Types of travel insurance plans in India</h3>
+        <div class=" d-flex" *ngIf="let ty of type; let i = index">
+         <div class="fw-bold">{{i + 1}}</div>
+         <div class="type-text">
+          <h5 class="m-2">Single trip travel insurance</h5>
+          <p>As the name implies, this policy covers a single international trip. Such a policy is valid until the conclusion of your trip, or say, until you return to your home country.</p>
+         </div>
+        </div>
+      </div>
+     </div>
+   </div>
+
+     <!-- advantages -->
+   <div class="main-adv mt-3">
+      <h2 class="align-center">Advantages of buying ICICI Lombard's travel insurance policy</h2>
+    <div class="adv">
+       <div *ngFor="let advant of advantages; let i = index" class="adv-box ">
+           <div class="adv-icon">{{i + 1}}</div>
+            <div class="adv-text">
+              <h5>{{advant.title}}</h5>
+              <p>{{advant.description}}</p></div>
+           </div>
+       </div>
+   </div>
+
+       <div class="qus mt-5">
+       <h2 class="qus-header m-3 p-3">Frequently asked questions about travel insurance</h2>
+      <div class="qus-item" *ngFor="let qus of questions; let i = index">
+        <div class="qus-title" (click)="toggleSection(i)">
+          {{ qus.title }}
+          <i class="bi bi-chevron-compact-down arrow"  [class.rotated]="qus.expanded">v</i>
+        </div>
+        <div class="qus-body" *ngIf="qus.expanded">
+        {{qus.answer }}
+                     </div>
+             </div>
+          </div>
+
+        </div>
+     

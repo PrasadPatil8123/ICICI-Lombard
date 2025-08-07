@@ -46,4 +46,9 @@ html, body {
   margin-left: 400px;
 }
 
+.active{
+   font-weight: bold;
+  color: blue;
+}
+
 
