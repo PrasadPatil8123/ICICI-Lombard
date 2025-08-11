@@ -36,39 +36,6 @@
                 <!-- Intimate a Claim -->
                 <div class="col-md-6">
                     <h5>Intimate a Claim</h5>
-                    <!-- <form [formGroup]="intimateForm" (ngSubmit)="onIntimateSubmit()">
-                        <div>
-                            <input type="hidden" formControlName="id">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" name="policyNumber" class="form-control"
-                                placeholder="Enter Policy Number" formControlName="policyNumber"
-                                [ngClass]="{ 'is-invalid': intimateForm.get('policyNumber')?.invalid && intimateForm.get('policyNumber')?.touched }">
-                            <div class="text-dager" *ngIf="intimateForm.get('policyNumber')?.touched">
-                                <div *ngIf="intimateForm.get('policyNumber')?.errors?.['required']">Policy number
-                                    greater than 5 and less than 10</div>
-                                <div></div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" name="mobileNumber" class="form-control"
-                                placeholder="Enter Mobile Number" formControlName="mobileNumber"
-                                [ngClass]="{ 'is-invalid': intimateForm.get('mobileNumber')?.invalid && intimateForm.get('mobileNumber')?.touched }">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" name="imeiNumber" class="form-control"
-                                placeholder="Enter IMEI/Serial Number" formControlName="imeiNumber"
-                                [ngClass]="{ 'is-invalid': intimateForm.get('imeiNumber')?.invalid && intimateForm.get('imeiNumber')?.touched }">
-
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" name="loanAccountNumber" class="form-control"
-                                placeholder="Enter Loan Account Number" formControlName="loanAccountNumber"
-                                [ngClass]="{ 'is-invalid': intimateForm.get('loanAccountNumber')?.invalid && intimateForm.get('loanAccountNumber')?.touched }">
-                        </div>
-                        <button class="btn btn-warning w-100">Submit</button>
-                    </form> -->
-
                     <form [formGroup]="intimateForm" (ngSubmit)="onIntimateSubmit()">
                         <input type="hidden" formControlName="id">
 
@@ -112,7 +79,6 @@
                                     characters required.</div>
                             </div>
                         </div>
-
                         <!-- Loan Account Number -->
                         <div class="mb-3">
                             <input type="text" class="form-control" formControlName="loanAccountNumber"
@@ -125,33 +91,41 @@
                                     characters required.</div>
                             </div>
                         </div>
-
-                        <button class="btn btn-warning w-100" type="submit" [disabled]="intimateForm.invalid">Submit</button>
+                        <button class="btn btn-warning w-100" type="submit"
+                            [disabled]="intimateForm.invalid">Submit</button>
                     </form>
-
-
-
                 </div>
 
                 <!-- Track a Claim -->
                 <div class="col-md-6">
                     <h5>Track a Claim</h5>
                     <form [formGroup]="trackForm" (ngSubmit)="onTrackSubmit()">
-                        <div>
-                            <input type="hidden" formControlName="id">
-                        </div>
                         <div class="mb-3">
                             <input type="text" name="claimRef" class="form-control"
                                 placeholder="Enter Claim Reference Number" formControlName="claimRef"
                                 [ngClass]="{ 'is-invalid': trackForm.get('claimRef')?.invalid && trackForm.get('claimRef')?.touched }">
+                            <div class="text-danger"
+                                *ngIf="trackForm.get('claimRef')?.touched && trackForm.get('claimRef')?.errors?.['required']">
+                                Claim Reference is required.
+                            </div>
                         </div>
+
                         <div class="mb-3">
                             <input type="text" name="loanNumber" class="form-control"
                                 placeholder="Enter Loan Account Number" formControlName="loanNumber"
                                 [ngClass]="{ 'is-invalid': trackForm.get('loanNumber')?.invalid && trackForm.get('loanNumber')?.touched }">
+                            <div class="text-danger"
+                                *ngIf="trackForm.get('loanNumber')?.touched && trackForm.get('loanNumber')?.errors?.['required']">
+                                Loan Number is required.
+                            </div>
+                            <div class="text-danger"
+                                *ngIf="trackForm.get('loanNumber')?.touched && trackForm.get('loanNumber')?.errors?.['minlength']">
+                                Loan Number must be at least 5 characters.
+                            </div>
                         </div>
-                        <button class="btn btn-warning w-100">Submit</button>
+                        <button class="btn btn-warning w-100" [disabled]="trackForm.invalid">Submit</button>
                     </form>
+
                 </div>
             </div>
             <div class="mt-4 text-danger fw-bold small">
@@ -171,34 +145,65 @@
                     <div class="col-md-6 mb-3">
                         <h5>Intimate a Claim</h5>
                         <form [formGroup]="intimateClaim" (ngSubmit)="intimateClaimSubmit()">
+                            <div>
+                                <input type="hidden" formControlName="id">
+                            </div>
                             <div class="mb-3">
                                 <input type="text" name="policyNumber" class="form-control"
-                                    placeholder="Enter Policy Number *" formControlName="policyNumber"
+                                    placeholder="Enter Claim Reference Number" formControlName="policyNumber"
                                     [ngClass]="{ 'is-invalid': intimateClaim.get('policyNumber')?.invalid && intimateClaim.get('policyNumber')?.touched }">
+                                <div class="text-danger"
+                                    *ngIf="intimateClaim.get('policyNumber')?.touched && intimateClaim.get('policyNumber')?.errors?.['required']">
+                                    Claim Reference is required.
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <input type="date" name="policyStartDate" class="form-control"
-                                    formControlName="policyStartDate"
+                                    placeholder="Enter policy Start Date" formControlName="policyStartDate"
                                     [ngClass]="{ 'is-invalid': intimateClaim.get('policyStartDate')?.invalid && intimateClaim.get('policyStartDate')?.touched }">
+                                <div class="text-danger"
+                                    *ngIf="intimateClaim.get('policyStartDate')?.touched && intimateClaim.get('policyStartDate')?.errors?.['required']">
+                                    Loan Number is required.
+                                </div>
+                                <div class="text-danger"
+                                    *ngIf="intimateClaim.get('policyStartDate')?.touched && intimateClaim.get('policyStartDate')?.errors?.['minlength']">
+                                    Loan Number must be at least 5 characters.
+                                </div>
                             </div>
-                            <button class="btn btn-warning w-100">Submit</button>
+                            <button class="btn btn-warning w-100" [disabled]="intimateClaim.invalid">Submit</button>
                         </form>
                     </div>
 
                     <!-- Track a Claim -->
                     <div class="col-md-6 mb-3">
                         <h5>Track a Claim</h5>
-                        <form [formGroup]="trackForm" (ngSubmit)="trackClaimSubmit()">
+                        <form [formGroup]="trackClaim" (ngSubmit)="trackClaimSubmit()">
+                            <div>
+                                <input type="hidden" formControlName="id">
+                            </div>
                             <div class="mb-3">
                                 <input type="text" name="claimRefNumber" class="form-control"
-                                    formControlName="claimRefNumber" placeholder="Enter Claim Reference Number *"
-                                    [ngClass]="{ 'is-invalid': trackForm.get('claimRefNumber')?.invalid && trackForm.get('claimRefNumber')?.touched }">
+                                    placeholder="Enter Claim Reference Number" formControlName="claimRefNumber"
+                                    [ngClass]="{ 'is-invalid': trackClaim.get('claimRefNumber')?.invalid && trackClaim.get('claimRefNumber')?.touched }">
+                                <div class="text-danger"
+                                    *ngIf="trackClaim.get('claimRefNumber')?.touched && trackClaim.get('claimRefNumber')?.errors?.['required']">
+                                    Claim Reference is required.
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <input type="date" name="lossDate" class="form-control" formControlName="lossDate"
-                                    [ngClass]="{ 'is-invalid': trackForm.get('lossDate')?.invalid && trackForm.get('lossDate')?.touched }">
+                                <input type="date" name="lossDate" class="form-control"
+                                    placeholder="Enter policy Start Date" formControlName="lossDate"
+                                    [ngClass]="{ 'is-invalid': trackClaim.get('lossDate')?.invalid && trackClaim.get('lossDate')?.touched }">
+                                <div class="text-danger"
+                                    *ngIf="trackClaim.get('lossDate')?.touched && trackClaim.get('lossDate')?.errors?.['required']">
+                                    Loan Number is required.
+                                </div>
+                                <div class="text-danger"
+                                    *ngIf="trackClaim.get('lossDate')?.touched && trackClaim.get('lossDate')?.errors?.['minlength']">
+                                    Loan Number must be at least 5 characters.
+                                </div>
                             </div>
-                            <button class="btn btn-warning w-100">Submit</button>
+                            <button class="btn btn-warning w-100" [disabled]="trackClaim.invalid">Submit</button>
                         </form>
                     </div>
                 </div>

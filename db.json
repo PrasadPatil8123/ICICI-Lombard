@@ -119,12 +119,11 @@
   ],
   "allHospitals": [
     {
-      "id": "8425",
       "name": "7 Orange Healthcare Organization Llp",
-      "address": "Survey No: 2, Plot No 74, Pawana Nagar, Chinchwad, Near Fatechand Jain High School",
-      "phone": "02027355777,02067191777",
+      "phone": "02436 554566 ,9566771540",
       "pincode": "411033",
-      "city": "Pune"
+      "city": "Pune",
+      "id": "8425"
     },
     {
       "id": "8079",
@@ -373,6 +372,62 @@
       "phone": "1147084545",
       "pincode": "110017",
       "city": "New Delhi"
+    },
+    {
+      "name": "ASD",
+      "phone": "02436 552145",
+      "pincode": "431116",
+      "city": "Pune",
+      "id": "mmGT9fi"
+    },
+    {
+      "name": "Sai Hospital ",
+      "phone": "02436 558844",
+      "pincode": "431114",
+      "city": "Pune",
+      "id": "NpgySDe"
+    },
+    {
+      "name": "Child Hospital",
+      "phone": "02436 551211",
+      "pincode": "431116",
+      "city": "New Delhi",
+      "id": "HeKCFl-"
+    },
+    {
+      "name": "Kamal Hospital",
+      "phone": "02436 552145",
+      "pincode": "431116",
+      "city": "Mumbai",
+      "id": "4bJHPkq"
+    },
+    {
+      "name": "Tata Hospital ",
+      "phone": "02536 554102",
+      "pincode": "400012",
+      "city": "Mumbai",
+      "id": "rl1ofVm"
+    },
+    {
+      "name": "Ramana Hospital",
+      "phone": "02436 552020",
+      "pincode": "401003",
+      "city": "Bangalore",
+      "id": "9q_RKRX"
+    },
+    {
+      "name": "Eye Hospital",
+      "phone": "02455 66541",
+      "pincode": "401025",
+      "city": "Bangalore",
+      "id": "8x3jncy"
+    },
+    {
+      "name": "Mapari Hospital",
+      "phone": "02436 225545",
+      "pincode": "401145",
+      "city": "Aurangabad",
+      "id": "E4vwv_w"
     }
   ],
   "reimbursementClaim": [
@@ -806,6 +861,341 @@
       "email": "xyz@gmail.com",
       "pincode": "414502",
       "name": "Prasad Patil"
+    }
+  ],
+  "mobile": [
+    {
+      "id": "1",
+      "mobile": "9890234517"
+    },
+    {
+      "id": "2",
+      "mobile": "9078564321"
+    }
+  ],
+  "policy": [
+    {
+      "id": "3",
+      "policyNo": "1234567890"
+    },
+    {
+      "id": "4",
+      "policyNo": "4325678943"
+    }
+  ],
+  "bussiness": [
+    {
+      "id": "5",
+      "policyNo": "34567800333",
+      "endDate": "29/07/2025"
+    },
+    {
+      "id": "2da6",
+      "policyNo": "44r66tg",
+      "endDate": "2025-08-05"
+    },
+    {
+      "id": "dd04",
+      "policyNo": "12wei6tyutyu",
+      "endDate": "2025-08-08"
+    }
+  ],
+  "renewalPolicies": [
+    {
+      "id": "10",
+      "policyNumber": "ICICI123456",
+      "phoneNumber": "9922523989",
+      "loanAccountNumber": "LN00112233",
+      "renewalDate": "2025-10-15"
+    },
+    {
+      "id": "20",
+      "policyNumber": "ICICI654321",
+      "phoneNumber": "9657892363",
+      "loanAccountNumber": "LN00998877",
+      "renewalDate": "2025-11-01"
+    }
+  ],
+  "appMobileIntimateClaim": [
+    {
+      "id": "1",
+      "policyNumber": "52145",
+      "mobileNumber": "9512478963",
+      "imeiNumber": "3247859623",
+      "loanAccountNumber": "65481235"
+    },
+    {
+      "id": "2",
+      "policyNumber": "89452",
+      "mobileNumber": "9966558877",
+      "imeiNumber": "5588446632",
+      "loanAccountNumber": "65478921"
+    },
+    {
+      "id": "3",
+      "policyNumber": "55884",
+      "mobileNumber": "6325987412",
+      "imeiNumber": "6677532148",
+      "loanAccountNumber": "99547882"
+    },
+    {
+      "policyNumber": "45622",
+      "mobileNumber": "9512365456",
+      "imeiNumber": "6985568956",
+      "loanAccountNumber": "65987456",
+      "id": "9HnhOp0"
+    }
+  ],
+  "appMobileTrackClaim": [
+    {
+      "claimRef": "9957854",
+      "loanNumber": "336641",
+      "id": 1
+    },
+    {
+      "claimRef": "665784",
+      "loanNumber": "33255",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "claimRef": "1231",
+      "loanNumber": "123"
+    },
+    {
+      "id": 4,
+      "claimRef": "123",
+      "loanNumber": "123"
+    },
+    {
+      "id": 5,
+      "claimRef": "12355",
+      "loanNumber": "55466"
+    }
+  ],
+  "CorporateIntimateClaims": [
+    {
+      "id": 1,
+      "policyNumber": "12321",
+      "policyStartDate": "2020-12-02"
+    },
+    {
+      "id": 2,
+      "policyNumber": "66854",
+      "policyStartDate": "2022-05-22"
+    },
+    {
+      "id": 3,
+      "policyNumber": "5545",
+      "policyStartDate": "2021-03-03"
+    }
+  ],
+  "CorporateTrackClaims": [
+    {
+      "claimRefNumber": "66574",
+      "lossDate": "2020-02-22",
+      "id": 1
+    },
+    {
+      "claimRefNumber": "3020",
+      "lossDate": "2022-05-22",
+      "id": 2
+    },
+    {
+      "claimRefNumber": "",
+      "lossDate": "",
+      "id": 3
+    }
+  ],
+  "vehicleRaiseClaim": [
+    {
+      "policyNo": "365541",
+      "vehicleReg": "asda448515",
+      "raiseTypeCar": "accident",
+      "id": 1
+    },
+    {
+      "policyNo": "88546411",
+      "vehicleReg": "ADS45674C562",
+      "raiseTypeCar": "stolen",
+      "id": 2
+    }
+  ],
+  "vehicleInformation": [
+    {
+      "policyNo": "65541",
+      "policyNumber": "65514855",
+      "vehicleReg": "MH 20 BH 2025",
+      "vehicleRegNo": "2541336",
+      "id": 1
+    },
+    {
+      "policyNo": "55214",
+      "policyNumber": "6554123",
+      "vehicleReg": "MH 14 BJ 2011",
+      "vehicleRegNo": "6332145",
+      "id": 2
+    }
+  ],
+  "assistanceItems": [
+    {
+      "title": "Doctor search",
+      "description": "Locating the nearest network physician/specialist",
+      "icon": "assets/claimsModuleImages/dr.svg"
+    },
+    {
+      "title": "Appointment booking",
+      "description": "Scheduling an appointment with an empanelled doctor",
+      "icon": "assets/claimsModuleImages/app booking.svg"
+    },
+    {
+      "title": "Second opinion",
+      "description": "Booking an appointment for an alternate medical opinion.",
+      "icon": "assets/claimsModuleImages/second-op.svg"
+    },
+    {
+      "title": "Hospitalisation assistance",
+      "description": "Sharing suitable options for hospitals and other cashless facilities.",
+      "icon": "assets/claimsModuleImages/pre-hospital.svg"
+    },
+    {
+      "title": "Medical information",
+      "description": "Giving preventive information on ailments",
+      "icon": "assets/claimsModuleImages/Medical-info.svg"
+    },
+    {
+      "title": "Post-hospitalisation care",
+      "description": "Providing guidance for physiotherapy, nursing at home, etc.",
+      "icon": "assets/claimsModuleImages/HA.svg"
+    }
+  ],
+  "connectOptions": [
+    {
+      "icon": "assets/claimsModuleImages/call.svg",
+      "title": "Call",
+      "value": "040 6627 4205",
+      "link": "tel:04066274205"
+    },
+    {
+      "icon": "assets/claimsModuleImages/app.svg",
+      "title": "Submit your queries",
+      "value": "IL TakeCare app > Service We Offer > Health Assistance",
+      "link": null
+    },
+    {
+      "icon": "assets/claimsModuleImages/web.svg",
+      "title": "Web Link",
+      "value": "https://ilhc.icicilombard.com/home/healthassistance",
+      "link": "https://ilhc.icicilombard.com/home/healthassistance"
+    },
+    {
+      "icon": "assets/claimsModuleImages/mail.svg",
+      "title": "Write to us at",
+      "value": "healthassistance@icicilombard.com",
+      "link": "mailto:healthassistance@icicilombard.com"
+    }
+  ],
+  "claimMethods": [
+    {
+      "icon": "assets/claimsModuleImages/claim_ladge_claim.png",
+      "title": "Lodge a claim",
+      "description": "Lodge a claim <a href=\"#\">here</a>"
+    },
+    {
+      "icon": "assets/claimsModuleImages/claim_tollfree.png",
+      "title": "Call 1800 2666",
+      "description": "(toll-free)"
+    },
+    {
+      "icon": "assets/claimsModuleImages/claim_download_app.png",
+      "title": "Download IL Take Care app",
+      "description": "<img src=\"assets/claimsModuleImages/app1-img.png\"> <img src=\"assets/claimsModuleImages/app2-img.png\">"
+    },
+    {
+      "icon": "assets/claimsModuleImages/claim_sms.png",
+      "title": "SMS \"CLAIM\"",
+      "description": "Send to 575758"
+    },
+    {
+      "icon": "assets/claimsModuleImages/claim_write.png",
+      "title": "Write to us",
+      "description": "customersupport@icicilombard.com"
+    }
+  ],
+  "serviceDoorstep": [
+    {
+      "name": "Doorstep car pick-up & drop"
+    },
+    {
+      "name": "Dedicated Claim Manager"
+    },
+    {
+      "name": "Service assurance (2 years, up to 10,000 kms from the date of repairs)"
+    },
+    {
+      "name": "Regular WhatsApp updates and tracking"
+    }
+  ],
+  "claimSteps": [
+    {
+      "image": "assets/claimsModuleImages/times_1.png",
+      "description": "We'll facilitate the pick-up and drop of your car by a preferred workshop^^."
+    },
+    {
+      "image": "assets/claimsModuleImages/times_2.png",
+      "description": "Get instant claim approval using the <strong>InstaSpect#</strong> feature on the IL Take Care app."
+    },
+    {
+      "image": "assets/claimsModuleImages/times_3.png",
+      "description": "You can also track and review your ICICI Lombard motor claim status on the app itself."
+    }
+  ],
+  "claimSteps2": [
+    {
+      "image": "assets/claimsModuleImages/times_4.png",
+      "description": "We'll follow-up with the workshop regarding the status of your Vehicle's repairs!"
+    },
+    {
+      "image": "assets/claimsModuleImages/times_5.png",
+      "description": "Sit back, relax! We will settle the bill as per the policy terms and conditions."
+    },
+    {
+      "image": "assets/claimsModuleImages/times_6.png",
+      "description": "We also provide quality assurance* on repairs done at a preferred partner garage."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do I claim insurance for my car or bike?",
+      "answer": "Contact our toll-free helpline 1800 2666 to register your claim and get a claim number or reference number. You can also directly register your claim here or download the IL Take Care app to initiate a claim."
+    },
+    {
+      "question": "What is the difference between a cashless claim and a non-cashless or reimbursement claim?",
+      "answer": "Cashless claim: In a cashless claim, we pay our share of your vehicle’s repair charges directly to the garage (provided the vehicle is repaired in our garage network). Non-cashless or reimbursement claim: If the vehicle is repaired in a garage outside the purview of our network, then you will need to pay the repair charges yourself. You need to get an inspection done from our claims manager/surveyor, post which you can get the repairs done. You can get your admissible claim amount reimbursed by submitting the original bills and payment receipts to our office."
+    },
+    {
+      "question": "Can I ask for some advance in case the repair charges are very high?",
+      "answer": "We offer cashless claim services where the repair charges are directly paid to the garage if your vehicle is repaired in a garage falling within our network. However, if the vehicle is repaired in a garage not in our network, you have to pay the repairing charges to the garage, and we will reimburse the amount to you, as per our non-cashless claim services."
+    },
+    {
+      "question": "When should I report an incident to the police?",
+      "answer": "You need to report the following incidents to the nearest police station: You’ve hurt someone with your vehicle, Your car/two-wheeler is stolen, Your vehicle is damaged due to a malicious activity, You’ve lost your car/bike keys, Your vehicle has been in a major accident."
+    },
+    {
+      "question": "How does filing a claim affect my policy?",
+      "answer": "When you make no claims, you get a No Claim Bonus (NCB) on your next year’s Own damage premium. The NCB amount starts from 20% of the Own Damage premium, if you make no claims. It accumulates up to a maximum of 50%. So if you make a small claim, say for a minor dent on your bumper, you lose out on the NCB. Another reason for not making a small claim is the deductible amount that you have to pay out of pocket. Suppose your policy comes with a deductible of 1000 and you make a claim of 3000, the insurer pays only 2000. Moreover, if your accumulated NCB was 5000, you end up losing that too. On the other hand, in case of a larger claim, you cover expensive repair costs and avoid out-of-pocket expenses through your insurance plan."
+    },
+    {
+      "question": "How long should I wait to make a bike or car insurance claim?",
+      "answer": "It’s best to report the claim immediately, as soon as the accident or theft occurs. Contact us within 24 hours of the incident so that we can begin your bike or car insurance claim process."
+    },
+    {
+      "question": "What should I do in case of an own damage claim?",
+      "answer": "Contact us on 1800 2666 or SMS CLAIM to 575758 to start the two-wheeler or car insurance claim process. Our call centre representative will direct you to the nearest cashless garage and also help you with the next steps for the motor insurance claim. You can also login to our IL Take Care app and visit the claims section to file an own damage claim."
+    },
+    {
+      "question": "How can I check my ICICI Lombard motor claim status?",
+      "answer": "You can login to our IL Take Care app with your policy number to check your ICICI Lombard motor claim status. You can also check your claims status on our website. Click here to know your claims status."
     }
   ]
 }

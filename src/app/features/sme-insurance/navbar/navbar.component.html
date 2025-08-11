@@ -4,7 +4,7 @@
     <img src="../../../../assets/sme-img/primary_desk.svg" alt="">
 
 
-    <li *ngFor="let item of topMenu" class="menu-item" [class.has_dropdown]="item.options?.length">
+    <li *ngFor="let item of topMenu" class="menu-item" [class.has_dropdown]="item.options.length">
       <a href="#" class="menu-link">{{ item.label }} </a> 
 
 

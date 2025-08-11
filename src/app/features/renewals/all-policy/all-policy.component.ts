@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SharedDataService } from '../shared/services/shared-data.service';
+import { HomeService } from '../shared/services/home.service';
 
 @Component({
   selector: 'app-all-policy',
@@ -30,8 +31,10 @@ public benefits = [
 
 public options:any = []
 
-constructor(private sharedData:SharedDataService){
+constructor(private sharedData:SharedDataService, homeService:HomeService){
   this.options = this.sharedData.options
+
+  
 }
 
 }

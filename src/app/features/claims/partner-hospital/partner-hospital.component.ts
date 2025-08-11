@@ -60,7 +60,7 @@ export class PartnerHospitalComponent {
   addHospitalData: any = [];
 
   user = {
-    id: '',
+    // id: '',
     name: '',
     phone: '',
     pincode: '',
@@ -72,6 +72,9 @@ export class PartnerHospitalComponent {
     console.log('Form Submitted:', this.addHospitalData);
     const modalInstance = bootstrap.Modal.getInstance(this.formModal.nativeElement);
     modalInstance.hide();
+    this.healthServices.onSendData(this.user).subscribe((res: any) => {
+      console.log(res);
+    })
     this.router.navigateByUrl('claims/commanTable/' + JSON.stringify(this.addHospitalData));
 
   }

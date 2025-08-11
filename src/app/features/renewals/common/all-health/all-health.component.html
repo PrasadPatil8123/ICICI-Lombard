@@ -1,33 +1,35 @@
-<div class="main">
+<div class="main" [formGroup]="form">
     <div class="container">
-        <div class="left">
-            <h1>
-                {{title}}
-            </h1>
+        <div class="row">
+            <div class="left col-md-6">
+                <h1>{{ title }}</h1>
+                <div class="benefits" *ngFor="let b of benefits">
+                    <img [src]="b.url" [alt]="b.text">
+                    <span class="text">{{ b.text }}</span>
+                </div>
+            </div>
 
-            <div class="benefits" *ngFor="let b of benefits">
-                <img [src]="b.url" [alt]="b.text">
-                <span class="text">{{b.text}}</span>
+            <div class="right col-md-6">
+                <label class="form-label">Renew With</label>
+                <select formControlName="selectedOption" (change)="onOptionChange($event)" class="form-select">
+                    <option *ngFor="let opt of options" [value]="opt.value">{{ opt.label }}</option>
+                </select>
+
+                <input type="text" formControlName="enteredValue" [placeholder]="
+    form.get('selectedOption')?.value === 'policy' ? 'Please enter Policy Number' :
+    form.get('selectedOption')?.value === 'phone' ? 'Please enter Mobile Number' :
+    'Please enter Loan Account Number'
+  " class="form-control" />
+                <div *ngIf="form.get('enteredValue')?.invalid && form.get('enteredValue')?.touched" class="text-danger">
+                    This field is required.
+                </div>
+
+                <p class="placeholder-text">{{ text }}</p>
+
+                <div class="custom-button">
+                    <app-button (click)="proceed()" type="submit">Proceed</app-button>
+                </div>
             </div>
         </div>
-
-        <!-- section Renew with -->
-        <div class="right">
-            <label class="form-label"> Renew With</label>
-            <select (change)="onOptionChange($event)" class="form-select">
-                <option *ngFor="let opt of options" [value]="opt.value">{{opt.label}}</option>
-            </select>
-
-            <input [type]="inputType" [(ngModel)]="enteredValue" [placeholder]="placeholder" class="form-control" required> 
-
-
-            <p class="placeholder-text">{{text}}</p>
-
-            <div class="custom-button">
-                <app-button (click)="proceed()" type="submit">Proceed</app-button>
-            </div>
-        </div>
-
     </div>
-
 </div>
