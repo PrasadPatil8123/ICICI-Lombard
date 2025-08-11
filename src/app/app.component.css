@@ -5,45 +5,181 @@
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  cursor: pointer;  
+  cursor: pointer;
+  
 } */
+/* Css for First Navbar */
+.navbar {
+    margin: 0;
+   padding: 2px ;
+   height: 35px ; 
+   display: flex;
+   align-items: center;
+}
+.navbar1{
+    height: 35px; 
+}
+.drop-down-container{
+    display: flex;
+} 
+.navbar .nav-item .dropdown-menu{
+    background-color: #fff; 
+    padding: 3rem;
+    position: absolute;
+}
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+.navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+    color: #EC6625; 
+    transform: translateX(5px); 
+    transition: all 0.3s ease;
+}
 
-html, body {
-  height: 100%;
+.blue{
+    background-color: #014579 ;
+    text-decoration: none;
+    text-align: center;
+    text-decoration: #fff;
+    color: #fff !important;
+}
+.orange{
+    background-color: #EC6625;
+    color: #fff;
+}
+.text-orange{
+  color: #EC6625;
+}
+
+
+/* Second navbar */
+.sec-nav-color{
+   height: 60px !important;
+   background: linear-gradient(to bottom, #f58220 -18%, #b02a30 127%) !important;
+   font-size: 13px !important;
+}
+.modal-content{
+    padding: 3rem !important;
+}
+.sub-menu-img{
+    width: 80px;
+    background-image: url(../assets/nav-images/rectangle-common.png);
+    background-size: cover;
+}
+.sub-menu-wrap{
+    width: 340px;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 1rem;
+    position: absolute;
+    top: 50px;
+    margin-left: -80px;
+    z-index: 9999;
+    visibility: hidden;
+  
+}
+.sub-menu-list{
+    padding: 3rem;
+    background-color: #fff;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.sub-menu-list li{
+list-style-type: none;
+}
+.sub-menu-list li:hover{
+color: #EC6625; 
+transform: translateX(5px); 
+transition: all 0.3s ease;
+}
+.navbar .nav-item:hover .sub-menu-wrap{
+    visibility: visible;
+}
+.nav-item i {
+    transition: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}
+.navbar .nav-item:hover i{
+   transform: rotate(180deg);
+}
+.navbar .nav-item .nav-linkk{
+   color: #fff;
+}
+.login-btnn{
+    display: none;
+}
+.first-navlist{
+    display: none;
+}
+@media (max-width: 992px){
+.navbar .nav-item:hover .sub-menu-wrap,.navbar-nav .nav-item .nav-link i{
+        visibility: hidden;
+    }
+.navbar .nav-item .nav-linkk{
+        color:  #282828;
+        padding: 12px;
+        background-color: #e0dbdb;
+        z-index: 999;
+    }
+.navbar .nav-item .nav-linkk i:hover{
+        transform: none;
+    }
+}  
+.sec-nav-color {
+  background: linear-gradient(to bottom, #f58220 -18%, #b02a30 127%) !important;
+  height: 60px !important;
+}
+
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+.nav-linkk {
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.nav-linkk:hover {
+  color: #fcd6c1;
+}
+
+.sub-menu-wrap {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  width: 340px;
+  border-radius: 1rem;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.sub-menu-img {
+  width: 80px;
+  background-image: url(../assets/nav-images/rectangle-common.png);
+  background-size: cover;
+}
+
+.sub-menu-list {
+  list-style: none;
+  padding: 20px;
   margin: 0;
 }
-/* Full viewport height and no margin */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+
+.sub-menu-list li {
+  margin: 10px 0;
+  font-weight: 500;
 }
 
-/* Container for flex layout */
-.layout-container {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+.sub-menu-list li a {
+  text-decoration: none;
+  color: #333;
 }
 
-/* Sidebar styling */
-.sidebar {
-  width: 280px; /* Fixed width */
-  background-color: #f9f9f9;
-  border-right: 1px solid #ddd;
-  overflow-y: auto;
+.sub-menu-list li a:hover {
+  color: #EC6625;
+  transform: translateX(5px);
+  transition: all 0.3s ease;
 }
-
-/* Main content takes remaining space */
-.main-content {
-  flex: 1;
-  padding: 24px;
-  overflow-y: auto;
-  background-color: #b04444;
-  margin-left: 400px;
-}
-
-

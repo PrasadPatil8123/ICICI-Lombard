@@ -26,6 +26,8 @@ import { SmeInsuranceModule } from './features/sme-insurance/sme-insurance.modul
 import { SafeUrlPipe } from './features/sme-insurance/health-nested-compo/pipe.pipe';
 
 // import { CarInsuranceComponent } from './features/motor-insurance/car-insurance/car-insurance.component';
+import { RouterModule } from '@angular/router';
+import { Footer1Component } from './common/all footer/footer/footer.component';
 
 
 
@@ -46,7 +48,8 @@ import { SafeUrlPipe } from './features/sme-insurance/health-nested-compo/pipe.p
   imports: [
 
     BrowserModule,
-    // Footer2Component,
+    Footer2Component,
+    Footer1Component,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

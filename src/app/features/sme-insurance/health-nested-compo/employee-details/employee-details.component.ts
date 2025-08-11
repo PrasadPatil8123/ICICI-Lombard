@@ -27,10 +27,8 @@ form:any=[]
 ngOnInit(){
   
   this.act.queryParams.subscribe(params => {
-    // console.log('Query Params:', params);
     this.corporateDetails=params
   console.log(this.corporateDetails)
-    // You can access form fields like: params['email'], params['pincode'], etc.
   });
 }
 
