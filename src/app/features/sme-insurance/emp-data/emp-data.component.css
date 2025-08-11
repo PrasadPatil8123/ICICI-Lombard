@@ -1,0 +1,12 @@
+.card-header {
+  padding: 1rem;
+}
+
+table th, table td {
+  vertical-align: middle;
+  text-align: left;
+}
+
+input.form-control-sm {
+  min-width: 100px;
+}

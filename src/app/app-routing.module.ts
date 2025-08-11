@@ -27,7 +27,8 @@ const routes: Routes = [
     .then(mod => mod.RenewalsModule)
   },
   {path : 'sme', loadChildren:()=> import('./features/sme-insurance/sme-insurance.module')
-    .then(mod => mod.SmeInsuranceModule)
+    .then(mod => mod.SmeInsuranceModule),
+    canMatch:[canmatch]
   },
   {path : 'travel-inc', loadChildren:()=> import('./features/travel-insurance/travel-insurance.module')
     .then(mod => mod.TravelInsuranceModule)

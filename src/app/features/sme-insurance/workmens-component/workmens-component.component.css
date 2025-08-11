@@ -636,6 +636,17 @@ section {
   margin-bottom: 10px;
 }
 
-  
-   
+  /* ========= */
+   /* .container {
+  max-width: 1000px;
+} */
+
+input.form-control-sm {
+  min-width: 120px;
+}
+
+table th, table td {
+  vertical-align: middle;
+}
+
 

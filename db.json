@@ -523,17 +523,7 @@
       "email_id": "riju123@gmail.com"
     }
   ],
-  
   "submitform1": [
-    {
-      "id": "c55c"
-    },
-    {
-      "id": "fa61",
-      "name": "nilesh",
-      "mobile": "9326834227",
-      "category": "Health Insurance"
-    },
     {
       "id": "5c07",
       "name": "nilesh",
@@ -542,68 +532,60 @@
     },
     {
       "id": "650e",
+      "name": "rahul",
+      "mobile": "9326834227",
+      "category": "Health Insurance"
+    },
+    {
+      "id": "5a98",
+      "name": "ganesh",
+      "mobile": "9326834227",
+      "category": "Travel Insurance"
+    },
+    {
+      "id": "1d35",
+      "name": "sagar",
+      "mobile": "9326834227",
+      "category": "Motor Insurance"
+    },
+    {
+      "id": "42ab",
       "name": "nilesh",
       "mobile": "9326834227",
       "category": "Health Insurance"
     },
     {
-      "id": "a64b",
-      "name": "nilesh ",
-      "mobile": "9326834227",
-      "category": "Health Insurance"
-    },
-    {
-      "id": "33d9",
-      "name": "nilesh",
-      "mobile": "9326834227",
-      "category": "Health Insurance"
-    },
-    {
-      "id": "c46e",
-      "name": "nilesh",
-      "mobile": "9326834227",
+      "id": "f5c4",
+      "name": "sagar ",
+      "mobile": "9956421387",
       "category": "Life Insurance"
     },
     {
-      "id": "443b",
-      "name": "nilesh ",
-      "mobile": "9326834227",
-      "category": "Health Insurance"
-    },
-    {
-      "id": "6a13",
-      "name": "nilesh",
-      "mobile": "9326834227",
-      "category": "Life Insurance"
+      "id": "1bc4",
+      "name": "komal ",
+      "mobile": "9956562417",
+      "category": "Motor Insurance"
     }
   ],
   "submitform2": [
     {
-      "id": "35cd"
-    },
-    {
       "id": "d053",
-      "fullName": "nilesh",
+      "fullName": "rahul",
       "email": "ghule12@gmail.com"
     },
     {
-      "id": "ff1a",
-      "fullName": "nilesh sanjay ghule ",
-      "email": "ghulenilesh123@gmail.com"
+      "id": "812b",
+      "fullName": "shekar ",
+      "email": "shekar12@gmail.com"
     },
     {
-      "id": "b2be",
-      "fullName": "nilesh sanjay ghule ",
-      "email": "ghulenilesh123@gmail.com"
+      "id": "109f",
+      "fullName": "ganesh ",
+      "email": "ganesh122@gmail.com"
     },
     {
-      "id": "1483",
+      "id": "eb1e",
       "fullName": "nilesh sanjay ghule ",
-      "email": "test12@gmail.com"
-    },
-    {
-      "id": "d8b6",
-      "fullName": "nilesh sanjay ghule",
       "email": "test12@gmail.com"
     }
   ],
@@ -612,16 +594,16 @@
       "id": "7ee5",
       "industryCategory": "Construction",
       "skilledWorkersCount": 5,
-      "skilledWorkerSalary": 2,
-      "semiSkilledWorkersCount": 1,
-      "semiSkilledWorkerSalary": 3,
-      "unskilledWorkersCount": 1,
-      "unskilledWorkerSalary": 1,
-      "policyPeriod": "2",
+      "skilledWorkerSalary": "50000",
+      "semiSkilledWorkersCount": "10",
+      "semiSkilledWorkerSalary": "20000",
+      "unskilledWorkersCount": "20",
+      "unskilledWorkerSalary": "10000",
+      "policyPeriod": "12",
       "lastClaim": "Nil or below ₹1 lakh"
     },
     {
-      "id": "2ec0",
+      "id": "518a",
       "industryCategory": "",
       "skilledWorkersCount": 0,
       "skilledWorkerSalary": "salary",
@@ -633,7 +615,7 @@
       "lastClaim": "Nil or below ₹1 lakh"
     },
     {
-      "id": "addb",
+      "id": "0057",
       "industryCategory": "",
       "skilledWorkersCount": 0,
       "skilledWorkerSalary": "salary",
@@ -645,16 +627,28 @@
       "lastClaim": "Nil or below ₹1 lakh"
     },
     {
-      "id": "ab6e",
-      "industryCategory": "",
-      "skilledWorkersCount": 5,
+      "id": "268d",
+      "industryCategory": "IT",
+      "skilledWorkersCount": 4,
       "skilledWorkerSalary": 50000,
-      "semiSkilledWorkersCount": 10,
+      "semiSkilledWorkersCount": 2,
       "semiSkilledWorkerSalary": 20000,
       "unskilledWorkersCount": 20,
       "unskilledWorkerSalary": 10000,
-      "policyPeriod": "12",
+      "policyPeriod": "5",
       "lastClaim": "Above ₹1 lakh"
+    },
+    {
+      "id": "6c15",
+      "industryCategory": "Manufacturing",
+      "skilledWorkersCount": 1,
+      "skilledWorkerSalary": 1,
+      "semiSkilledWorkersCount": 1,
+      "semiSkilledWorkerSalary": 1,
+      "unskilledWorkersCount": 5,
+      "unskilledWorkerSalary": 1,
+      "policyPeriod": "10",
+      "lastClaim": "Nil or below ₹1 lakh"
     }
   ],
   "group-health": [
@@ -666,44 +660,43 @@
       "agree": true,
       "whatsapp": false,
       "id": "1"
-    },
-    {
-      "id": "a277",
-      "mobile": "9326834227",
-      "pincode": "431103",
-      "company": "xyz",
-      "email": "test12@gmail.com",
-      "agree": true,
-      "whatsapp": false
     }
-
   ],
   "form-info": [
-    {},
     {
       "id": "0d85",
-      "mobail": "",
-      "email": "",
-      "company": "",
-      "pincode": ""
-    },
-    {
-      "id": "ee1e",
-      "mobile": "9326834227",
-      "pincode": "431103",
-      "company": "adasdf",
-      "email": "text12@gmail.com",
-      "agree": true,
-      "whatsapp": false
-    },
-    {
-      "id": "6c92",
-      "mobile": "9326834227",
-      "pincode": "431103",
-      "company": "nilesh",
+      "mobail": "988888898",
       "email": "test12@gmail.com",
-      "agree": true,
-      "whatsapp": false
+      "company": "xyz",
+      "pincode": "121232"
+    },
+    {
+      "id": "dda7",
+      "mobile": "9326834227",
+      "email": "test12@gmail.com",
+      "company": "xyz",
+      "pincode": "232312"
+    },
+    {
+      "id": "8e62",
+      "mobile": "9326834227",
+      "email": "atul12@gamil.com",
+      "company": "xyz",
+      "pincode": "232312"
+    },
+    {
+      "id": "214a",
+      "mobile": "9326834227",
+      "email": "tesssss12@gmail.com",
+      "company": "asfdf",
+      "pincode": "222222"
+    },
+    {
+      "id": "fc78",
+      "mobile": "9326834277",
+      "email": "test12@gmail.com",
+      "company": "xyz",
+      "pincode": "121321"
     }
   ],
   "employees": [
@@ -711,12 +704,78 @@
       "id": "d1e5",
       "isFirstPolicy": "yes",
       "policySource": "ICICI",
-      "existingPolicyLives": "112",
-      "claimAmount": "12333333431",
+      "existingPolicyLives": "5",
+      "claimAmount": "700000",
+      "startDate": "2025-06-11",
+      "employeeCount": 10,
+      "familyDefinition": "Employee",
+      "sumInsured": "5 Lakhs"
+    },
+    {
+      "id": "d1e8",
+      "isFirstPolicy": "yes",
+      "policySource": "ICICI",
+      "existingPolicyLives": "no",
+      "claimAmount": "200000",
       "startDate": "2025-07-23",
       "employeeCount": 10,
       "familyDefinition": "Employee",
       "sumInsured": "2 Lakhs"
+    },
+    {
+      "id": "d1e9",
+      "isFirstPolicy": "yes",
+      "policySource": "ICICI",
+      "existingPolicyLives": "no",
+      "claimAmount": "200000",
+      "startDate": "2025-07-23",
+      "employeeCount": 10,
+      "familyDefinition": "Employee",
+      "sumInsured": "2 Lakhs"
+    },
+    {
+      "id": "d110",
+      "isFirstPolicy": "yes",
+      "policySource": "ICICI",
+      "existingPolicyLives": "no",
+      "claimAmount": "200000",
+      "startDate": "2025-07-23",
+      "employeeCount": 10,
+      "familyDefinition": "Employee",
+      "sumInsured": "2 Lakhs"
+    },
+    {
+      "id": "d1e11",
+      "isFirstPolicy": "yes",
+      "policySource": "ICICI",
+      "existingPolicyLives": "no",
+      "claimAmount": "200000",
+      "startDate": "2025-07-23",
+      "employeeCount": 10,
+      "familyDefinition": "Employee",
+      "sumInsured": "2 Lakhs"
+    },
+    {
+      "id": "d1e12",
+      "isFirstPolicy": "yes",
+      "policySource": "ICICI",
+      "existingPolicyLives": "no",
+      "claimAmount": "400000",
+      "startDate": "2025-07-23",
+      "employeeCount": 10,
+      "familyDefinition": "Employee",
+      "sumInsured": "2 Lakhs"
+    },
+    {
+      "id": "2e7c",
+      "isFirstPolicy": "yes",
+      "policySource": "Other",
+      "existingPolicyLives": "5",
+      "claimAmount": "500000",
+      "startDate": "2025-08-29",
+      "employeeCount": 9,
+      "familyDefinition": "Employee, Spouse & Children",
+      "sumInsured": "5 Lakhs"
     }
   ],
   "HealthContactDetails": [
@@ -724,7 +783,8 @@
       "mobile": "",
       "email": "",
       "pincode": "",
-      "name": ""
+      "name": "",
+      "id": "9ad2"
     },
     {
       "id": "8ead",
@@ -748,5 +808,4 @@
       "name": "Prasad Patil"
     }
   ]
-
 }

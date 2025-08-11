@@ -69,8 +69,8 @@ import { Footer1Component } from './common/all footer/footer/footer.component';
     CommonModule,
     ButtonModule,
     BrowserAnimationsModule,
-    SmeInsuranceModule
-
+    SmeInsuranceModule,
+     Footer2Component
   ],
   providers: [
     {

@@ -85,8 +85,8 @@ activeTab:string="tab1"
     unskilledWorkerSalary: ['salary'],
     policyPeriod: [1],
     lastClaim: ['Nil or below ₹1 lakh']
-    
   });
+
 }
 
 
@@ -236,7 +236,35 @@ advantagesList = [
     }
   ]
   
+submitform1: any[] = [];
+  searchText: string = '';
+  editingId: string | null = null;
+  editData: any = {};
 
+//===========login==============
+   gologin = false;
 
+clicklogin() {
+  const confirmed = confirm("⚠️ This section is only for Bank Managers. Are you sure you are authorized?");
+  if (confirmed) {
+    this.gologin = true;
+  } else {
+    this.gologin = false;
+    alert("🚫 Access denied. Clients are not allowed to login.");
+  }
+}
+
+clicklogout() {
+  this.gologin = false;
+}
+
+    // --------------
+  isLoggedIn = false;
+  loginAttempted = false;
+
+  onLoginSuccess(status: boolean) {
+    this.loginAttempted = true;
+    this.isLoggedIn = status;
+  }
 
 }

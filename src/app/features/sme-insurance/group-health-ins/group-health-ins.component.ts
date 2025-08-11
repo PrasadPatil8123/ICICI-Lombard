@@ -62,7 +62,7 @@ isFormDirty:boolean=true;
   queries() {
   const formData = this.ghForm.value;
 
-  this.router.navigate(["sme/claim-vdo"] , { queryParams: formData }  );
+  this.router.navigate(["sme/claim-vdo"]  );
 }
 
   emp_d() {

@@ -23,7 +23,7 @@ import { GroupHealthIns2Component } from './workmen-nested-compo/group-health-in
 import { ClaimVdoComponent } from './health-nested-compo/claim-vdo/claim-vdo.component';
 import { EmployeeDetailsComponent } from './health-nested-compo/employee-details/employee-details.component';
 import { Navbar3Component } from './navbar/navbar.component';
-// import { EmpDataComponent } from './emp-data/emp-data.component';
+import { EmpDataComponent } from './emp-data/emp-data.component';
 import { HttpClientModule } from '@angular/common/http';
 
   
@@ -36,7 +36,7 @@ const router :Routes=[
     {path:"main",component:MainCompoComponent},
     {path:"claim-vdo",component:ClaimVdoComponent},
     {path:"emp-d",component:EmployeeDetailsComponent},
-    // {path:"emp-Data",component:EmpDataComponent},
+    {path:"emp-Data",component:EmpDataComponent},
 
     
 
@@ -65,7 +65,7 @@ const router :Routes=[
     ClaimVdoComponent,
     EmployeeDetailsComponent,
     Navbar3Component,
-    // EmpDataComponent,
+    EmpDataComponent,
   ],
   imports: [
     Footer1Component,

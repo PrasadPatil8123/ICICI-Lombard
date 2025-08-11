@@ -1,0 +1,57 @@
+<p>emp-data works!</p>
+<div class="container my-4">
+
+  <h2 class="mb-4 text-center"> icicilombard Data Base Section</h2>
+
+  <!-- Reusable Table -->
+  <ng-container *ngFor="let dataset of [
+    { title: 'Subscription Confirmed EMP', data: submitform2, search: searchText1, endpoint: 'submitform2' },
+    { title: 'Need insurance advisors', data: submitform1, search: searchText2, endpoint: 'submitform1' },
+    { title: 'Workmen login info ', data: formInfo, search: searchText5, endpoint: 'form-info' },
+    { title: ' Workmen Policies Of EMP', data: policies2, search: searchText3, endpoint: 'policies2' },
+    { title: 'Group Health login info', data: groupHealth, search: searchText4, endpoint: 'group-health' },
+    { title: 'Group Health Policies Of EMP', data: employees, search: searchText6, endpoint: 'employees' }
+  ]; let i = index">
+
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+        <strong>{{ dataset.title }}</strong>
+        <input type="text" [(ngModel)]="dataset.search" placeholder="Search..." class="form-control w-25" />
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped mb-0">
+          <thead class="table-light">
+            <tr>
+              <th *ngFor="let key of dataset.data[0] ? Object.keys(dataset.data[0]) : []">{{ key }}</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of filtered(dataset.data, dataset.search)">
+              <ng-container *ngIf="editId !== item.id; else editRow">
+                <td *ngFor="let key of Object.keys(item)">{{ item[key] || 'N/A' }}</td>
+                <td>
+                  <button class="btn btn-sm btn-primary me-2" (click)="startEdit(item)">Edit</button>
+                  <button class="btn btn-sm btn-danger" (click)="deleteItem(dataset.endpoint, item.id)">Delete</button>
+                </td>
+              </ng-container>
+
+              <ng-template #editRow>
+                <td *ngFor="let key of Object.keys(item)">
+                  <input *ngIf="key !== 'id'" [(ngModel)]="editObject[key]" class="form-control form-control-sm" />
+                  <span *ngIf="key === 'id'">{{ item[key] }}</span>
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-success me-2" (click)="saveEdit(dataset.endpoint)">Save</button>
+                  <button class="btn btn-sm btn-secondary" (click)="cancelEdit()">Cancel</button>
+                </td>
+              </ng-template>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </ng-container>
+</div>

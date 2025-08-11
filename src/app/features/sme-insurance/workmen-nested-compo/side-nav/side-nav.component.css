@@ -1,20 +1,9 @@
-/* .sidebar {
-  width: 300px;
-  background: #f9f7f7;
-  padding: 0;
-  list-style-type: none;
-}
-
-.sidebar li {
+.login-box {
+  max-width: 300px;
+  margin: 50px auto;
   padding: 20px;
-  cursor: pointer;
-  border-bottom: 1px solid #eee;
-  color: #777;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #aaa;
+  background: #f9f9f9;
 }
 
-.sidebar li.active {
-  border-left: 3px solid orange;
-  font-weight: bold;
-  color: black;
-  background-color: white;
-} */
