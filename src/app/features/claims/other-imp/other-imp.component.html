@@ -1,7 +1,14 @@
+<app-navbar></app-navbar>
 <div class="container">
     <input type="text" [formControl]="searchControl" placeholder="Search users" />
     <button class="btn btn-primary" (click)="onSentData()">submit</button>
     <ul>
         <li *ngFor="let user of users">{{ user.name }}</li>
     </ul>
+    <app-other-imp2 [data]="data" (childData)="receiveData($event)"></app-other-imp2><br>
+    {{childData}}
+    <br>
+    <button class="btn btn-primary ms-2" (click)="onGetViewChildMethod()">Data</button>
+    <br>
+    {{childData2}}
 </div>

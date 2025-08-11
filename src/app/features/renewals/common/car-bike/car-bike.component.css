@@ -32,10 +32,12 @@
 .custom-radio:checked {
   background-color: rgb(1, 1, 74);
   border-color: white;
+  color: black;
 }
 
 
 .custom-input {
+  color: aliceblue;
   background-color: rgb(1, 1, 74);
   border: none;
   border-bottom: 2px solid white;
