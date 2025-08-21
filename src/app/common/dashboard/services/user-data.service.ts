@@ -25,7 +25,6 @@ export class UserDataService {
 
   constructor(private http: HttpClient, private messageService: MessageService) {}
 
-  /** Load all user-related data in parallel */
   loadUserData(userId: number): Observable<{ payments: Payment[]; policies: Policy[]; savedQuotes: SavedQuote[] ; personalDetails : PersonalDetails[]}> {
     return forkJoin({
       payments: this.http.get<Payment[]>(`${this.baseUrl}/payments`).pipe(

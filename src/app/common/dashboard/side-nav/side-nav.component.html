@@ -2,7 +2,7 @@
   <div class="profile-header">
     <img src="../../../../assets/dashboard/guestico.png" class="profile-img" alt="Profile" />
     <div class="profile-details" *ngFor="let user of personalDetails">
-      <h2>{{ user.name | titlecase}}</h2>
+      <h2>{{ user.name | honorific:user.gender | titlecase}}</h2>
       <p class="text-muted">{{ user.email }}</p>
       <p class="text-muted">{{ user.mobile }}</p>
     </div>

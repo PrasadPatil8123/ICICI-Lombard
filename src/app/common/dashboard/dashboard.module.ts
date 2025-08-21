@@ -15,6 +15,7 @@ import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { SavedQuotesComponent } from './saved-quotes/saved-quotes.component';
 import { CardModule } from 'primeng/card';
+import { HonorificPipe } from './services/honorific.pipe';
 
 const routes: Routes = [
  {
@@ -36,7 +37,8 @@ const routes: Routes = [
     UsersComponent,
     PoliciesComponent,
     PaymentsComponent,
-    SavedQuotesComponent
+    SavedQuotesComponent,
+    HonorificPipe
 
   ],
   imports: [

@@ -35,24 +35,6 @@
         "notes": "Prefers WhatsApp updates",
         "lastUpdated": "2025-07-16T09:15:00"
       }
-    },
-    {
-      "id": 3,
-      "name": "prasad anil patil",
-      "mobile": "9764156012",
-      "dateOfBirth": "2025-08-03",
-      "gender": "male",
-      "email": "prasadpatil2003128@gmail.com",
-      "address": {
-        "street": "Chidoba Nagar,Hinjewadi",
-        "pincode": "411057",
-        "cityState": "Pune",
-        "landmark": "Chidoba Mandir"
-      },
-      "additional": {
-        "notes": "q",
-        "lastUpdated": "dd"
-      }
     }
   ],
   "policies": [

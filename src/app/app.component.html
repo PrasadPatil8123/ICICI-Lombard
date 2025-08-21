@@ -71,10 +71,13 @@
                                 <label for="otpMobile" class="form-label">Mobile no.</label>
                                 <input type="tel" id="otpMobile" formControlName="mobileNo" maxlength="10"
                                     minlength="10" class="form-control" placeholder="Enter 10-digit number" required />
+                                <div *ngIf="userNotFound" class="alert alert-danger mt-2">
+                                    Mobile number not found. Please check and try again.
+                                </div>
                             </div>
 
                             <!-- Send OTP Button -->
-                            <button type="submit" class="btn orange col-12 mt-3">Login</button>
+                            <button type="submit"  class="btn orange col-12 mt-3">Login</button>
 
                         </form>
 
@@ -92,10 +95,13 @@
         </div>
 
         <!-- Trigger Button to Open Modal -->
-        <button class="btn btn-sm orange ms-3 mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#login-modal">
+        <button class="btn btn-sm orange ms-3 mt-2 mb-2" *ngIf="!isLoggedIn" data-bs-toggle="modal" data-bs-target="#login-modal">
             Login&nbsp;
             <i class="fa-solid fa-chevron-right"></i>
         </button>
+        <button class="btn btn-primary" *ngIf="isLoggedIn" (click)="goToDashboard()" title="Access your dashboard">
+  <i class="bi bi-speedometer2"></i> Dashboard
+</button>
     </div>
 </nav>
 

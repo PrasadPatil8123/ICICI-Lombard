@@ -94,9 +94,9 @@ export class AppComponent {
     },
      {
       Title:' Claims',
-      SubMenueList:['Health Claims','Motor Claims','Travel Claims','Home Claims','Cyber Insurance Claims'],
+      SubMenueList:['health-claims','Motor Claims','Travel Claims','Home Claims','Cyber Insurance Claims'],
       Img:'../assets/nav-images/renewal-navigation.png',
-      Link:'claim'
+      Link:'claims'
     },
   ]
 
@@ -114,14 +114,35 @@ export class AppComponent {
    loginForm = this.fb.group({
     mobileNo: ['']
    });
+
+   userNotFound = false;
+   isLoggedIn = false;
     login() {
    const mobile:any = this.loginForm.value.mobileNo;
    this.homeSer.getPersonalDetails().subscribe(details => {
   const userId = this.homeSer.findUserIdByMobile(details, mobile);
-  console.log('Found ID:', userId);
-  this.router.navigate(['dashboard', userId]);
+  if (userId) {
+      this.userNotFound = false;
+      this.isLoggedIn = true;
+      localStorage.setItem('userId', userId.toString());
+      this.router.navigate(['dashboard', userId]);
+    } else {
+      this.isLoggedIn = false;
+      this.userNotFound = true;
+      console.warn('Mobile number not found');
+    }
    });
 
   };
+
+  goToDashboard() {
+  const userId = localStorage.getItem('userId');
+  if (userId) {
+    this.router.navigate(['dashboard', userId]);
+  } else {
+    console.warn('User ID not found. Redirecting to login.');
+    this.router.navigate(['/login']);
+  }
+}
 
 };

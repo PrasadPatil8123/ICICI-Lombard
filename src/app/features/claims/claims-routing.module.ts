@@ -9,6 +9,7 @@ import { Navbar2Component } from './navbar2/navbar2.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TravelClaimsComponent } from './travel-claims/travel-claims.component';
 import { HomeClaimsComponent } from './home-claims/home-claims.component';
+import { authGuard } from 'src/app/core/guards/auth.guard';
 
 const routes: Routes = [
     { path: 'health-claims', component: HealthClaimsComponent },
@@ -17,7 +18,7 @@ const routes: Routes = [
     { path: 'navbar', component: NavbarComponent },
     { path: 'navbar2', component: Navbar2Component },
     { path: 'travel', component: TravelClaimsComponent },
-    { path: 'motor', component: MotorClaimsComponent },
+    { path: 'motor',canActivate: [authGuard], component: MotorClaimsComponent },
     { path: 'home-claims', component: HomeClaimsComponent }
 ];
 
