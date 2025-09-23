@@ -3,11 +3,14 @@ name: Build and Deploy Angular to Netlify
 on:
   push:
     branches:
-      - master   #
+      - master
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -15,10 +18,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
-      - name: Install dependencies
-        run: npm install
+      - name: Clean install
+        run: npm ci  
 
       - name: Build Angular App
         run: npm run build -- --configuration=production
@@ -26,8 +29,9 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2
         with:
-          publish-dir: ./dist/ICICI-Lombard
+          publish-dir: ./dist/<your-angular-project-name>
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
